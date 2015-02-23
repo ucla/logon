@@ -1,0 +1,112 @@
+html {
+  background: $html-background;
+  background-size: cover;
+  box-sizing: border-box;
+  line-height: $base-line-height;
+  height: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  color: $body-text-color;
+  font-family: $font-stack;
+  letter-spacing: $global-letter-spacing;
+  line-height: $base-line-height;
+  @include enable-ligatures();
+}
+
+h1, h2, h3, h4 {
+  font-weight: normal;
+  color: $primary-color-safe;
+  font-family: $font-stack-alt;
+  line-height: $header-line-height;
+}
+
+input + h1, input + h2, input + h3 {
+  margin-top: $half-spacing;
+}
+
+h1 {
+  font-size: $h2-font-size;
+  @include breakpoint($multi-column) {
+    font-size: $h1-font-size;
+  }
+}
+
+h2 {
+  font-size: $h3-font-size;
+  @include breakpoint($multi-column) {
+    font-size: $h2-font-size;
+  }
+}
+
+h3 {
+  font-size: $h3-font-size;
+}
+
+h4 {
+  font-size: $h4-font-size;
+}
+
+h5, h6 {
+  font-size: $p-font-size;
+  font-weight: bold;
+}
+
+h6 {
+  color: lighten($body-text-color, 15%);
+}
+
+a {
+  color: $anchor-color;
+  text-decoration: underline;
+  @include transition-property(color);
+  @include transition-duration(.15s);
+  background: transparent;
+  &:visited {
+    color: $anchor-color;
+  }
+  &:hover, &:focus {
+    text-decoration: underline;
+    color: $anchor-color-hover;
+    outline: 0;
+  }
+  &:focus {
+    outline: thin dotted;
+  }
+  &:active {
+    outline: 0;
+  }
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+section[role="main"] ul {
+  list-style: none;
+  padding-left: .1em;
+  margin-bottom: 0;
+  li {
+    margin: -.15em 0 0;
+  }
+  li:before {
+    color: $bullet-color;
+    content: "•";
+    position: relative;
+    font-size: 1.6em;
+    left: -.13em;
+    top: .1em;
+  }
+}
+
+.touch section[role="main"] li {
+  margin: $default-spacing 0;
+}

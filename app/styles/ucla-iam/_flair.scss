@@ -1,0 +1,80 @@
+/////////////////////////////////////////
+///        NOTIFICATION BADGE
+/////////////////////////////////////////
+
+//container
+.badged {
+  position: relative;
+}
+
+//element w/ badge
+.badge:after{
+  content:attr(data-count);
+  position: absolute;
+  background: $ucla-pink;
+  height: $double-spacing;
+  top: -$half-spacing;
+  right: -$default-spacing;
+  width: $double-spacing;
+  text-align: center;
+  line-height: $double-spacing;
+  font-size: $default-spacing;
+  border-radius: 50%;
+  color: $white;
+  border: 1px solid $ucla-pink;
+}
+
+/////////////////////////////////////////
+///           --- OR ---
+/////////////////////////////////////////
+
+.line-thru {
+  display: block;
+  margin: 1rem 0;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+  &:before {
+    width: 40px;
+    height: 10px;
+    background-color: #fff;
+    content: '';
+    margin: -5px 0 0 -20px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    z-index: -1;
+  }
+  &:after {
+    border-bottom: 1px solid $background-light-grey;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 49%;
+    width: 100%;
+    z-index: -2;
+  }
+}
+
+/////////////////////////////////////////
+///                MISC
+/////////////////////////////////////////
+
+%ucla-box-shadow {
+  box-shadow: 0 1px 1px #347bad;
+}
+
+.fail {
+  background: $ucla-pink;
+  color: $black;
+  border-radius: $global-border-radius;
+  padding: $half-spacing;
+}
+
+.success {
+  background: $ucla-green;
+  color: $black;
+  border-radius: $global-border-radius;
+  padding: $half-spacing;
+}
