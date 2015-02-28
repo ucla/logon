@@ -3,7 +3,7 @@
 /////////////////////////////////////////
 
 // breakpoints
-$multi-column: 30em; // 480px @ zoom:1
+$multi-column: 32em;
 
 /////////////////////////////////////////
 ///            COLOURS
@@ -38,6 +38,7 @@ $black: #000;
 
 $primary-color: $ucla-blue;
 $primary-color-safe: $ucla-blue-safe;
+$primary-color-alternate-state: $ucla-blue-dark;
 $secondary-color: $ucla-gold;
 
 $error-color: $ucla-pink;
@@ -59,13 +60,18 @@ $input-background-color-focus: $white;
 $background-light-grey: lighten($neutral, 12%);
 $alternate-light-grey: lighten($neutral, 15%);
 
+// SSO Specific
+
+$secondary-login-option-color: #526991;
+$sp-support-bg: rgba($white, .55);
+
 /////////////////////////////////////////
 ///       TYPOGRAPHY / RHYTHM
 /////////////////////////////////////////
 
-$html-background: $white;
-$body-background: $white;
+$html-background: #d1e8f8 url('../images/skyline.jpg') no-repeat;
 $body-text-color: #444;
+$body-background-color: $white;
 
 $font-stack: 'Proxima Nova', Verdana, sans-serif;
 $font-stack-alt: 'Proxima Nova', Verdana, sans-serif;
@@ -76,18 +82,18 @@ body {
 	font-size: 100%;
 }
 
-$h1-font-size: 2.625em; //42px @ 100%base
-$h2-font-size: 1.5em; // 26px @ 100%base
-$h3-font-size: 1.25em; // 20px @ 100%base
-$h4-font-size: 1.125em; // 18px @100%base
+$h1-font-size: 2.625rem; //42px @ 100%base
+$h2-font-size: 1.5rem; // 26px @ 100%base
+$h3-font-size: 1.25rem; // 20px @ 100%base
+$h4-font-size: 1.125rem; // 18px @100%base
 
-$p-font-size: 1em; // 16px @100%base
-$meta-font-size: .8125em; //13px @100%base
+$p-font-size: 1rem; // 16px @100%base
+$meta-font-size: .8125rem; //13px @100%base
 
 $header-line-height: 1.1;
 $base-line-height: 1.4;
 
-$default-spacing: 1em;
+$default-spacing: 1rem;
 $half-spacing: $default-spacing / 2;
 $double-spacing: $default-spacing * 2;
 $triple-spacing: $default-spacing * 3;
@@ -101,13 +107,7 @@ $global-border-radius: 3px;
 /////////////////////////////////////////
 
 @font-face {
-	font-family: 'Proxima Nova';src: url('/fonts/ProximaNova-Regular.eot');src: url('/fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),url('/fonts/ProximaNova-Regular.woff') format('woff'),url('/fonts/ProximaNova-Reg.otf') format('truetype');
+	font-family: 'Proxima Nova';src: url('../fonts/ProximaNova-Regular.eot');src: url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),url('../fonts/ProximaNova-Regular.woff') format('woff'),url('../fonts/ProximaNova-Reg.otf') format('truetype');
 	font-weight: 400;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Proxima Nova';src: url('/fonts/ProximaNova-Semibold.eot');src: url('/fonts/ProximaNova-Semibold.eot?#iefix') format('embedded-opentype'),url('/fonts/ProximaNova-Semibold.woff') format('woff'),url('/fonts/ProximaNova-Sbold.otf') format('truetype');
-	font-weight: 700;
 	font-style: normal;
 }
