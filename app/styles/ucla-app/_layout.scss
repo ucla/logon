@@ -1,7 +1,10 @@
-.page-wrapper {
-  width: 90%;
-  max-width: 55em;
+.content-wrapper {
+  width: 80%;
   margin: 0 auto;
+}
+
+.landing .content-wrapper {
+  max-width: 55em;
 }
 
 .page-header {

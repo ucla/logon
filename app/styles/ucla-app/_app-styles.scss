@@ -2,6 +2,34 @@
   @include line-thru();
 }
 
+.floating-side-nav {
+  float: left;
+  ul {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+    color: $white;
+    font-size: $h1-font-size;
+    margin-bottom: $default-spacing;
+    &:hover {
+      color: $ucla-yellow;
+    }
+  }
+}
+
+.info-box {
+  background: rgba(#fff, .8);
+  padding: $half-spacing $default-spacing;
+  width: 61.5%;
+  float: right;
+  margin-top: $double-spacing;
+  margin-right: $double-spacing;
+  p {
+    font-size: $meta-font-size;
+  }
+}
+
 .tertiary-links {
 	position: absolute;
 	bottom: 0;

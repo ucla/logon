@@ -1,3 +1,7 @@
+/////////////////////////////////////////
+///             GENERAL
+/////////////////////////////////////////
+
 .cards {
   position: relative;
   overflow: hidden;
@@ -5,9 +9,7 @@
 
 .card {
   background: $white;
-  color: $anchor-color;
   weight: 300;
-  font-size: $h1-font-size;
   margin-bottom: $half-spacing;
   @extend %ucla-box-shadow;
   transition: all .2s ease-in-out;
@@ -26,15 +28,32 @@
   }
 }
 
-.primary-cards h1, .secondary-cards h1 {
-    display: inline-block;
-    margin-bottom: -$quad-spacing;
-    padding: $half-spacing;
-    font-size: $h2-font-size;
-    font-weight: 300;
-  }
+/////////////////////////////////////////
+///             CARD LAYOUTs
+/////////////////////////////////////////
 
-.primary-cards {
+.primary-landing-cards h1, .secondary-landing-cards h1, .card-column h1 {
+  display: inline-block;
+  margin-bottom: -$quad-spacing;
+  padding: $half-spacing;
+  font-size: $h2-font-size;
+  font-weight: 300;
+}
+
+.card-column {
+  width: 55%;
+  float: right;
+  h1 {
+    background: rgba($ucla-blue-dark, .9);
+    color: $ucla-yellow;
+    margin-left: 8.5em;
+  }
+  p {
+    margin-top: 0;
+  }
+}
+
+.primary-landing-cards {
   width: 55%;
   float: left;
   h1 {
@@ -43,12 +62,14 @@
     margin-left: 8.5em;
   }
   p {
+    font-size: $h1-font-size;
+    color: $anchor-color;
     text-align: right;
     margin-top: 0;
   }
 }
 
-.secondary-cards {
+.secondary-landing-cards {
   width: 43%;
   margin-left: 2%;
   float: right;
@@ -58,18 +79,7 @@
     margin-left: 1em;
   }
   p {
+    font-size: $h1-font-size;
     margin-top: 0;
-  }
-}
-
-.info-card {
-  background: rgba(#fff, .8);
-  padding: $half-spacing $default-spacing;
-  width: 61.5%;
-  float: right;
-  margin-top: $double-spacing;
-  margin-right: $double-spacing;
-  p {
-    font-size: $meta-font-size;
   }
 }
