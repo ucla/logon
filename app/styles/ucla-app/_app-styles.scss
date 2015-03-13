@@ -1,24 +1,44 @@
+.line-thru {
+  @include line-thru();
+}
+
 .tertiary-links {
-	background: rgba($black, .75);
-	border-top: 1px solid $primary-color-alternate-state;
-	padding: $half-spacing;
-	color: lighten($body-text-color, 40%);
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: $quad-spacing;
+  background: rgba($black, .75);
+  border-top: 1px solid $primary-color;
+  padding: $half-spacing;
+  color: lighten($body-text-color, 40%);
+  @include breakpoint($multi-column) {
+		height: $double-spacing;
+	}
+	a, span {
+		display: block;
+		width: 100%;
+		@include breakpoint($multi-column) {
+			display: inline;
+			width: auto;
+		}
+	}
 }
 
 .tertiary-links-wrapper {
-	p {
-		margin: 0 auto;
-		font-size: $meta-font-size;
-	}
-	a {
-		text-decoration: none;
-		color: $footer-link-color;
-		&:visited {
-			color: $footer-link-color;
-		}
-		&:hover, &:focus {
-			color: $footer-link-color-hover;
-			text-decoration: underline;
-		}
-	}
+  p {
+    margin: 0 auto;
+    font-size: $meta-font-size;
+    text-align: center;
+  }
+  a {
+    text-decoration: none;
+    color: $footer-link-color;
+    &:visited {
+      color: $footer-link-color;
+    }
+    &:hover, &:focus {
+      color: $footer-link-color-hover;
+      text-decoration: underline;
+    }
+  }
 }

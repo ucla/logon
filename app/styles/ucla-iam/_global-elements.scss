@@ -1,19 +1,17 @@
 html {
-  background: $html-background;
+	background: $html-background;
   background-size: cover;
-  box-sizing: border-box;
-  line-height: $base-line-height;
-  height: 100%;
+	box-sizing: border-box;
+	position: relative;
+	min-height: 100%;
+	width: 100%;
 }
 
 *, *:before, *:after {
-  box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
   color: $body-text-color;
   font-family: $font-stack;
   letter-spacing: $global-letter-spacing;

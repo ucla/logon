@@ -14,28 +14,34 @@
 
 <body>
 
-  <header><img src="/images/ucla-white.png" alt="UCLA"></header>
+  <div class="page-wrapper">
 
-  <article class="primary">
-    <h1>manage your account</h1>
-    <p>Sign in to manage identity, passwords, email, security, and more</p>
-  </article>
+    <header class="page-header" role="banner"><img src="/images/ucla-white.png" alt="UCLA"></header>
 
-  <div class="secondary">
-    <h1>can't sign in?</h1>
+    <div class="cards">
+      <section class="primary-cards">
+        <h1>manage your account</h1>
+        <p class="card"><a href="cards.html">Sign in to manage identity, passwords, email, security, <br> and more</a></p>
+      </section>
 
-    <p>Reset password / lookup Logon ID</p>
+      <section class="secondary-cards">
+        <h1>can't sign in?</h1>
+
+        <p class="card"><a href="reset.html">Reset password / lookup Logon ID</a></p>
+
+        <p class="line-thru">or</p>
+
+        <p class="card"><a href="create.html">Create Logon ID</a></p>
+      </section>
+    </div>
+
+    <aside class="info-card"><p>The UCLA Logon ID is your campus online identifier. It is used for authentication to most online services on campus. It also provides eligible users with access to Bruin OnLine services such as an e-mail account, network access, web hosting service, etc. Previously, the UCLA Logon ID was called a Bruin OnLine ID or BOLid.</p></aside>
+
   </div>
-
-  <div class="secondary">
-    <p>Create Logon ID</p>
-  </div>
-
-  <aside class="about"><p>The UCLA Logon ID is your campus online identifier. It is used for authentication to most online services on campus. It also provides eligible users with access to Bruin OnLine services such as an e-mail account, network access, web hosting service, etc. Previously, the UCLA Logon ID was called a Bruin OnLine ID or BOLid.</p></aside>
 
   <footer role="contentinfo" class="tertiary-links">
   	<div class="tertiary-links-wrapper">
-  		<p><a href="{{ site.baseurl }}/ucla-logon-mocks/cms-policies.html">Privacy, Security & Legal</a> <span>Loaded: {{ site.time }}</span> <a href="{{ site.baseurl }}/" class="right">NH</a></p>
+  		<p><a href="{{ site.baseurl }}/ucla-logon-mocks/cms-policies.html">Privacy, Security & Legal</a> <span>Loaded: {{ site.time }}</span></p>
   	</div>
   </footer>
 
