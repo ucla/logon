@@ -28,8 +28,8 @@
 
 .primary-cards h1, .secondary-cards h1 {
     display: inline-block;
-    margin-bottom: -4em;
-    padding: .5em;
+    margin-bottom: -$quad-spacing;
+    padding: $half-spacing;
     font-size: $h2-font-size;
     font-weight: 300;
   }
@@ -65,7 +65,11 @@
 .info-card {
   background: rgba(#fff, .8);
   padding: $half-spacing $default-spacing;
+  width: 61.5%;
+  float: right;
+  margin-top: $double-spacing;
+  margin-right: $double-spacing;
   p {
-    font: $meta-font-size !important;
+    font-size: $meta-font-size;
   }
 }
