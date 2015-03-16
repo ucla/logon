@@ -1,83 +1,78 @@
-<form action="/userlookup.php" method="post">
+<!doctype html>
+<html>
 
-<div class="textbox">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UCLA Logon</title>
 
-<div class="element" id="box.uid" style="font-weight: bold; position: relative; height: auto;"><table><tbody><tr>
-<td><input type="radio" value="uid" name="whoami"></td>
-<td>I am a UCLA Student, a UCLA Alumnus, a UCLA Faculty member, a UCLA Staff member, a UCOP or UC Merced Staff member</td>
-</tr></tbody></table></div>
+  <!-- build:css /styles/screen.css -->
+  <link rel="stylesheet" href="/styles/screen.css">
+  <!-- endbuild-->
+</head>
 
-<p>You must have your 9-digit UCLA Identification Number to continue.  You can find this number:</p>
+<body class="landing">
 
-<ul style="line-spacing:1;">
-<li>On your online or paper letter of admission (new students)</li>
-<li>On your BruinCard (current students, alumni, faculty, staff)</li>
-<li>On your UCLA transcript (current students, alumni)</li>
-<li>On your paycheck stub or online earnings statement</li>
-</ul>
+  <div class="content-wrapper">
 
-<div class="element" id="box.nouid" style="font-weight: bold; position: relative; height: auto;"><table><tbody><tr>
-<td><input type="radio" value="nouid" name="whoami"></td>
-<td>I do not have a UCLA Identification Number</td>
-</tr></tbody></table></div>
+    <header class="page-header" role="banner"><img src="/images/ucla-white.png" alt="UCLA"></header>
 
-<p>For further assistance, contact the Help Desk by telephone at 310-267-HELP (4357) or email at <a href="mailto:accounts@ucla.edu">accounts@ucla.edu</a>.</p>
-</div>
+    <article class="content">
 
-<div><input class="button" type="submit" value="Next »">
-<input type="hidden" name="action" value="+iR0F59DEiw13EaO5UwR+/S55QJ3jMbZsHXyBCEttB8="></div>
-</form>
+      <h2>Lookup your UCLA Logon ID</h2>
 
+      <form action="/userlookup.php" method="post">
 
+      <input type="radio" value="uid" name="whoami">
+      <label>I am a UCLA Student, a UCLA Alumnus, a UCLA Faculty member, a UCLA Staff member, a UCOP or UC Merced Staff member</label>
 
+      <p>You must have your 9-digit UCLA Identification Number to continue.  You can find this number:</p>
 
-<div id="bodyContainer">
-<div id="nav">
-<div class="navbox">
-<div class="navlist"><a href="/activate.php">Create UCLA Logon ID</a></div>
-<div class="navlist"><a href="/manage.php">Manage UCLA Logon ID</a></div>
-<div class="navlist"><a href="/mailprefs.php">Manage Email Preferences</a></div>
-<div class="navlist"><a href="/userlookup.php">Look Up UCLA Logon ID</a></div>
-<div class="navlist"><a href="/passchange.php">Change Password</a></div>
-<div class="navlist"><a class="selected" href="/passreset.php">Reset Password</a></div>
-<div class="navlist"><a href="/passoptions.php">Set Security Question</a></div>
-</div>
+      <ul>
+        <li>On your online or paper letter of admission (new students)</li>
+        <li>On your BruinCard (current students, alumni, faculty, staff)</li>
+        <li>On your UCLA transcript (current students, alumni)</li>
+        <li>On your paycheck stub or online earnings statement</li>
+      </ul>
 
-<div id="timeout">Time Remaining:
-<span id="counter" style="font-weight: bold;">19:42</span><br>
-<div id="bar"><div id="barfill" style="width: 0.17999999999999972em;"></div></div>
-</div>
+      <input type="radio" value="nouid" name="whoami">
+      <label>I do not have a UCLA Identification Number</label>
 
-</div>
+      <p>For further assistance, contact the Help Desk by telephone at 310-267-HELP (4357) or email at <a href="mailto:accounts@ucla.edu">accounts@ucla.edu</a>.</p>
 
-<div id="content">
-<h2>Reset Password</h2>
-<p>Answer the following questions to confirm your identity.  Follow
-the instructions on the next set of screens to set a new password.</p>
+      <input class="button" type="submit" value="Next »">
+      </form>
 
-<p>If you do not have the information below, please bring University-issued
-photo identification to the Bruin OnLine Help Desk located in Suite 124,
-Kerckhoff Hall.  If you are not able to visit the Help Desk, please fax in
-a completed copy of the <a href='javascript:warn_pii("/forms/service_request.pdf");'>UCLA Logon
-Service Request Form</a>, with all required supporting documentation.</p>
+      <h2>Reset Your Password</h2>
 
-<p>For further assistance, contact the Help Desk by telephone at 310-267-HELP
-(4357) or email at <a href="mailto:accounts@ucla.edu">accounts@ucla.edu</a>.</p>
+      <p>Answer the following questions to confirm your identity.  Follow
+      the instructions on the next set of screens to set a new password.</p>
 
-<strong>Validate Your Identity</strong>
+      <p>If you do not have the information below, please bring University-issued photo identification to the Bruin OnLine Help Desk located in Suite 124, Kerckhoff Hall. If you are not able to visit the Help Desk, please fax in a completed copy of the <a href="#">UCLA Logon Service Request Form</a>, with all required supporting documentation.</p>
 
-<form action="/passreset.php" method="post">
+      <p>For further assistance, contact the Help Desk by telephone at 310-267-HELP (4357) or email at <a href="mailto:accounts@ucla.edu">accounts@ucla.edu</a>.</p>
 
-<div class="textbox">
+      <h3>Validate Your Identity</h3>
 
-<div class="element" id="box.uid" style="position: relative; height: auto;">
-<span style="font-weight: bold; float: left; position: relative; left: 127px;" class="etext"><span class="help" help.title="Your UCLA Logon is your University identifier, previously known as your &lt;b&gt;BOL ID&lt;/b&gt; or &lt;b&gt;BOL username&lt;/b&gt;." style="border-bottom-style: double; border-bottom-color: rgb(113, 188, 31); cursor: help;">UCLA Logon ID</span></span>
-<span class="etext" style="float: left; position: relative; left: 254px;"><input name="uid" size="40" maxlength="15" value="" id="uid" class="focus"></span>
-</div>
-</div>
+      <form action="/passreset.php" method="post">
 
-<div><input class="button" type="submit" value="Next »">
-<input type="hidden" name="action" value="Ul2zlgyg9Jh6AcSa8YjTaqPHJYPA/0DX"></div>
-</form>
-</div>
-</div>
+      <label class="help">UCLA Logon ID</label>
+      <input name="uid" size="40" maxlength="15" value="" id="uid" class="focus">
+
+      <input class="button" type="submit" value="Next »">
+      </form>
+
+    </article>
+
+  </div>
+
+  <footer role="contentinfo" class="tertiary-links">
+  	<div class="tertiary-links-wrapper">
+  		<p><a href="{{ site.baseurl }}/ucla-logon-mocks/cms-policies.html">Privacy, Security & Legal</a> <span>Loaded: {{ site.time }}</span> <a href="{{ site.baseurl }}/" class="right">NH</a></p>
+  	</div>
+  </footer>
+
+</body>
+
+</html>

@@ -18,6 +18,13 @@
   }
 }
 
+.content {
+  background: $white;
+  @extend %ucla-box-shadow;
+  padding: $default-spacing;
+  margin-bottom: $quad-spacing;
+}
+
 .info-box {
   background: rgba(#fff, .8);
   padding: $half-spacing $default-spacing;
