@@ -2,9 +2,8 @@
 ///             GENERAL
 /////////////////////////////////////////
 
-.cards {
-  position: relative;
-  overflow: hidden;
+.cards-assymetric {
+  @include clearfix;
 }
 
 .card {
@@ -13,8 +12,10 @@
   margin-bottom: $half-spacing;
   @extend %ucla-box-shadow;
   transition: all .2s ease-in-out;
+  overflow: visible;
   &:hover {
     transform: scale(1.025);
+    cursor: pointer;
   }
   a {
     text-decoration: none;
@@ -32,7 +33,7 @@
 ///             CARD LAYOUTs
 /////////////////////////////////////////
 
-.primary-landing-cards h1, .secondary-landing-cards h1, .card-column h1 {
+.primary-landing-cards h1, .secondary-landing-cards h1, .cards-column h1 {
   display: inline-block;
   margin-bottom: -$quad-spacing;
   padding: $half-spacing;
@@ -40,16 +41,40 @@
   font-weight: 300;
 }
 
-.card-column {
+.cards-column {
   width: 55%;
   float: right;
+  overflow: visible;
   h1 {
     background: rgba($ucla-blue-dark, .9);
     color: $ucla-yellow;
-    margin-left: 8.5em;
+    margin-left: 11.9em;
+  }
+  .profile-pic {
+    max-width: $octo-spacing;
+    max-height: $octo-spacing;
+    margin-left: -9em;
+    float: left;
   }
   p {
     margin-top: 0;
+  }
+  .card {
+    font-size: $meta-font-size;
+    @include clearfix;
+    dl {
+      @include grid-span(1, 1);
+      &:nth-child(2) {
+        @include grid-span(1, 2);
+      }
+    }
+    dt {
+      margin-top: $default-spacing;
+    }
+    dd {
+      margin-left: 0;
+      font-weight: bold;
+    }
   }
 }
 

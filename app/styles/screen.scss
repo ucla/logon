@@ -1,8 +1,9 @@
 // general utility gems
 @import 'breakpoint';
+@import "singularitygs";
 @import 'toolkit';
 @import 'compass/css3';
-@import "a11y";
+@import 'a11y';
 
 // normalize components, see https://github.com/ksmandersen/compass-normalize
 @import 'normalize-version';
@@ -21,7 +22,7 @@
 
 // general IAM partials
 @import 'ucla-iam-core/global-elements';
-@import 'ucla-iam-core/tables';
+// @import 'ucla-iam-core/tables';
 @import 'ucla-iam-core/form-elements';
 @import 'ucla-iam-core/general-classes';
 @import 'ucla-iam-core/flair';

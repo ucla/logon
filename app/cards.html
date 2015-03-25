@@ -16,22 +16,22 @@
 
   <div class="content-wrapper">
 
-    <header class="page-header" role="banner"><img src="/images/ucla-white.png" alt="UCLA"></header>
+    <header class="page-header" role="banner"><a href="./"><img src="/images/ucla-white.png" alt="UCLA"></a></header>
 
     <nav class="floating-side-nav">
       <ul>
-        <li><a href="#">profile »</a></li>
-        <li><a href="#">security »</a></li>
+        <li><a href="#profile">profile</a></li>
+        <li><a href="#security">security</a></li>
       </ul>
     </nav>
 
-    <section class="card-column">
+    <section class="cards-column">
 
       <h1>your profile</h1>
 
-      <article class="card">
+      <article class="card" id="profile">
         <dl>
-          <img src="/images/carl.jpg">
+          <img src="/images/carl.jpg" class="profile-pic">
 
           <dt>Name:</dt>
           <dd>Carl Übelhardt</dd>
@@ -60,19 +60,19 @@
 
       <h1>security</h1>
 
-      <article class="card">
+      <article class="card" id="security">
         <dl>
           <dt>UCLA Logon ID Password:</dt>
           <dd>••••••••••••••••••••••••••••••••</dd>
 
           <dt>Security Question:</dt>
           <dd>Set</dd>
+
+          <dt>QDB Password:</dt>
+          <dd>••••••••••••••••••••••••••••••••</dd>
         </dl>
 
         <dl>
-          <dt>QDB Password:</dt>
-          <dd>••••••••••••••••••••••••••••••••</dd>
-
           <dt>Bruin OnLine Supported Services:</dt>
           <dd>UCLA Logon ID</dd>
 
@@ -87,10 +87,8 @@
 
   </div>
 
-  <footer role="contentinfo" class="tertiary-links">
-  	<div class="tertiary-links-wrapper">
-  		<p><a href="{{ site.baseurl }}/ucla-logon-mocks/cms-policies.html">Privacy, Security & Legal</a> <span>Loaded: {{ site.time }}</span> <a href="{{ site.baseurl }}/" class="right">NH</a></p>
-  	</div>
+  <footer role="contentinfo" class="ucla-iam-footer">
+    <p><a href="{{ site.baseurl }}/ucla-logon-mocks/cms-policies.html">Privacy, Security & Legal</a> <span class="timestamp">Loaded: {{ site.time }}</span></p>
   </footer>
 
 </body>

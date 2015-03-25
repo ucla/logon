@@ -5,6 +5,11 @@
 // breakpoints
 $multi-column: 32em;
 
+// grid
+@include add-grid(2);
+@include add-gutter(1/2);
+@include add-gutter-style('split');
+
 /////////////////////////////////////////
 ///            COLOURS
 /////////////////////////////////////////
@@ -76,6 +81,7 @@ $body-background-color: $white;
 $font-stack: 'Proxima Nova', Verdana, sans-serif;
 $font-stack-alt: 'Proxima Nova', Verdana, sans-serif;
 $global-letter-spacing: 0.5px;
+$header-weight: 300;
 
 // prepare for media queries to shift base font and have that inherited down em chain
 body {
@@ -105,6 +111,12 @@ $global-border-radius: 3px;
 /////////////////////////////////////////
 ///           FONT FACE
 /////////////////////////////////////////
+
+@font-face {
+	font-family: '../fonts/ProximaNova';src: url('../fonts/ProximaNova-Light.eot');src: url('../fonts/ProximaNova-Light.eot?#iefix') format('embedded-opentype'),url('../fonts/ProximaNova-Light.woff') format('woff'),url('../fonts/ProximaNova-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
 
 @font-face {
 	font-family: 'Proxima Nova';src: url('../fonts/ProximaNova-Regular.eot');src: url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),url('../fonts/ProximaNova-Regular.woff') format('woff'),url('../fonts/ProximaNova-Reg.otf') format('truetype');
