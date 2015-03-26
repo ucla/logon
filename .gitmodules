@@ -1,0 +1,3 @@
+[submodule "app/styles/ucla-iam-core"]
+	path = app/styles/ucla-iam-core
+	url = https://github.com/ucla/ucla-iam-core.git
