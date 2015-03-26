@@ -8,7 +8,7 @@
 
 .card {
   background: $white;
-  weight: 300;
+  font-weight: $header-weight;
   margin-bottom: $half-spacing;
   @extend %ucla-box-shadow;
   transition: all .2s ease-in-out;
@@ -38,17 +38,17 @@
   margin-bottom: -$quad-spacing;
   padding: $half-spacing;
   font-size: $h2-font-size;
-  font-weight: 300;
+  font-weight: $header-weight;
 }
 
 .cards-column {
-  width: 55%;
+  width: 60%;
   float: right;
   overflow: visible;
   h1 {
     background: rgba($ucla-blue-dark, .9);
     color: $ucla-yellow;
-    margin-left: 11.9em;
+    margin-left: 12.5em;
   }
   .profile-pic {
     max-width: $octo-spacing;
