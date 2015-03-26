@@ -1,0 +1,3 @@
+[submodule "ucla-iam-core"]
+	path = app/scssucla-iam-core
+	url = https://github.com/ucla/ucla-iam-core
