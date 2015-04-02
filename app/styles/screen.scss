@@ -21,6 +21,8 @@
 @import 'config/app-specific-vars';
 
 // general IAM partials
+@import 'ucla-iam-core/core-layout';
+// @import 'ucla-iam-core/core-layout-flex';
 @import 'ucla-iam-core/global-elements';
 // @import 'ucla-iam-core/tables';
 @import 'ucla-iam-core/form-elements';
