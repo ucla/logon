@@ -33,6 +33,7 @@
 ///             CARD LAYOUTs
 /////////////////////////////////////////
 
+// overlapping titles
 .primary-landing-cards h1, .secondary-landing-cards h1, .cards-column h1 {
   display: inline-block;
   margin-bottom: -$quad-spacing;
@@ -41,6 +42,7 @@
   font-weight: $header-weight;
 }
 
+// interior card listing
 .cards-column {
   width: 60%;
   float: right;
@@ -79,6 +81,7 @@
   }
 }
 
+// left col of home
 .primary-landing-cards {
   width: 55%;
   float: left;
@@ -95,6 +98,7 @@
   }
 }
 
+// right col of home
 .secondary-landing-cards {
   width: 43%;
   margin-left: 2%;

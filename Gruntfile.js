@@ -29,6 +29,13 @@ module.exports = function (grunt) {
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
       },
+      includes: {
+        files: [
+          '<%= yeoman.app %>/*.html',
+          '<%= yeoman.app %>/includes/*.html'
+        ],
+        tasks: ['includes:server']
+      },
       js: {
         files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
         tasks: ['jshint']
