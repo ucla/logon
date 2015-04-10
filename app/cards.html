@@ -1,93 +1,67 @@
-<!doctype html>
-<html>
+include "head"
 
-<head>
-  <meta charset="utf-8">
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>UCLA Logon</title>
+  <nav class="floating-side-nav">
+    <ul>
+      <li><a href="#">profile</a></li>
+      <li><a href="#">security</a></li>
+    </ul>
+  </nav>
 
-  <!-- build:css /styles/screen.css -->
-  <link rel="stylesheet" href="/styles/screen.css">
-  <!-- endbuild-->
-</head>
+  <section class="cards-column">
 
-<body>
+    <h1>your profile</h1>
 
-  <div class="content-wrapper">
+    <article class="card" id="profile">
+      <dl>
+        <img src="/images/carl.jpg" class="profile-pic">
 
-    <header class="page-header" role="banner"><a href="./"><img src="/images/ucla-white.png" alt="UCLA"></a></header>
+        <dt>Name:</dt>
+        <dd>Carl Übelhardt</dd>
 
-    <nav class="floating-side-nav">
-      <ul>
-        <li><a href="#">profile</a></li>
-        <li><a href="#">security</a></li>
-      </ul>
-    </nav>
+        <dt>UCLA Logon:</dt>
+        <dd>ubelhardt</dd>
 
-    <section class="cards-column">
+        <dt>UCLA ID Number:</dt>
+        <dd>123-456-789</dd>
+      </dl>
 
-      <h1>your profile</h1>
+      <dl>
+        <dt>Official Email Address:</dt>
+        <dd>foo.bar@ucla.edu</dd>
 
-      <article class="card" id="profile">
-        <dl>
-          <img src="/images/carl.jpg" class="profile-pic">
+        <dt>Bruin OnLine Provisioned Email:</dt>
+        <dd>foo.bar@ucla.edu</dd>
 
-          <dt>Name:</dt>
-          <dd>Carl Übelhardt</dd>
+        <dt>Email Delivery Address:</dt>
+        <dd>carl@foo.ucla.edu</dd>
 
-          <dt>UCLA Logon:</dt>
-          <dd>ubelhardt</dd>
+        <dt>Phone:</dt>
+        <dd>(310) 123-4567</dd>
+      </dl>
+    </article>
 
-          <dt>UCLA ID Number:</dt>
-          <dd>123-456-789</dd>
-        </dl>
+    <h1>security</h1>
 
-        <dl>
-          <dt>Official Email Address:</dt>
-          <dd>foo.bar@ucla.edu</dd>
+    <article class="card" id="security">
+      <dl>
+        <dt>UCLA Logon ID Password:</dt>
+        <dd>••••••••••••••••••••••••••••••••</dd>
 
-          <dt>Bruin OnLine Provisioned Email:</dt>
-          <dd>foo.bar@ucla.edu</dd>
+        <dt>Security Question:</dt>
+        <dd>Set</dd>
+      </dl>
 
-          <dt>Email Delivery Address:</dt>
-          <dd>carl@foo.ucla.edu</dd>
+      <dl>
+        <dt>Bruin OnLine Supported Services:</dt>
+        <dd>UCLA Logon ID</dd>
 
-          <dt>Phone:</dt>
-          <dd>(310) 123-4567</dd>
-        </dl>
-      </article>
+        <dt>Affiliations:</dt>
+        <dd>student-degreed@ucla.edu;</dd>
+        <dd>google-apps-eligible@ucla.edu;</dd>
+        <dd>internet-mercenary@ucla.edu</dd>
+      </dl>
+    </article>
 
-      <h1>security</h1>
+  </section>
 
-      <article class="card" id="security">
-        <dl>
-          <dt>UCLA Logon ID Password:</dt>
-          <dd>••••••••••••••••••••••••••••••••</dd>
-
-          <dt>Security Question:</dt>
-          <dd>Set</dd>
-        </dl>
-
-        <dl>
-          <dt>Bruin OnLine Supported Services:</dt>
-          <dd>UCLA Logon ID</dd>
-
-          <dt>Affiliations:</dt>
-          <dd>student-degreed@ucla.edu;</dd>
-          <dd>google-apps-eligible@ucla.edu;</dd>
-          <dd>internet-mercenary@ucla.edu</dd>
-        </dl>
-      </article>
-
-    </section>
-
-  </div>
-
-  <footer role="contentinfo" class="ucla-iam-footer">
-    <p><a href="{{ site.baseurl }}/ucla-logon-mocks/cms-policies.html">Privacy, Security & Legal</a> <span class="timestamp">Loaded: {{ site.time }}</span></p>
-  </footer>
-
-</body>
-
-</html>
+include "footer"

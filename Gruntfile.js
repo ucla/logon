@@ -5,7 +5,6 @@ module.exports = function (grunt) {
   require('time-grunt')(grunt);
   // load all grunt tasks
   require('load-grunt-tasks')(grunt);
-  grunt.loadNpmTasks('web-component-tester');
 
   // configurable paths
   var yeomanConfig = {
@@ -22,6 +21,7 @@ module.exports = function (grunt) {
       default: {
         files: [
           '<%= yeoman.app %>/*.html',
+          '<%= yeoman.app %>/includes/*.html',
           '<%= yeoman.app %>/elements/{,*/}*.html',
           '{.tmp,<%= yeoman.app %>}/elements/{,*/}*.{css,js}',
           '{.tmp,<%= yeoman.app %>}/styles/{,*/}*.css',
@@ -46,6 +46,26 @@ module.exports = function (grunt) {
           '<%= yeoman.app %>/elements/{,*/}*.{scss,sass}'
         ],
         tasks: ['sass:server', 'autoprefixer:server']
+      }
+    },
+    includes: {
+      dist: {
+        cwd: '<%= yeoman.app %>',
+        src: '*.html',
+        dest: '<%= yeoman.dist %>',
+        options: {
+          filenameSuffix: '.html',
+          includePath: '<%= yeoman.app %>/includes',
+        }
+      },
+      server: {
+        cwd: '<%= yeoman.app %>',
+        src: '*.html',
+        dest: '.tmp',
+        options: {
+          filenameSuffix: '.html',
+          includePath: '<%= yeoman.app %>/includes',
+        }
       }
     },
     // Compiles Sass to CSS and generates necessary files if requested
@@ -285,6 +305,7 @@ module.exports = function (grunt) {
       'clean:server',
       'sass:server',
       'copy:styles',
+      'includes:server',
       'autoprefixer:server',
       'browserSync:app',
       'watch'
@@ -297,6 +318,7 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'clean:dist',
     'sass',
+    'includes',
     'copy',
     'useminPrepare',
     'imagemin',

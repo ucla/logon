@@ -1,74 +1,48 @@
-<!doctype html>
-<html>
+include "head"
 
-<head>
-  <meta charset="utf-8">
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>UCLA Logon</title>
+  <article class="content">
 
-  <!-- build:css /styles/screen.css -->
-  <link rel="stylesheet" href="/styles/screen.css">
-  <!-- endbuild-->
-</head>
+    <h1>Create UCLA Logon ID</h1>
 
-<body class="landing">
+    <p>By completing this procedure, you will activate your UCLA Logon. Before proceeding you must identify yourself to the system.</p>
 
-  <div class="content-wrapper">
+    <p>I am a (select all that apply):</p>
 
-    <header class="page-header" role="banner"><a href="./"><img src="/images/ucla-white.png" alt="UCLA"></a></header>
+    <form action="/activate.php" method="post">
+      <input type="checkbox" id="newstudent" name="newstudent" value="uid">
+      <label for="newstudent">New UCLA Student (including admitted applicants)</label>
 
-    <article class="content">
+      <input type="checkbox" id="waitlist" name="waitlist" value="uid">
+      <label for="waitlist">UCLA Applicant on the waitlist</label>
 
-      <h1>Create UCLA Logon ID</h1>
+      <input type="checkbox" id="student" name="student" value="uid">
+      <label for="student">Current UCLA Student</label>
 
-      <p>By completing this procedure, you will activate your UCLA Logon. Before proceeding you must identify yourself to the system.</p>
+      <input type="checkbox" id="formerstudent" name="formerstudent" value="uid">
+      <label for="formerstudent">Former UCLA Student (including alumni)</label>
 
-      <p>I am a (select all that apply):</p>
+      <input type="checkbox" id="summerstudent" name="summerstudent" value="uid">
+      <label for="summerstudent">UCLA Summer Session Only Student (new, current, or former)</label>
 
-      <form action="/activate.php" method="post">
-        <input type="checkbox" id="newstudent" name="newstudent" value="uid">
-        <label for="newstudent">New UCLA Student (including admitted applicants)</label>
+      <input type="checkbox" id="stafforfaculty" name="stafforfaculty" value="uid">
+      <label for="stafforfaculty">UCLA Faculty Member or Staff Member</label>
 
-        <input type="checkbox" id="waitlist" name="waitlist" value="uid">
-        <label for="waitlist">UCLA Applicant on the waitlist</label>
+      <input type="checkbox" id="ucopormerced" name="ucopormerced" value="uid">
+      <label for="ucopormerced">UCOP or UC Merced Staff Member</label>
 
-        <input type="checkbox" id="student" name="student" value="uid">
-        <label for="student">Current UCLA Student</label>
+      <input type="checkbox" id="nouid" name="nouid" value="nouid">
+      <label for="nouid">I do not have a UCLA Identification Number and I am
+      <b>NONE OF THE ABOVE</b>.  Accounts created without a UCLA ID number can
+      be used to authenticate to many UCLA applications, but are not generally
+      eligible to receive campus services.</label>
+      </div>
 
-        <input type="checkbox" id="formerstudent" name="formerstudent" value="uid">
-        <label for="formerstudent">Former UCLA Student (including alumni)</label>
+      <p>For further assistance, contact the Help Desk by telephone at 310-267-HELP
+      (4357) or email at <a href="mailto:accounts@ucla.edu">accounts@ucla.edu</a>.</p>
 
-        <input type="checkbox" id="summerstudent" name="summerstudent" value="uid">
-        <label for="summerstudent">UCLA Summer Session Only Student (new, current, or former)</label>
+      <input class="button" type="submit" value="Next »">
+    </form>
 
-        <input type="checkbox" id="stafforfaculty" name="stafforfaculty" value="uid">
-        <label for="stafforfaculty">UCLA Faculty Member or Staff Member</label>
+  </article>
 
-        <input type="checkbox" id="ucopormerced" name="ucopormerced" value="uid">
-        <label for="ucopormerced">UCOP or UC Merced Staff Member</label>
-
-        <input type="checkbox" id="nouid" name="nouid" value="nouid">
-        <label for="nouid">I do not have a UCLA Identification Number and I am
-        <b>NONE OF THE ABOVE</b>.  Accounts created without a UCLA ID number can
-        be used to authenticate to many UCLA applications, but are not generally
-        eligible to receive campus services.</label>
-        </div>
-
-        <p>For further assistance, contact the Help Desk by telephone at 310-267-HELP
-        (4357) or email at <a href="mailto:accounts@ucla.edu">accounts@ucla.edu</a>.</p>
-
-        <input class="button" type="submit" value="Next »">
-      </form>
-
-    </article>
-
-  </div>
-
-  <footer role="contentinfo" class="ucla-iam-footer">
-    <p><a href="{{ site.baseurl }}/ucla-logon-mocks/cms-policies.html">Privacy, Security & Legal</a> <span class="timestamp">Loaded: {{ site.time }}</span></p>
-  </footer>
-
-</body>
-
-</html>
+include "footer"
