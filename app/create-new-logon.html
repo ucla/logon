@@ -2,11 +2,7 @@ include "head"
 
   <article class="content">
 
-    <h1>Create UCLA Logon ID</h1>
-
-    <p>In support of the University's mission of teaching, research, and public service, Information Technology Services provides computing, networking, and information resources to UCLA's students, faculty, and staff.</p>
-
-    <p>IT Services provides the UCLA community with access to local, national, and international sources of information in an atmosphere that encourages sharing of information, access to a rich collection of services, and open and free discussion for academic purposes and other University-related uses.</p>
+    <h1>Create a UCLA Logon ID</h1>
 
     <p>For both your personal benefit and the benefit of others, you must assume responsibility for making the best possible use of your privileges and for not abusing them. All existing laws (federal and state) and University regulations and policies apply, including not only those laws and regulations that are specific to computers and networks, but also those that may apply generally to personal conduct.</p>
 
@@ -43,8 +39,9 @@ include "head"
     <p>You may not agree to the terms and may not proceed with account creation if you are barred from accepting the terms under the laws of the United States or the country from which you are creating this account.</p>
 
     <form action="/activate.php" method="post">
-      <input type="checkbox" name="agree" id="agree" value="agree"><label>Agree to the Acceptable Use Policy.</label>
-      <input class="button" type="submit" value="Next »">
+      <label class="for-checkbox" for="agree"><input type="checkbox" name="agree" id="agree" value="agree">I agree to the Acceptable Use Policy.</label>
+
+      <input class="button" type="submit" value="Continue">
     </form>
 
   </article>

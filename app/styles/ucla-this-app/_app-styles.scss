@@ -27,6 +27,21 @@
   margin-bottom: $quad-spacing;
 }
 
+.reset-lookup {
+  @include clearfix;
+  article {
+
+  }
+  aside {
+
+  }
+}
+
+.overlay {
+  @extend .content;
+  @extend .content-wrapper;
+}
+
 .info-box {
   background: rgba(#fff, .8);
   padding: $half-spacing $default-spacing;
@@ -37,4 +52,8 @@
   p {
     font-size: $meta-font-size;
   }
+}
+
+.help-box {
+  font-size: $meta-font-size;
 }

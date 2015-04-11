@@ -51,7 +51,7 @@
     background: rgba($ucla-blue-dark, .9);
     color: $ucla-yellow;
     margin-left: 12.5em;
-    margin-top: 0;
+    margin-top: $default-spacing;
   }
   .profile-pic {
     max-width: $octo-spacing;
