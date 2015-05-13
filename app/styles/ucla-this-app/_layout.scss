@@ -9,3 +9,32 @@
   max-width: 444px;
   margin: $double-spacing auto;
 }
+
+form {
+  max-width: 30em;
+}
+
+.overlay {
+  position: relative;
+}
+
+.reset-lookup {
+  header {
+    @include clearfix;
+  }
+  h1 {
+    @include grid-span(2, 1);
+  }
+  section {
+    @include clearfix;
+  }
+  article {
+    @include grid-span(1, 1);
+    &:last-of-type {
+      @include grid-span(1, 2);
+    }
+  }
+  aside {
+    @include grid-span(2, 1);
+  }
+}

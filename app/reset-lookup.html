@@ -1,64 +1,62 @@
-include "head"
+  <div class="overlay reset-lookup">
 
-  <section class="content reset-lookup">
+    <header>
+      <h1>Get help signing into your Account</h1>
+    </header>
 
-    <h1>Get help signing into your Account</h1>
+    <section>
+      <article>
 
-    <article>
+        <h2>Lookup your UCLA Logon ID</h2>
 
-      <h2>Lookup your UCLA Logon ID</h2>
+        <form action="/userlookup.php" method="post">
 
-      <form action="/userlookup.php" method="post">
+          <label title="Enter your last name as it is on file with UCLA. Do not include any suffix." for="sn">Last Name</label>
+          <input name="sn" size="40" maxlength="40" value="" id="sn">
 
-        <label title="Enter your last name as it is on file with UCLA. Do not include any suffix." for="sn">Last Name</label>
-        <input name="sn" size="40" maxlength="40" value="" id="sn">
+          <label title="Enter the date you were born in year-month-day format. Prefix all single digit numbers (1 - 9) with a zero (0)." for="dob">Date of Birth (YYYY-MM-DD)</label>
+          <input name="dob" maxlength="10" value="" id="dob">
 
-        <label title="Enter the date you were born in year-month-day format. Prefix all single digit numbers (1 - 9) with a zero (0)." for="dob">Date of Birth (YYYY-MM-DD)</label>
-        <input name="dob" maxlength="10" value="" id="dob">
+          <label class="for-checkbox" title="You must have your 9-digit UCLA Identification Number to continue. You can find this number on your:
 
-        <label class="for-checkbox" title="You must have your 9-digit UCLA Identification Number to continue. You can find this number on your:
+  Letter of admission (new students)
+  BruinCard (current students, faculty, staff)
+  UCLA transcript (current students, alumni)
+  Paycheck stub or online earnings statement">
+            <input type="checkbox" checked="checked"> I am a UCLA Student, Alumnus, Faculty, Staff, or a UCOP or UC Merced Staff member.
+          </label>
 
-Letter of admission (new students)
-BruinCard (current students, faculty, staff)
-UCLA transcript (current students, alumni)
-Paycheck stub or online earnings statement">
-          <input type="checkbox" checked="checked"> I am a UCLA Student, UCLA Alumnus, UCLA Faculty member, UCLA Staff member, UCOP or UC Merced Staff member.
-        </label>
+          <label title="Your UCLA ID Number is nine (9) digits long and is printed on your UCLA ID Card." for="uclaid">UCLA ID Number</label>
+          <input name="uclaid" maxlength="9" type="password" value="" id="uclaid">
 
-        <label title="Your UCLA ID Number is nine (9) digits long and is printed on your UCLA ID Card." for="uclaid">UCLA ID Number</label>
-        <input name="uclaid" maxlength="9" type="password" value="" id="uclaid">
+          <label title="A valid contact email address is required to continue" for="email">Email address on file</label>
+          <input name="email" maxlength="40" value="" id="email">
 
-        <label title="A valid contact email address is required to continue" for="email">Email address on file</label>
-        <input name="email" maxlength="40" value="" id="email">
+          <button class="primary-button" type="submit">Lookup your Logon ID</button>
 
-        <input class="button" type="submit" value="Lookup your Logon ID">
+        </form>
 
-      </form>
+      </article>
 
-    </article>
+      <article>
 
-    <article>
+        <h2>Reset Your Password</h2>
 
-      <h2>Reset Your Password</h2>
+        <form action="/passreset.php" method="post">
 
-      <form action="/passreset.php" method="post">
+        <label class="help">UCLA Logon ID</label>
+        <input name="uid" size="40" maxlength="15" value="" id="uid" class="focus">
 
-      <label class="help">UCLA Logon ID</label>
-      <input name="uid" size="40" maxlength="15" value="" id="uid" class="focus">
+        <button class="primary-button" type="submit">Check for security question</button>
+        </form>
 
-      <input class="button" type="submit" value="Check for security question">
-      </form>
-
-    </article>
+      </article>
+    </section>
 
     <aside>
-
       <p>If you cannot fill out the information above, please bring University-issued photo identification to the Bruin OnLine Help Desk located in Suite 124, Kerckhoff Hall.  If you are not able to visit the Help Desk, please fax in a completed copy of the <a href='javascript:warn_pii("/forms/service_request.pdf");'>UCLA Logon Service Request Form</a>, with all required supporting documentation.</p>
 
       <p>For further assistance, contact the Help Desk by telephone at 310-267-HELP (4357) or email at <a href="mailto:accounts@ucla.edu">accounts@ucla.edu</a>.</p>
-
     </aside>
 
-  </section>
-
-include "footer"
+  </div>

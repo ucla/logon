@@ -2,4 +2,101 @@
 
 <h1>Manage your Security</h1>
 
+<h2>Change your UCLA Logon ID Password</h2>
+
+<p>Your new password must be <strong>different from</strong> the old password, between <strong>8 and 128 characters</strong> long, is <strong>case-sensitive</strong>, and must use at least <strong>one character from two of the three sets</strong> of allowed characters:</p>
+
+<ul>
+  <li>letters: a-z or A-Z</li>
+  <li>numbers: 0-9</li>
+  <li>special characters: !@#$%^&*().,</li>
+</ul>
+
+<form id="user-requested-password" role="form" action="/" method="post" class="ws-validate">
+
+  <label for="pass-requested" hidden>Your New Password</label>
+  <input id="pass-requested" name="pass-requested" type="password" placeholder="Your New Password" aria-required="true" pattern=".{8,128}" required oninvalid="setCustomValidity('Passwords must be at least 8 characters long')" onkeyup="try{setCustomValidity('')}catch(e){}">
+
+  <label for="pass-requested-confirm" hidden>Confirm Your New Password</label>
+  <input id="pass-requested" name="pass-requested" type="password" placeholder="Confirm Your New Password" aria-required="true" pattern=".{8,128}" required oninvalid="setCustomValidity('Passwords must be at least 8 characters long')" onkeyup="try{setCustomValidity('')}catch(e){}">
+
+  <fieldset class="confirm-staff-submit">
+  	<button class="primary-button" type="submit" name="sso">Change your password</button>
+  </fieldset>
+
+</form>
+
+<h2>Set your Challenge Phrase</h2>
+
+<p>A Challenge Phrase allows you reset your password online. Both the challenge and response must be between <strong>8 and 128 characters</strong> long. They cannot be the same, and the response is <strong>case-sensitive</strong>.</p>
+
+<form action="/passoptions.php" method="post">
+
+  <script type="text/javascript">
+  var cbh;
+
+  function updateChallenge(obj) {
+    var c = document.getElementById("challenge");
+
+    if (obj == 'self') {
+      var s = document.getElementById("selectChallenge");
+
+      s.style.display = 'none';
+      s.style.zIndex = '5';
+
+      c.style.zIndex = '10';
+      c.style.display = 'inline';
+
+      c.value = '';
+      c.focus();
+    } else {
+      c.value = obj;
+    }
+  }
+  </script>
+
+  <label title="Your Challenge phrase is a question or phrase that only you know the response to.">Challenge</label>
+
+  <select id="selectChallenge" onchange="updateChallenge(this.value);">
+    <option value="What is the name of your first pet?">What is the name of your first pet?</option>
+    <option value="What was your maternal grandmother's maiden name?">What was your maternal grandmother's maiden name?</option>
+    <option value="Who is your favorite actor, musician, or artist?">Who is your favorite actor, musician, or artist?</option>
+    <option value="What is your favorite color?">What is your favorite color?</option>
+    <option value="What is the name of your elementary school?">What is the name of your elementary school?</option>
+    <option value="What was your favorite place to visit as a child?">What was your favorite place to visit as a child?</option>
+    <option value="What is your favorite movie?">What is your favorite movie?</option>
+    <option value="Which phone number do you remember most from your childhood?">Which phone number do you remember most from your childhood?</option>
+    <option value="What is the nickname you gave your favorite grandparent?">What is the nickname you gave your favorite grandparent?</option>
+    <option value="What city were you born in?">What city were you born in?</option>
+    <option value="What is the model of your first car?">What is the model of your first car?</option>
+    <option value="What was the first name of your date for your high school prom?">What was the first name of your date for your high school prom?</option>
+    <option value="self">Write your own question</option>
+  </select>
+  <input name="challenge" size="60" maxlength="128" id="challenge" class="focus" style="display:none;z-index:5;top:0;position:relative;">
+
+  <label>Response</label>
+  <input name="response" size="60" maxlength="128" placeholder="Answer to above" id="response" class="focus">
+
+  <button class="primary-button" type="submit">Set Challenge Phrase</button>
+</form>
+
+<h2>Input Personal Email and/or Mobile Phone</h2>
+
+<p>We'll be rolling out two factor authentication in the near future. You can choose to have a one-time code sent via email or as a text whenever you (or someone else!) tries to access or modify your identity at UCLA. If you want to be ahead of the curve, let us know where we can reach you below:</p>
+
+
+<form id="2fa-contact" role="form" action="/" method="post" class="ws-validate">
+
+  <label for="personal-email">Personal email account</label>
+  <input id="personal-email" name="personal-email" type="email" placeholder="foobear@gmail.com" oninvalid="setCustomValidity('Passwords must be at least 8 characters long')" onkeyup="try{setCustomValidity('')}catch(e){}">
+
+  <label for="mobile-number">Mobile Number</label>
+  <input id="mobile-number" name="mobile-number" type="phone" placeholder="(310) 123-4567" oninvalid="setCustomValidity('Passwords must be at least 8 characters long')" onkeyup="try{setCustomValidity('')}catch(e){}">
+
+  <fieldset class="confirm-staff-submit">
+  	<button class="primary-button" type="submit" name="sso">Submit Contact Info</button>
+  </fieldset>
+
+</form>
+
 </article>

@@ -52,6 +52,9 @@
     color: $ucla-yellow;
     margin-left: 12.5em;
     margin-top: $default-spacing;
+    &:first-child {
+      margin-top: 0;
+    }
   }
   .profile-pic {
     max-width: $octo-spacing;
@@ -61,6 +64,9 @@
   }
   p {
     margin-top: 0;
+  }
+  a .card {
+    color: $body-text-color;
   }
   .card {
     font-size: $meta-font-size;

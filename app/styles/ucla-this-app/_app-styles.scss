@@ -20,7 +20,7 @@
   }
 }
 
-.content {
+%content {
   background: $white;
   @extend %ucla-box-shadow;
   padding: $default-spacing;
@@ -38,7 +38,8 @@
 }
 
 .overlay {
-  @extend .content;
+  margin-top: $quad-spacing;
+  @extend %content;
   @extend .content-wrapper;
 }
 
