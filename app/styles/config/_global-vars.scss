@@ -3,7 +3,8 @@
 /////////////////////////////////////////
 
 // breakpoints
-$multi-column: 56em;
+$multi-column: 50em;
+$split-supporting-info: 90em;
 
 // grid
 @include add-grid(2 1);
@@ -110,6 +111,7 @@ $quad-spacing: $default-spacing * 4;
 $octo-spacing: $default-spacing * 8;
 
 $global-border-radius: 3px;
+$card-border-radius: 8px;
 
 /////////////////////////////////////////
 ///           FONT FACE

@@ -45,16 +45,11 @@ hr {
 
 .content {
   @extend %content-styling;
-  float: left;
-  a {
-    text-decoration: none;
-  }
 }
 
 .supporting-info {
   background: rgba(#fff, .8);
   padding: $default-spacing $default-spacing;
-  float: right;
   p, li {
     font-size: $meta-font-size;
   }
@@ -63,5 +58,17 @@ hr {
   }
   h2 {
     font-size: $h3-font-size;
+  }
+}
+
+// home page specific styling
+.home {
+  max-width: 58em;
+  margin: 0 auto;
+  a {
+    text-decoration: none;
+  }
+  .content h1 {
+    margin-bottom: $triple-spacing;
   }
 }

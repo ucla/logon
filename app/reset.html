@@ -3,17 +3,19 @@ include "head"
 <section class="page">
   <article class="content">
 
-    <h1>Get help signing into your Account</h1>
+    <h1>Having Trouble Signing In?</h1>
 
-    <h2>Reset Your Password</h2>
+    <p>If you've forgotten your password, enter your UCLA Logon ID below.</p>
 
     <form action="/passreset.php" method="post">
 
-    <label class="help" for="uid">UCLA Logon ID</label>
-    <input name="uid" size="40" maxlength="15" value="" id="uid" class="focus" required>
+    <label class="help" for="uid" hidden>UCLA Logon ID</label>
+    <input name="uid" size="40" maxlength="15" value="" id="uid" class="focus" placeholder="Your UCLA Logon ID" required>
 
-    <button class="psrimary-button" type="submit">Check for security question</button>
+    <button class="psrimary-button" type="submit">Check for security challenge question</button>
     </form>
+
+    <p>If you can't remember your UCLA Logon ID, go <a href="lookup.html">look it up</a>.</p>
 
   </article>
 
