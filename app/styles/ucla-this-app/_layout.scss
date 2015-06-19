@@ -1,6 +1,5 @@
 .content-wrapper {
   width: 94%;
-  max-width: 56em;
   margin: 0 auto;
   padding-bottom: 8em;
 }
@@ -10,30 +9,29 @@
   margin: $double-spacing auto;
 }
 
-
-// dual pane display
-.reset-lookup {
-  @include clearfix;
-  form {
-    max-width: 30em;
-  }
-  header {
-    @include clearfix;
-  }
-  h1 {
+// general layout of pages
+.page, .home {
+  .content {
     @include grid-span(2, 1);
+    @include breakpoint($multi-column) {
+      @include grid-span(1, 1);
+    }
   }
-  section {
-    @include clearfix;
-  }
-  article {
-    @include grid-span(1, 1);
-    &:last-of-type {
+  .supporting-info {
+    @include grid-span(2, 1);
+    margin-bottom: $double-spacing;
+    @include breakpoint($multi-column) {
       @include grid-span(1, 2);
     }
   }
-  aside {
-    @include grid-span(2, 1);
+}
+
+// home page specific
+.home {
+  max-width: 58em;
+  margin: 0 auto;
+  .content h1 {
+    margin-bottom: $triple-spacing;
   }
 }
 

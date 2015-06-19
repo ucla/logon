@@ -3,11 +3,11 @@
 /////////////////////////////////////////
 
 // breakpoints
-$multi-column: 32em;
+$multi-column: 56em;
 
 // grid
-@include add-grid(2);
-@include add-gutter(1/3);
+@include add-grid(2 1);
+@include add-gutter(1/15);
 @include add-gutter-style('split');
 
 /////////////////////////////////////////

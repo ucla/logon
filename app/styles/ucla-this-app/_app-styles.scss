@@ -2,6 +2,13 @@
   @include line-thru();
 }
 
+hr {
+  height: 1px;
+  color: $body-text-color;
+  background-color: $body-text-color;
+  border: none;
+}
+
 .floating-side-nav {
   float: left;
   margin-top: $default-spacing;
@@ -20,18 +27,11 @@
   }
 }
 
-.content {
+%content-styling {
   background: $white;
   @extend %ucla-box-shadow;
   padding: $default-spacing;
   margin-bottom: $quad-spacing;
-}
-
-hr {
-  height: 1px;
-  color: $body-text-color;
-  background-color: $body-text-color;
-  border: none;
 }
 
 
@@ -39,32 +39,29 @@ hr {
   position: relative;
   margin-top: $quad-spacing;
   border-radius: $card-border-radius;
-  @extend .content;
+  @extend %content-styling;
   @extend .content-wrapper;
 }
 
-.home {
-  @extend .content;
-  width: 73%;
+.content {
+  @extend %content-styling;
   float: left;
   a {
     text-decoration: none;
   }
-  h1 {
-    margin-bottom: $triple-spacing;
-  }
 }
 
-.info-box {
+.supporting-info {
   background: rgba(#fff, .8);
   padding: $default-spacing $default-spacing;
-  width: 25%;
   float: right;
-  p {
+  p, li {
     font-size: $meta-font-size;
   }
-}
-
-.help-box {
-  font-size: $meta-font-size;
+  h1 {
+    font-size: $h2-font-size;
+  }
+  h2 {
+    font-size: $h3-font-size;
+  }
 }
