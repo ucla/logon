@@ -1,44 +1,43 @@
-  <article class="overlay">
+include "head"
 
-    <h1>Create UCLA Logon ID</h1>
+<article class="content">
 
-    <p>By completing this procedure, you will activate your UCLA Logon. Before proceeding you must identify yourself to the system.</p>
+  <h1>Create UCLA Logon ID</h1>
 
-    <p>I am a (select all that apply):</p>
+  <p>By completing this procedure, you will activate your UCLA Logon.<br>
+    Before proceeding you must identify yourself to the system.</p>
 
-    <form action="/activate.php" method="post">
-      <input type="checkbox" id="newstudent" name="newstudent" value="uid">
-      <label for="newstudent">New UCLA Student (including admitted applicants)</label>
+  <p>I am a (select all that apply):</p>
 
-      <input type="checkbox" id="waitlist" name="waitlist" value="uid">
-      <label for="waitlist">UCLA Applicant on the waitlist</label>
+  <form action="/activate.php" method="post">
+    <label class="for-checkbox"><input type="checkbox" id="newstudent" name="newstudent" value="uid">New UCLA Student (including admitted applicants)</label>
 
-      <input type="checkbox" id="student" name="student" value="uid">
-      <label for="student">Current UCLA Student</label>
+    <label class="for-checkbox"><input type="checkbox" id="waitlist" name="waitlist" value="uid">UCLA Applicant on the waitlist</label>
 
-      <input type="checkbox" id="formerstudent" name="formerstudent" value="uid">
-      <label for="formerstudent">Former UCLA Student (including alumni)</label>
+    <label class="for-checkbox"><input type="checkbox" id="student" name="student" value="uid">Current UCLA Student</label>
 
-      <input type="checkbox" id="summerstudent" name="summerstudent" value="uid">
-      <label for="summerstudent">UCLA Summer Session Only Student (new, current, or former)</label>
+    <label class="for-checkbox"><input type="checkbox" id="formerstudent" name="formerstudent" value="uid">Former UCLA Student (including alumni)</label>
 
-      <input type="checkbox" id="stafforfaculty" name="stafforfaculty" value="uid">
-      <label for="stafforfaculty">UCLA Faculty Member or Staff Member</label>
+    <label class="for-checkbox"><input type="checkbox" id="summerstudent" name="summerstudent" value="uid">UCLA Summer Session Only Student (new, current, or former)</label>
 
-      <input type="checkbox" id="ucopormerced" name="ucopormerced" value="uid">
-      <label for="ucopormerced">UCOP or UC Merced Staff Member</label>
+    <label class="for-checkbox"><input type="checkbox" id="stafforfaculty" name="stafforfaculty" value="uid">UCLA Faculty Member or Staff Member</label>
 
-      <input type="checkbox" id="nouid" name="nouid" value="nouid">
-      <label for="nouid">I do not have a UCLA Identification Number and I am
-      <b>NONE OF THE ABOVE</b>.  Accounts created without a UCLA ID number can
-      be used to authenticate to many UCLA applications, but are not generally
-      eligible to receive campus services.</label>
-      </div>
+    <label class="for-checkbox"><input type="checkbox" id="ucopormerced" name="ucopormerced" value="uid">UCOP or UC Merced Staff Member</label>
 
-      <p>For further assistance, contact the Help Desk by telephone at 310-267-HELP
-      (4357) or email at <a href="mailto:accounts@ucla.edu">accounts@ucla.edu</a>.</p>
+    <hr>
 
-      <input class="button" type="submit" value="Next">
-    </form>
+    <label class="for-checkbox"><input type="checkbox" id="nouid" name="nouid" value="nouid">
+    I do not have a UCLA Identification Number and I am
+    <b>NONE OF THE ABOVE</b>.  Accounts created without a UCLA ID number can
+    be used to authenticate to many UCLA applications, but are not generally
+    eligible to receive campus services.</label>
 
-  </article>
+    <input class="button" type="submit" value="Next">
+
+  </form>
+
+  <p>For further assistance, contact the Help Desk by telephone at 310-267-HELP (4357) or email at <a href="mailto:accounts@ucla.edu">accounts@ucla.edu</a>.</p>
+
+</article>
+
+include "footer"

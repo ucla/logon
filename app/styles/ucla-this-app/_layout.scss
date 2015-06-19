@@ -10,15 +10,13 @@
   margin: $double-spacing auto;
 }
 
-form {
-  max-width: 30em;
-}
 
-.overlay {
-  position: relative;
-}
-
+// dual pane display
 .reset-lookup {
+  @include clearfix;
+  form {
+    max-width: 30em;
+  }
   header {
     @include clearfix;
   }
@@ -37,4 +35,9 @@ form {
   aside {
     @include grid-span(2, 1);
   }
+}
+
+// prepare for app.js jquery toggle
+#email-toggle {
+  display: none;
 }

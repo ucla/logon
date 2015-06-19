@@ -26,3 +26,17 @@ webshim.setOptions('forms', {
 
 // start polyfilling
 webshim.polyfill('forms forms-ext');
+
+/////////////////////////////////////////
+///  hide/show input if checkbox ticked
+/////////////////////////////////////////
+
+$('#email-uclaid-toggler').click(function() {
+  if ($(this).is(':checked') ) {
+    $('#uclaid-toggle' ).show('fast');
+    $('#email-toggle' ).hide('fast');
+  } else {
+    $('#uclaid-toggle').hide('fast');
+    $('#email-toggle').show('fast');
+  }
+});

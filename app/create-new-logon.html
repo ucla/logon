@@ -1,45 +1,45 @@
-  <article class="overlay">
+include "head"
 
-    <h1>Create a UCLA Logon ID</h1>
+<article class="content">
 
-    <p>For both your personal benefit and the benefit of others, you must assume responsibility for making the best possible use of your privileges and for not abusing them. All existing laws (federal and state) and University regulations and policies apply, including not only those laws and regulations that are specific to computers and networks, but also those that may apply generally to personal conduct.</p>
+  <h1>Create a UCLA Logon ID</h1>
 
-    <h2>Your Responsibilities</h2>
+  <p>For both your personal benefit and the benefit of others, you must assume responsibility for making the best possible use of your privileges and for not abusing them. All existing laws (federal and state) and University regulations and policies apply, including not only those laws and regulations that are specific to computers and networks, but also those that may apply generally to personal conduct.</p>
 
-    <p>Computers and networks can provide access to resources on and off campus, as well as the ability to communicate with other users worldwide. Such open access is a privilege, and requires that individuals act responsibly. Users must respect the rights of other users, respect the integrity of the systems and related physical resources, and observe all relevant laws, regulations, and contractual obligations.</p>
+  <h2>Your Responsibilities</h2>
 
-    <p>You are responsible for ensuring the integrity of your account. IT Services grants permission to members of the UCLA community to use computing resources by issuing individual computing accounts including UCLA Logon IDs. As a condition of receiving an account, you must observe the following guidelines:</p>
+  <p>Computers and networks can provide access to resources on and off campus, as well as the ability to communicate with other users worldwide. Such open access is a privilege, and requires that individuals act responsibly. Users must respect the rights of other users, respect the integrity of the systems and related physical resources, and observe all relevant laws, regulations, and contractual obligations.</p>
 
-    <ul>
-      <li>Respect the rights of other users, respect the integrity of the systems and related physical resources, and observe all relevant laws, regulations, and contractual obligations.</li>
+  <p>You are responsible for ensuring the integrity of your account. IT Services grants permission to members of the UCLA community to use computing resources by issuing individual computing accounts including UCLA Logon IDs. As a condition of receiving an account, you must observe the following guidelines:</p>
 
-      <li>Respect others' rights to the privacy of their programs and data.</li>
+  <ul>
+    <li>Respect the rights of other users, respect the integrity of the systems and related physical resources, and observe all relevant laws, regulations, and contractual obligations.</li>
+    <li>Respect others' rights to the privacy of their programs and data.</li>
+    <li>Prevent others from learning your password, thus reducing the possibility of illegal use of your account by unauthorized persons.</li>
+    <li>Report suspected unauthorized use of facility resources to the BOL User Relations Office (Kerckhoff Hall, Suite 124) or to abuse@ucla.edu.</li>
+    <li>Your UCLA Logon may not be used for: unlawful activities; commercial purposes not under the auspices of the University; or personal financial gain (except as permitted under applicable academic policies).</li>
+  </ul>
 
-      <li>Prevent others from learning your password, thus reducing the possibility of illegal use of your account by unauthorized persons.</li>
+  <h2>Consequences of Misuse</h2>
 
-      <li>Report suspected unauthorized use of facility resources to the BOL User Relations Office (Kerckhoff Hall, Suite 124) or to abuse@ucla.edu.</li>
+  <p>Misuse of computing, networking, or information resources may result in the loss of computing privileges. Additionally, misuse of a computing account will require financial restitution to the University for funds expended and could result in University disciplinary action or civil or criminal action.</p>
 
-      <li>Your UCLA Logon may not be used for: unlawful activities; commercial purposes not under the auspices of the University; or personal financial gain (except as permitted under applicable academic policies).</li>
-    </ul>
+  <p>Users may be held accountable for their conduct under any applicable University or campus policies, procedures, or collective bargaining agreements. Any actions which deter other users from doing their work or which would otherwise be deemed malicious by the University will result in the loss of access to the system and possible University disciplinary action or civil or criminal action.  Unauthorized use of computing resources and use for personal gain constitute theft under California law and will be prosecuted by the University.</p>
 
-    <h2>Consequences of Misuse</h2>
+  <p>Complaints alleging misuse of resources will be directed to those responsible for taking appropriate disciplinary action.</p>
 
-    <p>Misuse of computing, networking, or information resources may result in the loss of computing privileges. Additionally, misuse of a computing account will require financial restitution to the University for funds expended and could result in University disciplinary action or civil or criminal action.</p>
+  <h2>Acceptance of Terms</h2>
 
-    <p>Users may be held accountable for their conduct under any applicable University or campus policies, procedures, or collective bargaining agreements. Any actions which deter other users from doing their work or which would otherwise be deemed malicious by the University will result in the loss of access to the system and possible University disciplinary action or civil or criminal action.  Unauthorized use of computing resources and use for personal gain constitute theft under California law and will be prosecuted by the University.</p>
+  <p>In order to create a UCLA Logon, you must first agree to these terms.  You may not create an account if you do not accept the terms.  Continuing with the account creation process constitutes agreement.</p>
 
-    <p>Complaints alleging misuse of resources will be directed to those responsible for taking appropriate disciplinary action.</p>
+  <p>You may not agree to the terms and may not proceed with account creation if you are barred from accepting the terms under the laws of the United States or the country from which you are creating this account.</p>
 
-    <h2>Acceptance of Terms</h2>
+  <form action="/activate.php" method="post">
+    <label class="for-checkbox" for="agree"><input type="checkbox" name="agree" id="agree" value="agree">I agree to the Acceptable Use Policy.</label>
 
-    <p>In order to create a UCLA Logon, you must first agree to these terms.  You may not create an account if you do not accept the terms.  Continuing with the account creation process constitutes agreement.</p>
+    <input class="button" type="submit" value="Continue">
+  </form>
 
-    <p>You may not agree to the terms and may not proceed with account creation if you are barred from accepting the terms under the laws of the United States or the country from which you are creating this account.</p>
+</article>
 
-    <form action="/activate.php" method="post">
-      <label class="for-checkbox" for="agree"><input type="checkbox" name="agree" id="agree" value="agree">I agree to the Acceptable Use Policy.</label>
-
-      <input class="button" type="submit" value="Continue">
-    </form>
-
-  </article>
+include "footer"

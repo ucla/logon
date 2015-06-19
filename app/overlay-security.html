@@ -15,10 +15,10 @@
 <form id="user-requested-password" role="form" action="/" method="post" class="ws-validate">
 
   <label for="pass-requested" hidden>Your New Password</label>
-  <input id="pass-requested" name="pass-requested" type="password" placeholder="Your New Password" aria-required="true" pattern=".{8,128}" required oninvalid="setCustomValidity('Passwords must be at least 8 characters long')" onkeyup="try{setCustomValidity('')}catch(e){}">
+  <input id="pass-requested" name="pass-requested" type="password" placeholder="Your New Password" aria-required="true" pattern="[a-zA-Z0-9 !@#$%^&*().,]{8,128}" required>
 
   <label for="pass-requested-confirm" hidden>Confirm Your New Password</label>
-  <input id="pass-requested" name="pass-requested" type="password" placeholder="Confirm Your New Password" aria-required="true" pattern=".{8,128}" required oninvalid="setCustomValidity('Passwords must be at least 8 characters long')" onkeyup="try{setCustomValidity('')}catch(e){}">
+  <input id="pass-requested" name="pass-requested" type="password" placeholder="Confirm Your New Password" aria-required="true" pattern="[a-zA-Z0-9 !@#$%^&*().,]{8,128}" required>
 
   <fieldset class="confirm-staff-submit">
   	<button class="primary-button" type="submit" name="sso">Change your password</button>
@@ -55,7 +55,7 @@
   }
   </script>
 
-  <label title="Your Challenge phrase is a question or phrase that only you know the response to.">Challenge</label>
+  <label title="Your Challenge phrase is a question or phrase that only you know the response to." for="selectChallenge">Challenge</label>
 
   <select id="selectChallenge" onchange="updateChallenge(this.value);">
     <option value="What is the name of your first pet?">What is the name of your first pet?</option>
@@ -74,29 +74,10 @@
   </select>
   <input name="challenge" size="60" maxlength="128" id="challenge" class="focus" style="display:none;z-index:5;top:0;position:relative;">
 
-  <label>Response</label>
+  <label for="response">Response</label>
   <input name="response" size="60" maxlength="128" placeholder="Answer to above" id="response" class="focus">
 
   <button class="primary-button" type="submit">Set Challenge Phrase</button>
-</form>
-
-<h2>Input Personal Email and/or Mobile Phone</h2>
-
-<p>We'll be rolling out two factor authentication in the near future. You can choose to have a one-time code sent via email or as a text whenever you (or someone else!) tries to access or modify your identity at UCLA. If you want to be ahead of the curve, let us know where we can reach you below:</p>
-
-
-<form id="2fa-contact" role="form" action="/" method="post" class="ws-validate">
-
-  <label for="personal-email">Personal email account</label>
-  <input id="personal-email" name="personal-email" type="email" placeholder="foobear@gmail.com" oninvalid="setCustomValidity('Passwords must be at least 8 characters long')" onkeyup="try{setCustomValidity('')}catch(e){}">
-
-  <label for="mobile-number">Mobile Number</label>
-  <input id="mobile-number" name="mobile-number" type="phone" placeholder="(310) 123-4567" oninvalid="setCustomValidity('Passwords must be at least 8 characters long')" onkeyup="try{setCustomValidity('')}catch(e){}">
-
-  <fieldset class="confirm-staff-submit">
-  	<button class="primary-button" type="submit" name="sso">Submit Contact Info</button>
-  </fieldset>
-
 </form>
 
 </article>

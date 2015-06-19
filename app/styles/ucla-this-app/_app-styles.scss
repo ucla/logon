@@ -20,36 +20,46 @@
   }
 }
 
-%content {
+.content {
   background: $white;
   @extend %ucla-box-shadow;
   padding: $default-spacing;
   margin-bottom: $quad-spacing;
 }
 
-.reset-lookup {
-  @include clearfix;
-  article {
-
-  }
-  aside {
-
-  }
+hr {
+  height: 1px;
+  color: $body-text-color;
+  background-color: $body-text-color;
+  border: none;
 }
 
+
 .overlay {
+  position: relative;
   margin-top: $quad-spacing;
-  @extend %content;
+  border-radius: $card-border-radius;
+  @extend .content;
   @extend .content-wrapper;
+}
+
+.home {
+  @extend .content;
+  width: 73%;
+  float: left;
+  a {
+    text-decoration: none;
+  }
+  h1 {
+    margin-bottom: $triple-spacing;
+  }
 }
 
 .info-box {
   background: rgba(#fff, .8);
-  padding: $half-spacing $default-spacing;
-  width: 61.5%;
+  padding: $default-spacing $default-spacing;
+  width: 25%;
   float: right;
-  margin-top: $double-spacing;
-  margin-right: $double-spacing;
   p {
     font-size: $meta-font-size;
   }

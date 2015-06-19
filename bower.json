@@ -1,6 +1,7 @@
 {
   "name": "UCLA Logon",
   "version": "0.0.0",
+  "private": true,
   "dependencies": {
     "webshim": "~1.15.7",
     "jquery": "~1.11.2",
