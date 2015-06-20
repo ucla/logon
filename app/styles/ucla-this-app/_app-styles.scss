@@ -53,6 +53,9 @@ hr {
   p, li {
     font-size: $meta-font-size;
   }
+  ul {
+    padding-left: $default-spacing;
+  }
   h1 {
     font-size: $h2-font-size;
   }

@@ -23,14 +23,26 @@
     @include breakpoint($multi-column) {
       @include grid-span(1, 2);
     }
-/*
-    @include breakpoint($split-supporting-info) {
-      column-count: 2;
-      column-gap: 4%;
-    }
-*/
   }
 }
+
+// for pages with a lot of supporting content
+.many-infos {
+  .content {
+    @include breakpoint($split-supporting-info) {
+      @include grid-span(1, 1, 2);
+    }
+  }
+  .supporting-info {
+    @include breakpoint($split-supporting-info) {
+       @include grid-span(1, 2, 2);
+      column-count: 2;
+      column-gap: normal;
+    }
+  }
+}
+
+// @include grid-span(1, 2, (1.1 1));
 
 // prepare for app.js jquery toggle
 #email-toggle {
