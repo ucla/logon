@@ -1,38 +1,46 @@
 include "head"
 
-<article class="content">
+<section class="page">
 
-  <h1>Create UCLA Logon ID</h1>
+  <aside class="supporting-info">
 
-  <p>By completing this procedure, you will activate your UCLA Logon. Before proceeding you must identify yourself to the system.</p>
+    <h1>About Validation</h1>
 
-  <h2>Third Party Account Holders</h2>
+    <p>By completing this procedure, you will activate your UCLA Logon. Before proceeding you must identify yourself to the system.</p>
 
-  <p>You are creating an account without a UCLA Identification Number.  Accounts created without a UCLA ID Number can be used to authenticate to many UCLA applications, but are not generally eligible to receive campus services (email, network access).</p>
+    <h2>Third Party Account Holders</h2>
 
-  <p>If you are a <b>NEW STUDENT</b> or <b>UCLA ALUMNI</b>, please <a href="/activate.php">create</a> a UCLA Logon with your UCLA ID number.  Failure to do so will prevent you from using your UCLA Logon to access your Student Records and other student applications.</p>
+    <p>You are creating an account without a UCLA Identification Number.  Accounts created without a UCLA ID Number can be used to authenticate to many UCLA applications, but are not generally eligible to receive campus services (email, network access).</p>
 
-  <strong>Validate Your Identity</strong>
+    <p>If you are a <b>NEW STUDENT</b> or <b>UCLA ALUMNI</b>, please <a href="/activate.php">create</a> a UCLA Logon with your UCLA ID number.  Failure to do so will prevent you from using your UCLA Logon to access your Student Records and other student applications.</p>
 
-  <form action="/activate.php" method="post">
+  </aside>
 
-    <label for="gn">First Name</label>
-    <input name="gn" size="40" maxlength="40" type="text" value="" id="gn">
+  <article class="content">
 
-    <label for="sn">Last Name</label>
-    <input name="sn" size="40" maxlength="40" type="text" value="" id="sn">
+    <h1>Validate Your Identity</h1>
 
-    <label for="sn">Date of Birth (YYYY-MM-DD)</label>
-    <input name="dob" type="date" maxlength="10" value="" id="dob">
+    <form action="/activate.php" method="post">
 
-    <label for="email">Email Address</label>
-    <input name="email" type="email" maxlength="40" value="" id="email">
+      <label for="gn">First Name</label>
+      <input name="gn" size="40" maxlength="40" type="text" value="" id="gn">
 
-    <input class="button" type="submit" value="Next">
-  </form>
+      <label for="sn">Last Name</label>
+      <input name="sn" size="40" maxlength="40" type="text" value="" id="sn">
+
+      <label for="sn">Date of Birth (YYYY-MM-DD)</label>
+      <input name="dob" type="date" maxlength="10" value="" id="dob">
+
+      <label for="email">Email Address</label>
+      <input name="email" type="email" maxlength="40" value="" id="email">
+
+      <input class="button" type="submit" value="Next">
+    </form>
 
   <p>For further assistance, contact the Help Desk by telephone at 310-267-HELP (4357) or email at <a href="mailto:accounts@ucla.edu">accounts@ucla.edu</a>.</p>
 
-</article>
+  </article>
+
+</section>
 
 include "footer"

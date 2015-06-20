@@ -1,45 +1,52 @@
 include "head"
 
-<article class="content">
+<section class="page">
 
-  <h1>Create UCLA Logon ID</h1>
+  <aside class="supporting-info">
 
-  <p>By completing this procedure, you will activate your UCLA Logon. Before proceeding you must identify yourself to the system.</p>
+    <h1>About Validation</h1>
 
-  <p>You must have your 9-digit UCLA Identification Number to continue. You can find this number:</p>
+    <p>By completing this procedure, you will activate your UCLA Logon. Before proceeding you must identify yourself to the system.</p>
 
-  <ul>
-    <li>On your online or paper letter of admission (new students, waitlisted applicants)</li>
-    <li>On your BruinCard (current students, alumni, faculty, staff)</li>
-    <li>On your UCLA transcript (current students, alumni)</li>
-    <li>On your paycheck stub or online earnings statement (faculty, staff)</li>
-  </ul>
+    <p>You must have your 9-digit UCLA Identification Number to continue. You can find this number:</p>
 
-  <h2>Students, Alumni, Faculty, and Staff</h2>
+    <ul>
+      <li>On your online or paper letter of admission (new students, waitlisted applicants)</li>
+      <li>On your BruinCard (current students, alumni, faculty, staff)</li>
+      <li>On your UCLA transcript (current students, alumni)</li>
+      <li>On your paycheck stub or online earnings statement (faculty, staff)</li>
+    </ul>
 
-  <p>If you do not remember your 9-digit UCLA ID number please bring photo identification that clearly displays both your full name and date of birth (Driver's License, Passport, or other Government issued ID) to the Bruin OnLine Help Desk located in Suite 124, Kerckhoff Hall.  If you are not able to visit the Help Desk, please fax in a completed copy of the <a href='javascript:warn_pii("/forms/service_request.pdf");'>UCLA Logon Service Request Form</a>, with all required supporting documentation.</p>
+    <h2>Forgot your UCLA UID?</h2>
 
-  <p>For further assistance, contact the Help Desk by telephone at 310-267-HELP (4357) or email at <a href="mailto:accounts@ucla.edu">accounts@ucla.edu</a>.</p>
+    <p><strong>Students, Alumni, Faculty, & Staff:</strong> If you do not remember your 9-digit UCLA ID number please bring photo identification that clearly displays both your full name and date of birth (Driver's License, Passport, or other Government issued ID) to the Bruin OnLine Help Desk located in Suite 124, Kerckhoff Hall.  If you are not able to visit the Help Desk, please fax in a completed copy of the <a href='javascript:warn_pii("/forms/service_request.pdf");'>UCLA Logon Service Request Form</a>, with all required supporting documentation.</p>
 
-  <h2>Validate Your Identity</h2>
+    <p>For further assistance, contact the Help Desk by telephone at 310-267-HELP (4357) or email at <a href="mailto:accounts@ucla.edu">accounts@ucla.edu</a>.</p>
 
-  <form action="/activate.php" method="post">
-    <label for="gn">First Name</label>
-    <input name="gn" size="40" maxlength="40" type="text" value="" id="gn" class="focus">
+  </aside>
 
-    <label for="sn">Last Name</label>
-    <input name="sn" size="40" maxlength="40" type="text" value="" id="sn" class="focus">
+  <article class="content">
 
-    <label for="dob">Date of Birth (YYYY-MM-DD)</label>
-    <input name="dob" maxlength="10" value="" id="dob" class="focus"></span>
-    </div>
+    <h1>Validate Your Identity</h1>
 
-    <label for="uclaid">UCLA ID Number</label>
-    <input name="uclaid" pattern="[0-9]{0-9}" type="password" value="" id="uclaid" class="focus">
+    <form action="/activate.php" method="post">
+      <label for="gn">First Name</label>
+      <input name="gn" size="40" maxlength="40" type="text" value="" id="gn" class="focus">
 
-    <input class="button" type="submit" value="Next">
-  </form>
+      <label for="sn">Last Name</label>
+      <input name="sn" size="40" maxlength="40" type="text" value="" id="sn" class="focus">
 
-</article>
+      <label for="dob">Date of Birth (YYYY-MM-DD)</label>
+      <input name="dob" maxlength="10" value="" id="dob" class="focus">
+
+      <label for="uclaid">UCLA ID Number</label>
+      <input name="uclaid" pattern="[0-9]{0-9}" type="password" value="" id="uclaid" class="focus">
+
+      <input class="button" type="submit" value="Next">
+    </form>
+
+  </article>
+
+</section>
 
 include "footer"
