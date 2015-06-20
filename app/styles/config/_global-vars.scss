@@ -8,7 +8,7 @@ $split-supporting-info: 74em;
 
 // grid
 @include add-grid(1.75 1);
-@include add-gutter(1/15);
+@include add-gutter(1/12);
 @include add-gutter-style('split');
 
 /////////////////////////////////////////

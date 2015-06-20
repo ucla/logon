@@ -5,6 +5,7 @@
 // basic card styling
 .card {
   background: $white;
+  padding: 0 $triple-spacing ;
   font-weight: $header-weight;
   margin-bottom: $half-spacing;
   @extend %ucla-box-shadow;
@@ -34,7 +35,7 @@
 
 // interior card listing
 .cards-column {
-  width: 60%;
+  width: 32em;
   float: right;
   overflow: visible;
   h1 {
@@ -55,6 +56,7 @@
     max-width: $octo-spacing;
     max-height: $octo-spacing;
     margin-left: -9em;
+    margin-top: $default-spacing;
     float: left;
     border-radius: $global-border-radius;
   }
@@ -68,9 +70,9 @@
     font-size: $meta-font-size;
     @include clearfix;
     dl {
-      @include grid-span(1, 1);
+      @include grid-span(1, 1, 2);
       &:nth-child(2) {
-        @include grid-span(1, 2);
+        @include grid-span(1, 2, 2);
       }
     }
     dt {

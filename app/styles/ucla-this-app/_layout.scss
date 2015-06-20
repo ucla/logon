@@ -9,6 +9,18 @@
   margin: $double-spacing auto;
 }
 
+.cards-nav {
+  max-width: 54em;
+  margin: 0 auto;
+}
+
+.floating-side-nav {
+  display: none;
+  @include breakpoint($multi-column) {
+    display: block;
+  }
+}
+
 // general layout of pages
 .page, .home {
   .content {
