@@ -40,3 +40,21 @@ $('#email-uclaid-toggler').click(function() {
     $('#email-toggle').show('fast');
   }
 });
+
+/////////////////////////////////////////
+///  placeholder behaviour for prototype
+/////////////////////////////////////////
+
+$('.logon-fail').click(function() {
+  $('#result').load('includes/logon-fail.html');
+});
+$('.logon-success').click(function() {
+  $('#result').load('includes/logon-success.html');
+});
+
+$('.lookup-fail').click(function() {
+  $('#result').load('includes/lookup-fail.html');
+});
+$('.lookup-success').click(function() {
+  $('#result').load('includes/lookup-success.html');
+});

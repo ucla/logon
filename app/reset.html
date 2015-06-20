@@ -5,14 +5,16 @@ include "head"
 
     <h1>Having Trouble Signing In?</h1>
 
-    <p>If you've forgotten your password, enter your UCLA Logon ID below.</p>
+    <p>If you've forgotten your password, enter your UCLA Logon ID below then answer your challenge question.</p>
 
     <form action="/passreset.php" method="post">
 
-    <label class="help" for="uid" hidden>UCLA Logon ID</label>
-    <input name="uid" size="40" maxlength="15" value="" id="uid" class="focus" placeholder="Your UCLA Logon ID" required>
+      <label class="help" for="uid" hidden>UCLA Logon ID</label>
+      <input name="uid" size="40" maxlength="15" value="" id="uid" class="focus" placeholder="Your UCLA Logon ID" required>
 
-    <button class="psrimary-button" type="submit">Check for security challenge question</button>
+      <button class="button" type="submit">Check for security challenge question</button> <span class="logon-fail fail">(fail)</span> <span class="logon-success success">(success)</span>
+      <div id="result"></div>
+
     </form>
 
     <p>If you can't remember your UCLA Logon ID, go <a href="lookup.html">look it up</a>.</p>
@@ -20,7 +22,7 @@ include "head"
   </article>
 
   <aside class="supporting-info">
-    <p>If you cannot fill out the information above, please bring University-issued photo identification to the Bruin OnLine Help Desk located in Suite 124, Kerckhoff Hall.  If you are not able to visit the Help Desk, please fax in a completed copy of the <a href='javascript:warn_pii("/forms/service_request.pdf");'>UCLA Logon Service Request Form</a>, with all required supporting documentation.</p>
+    <p>If you cannot complete the password reset form, please bring University-issued photo identification to the Bruin OnLine Help Desk located in Suite 124, Kerckhoff Hall. If you are not able to visit the Help Desk, please fax in a completed copy of the <a href='javascript:warn_pii("/forms/service_request.pdf");'>UCLA Logon Service Request Form</a>, with all required supporting documentation.</p>
 
     <p>For further assistance, contact the Help Desk by telephone at 310-267-HELP (4357) or email at <a href="mailto:accounts@ucla.edu">accounts@ucla.edu</a>.</p>
   </aside>
