@@ -12,11 +12,6 @@
   transition: all .2s ease-in-out;
   overflow: visible;
   border-radius: $card-border-radius;
-  &:hover {
-    transform: scale(1.025);
-
-    border-radius: $card-border-radius;
-  }
   a {
     text-decoration: none;
     display: block;
