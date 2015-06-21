@@ -11,6 +11,7 @@ hr {
 
 .floating-side-nav {
   float: left;
+  position: fixed;
   margin-top: $default-spacing;
   ul {
     list-style: none;

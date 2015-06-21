@@ -5,7 +5,7 @@
 // basic card styling
 .card {
   background: $white;
-  padding: 0 $triple-spacing ;
+  padding: $default-spacing $triple-spacing ;
   font-weight: $header-weight;
   margin-bottom: $half-spacing;
   @extend %ucla-box-shadow;
@@ -63,15 +63,12 @@
   }
   .card {
     font-size: $meta-font-size;
-    @include clearfix;
-    dl {
-      @include grid-span(1, 1, 2);
-      &:nth-child(2) {
-        @include grid-span(1, 2, 2);
-      }
-    }
     dt {
-      margin-top: $default-spacing;
+      padding-top: $default-spacing;
+      border-top: 1px solid $background-light-grey;
+      &:first-child {
+        border-top: none;
+      }
     }
     dd {
       margin-left: 0;
