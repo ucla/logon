@@ -10,7 +10,7 @@
 }
 
 .cards-nav {
-  max-width: 54em;
+  max-width: 58em;
   margin: 0 auto;
 }
 
@@ -53,8 +53,6 @@
     }
   }
 }
-
-// @include grid-span(1, 2, (1.1 1));
 
 // prepare for app.js jquery toggle
 #email-toggle {

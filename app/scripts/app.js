@@ -49,3 +49,16 @@ $('.lookup-fail').click(function() {
 $('.lookup-success').click(function() {
   $('#result').load('includes/lookup-success.html');
 });
+
+/////////////////////////////////////////
+///  action toggles for cards
+/////////////////////////////////////////
+
+.name-change-load
+.name-change-action
+
+.load-ucla-challenge
+.action-ucla-challenge
+
+.load-ucla-pass
+.action-ucla-pass
