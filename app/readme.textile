@@ -1,0 +1,21 @@
+h1. UCLA Self-Service Prototype
+
+
+h2. Dependencies
+
+Built from https://github.com/ucla/generator-polymer, but not using any of the polymer stuff, yay.
+
+In order to build dependencies you'll need to install "Node + NPM":https://www.npmjs.com, "Bower":http://bower.io & "Bundler":http://bundler.io if you haven't already. The instructions assume you're running OS X or some flavour of Linux.
+
+# Go to https://nodejs.org and download and run the Node installer for the operating system you're using (or use a package manager of your choice)
+# Run @sudo npm install npm -g@ to make sure you're using the latest npm
+# Install Bower with npm by running @npm install -g bower@
+# Install Bundler (you may need to sudo) with @gem install bundler@
+# Navigate to the directory you've cloned/downloaded this repository to
+# Run @npm install@
+# Run @bower install@
+# Run @bundle install@
+
+h2. Running the Site Locally
+
+$ @grunt serve@ to view or just $ @grunt@ to build out @/dist@.
