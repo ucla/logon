@@ -27,16 +27,16 @@ include "head"
 
     <form action="/activate.php" method="post">
       <label for="gn">First Name</label>
-      <input name="gn" size="40" maxlength="40" type="text" value="" id="gn" class="focus">
+      <input name="gn" size="40" maxlength="40" type="text" placeholder="Joe" value="" id="gn" class="focus">
 
       <label for="sn">Last Name</label>
-      <input name="sn" size="40" maxlength="40" type="text" value="" id="sn" class="focus">
+      <input name="sn" size="40" maxlength="40" type="text" placeholder="Bruin" value="" id="sn" class="focus">
 
       <label for="dob">Date of Birth (YYYY-MM-DD)</label>
-      <input name="dob" maxlength="10" value="" id="dob" class="focus">
+      <input name="dob" maxlength="10" type="date" placeholder="(YYYY-MM-DD)" value="" id="dob" class="focus">
 
       <label for="uclaid">UCLA ID Number</label>
-      <input name="uclaid" pattern="[0-9]{0-9}" type="password" value="" id="uclaid" class="focus">
+      <input name="uclaid" pattern="[0-9]{0-9}" type="password" placeholder="123-456-789" value="" id="uclaid" class="focus">
 
       <input class="button" type="submit" value="Next"> <span class="success"><a href="create-new-logon3.html">(create)</a></span>
     </form>
