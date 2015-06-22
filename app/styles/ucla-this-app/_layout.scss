@@ -54,6 +54,14 @@
   }
 }
 
+//simple pass-fail pages
+
+.content-full {
+  @extend %content-styling;
+  max-width: 44em;
+  margin: 0 auto;
+}
+
 // prepare for app.js jquery toggle
 #email-toggle {
   display: none;

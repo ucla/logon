@@ -43,13 +43,6 @@ $('.logon-success').click(function() {
   $('#result').load('includes/logon-success.html');
 });
 
-$('.lookup-fail').click(function() {
-  $('#result').load('includes/lookup-fail.html');
-});
-$('.lookup-success').click(function() {
-  $('#result').load('includes/lookup-success.html');
-});
-
 /////////////////////////////////////////
 ///  action toggles for cards
 /////////////////////////////////////////
