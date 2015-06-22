@@ -54,11 +54,6 @@ $('.lookup-success').click(function() {
 ///  action toggles for cards
 /////////////////////////////////////////
 
-.name-change-load
-.name-change-action
-
-.load-ucla-challenge
-.action-ucla-challenge
-
-.load-ucla-pass
-.action-ucla-pass
+$('.card-action').click(function() {
+  $(this).next('div').toggle();
+});
