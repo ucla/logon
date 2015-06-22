@@ -8,28 +8,21 @@
     <form action="/userlookup.php" method="post">
 
       <label title="Enter your last name as it is on file with UCLA. Do not include any suffix." for="sn">Last Name</label>
-      <input name="sn" size="40" maxlength="40" value="" id="sn" required>
+      <input name="sn" size="40" maxlength="40" value="" placeholder="Bruin" id="sn" required>
 
-      <label title="Enter the date you were born in year-month-day format." for="dob">Date of Birth (YYYY-MM-DD)</label>
-      <input name="dob" type="date" id="dob" required>
+      <label title="Enter the date you were born in year-month-day format." for="dob">Date of Birth</label>
+      <input name="dob" type="date" placeholder="YYYY-MM-DD" id="dob" required>
 
-      <label class="for-checkbox" title="You must have your 9-digit UCLA Identification Number to continue. You can find this number on your:
+      <label title="Your UCLA ID Number is nine (9) digits long and is printed on your UCLA ID Card." for="uclaid">9 Digit UCLA ID Number</label>
+      <input name="uclaid" pattern="" type="password" placeholder="123-456-789" value="" id="uclaid">
 
-  Letter of admission (new students)
-  BruinCard (current students, faculty, staff)
-  UCLA transcript (current students, alumni)
-  Paycheck stub or online earnings statement">
-        <input type="checkbox" checked="checked" id="email-uclaid-toggler" required> I am a UCLA Student, Alumnus, Faculty, Staff, or a UCOP or UC Merced Staff member.
+      <label class="for-checkbox">
+        <input type="checkbox" id="email-toggler" required>But... I don't have a 9 Digit UCLA ID Number. :(
       </label>
 
-      <div id="uclaid-toggle">
-        <label title="Your UCLA ID Number is nine (9) digits long and is printed on your UCLA ID Card." for="uclaid">9 Digit UCLA ID Number</label>
-        <input name="uclaid" pattern="" type="password" value="" id="uclaid">
-      </div>
-
       <div id="email-toggle">
-        <label title="A valid contact email address is required to continue" for="email">Email address on file</label>
-        <input name="email" type="email" id="email">
+        <label title="A valid contact email address is required to continue" for="email">We got your back, enter your email address on file instead</label>
+        <input name="email" type="email" placeholder="joe.bruin@gmail.com" id="email">
       </div>
 
       <button class="primary-button" type="submit">Lookup your Logon ID</button> <span class="fail"><a href="lookup-fail.html">(fail)</a></span> <span class="success"><a href="lookup-success.html">(success)</a></span>

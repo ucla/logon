@@ -1,5 +1,6 @@
 .line-thru {
   @include line-thru();
+  margin: -$half-spacing 0 0;
 }
 
 hr {

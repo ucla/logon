@@ -19,28 +19,15 @@ webshim.setOptions('forms', {
 webshim.polyfill('forms forms-ext');
 
 /////////////////////////////////////////
-///  hide/show input if checkbox ticked
+///  show email field if checkbox ticked
 /////////////////////////////////////////
 
-$('#email-uclaid-toggler').click(function() {
+$('#email-toggler').click(function() {
   if ($(this).is(':checked') ) {
-    $('#uclaid-toggle' ).show('fast');
-    $('#email-toggle' ).hide('fast');
+    $('#email-toggle' ).show('fast');
   } else {
-    $('#uclaid-toggle').hide('fast');
-    $('#email-toggle').show('fast');
+    $('#email-toggle').hide('fast');
   }
-});
-
-/////////////////////////////////////////
-///  placeholder behaviour for prototype
-/////////////////////////////////////////
-
-$('.logon-fail').click(function() {
-  $('#result').load('includes/logon-fail.html');
-});
-$('.logon-success').click(function() {
-  $('#result').load('includes/logon-success.html');
 });
 
 /////////////////////////////////////////
@@ -49,4 +36,12 @@ $('.logon-success').click(function() {
 
 $('.card-action').click(function() {
   $(this).next('div').toggle();
+});
+
+/////////////////////////////////////////
+///  placeholder behaviour for prototype
+/////////////////////////////////////////
+
+$('.logon-success').click(function() {
+  $('#result').load('includes/logon-success.html');
 });
