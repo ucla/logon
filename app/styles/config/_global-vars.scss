@@ -3,7 +3,7 @@
 /////////////////////////////////////////
 
 // breakpoints
-$multi-column: 50em;
+$multi-column: 56em;
 $split-supporting-info: 74em;
 
 // grid
@@ -47,6 +47,7 @@ $primary-color-safe: $ucla-blue-safe;
 $primary-color-alternate-state: $ucla-blue-dark;
 $secondary-color: $ucla-gold;
 
+$success-color: $ucla-green;
 $error-color: $ucla-pink;
 $error-color-dark: darken($ucla-pink, 42%);
 $error-color-dark-alt: darken($ucla-pink, 46%);
@@ -58,8 +59,8 @@ $bullet-color: $ucla-green;
 $footer-link-color: $white;
 $footer-link-color-hover: $ucla-yellow;
 
-$form-valid-color: $ucla-blue-light;
-$form-invalid-color: $ucla-pink;
+$form-valid-color: $success-color;
+$form-invalid-color: $error-color;
 $input-background-color: lighten($neutral, 19%);
 $input-background-color-focus: $white;
 
@@ -76,6 +77,7 @@ $sp-support-bg: rgba($white, .55);
 /////////////////////////////////////////
 
 $html-background: #d1e8f8 url('../images/skyline.jpg') no-repeat;
+$html-background-size: cover;
 $body-text-color: #444;
 $body-background-color: $white;
 

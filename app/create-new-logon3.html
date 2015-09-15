@@ -53,14 +53,14 @@ include "head"
     <form action="/activate.php" method="post">
 
       <label for="user1">Desired UCLA Logon ID</label>
-      <input name="user1" maxlength="15" placeholder="joebruin42" id="user1" value="" alt="Your username will be assigned for life and CAN NOT BE CHANGED. Select carefully." class="focus">
+      <input name="user1" maxlength="15" placeholder="joebruin42" id="user1" value="" alt="Your username will be assigned for life and CAN NOT BE CHANGED. Select carefully.">
       <label for="user2">Confirm desired UCLA Logon ID</label>
-      <input name="user2" maxlength="15" placeholder="joebruin42" id="user2" value="" alt="Your username will be assigned for life and CAN NOT BE CHANGED. Select carefully." class="focus">
+      <input name="user2" maxlength="15" placeholder="joebruin42" id="user2" value="" alt="Your username will be assigned for life and CAN NOT BE CHANGED. Select carefully.">
 
       <label for="pass1">Password</label>
-      <input name="pass1" type="password" placeholder="Your desired password" maxlength="128" size="48" id="pass1" value="" class="focus">
+      <input name="pass1" type="password" placeholder="Your desired password" maxlength="128" size="48" id="pass1" value="">
       <label for="pass2">Confirm Password</label>
-      <input name="pass2" type="password" placeholder="Your desired password (again)" maxlength="128" size="48" id="pass2" value="" class="focus">
+      <input name="pass2" type="password" placeholder="Your desired password (again)" maxlength="128" size="48" id="pass2" value="">
 
       <p><span id="strength_human">password strength</span>: <span id="strength_score">0</span></p>
 
@@ -108,7 +108,7 @@ include "head"
         </option>
       </select>
 
-      <input name="challenge" size="60" maxlength="128" id="challenge" class="focus" style="display:none;z-index:5;top:0;position:relative;">
+      <input name="challenge" size="60" maxlength="128" id="challenge" style="display:none;z-index:5;top:0;position:relative;">
 
       <script type="text/javascript">
         var element = document.getElementById("selectChallenge");
@@ -116,9 +116,9 @@ include "head"
       </script>
 
       <label for="selectChallenge">Type your Response</label>
-      <input name="response" size="60" maxlength="128" placeholder="Your response to the challenge question" id="response" class="focus" alt="Your Response is the answer to your Challenge question.">
+      <input name="response" size="60" maxlength="128" placeholder="Your response to the challenge question" id="response" alt="Your Response is the answer to your Challenge question.">
 
-      <input class="primary-button button" type="submit" value="Create UCLA Logon ID">
+      <button class="primary-button" type="submit">Create UCLA Logon ID</button>
     </form>
 
   </article>

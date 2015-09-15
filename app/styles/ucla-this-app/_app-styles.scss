@@ -66,14 +66,7 @@ hr {
   }
 }
 
-// home page specific styling
-.home {
-  max-width: 58em;
-  margin: 0 auto;
-  a {
-    text-decoration: none;
-  }
-  .content h1 {
-    margin-bottom: $triple-spacing;
-  }
+// prepare for app.js jquery toggle
+#email-toggle {
+  display: none;
 }

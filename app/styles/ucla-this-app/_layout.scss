@@ -1,19 +1,39 @@
+// where everything goes
 .content-wrapper {
   width: 94%;
   margin: 0 auto;
   padding-bottom: 8em;
 }
 
+// logo etc
 .page-header {
   max-width: 444px;
   margin: $double-spacing auto;
 }
 
+// home page specific styling
+.home {
+  max-width: 58em;
+  margin: 0 auto;
+  a {
+    text-decoration: none;
+  }
+  .content h1 {
+    margin-bottom: $triple-spacing;
+  }
+}
+
+// cards to manage content once logged in
 .cards-nav {
   max-width: 58em;
   margin: 0 auto;
 }
 
+.ucla-iam-footer-content {
+  max-width: 58em;
+}
+
+// jump around cards
 .floating-side-nav {
   display: none;
   @include breakpoint($multi-column) {
@@ -38,7 +58,7 @@
   }
 }
 
-// for pages with a lot of supporting content
+// for pages with a lot of supporting content use column count to spread it out
 .many-infos {
   .content {
     @include breakpoint($split-supporting-info) {
@@ -54,15 +74,9 @@
   }
 }
 
-//simple pass-fail pages
-
+//single col pages
 .content-full {
   @extend %content-styling;
-  max-width: 44em;
+  max-width: 42em;
   margin: 0 auto;
-}
-
-// prepare for app.js jquery toggle
-#email-toggle {
-  display: none;
 }
