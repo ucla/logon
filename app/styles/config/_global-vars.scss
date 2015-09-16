@@ -3,8 +3,9 @@
 /////////////////////////////////////////
 
 // breakpoints
+$collapse-cards: 42.5em;
 $multi-column: 56em;
-$split-supporting-info: 74em;
+$split-column-supporting-info: 74em;
 
 // grid
 @include add-grid(1.75 1);

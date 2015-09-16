@@ -19,18 +19,6 @@ webshim.setOptions('forms', {
 webshim.polyfill('forms forms-ext');
 
 /////////////////////////////////////////
-///  show email field if checkbox ticked
-/////////////////////////////////////////
-
-$('#email-toggler').click(function() {
-  if ($(this).is(':checked') ) {
-    $('#email-toggle' ).show('fast');
-  } else {
-    $('#email-toggle').hide('fast');
-  }
-});
-
-/////////////////////////////////////////
 ///  action toggles for cards
 /////////////////////////////////////////
 

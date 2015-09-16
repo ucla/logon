@@ -23,24 +23,6 @@
   }
 }
 
-// cards to manage content once logged in
-.cards-nav {
-  max-width: 58em;
-  margin: 0 auto;
-}
-
-.ucla-iam-footer-content {
-  max-width: 58em;
-}
-
-// jump around cards
-.floating-side-nav {
-  display: none;
-  @include breakpoint($multi-column) {
-    display: block;
-  }
-}
-
 // general layout of pages
 .page, .home {
   .content {
@@ -61,12 +43,12 @@
 // for pages with a lot of supporting content use column count to spread it out
 .many-infos {
   .content {
-    @include breakpoint($split-supporting-info) {
+    @include breakpoint($split-column-supporting-info) {
       @include grid-span(1, 1, 2);
     }
   }
   .supporting-info {
-    @include breakpoint($split-supporting-info) {
+    @include breakpoint($split-column-supporting-info) {
        @include grid-span(1, 2, 2);
       column-count: 2;
       column-gap: normal;
@@ -74,7 +56,26 @@
   }
 }
 
-//single col pages
+// cards to manage content once logged in
+.cards-wrapper {
+  max-width: 58em;
+  margin: 0 auto;
+}
+
+// inline links to cards on tablet/desktop
+.floating-side-nav {
+  display: none;
+  @include breakpoint($multi-column) {
+    display: block;
+  }
+}
+
+// align footer content somewhat
+.ucla-iam-footer-content {
+  max-width: 58em;
+}
+
+//single column pages
 .content-full {
   @extend %content-styling;
   max-width: 42em;

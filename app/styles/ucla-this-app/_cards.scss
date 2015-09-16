@@ -18,6 +18,14 @@
     height: 100%;
     padding: $half-spacing;
   }
+  .profile-pic {
+    max-width: $octo-spacing;
+    max-height: $octo-spacing;
+    margin-left: -9em;
+    margin-top: $default-spacing;
+    float: left;
+    border-radius: $global-border-radius;
+  }
 }
 
 // the button that toggles it on desktop/tablet view
@@ -38,8 +46,10 @@
 
 // interior card listing
 .cards-column {
-  width: 36em;
-  float: right;
+  @include breakpoint($collapse-cards) {
+    width: 36em;
+    float: right;
+  }
   overflow: visible;
   h1 {
     display: inline-block;
@@ -54,14 +64,6 @@
     &:first-child {
       margin-top: 0;
     }
-  }
-  .profile-pic {
-    max-width: $octo-spacing;
-    max-height: $octo-spacing;
-    margin-left: -9em;
-    margin-top: $default-spacing;
-    float: left;
-    border-radius: $global-border-radius;
   }
   p {
     margin-top: 0;
