@@ -1,9 +1,5 @@
+.DS_Store
 node_modules
-dist
-test/temp
-.sass-cache
+npm-debug.log
 bower_components
-.tmp
-test/bower_components/
-Gemfile.lock
-app/styles/iam-ucla-core
+dist

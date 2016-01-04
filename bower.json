@@ -1,10 +1,21 @@
 {
-  "name": "UCLA Logon",
-  "version": "0.0.0",
-  "private": true,
+  "name": "foundation-ssg",
+  "version": "1.0.0",
+  "authors": [
+    "ZURB <foundation@zurb.com>"
+  ],
+  "description": "Static site generator for Foundation for Sites.",
+  "main": "gulpfile.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
   "dependencies": {
-    "webshim": "~1.15.7",
-    "jquery": "~1.11.2",
-    "animate.css": "~3.2.5",
-  }
+    "motion-ui": "~1.1.0"
+  },
+  "private": true
 }
