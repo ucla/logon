@@ -2,18 +2,36 @@
 
 <!doctype html>
 <html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foundation for Sites</title>
-    <link rel="stylesheet" href="{{root}}assets/css/app.css">
-  </head>
-  <body>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UCLA Logon</title>
+  <link rel="stylesheet" href="{{root}}assets/css/app.css">
+</head>
+
+<body>
+
+  <div class="content-wrapper">
+
+    <header class="page-header" role="banner"><a href="./"><img src="{{root}}assets/img/ucla-white.png" alt="UCLA"></a></header>
+
 
     {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
     {{> body}}
+    
+  </div>
 
-    <script src="{{root}}assets/js/app.js"></script>
-  </body>
+  <footer role="contentinfo" class="ucla-iam-footer">
+    <p class="ucla-iam-footer-content"><a href="#">Privacy, Security &amp; Legal</a></p>
+  </footer>
+
+  <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="/bower_components/webshim/js-webshim/minified/polyfiller.js"></script>
+  <script src="{{root}}assets/js/app.js"></script>
+
+</body>
+
 </html>
