@@ -5,14 +5,14 @@
 /////////////////////////////////////////
 
 // Main toggles
+@import 'singularitygs';
 @import 'settings';
 @import 'foundation';
 @import 'motion-ui';
-@import 'singularitygs';
 
 // ZURB Foundation for Sites
 @include foundation-global-styles;
-@include foundation-grid;
+// @include foundation-grid;
 @include foundation-typography;
 @include foundation-button;
 @include foundation-forms;

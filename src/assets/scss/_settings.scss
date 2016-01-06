@@ -93,6 +93,10 @@ $breakpoint-classes: ();
 // 3. The Grid
 // -----------
 
+@include add-grid(1.75 1);
+@include add-gutter(1/12);
+@include add-gutter-style('split');
+
 $grid-row-width: $global-width;
 $grid-column-count: 12;
 $grid-column-responsive-gutter: (
