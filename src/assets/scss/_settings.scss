@@ -58,7 +58,8 @@ $warning-color: $ucla-pink;
 $warning-color-dark: darken($ucla-pink, 42%);
 $warning-color-dark-alt: darken($ucla-pink, 46%);
 $alert-color: $ucla-orange;
-$light-gray: lighten($ucla-neutral, 15%);
+$lighter-gray: lighten($ucla-neutral, 16%);
+$light-gray: lighten($ucla-neutral, 12%);
 $medium-gray: $ucla-neutral;
 $dark-gray: darken($ucla-neutral, 15%);
 $black: $ucla-black;
@@ -82,6 +83,7 @@ $global-text-direction: ltr;
 
 $breakpoints: (
   single-column: 0,
+  collapse-cards: 42.5em,
   multi-column: 56rem,
   split-column-supporting-info: 74em,
   wide: 100rem,
@@ -556,5 +558,5 @@ $topbar-input-width: 200px;
 // 36. Application Specific
 // ---------
 
-$card-border-radius: 8px;
+$card-radius: 8px;
 $global-letter-spacing: 0.5px;
