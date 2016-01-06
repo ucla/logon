@@ -8,7 +8,7 @@
 // logo etc
 .page-header {
   max-width: 444px;
-  margin: $double-spacing auto;
+  margin: ($global-margin * 2) auto;
 }
 
 // home page specific styling
@@ -19,7 +19,7 @@
     text-decoration: none;
   }
   .content h1 {
-    margin-bottom: $triple-spacing;
+    margin-bottom: ($global-margin * 3);
   }
 }
 
@@ -27,14 +27,14 @@
 .page, .home {
   .content {
     @include grid-span(2, 1);
-    @include breakpoint($multi-column) {
+    @include breakpoint(multi-column) {
       @include grid-span(1, 1);
     }
   }
   .supporting-info {
     @include grid-span(2, 1);
-    margin-bottom: $double-spacing;
-    @include breakpoint($multi-column) {
+    margin-bottom: ($global-margin * 2);
+    @include breakpoint(multi-column) {
       @include grid-span(1, 2);
     }
   }
@@ -43,12 +43,12 @@
 // for pages with a lot of supporting content use column count to spread it out
 .many-infos {
   .content {
-    @include breakpoint($split-column-supporting-info) {
+    @include breakpoint(split-column-supporting-info) {
       @include grid-span(1, 1, 2);
     }
   }
   .supporting-info {
-    @include breakpoint($split-column-supporting-info) {
+    @include breakpoint(split-column-supporting-info) {
        @include grid-span(1, 2, 2);
       column-count: 2;
       column-gap: normal;
@@ -65,7 +65,7 @@
 // inline links to cards on tablet/desktop
 .floating-side-nav {
   display: none;
-  @include breakpoint($multi-column) {
+  @include breakpoint(multi-column) {
     display: block;
   }
 }

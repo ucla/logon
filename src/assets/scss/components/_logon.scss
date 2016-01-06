@@ -1,28 +1,28 @@
 .line-thru {
   @include line-thru();
-  margin: -$half-spacing 0 0;
+  margin: -($global-spacing  / 2) 0 0;
 }
 
 hr {
   height: 1px;
-  color: $body-text-color;
-  background-color: $body-text-color;
+  color: $body-font-color;
+  background-color: $body-font-color;
   border: none;
 }
 
 .floating-side-nav {
   float: left;
   position: fixed;
-  margin-top: $default-spacing;
+  margin-top: $global-spacing;
   ul {
     list-style: none;
   }
   a {
     text-decoration: none;
     color: $white;
-    font-size: $h1-font-size;
-    margin-bottom: $default-spacing;
-    font-weight: $header-weight;
+    font-size: map-get($header-sizes, h1);
+    margin-bottom: $global-spacing;
+    font-weight: $header-font-weight;
     &:hover {
       color: $ucla-yellow;
     }
@@ -32,15 +32,15 @@ hr {
 %content-styling {
   background: $white;
   @extend %ucla-box-shadow;
-  padding: $default-spacing;
-  margin-bottom: $quad-spacing;
+  padding: $global-spacing;
+  margin-bottom: ($global-spacing * 4);
 }
 
 
 .overlay {
   position: relative;
-  margin-top: $quad-spacing;
-  border-radius: $card-border-radius;
+  margin-top: ($global-spacing * 4);
+  border-radius: $card-radius;
   @extend %content-styling;
   @extend .content-wrapper;
 }
@@ -51,17 +51,17 @@ hr {
 
 .supporting-info {
   background: rgba(#fff, .8);
-  padding: $default-spacing $default-spacing;
+  padding: $global-spacing $global-spacing;
   p, li {
-    font-size: $meta-font-size;
+    font-size: $small-font-size;
   }
   ul {
-    padding-left: $default-spacing;
+    padding-left: $global-spacing;
   }
   h1 {
-    font-size: $h2-font-size;
+    font-size: map-get($header-sizes, h2);
   }
   h2 {
-    font-size: $h3-font-size;
+    font-size: map-get($header-sizes, h3);
   }
 }

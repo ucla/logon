@@ -59,8 +59,8 @@
     margin-top: $global-margin;
     margin-bottom: -($global-margin * 4);
     padding: ($global-padding);
-    font-size: $h2-font-size;
-    font-weight: $header-weight;
+    font-size: map-get($header-sizes, h2);
+    font-weight: $header-font-weight;
     &:first-child {
       margin-top: 0;
     }
