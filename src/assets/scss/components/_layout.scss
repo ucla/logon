@@ -3,32 +3,15 @@ body {
   background-size: cover;
 }
 
-// where everything goes
-.content-wrapper {
-  @include grid-row;
-  padding-bottom: 8rem;
-}
-
 // logo etc
 .page-header {
   max-width: 444px;
   margin: ($global-margin * 2) auto;
 }
 
-// home page specific styling
-.home {
-  max-width: 58rem;
-  margin: 0 auto;
-  a {
-    text-decoration: none;
-  }
-  .content h1 {
-    margin-bottom: $global-margin * 3;
-  }
-}
-
 // general layout of pages
 .page, .home {
+  @include grid-row;
   .content {
     @include grid-column(12);
     @include breakpoint(multi-column) {
@@ -44,16 +27,28 @@ body {
   }
 }
 
+// home page specific styling
+.home {
+  max-width: 60rem;
+  a {
+    text-decoration: none;
+  }
+  .content h1 {
+    margin-bottom: $global-margin * 7;
+  }
+}
+
 // for pages with a lot of supporting content use column count to spread it out
 .many-infos {
+  @include grid-row;
   .content {
-    @include breakpoint(split-column-supporting-info) {
-      @include grid-column(8);
-    }
+    @include grid-column(8);
+    @include grid-column-position(-4);
   }
   .supporting-info {
+    @include grid-column(4);
+    @include grid-column-position(8);
     @include breakpoint(split-column-supporting-info) {
-      @include grid-column(2);
       column-count: 2;
       column-gap: normal;
     }
