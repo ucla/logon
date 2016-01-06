@@ -94,6 +94,7 @@ $breakpoint-classes: ();
 
 $grid-row-width: $global-width;
 $grid-column-count: 12;
+$grid-column-gutter: 30px;
 $grid-column-responsive-gutter: (
   single-column: 20px,
   multi-column: 30px,

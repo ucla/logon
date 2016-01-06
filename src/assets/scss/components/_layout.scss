@@ -1,6 +1,20 @@
-body {
+html {
   background: $body-background;
-  background-size: cover;
+  box-sizing: border-box;
+  line-height: $global-lineheight;
+	position: relative;
+	min-height: 100%;
+	width: 100%;
+  padding-bottom: $global-spacing * 3;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+  color: $body-font-color;
+  letter-spacing: $global-letter-spacing;
 }
 
 // logo etc
@@ -11,7 +25,7 @@ body {
 
 // general layout of pages
 .page, .home {
-  @include grid-row;
+  @include grid-row();
   .content {
     @include grid-column(12);
     @include breakpoint(multi-column) {
@@ -40,7 +54,6 @@ body {
 
 // for pages with a lot of supporting content use column count to spread it out
 .many-infos {
-  @include grid-row;
   .content {
     @include grid-column(8);
     @include grid-column-position(-4);
@@ -71,12 +84,12 @@ body {
 
 // align footer content somewhat
 .ucla-iam-footer-content {
-  max-width: 58rem;
+  max-width: 56rem;
 }
 
 //single column pages
 .content-full {
   @extend %content-styling;
-  max-width: 42rem;
+  max-width: 48rem;
   margin: 0 auto;
 }

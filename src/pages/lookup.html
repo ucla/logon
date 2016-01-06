@@ -1,39 +1,41 @@
 <section class="page">
   <article class="content">
-
-    <h1>Lookup your UCLA Logon ID</h1>
-
-    <form action="/userlookup.php" method="post">
-
-      <label title="Enter your last name as it is on file with UCLA. Do not include any suffix." for="sn">Last Name</label>
-      <input name="sn" size="40" maxlength="40" value="" placeholder="Bruin" id="sn" required>
-
-      <label title="Enter the date you were born in year-month-day format." for="dob">Date of Birth</label>
-      <input name="dob" type="date" placeholder="YYYY-MM-DD" id="dob" required>
-
-      <label title="Your UCLA ID Number is nine (9) digits long and is printed on your UCLA ID Card." for="uclaid">9 Digit UCLA ID Number</label>
-      <input name="uclaid" pattern="" type="password" placeholder="123-456-789" value="" id="uclaid">
-
-      <label class="for-checkbox">
-        <input type="checkbox" id="email-toggler" required>But... I don't have a 9 Digit UCLA ID Number. :(
-      </label>
-
-      <div id="email-toggle">
-        <label title="A valid contact email address is required to continue" for="email">We got your back, enter your email address on file instead</label>
-        <input name="email" type="email" placeholder="joe.bruin@gmail.com" id="email">
-      </div>
-
-      <button class="primary-button" type="submit">Lookup your Logon ID</button> <span class="message-fail"><a href="lookup-fail.html">(fail)</a></span> <span class="message-success"><a href="lookup-success.html">(success)</a></span>
-      <div id="result"></div>
-
-    </form>
-
+    <div>
+      <h1>Lookup your UCLA Logon ID</h1>
+  
+      <form action="/userlookup.php" method="post">
+  
+        <label title="Enter your last name as it is on file with UCLA. Do not include any suffix." for="sn">Last Name</label>
+        <input name="sn" size="40" maxlength="40" value="" placeholder="Bruin" id="sn" required>
+  
+        <label title="Enter the date you were born in year-month-day format." for="dob">Date of Birth</label>
+        <input name="dob" type="date" placeholder="YYYY-MM-DD" id="dob" required>
+  
+        <label title="Your UCLA ID Number is nine (9) digits long and is printed on your UCLA ID Card." for="uclaid">9 Digit UCLA ID Number</label>
+        <input name="uclaid" pattern="" type="password" placeholder="123-456-789" value="" id="uclaid">
+  
+        <label class="for-checkbox">
+          <input type="checkbox" id="email-toggler" required>But... I don't have a 9 Digit UCLA ID Number. :(
+        </label>
+  
+        <div id="email-toggle">
+          <label title="A valid contact email address is required to continue" for="email">We got your back, enter your email address on file instead</label>
+          <input name="email" type="email" placeholder="joe.bruin@gmail.com" id="email">
+        </div>
+  
+        <button class="primary-button" type="submit">Lookup your Logon ID</button> <span class="message-fail"><a href="lookup-fail.html">(fail)</a></span> <span class="message-success"><a href="lookup-success.html">(success)</a></span>
+        <div id="result"></div>
+  
+      </form>
+    </div>
   </article>
 
   <aside class="supporting-info">
-    <p>If you cannot lookup your Logon ID, please bring University-issued photo identification to the Bruin OnLine Help Desk located in Suite 124, Kerckhoff Hall.  If you are not able to visit the Help Desk, please fax in a completed copy of the <a href='javascript:warn_pii("/forms/service_request.pdf");'>UCLA Logon Service Request Form</a>, with all required supporting documentation.</p>
-
-    <p>For further assistance, contact the Help Desk by telephone at 310-267-HELP (4357) or email at <a href="mailto:accounts@ucla.edu">accounts@ucla.edu</a>.</p>
+    <div>
+      <p>If you cannot lookup your Logon ID, please bring University-issued photo identification to the Bruin OnLine Help Desk located in Suite 124, Kerckhoff Hall.  If you are not able to visit the Help Desk, please fax in a completed copy of the <a href='javascript:warn_pii("/forms/service_request.pdf");'>UCLA Logon Service Request Form</a>, with all required supporting documentation.</p>
+  
+      <p>For further assistance, contact the Help Desk by telephone at 310-267-HELP (4357) or email at <a href="mailto:accounts@ucla.edu">accounts@ucla.edu</a>.</p>
+    </div>
   </aside>
 
 </section>

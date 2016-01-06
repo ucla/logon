@@ -36,20 +36,11 @@ hr {
   margin-bottom: ($global-spacing * 4);
 }
 
-
-.overlay {
-  position: relative;
-  margin-top: ($global-spacing * 4);
-  border-radius: $card-radius;
-  @extend %content-styling;
-  @extend .content-wrapper;
-}
-
-.content {
+.content div {
   @extend %content-styling;
 }
 
-.supporting-info {
+.supporting-info div {
   background: rgba(#fff, .8);
   padding: $global-spacing $global-spacing;
   p, li {
