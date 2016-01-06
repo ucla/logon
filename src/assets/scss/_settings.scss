@@ -64,15 +64,14 @@ $medium-gray: $ucla-neutral;
 $dark-gray: darken($ucla-neutral, 15%);
 $black: $ucla-black;
 $white: $ucla-white;
-$html-background: #d1e8f8 url('../images/skyline.jpg') no-repeat;
-$html-background-size: cover;
-$body-background: $white;
+$body-background: #d1e8f8 url('/assets/img/skyline.jpg') no-repeat;
 $body-font-color: #444;
 $body-font-family: $ucla-font-stack;
 $body-antialiased: true;
 $global-spacing: 1rem;
 $global-margin: $global-spacing;
 $global-padding: $global-spacing;
+$global-weight-light: 300;
 $global-weight-normal: normal;
 $global-weight-bold: bold;
 $global-radius: 3px;
@@ -83,19 +82,15 @@ $global-text-direction: ltr;
 
 $breakpoints: (
   single-column: 0,
-  collapse-cards: 42.5em,
+  collapse-cards: 42.5rem,
   multi-column: 56rem,
-  split-column-supporting-info: 74em,
+  split-column-supporting-info: 74rem,
   wide: 100rem,
 );
 $breakpoint-classes: ();
 
 // 3. The Grid
 // -----------
-
-@include add-grid(1.75 1);
-@include add-gutter(1/12);
-@include add-gutter-style('split');
 
 $grid-row-width: $global-width;
 $grid-column-count: 12;
@@ -110,7 +105,7 @@ $block-grid-max: 8;
 // ------------------
 
 $header-font-family: $body-font-family;
-$header-font-weight: $global-weight-normal;
+$header-font-weight: $global-weight-light;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-sizes: (
@@ -124,14 +119,14 @@ $header-sizes: (
   ),
   multi-column: (
     'h1': 42,
-    'h2': 38,
+    'h2': 34,
     'h3': 26,
-    'h4': 24,
+    'h4': 22,
     'h5': 20,
     'h6': 16,
   ),
 );
-$header-color: inherit;
+$header-color: $primary-color;
 $header-lineheight: 1.2;
 $header-margin-bottom: 0.5rem;
 $header-text-rendering: optimizeLegibility;

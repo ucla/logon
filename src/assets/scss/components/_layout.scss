@@ -1,8 +1,12 @@
+body {
+  background: $body-background;
+  background-size: cover;
+}
+
 // where everything goes
 .content-wrapper {
-  width: 94%;
-  margin: 0 auto;
-  padding-bottom: 8em;
+  @include grid-row;
+  padding-bottom: 8rem;
 }
 
 // logo etc
@@ -13,29 +17,29 @@
 
 // home page specific styling
 .home {
-  max-width: 58em;
+  max-width: 58rem;
   margin: 0 auto;
   a {
     text-decoration: none;
   }
   .content h1 {
-    margin-bottom: ($global-margin * 3);
+    margin-bottom: $global-margin * 3;
   }
 }
 
 // general layout of pages
 .page, .home {
   .content {
-    @include grid-span(2, 1);
+    @include grid-column(12);
     @include breakpoint(multi-column) {
-      @include grid-span(1, 1);
+      @include grid-column(8);
     }
   }
   .supporting-info {
-    @include grid-span(2, 1);
+    @include grid-column(12);
     margin-bottom: ($global-margin * 2);
     @include breakpoint(multi-column) {
-      @include grid-span(1, 2);
+      @include grid-column(4);
     }
   }
 }
@@ -44,12 +48,12 @@
 .many-infos {
   .content {
     @include breakpoint(split-column-supporting-info) {
-      @include grid-span(1, 1, 2);
+      @include grid-column(8);
     }
   }
   .supporting-info {
     @include breakpoint(split-column-supporting-info) {
-       @include grid-span(1, 2, 2);
+      @include grid-column(2);
       column-count: 2;
       column-gap: normal;
     }
@@ -58,7 +62,7 @@
 
 // cards to manage content once logged in
 .cards-wrapper {
-  max-width: 58em;
+  max-width: 58rem;
   margin: 0 auto;
 }
 
@@ -72,12 +76,12 @@
 
 // align footer content somewhat
 .ucla-iam-footer-content {
-  max-width: 58em;
+  max-width: 58rem;
 }
 
 //single column pages
 .content-full {
   @extend %content-styling;
-  max-width: 42em;
+  max-width: 42rem;
   margin: 0 auto;
 }

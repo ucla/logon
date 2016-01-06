@@ -47,7 +47,7 @@
 // interior card listing
 .cards-column {
   @include breakpoint(collapse-cards) {
-    width: 36em;
+    width: 36rem;
     float: right;
   }
   overflow: visible;

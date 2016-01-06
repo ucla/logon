@@ -1,6 +1,6 @@
 .line-thru {
   @include line-thru();
-  margin: -($global-spacing  / 2) 0 0;
+  margin: -($global-spacing / 2) 0 0;
 }
 
 hr {
@@ -20,7 +20,7 @@ hr {
   a {
     text-decoration: none;
     color: $white;
-    font-size: map-get($header-sizes, h1);
+    font-size: map-get($header-sizes, h2);
     margin-bottom: $global-spacing;
     font-weight: $header-font-weight;
     &:hover {
