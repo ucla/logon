@@ -36,11 +36,11 @@ hr {
   margin-bottom: ($global-spacing * 4);
 }
 
-.content div {
+.content > div {
   @extend %content-styling;
 }
 
-.supporting-info div {
+.supporting-info > div {
   background: rgba(#fff, .8);
   padding: $global-spacing $global-spacing;
   p, li {

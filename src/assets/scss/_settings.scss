@@ -64,7 +64,7 @@ $medium-gray: $ucla-neutral;
 $dark-gray: darken($ucla-neutral, 15%);
 $black: $ucla-black;
 $white: $ucla-white;
-$body-background: #d1e8f8 url('/assets/img/skyline.jpg') no-repeat;
+$body-background: #d1e8f8 url('/assets/img/skyline.jpg') no-repeat fixed;
 $body-font-color: #444;
 $body-font-family: $ucla-font-stack;
 $body-antialiased: true;

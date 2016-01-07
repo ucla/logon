@@ -7,14 +7,19 @@
 // Fonts
 @import 'ucla/proxima-nova';
 
-// Main toggles
+// Main includes
 @import 'settings';
 @import 'foundation';
 @import 'motion-ui';
+// @import 'singularitygs'
+// @import 'breakpoint'
 
-// ZURB Foundation for Sites
+/////////////////////////////////////////
+///  CSS CLASSES OUTPUT BY FOUNDATION
+/////////////////////////////////////////
+
 @include foundation-global-styles;
-@include foundation-grid;
+// @include foundation-grid;
 @include foundation-typography;
 @include foundation-button;
 @include foundation-forms;
@@ -34,7 +39,7 @@
 // @include foundation-label;
 // @include foundation-media-object;
 // @include foundation-menu;
-@include foundation-off-canvas;
+// @include foundation-off-canvas;
 // @include foundation-orbit;
 // @include foundation-pagination;
 // @include foundation-progress-bar;
@@ -44,10 +49,18 @@
 // @include foundation-switch;
 // @include foundation-table;
 // @include foundation-tabs;
-@include foundation-thumbnail;
+// @include foundation-thumbnail;
 // @include foundation-title-bar;
 // @include foundation-tooltip;
 // @include foundation-top-bar;
+
+// ZURB Motion UI
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+/////////////////////////////////////////
+///   ADDITIONAL UC SPECIFIC STYLING
+/////////////////////////////////////////
 
 // UCLA
 @import 'ucla/ucla-badges';
@@ -57,10 +70,6 @@
 
 // Polyfill Overrides
 @import 'ucla/webshim-styling';
-
-// ZURB Motion UI
-@include motion-ui-transitions;
-@include motion-ui-animations;
 
 /////////////////////////////////////////
 ///      APPLICATION COMPONENTS

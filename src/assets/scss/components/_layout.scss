@@ -1,20 +1,35 @@
 html {
-  background: $body-background;
-  box-sizing: border-box;
-  line-height: $global-lineheight;
-	position: relative;
-	min-height: 100%;
-	width: 100%;
-  padding-bottom: $global-spacing * 3;
-}
-
-*, *:before, *:after {
-	box-sizing: inherit;
+	height: 100% !important;
 }
 
 body {
-  color: $body-font-color;
+  background-size: cover;
   letter-spacing: $global-letter-spacing;
+	height: 100% !important;
+}
+
+// have the footer align nicely
+.page-wrap {
+  min-height: 100%;
+  margin-bottom: $global-spacing * 4;
+	@include breakpoint(multi-column) {
+		margin-bottom: $global-spacing * 2;
+	}
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.ucla-iam-footer, .page-wrap:after {
+  height: $global-spacing * 4;
+	@include breakpoint(multi-column) {
+		height: $global-spacing * 2;
+	}
+}
+
+// align footer content somewhat
+.ucla-iam-footer-content {
+  max-width: 56rem;
 }
 
 // logo etc
@@ -25,6 +40,7 @@ body {
 
 // general layout of pages
 .page, .home {
+  padding-bottom: $global-spacing * 3;
   @include grid-row();
   .content {
     @include grid-column(12);
@@ -41,6 +57,19 @@ body {
   }
 }
 
+// have source ordering of aside appear above article in mobile
+.info-first {
+  .content {
+    @include breakpoint(multi-column) {
+      @include grid-column-position(-4);
+    }
+  }
+  .supporting-info {
+    @include breakpoint(multi-column) {
+      @include grid-column-position(8);
+    }
+  }
+
 // home page specific styling
 .home {
   max-width: 60rem;
@@ -52,19 +81,13 @@ body {
   }
 }
 
-// for pages with a lot of supporting content use column count to spread it out
-.many-infos {
-  .content {
-    @include grid-column(8);
-    @include grid-column-position(-4);
-  }
-  .supporting-info {
-    @include grid-column(4);
-    @include grid-column-position(8);
-    @include breakpoint(split-column-supporting-info) {
-      column-count: 2;
-      column-gap: normal;
-    }
+// for a lot of supporting info use column count to spread it out
+.column-split {
+  @include grid-column(4);
+  @include grid-column-position(8);
+  @include breakpoint(split-column-supporting-info) {
+    column-count: 2;
+    column-gap: normal;
   }
 }
 
@@ -80,11 +103,6 @@ body {
   @include breakpoint(multi-column) {
     display: block;
   }
-}
-
-// align footer content somewhat
-.ucla-iam-footer-content {
-  max-width: 56rem;
 }
 
 //single column pages
