@@ -47,17 +47,17 @@
 // ---------
 
 $global-font-size: 100%;
-$global-width: rem-calc(1200);
+$global-width: rem-calc(1320);
 $global-lineheight: 1.5;
 $primary-color: $ucla-blue;
 $primary-color-safe: $ucla-blue-safe;
 $primary-color-alternate: $ucla-blue-dark;
 $secondary-color: $ucla-gold;
 $success-color: $ucla-green;
-$warning-color: $ucla-pink;
-$warning-color-dark: darken($ucla-pink, 42%);
-$warning-color-dark-alt: darken($ucla-pink, 46%);
-$alert-color: $ucla-orange;
+$warning-color: $ucla-orange;
+$alert-color: $ucla-pink;
+$alert-color-dark: darken($ucla-pink, 42%);
+$alert-color-dark-alternate: darken($ucla-pink, 46%);
 $lighter-gray: lighten($ucla-neutral, 16%);
 $light-gray: lighten($ucla-neutral, 12%);
 $medium-gray: $ucla-neutral;
@@ -82,11 +82,11 @@ $global-text-direction: ltr;
 
 $breakpoints: (
   single-column: 0,
-  shift-typo: 34rem,
+  large-type: 34rem,
   collapse-cards: 37rem,
   multi-column: 54rem,
-  split-column-supporting-info: 74rem,
-  wide: 100rem,
+  split-column-supporting-info: 90rem,
+  wide: 120rem,
 );
 $breakpoint-classes: ();
 
@@ -118,7 +118,7 @@ $header-sizes: (
     'h5': 17,
     'h6': 16,
   ),
-  shift-typo: (
+  large-type: (
     'h1': 40,
     'h2': 32,
     'h3': 26,
@@ -187,8 +187,8 @@ $stat-font-size: 2.5rem;
 
 $abide-inputs: true;
 $abide-labels: true;
-$input-background-invalid: $warning-color;
-$form-label-color-invalid: $warning-color;
+$input-background-invalid: $alert-color;
+$form-label-color-invalid: $alert-color;
 $input-warning-color: $warning-color;
 $input-error-font-size: rem-calc(12);
 $input-error-font-weight: $global-weight-bold;

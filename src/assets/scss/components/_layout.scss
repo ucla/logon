@@ -30,7 +30,7 @@ body {
 
 // align footer content somewhat
 .ucla-iam-footer-content {
-  max-width: 56rem;
+  max-width: 60rem;
 }
 
 // logo etc
@@ -86,6 +86,7 @@ body {
 // for a lot of supporting info use column count to spread it out
 .column-split {
   @include breakpoint(split-column-supporting-info) {
+    @include grid-column-collapse;
     column-count: 2;
     column-gap: normal;
   }

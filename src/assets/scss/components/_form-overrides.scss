@@ -1,0 +1,57 @@
+legend {
+  font-size: map-get($header-sizes, h2);
+  margin-bottom: ($global-spacing / 2);
+  display: block;
+  width: 100%;
+  font-weight: normal;
+  color: $primary-color-safe;
+}
+
+.for-checkbox, .for-radio {
+  display: block;
+  input {
+    margin-right: ($global-spacing / 2);
+    margin-bottom: 0;
+    width: auto;
+    vertical-align: -1px;
+  }
+}
+
+ input + .for-checkbox, input + .for-radio {
+   margin: 1rem 0 0;
+ }
+
+
+button, .button {
+  background-color: $light-gray;
+  text-decoration: none;
+  border-radius: $global-radius;
+  &:focus {
+    outline: 0;
+  }
+  &:hover {
+    background-color: $lighter-gray;
+    text-decoration: none;
+    color: $anchor-color-hover;
+  }
+  &:active {
+    box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+.primary-button {
+  background-color: $primary-color;
+  color: $white;
+  &:hover {
+    background-color: $secondary-color;
+    color: $ucla-blue-dark;
+  }
+}
+
+.cancel-button:hover {
+  background-color: mix($ucla-pink, $white, 80%);
+  color: $white;
+}
