@@ -82,8 +82,9 @@ $global-text-direction: ltr;
 
 $breakpoints: (
   single-column: 0,
-  collapse-cards: 42.5rem,
-  multi-column: 56rem,
+  shift-typo: 34rem,
+  collapse-cards: 37rem,
+  multi-column: 54rem,
   split-column-supporting-info: 74rem,
   wide: 100rem,
 );
@@ -93,11 +94,10 @@ $breakpoint-classes: ();
 // -----------
 
 $grid-row-width: $global-width;
-$grid-column-count: 12;
-$grid-column-gutter: 30px;
+$grid-column-count: 16;
 $grid-column-responsive-gutter: (
-  single-column: 20px,
-  multi-column: 30px,
+  single-column: 24px,
+  multi-column: 36px,
 );
 $grid-column-align-edge: true;
 $block-grid-max: 8;
@@ -118,9 +118,9 @@ $header-sizes: (
     'h5': 17,
     'h6': 16,
   ),
-  multi-column: (
-    'h1': 42,
-    'h2': 34,
+  shift-typo: (
+    'h1': 40,
+    'h2': 32,
     'h3': 26,
     'h4': 22,
     'h5': 20,
