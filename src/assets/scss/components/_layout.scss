@@ -8,31 +8,6 @@ body {
 	height: 100% !important;
 }
 
-// have the footer align nicely
-.page-wrap {
-  min-height: 100%;
-  margin-bottom: $global-spacing * 4;
-	@include breakpoint(multi-column) {
-		margin-bottom: $global-spacing * 2;
-	}
-}
-.page-wrap:after {
-  content: "";
-  display: block;
-}
-
-.ucla-iam-footer, .page-wrap:after {
-  height: $global-spacing * 4;
-	@include breakpoint(multi-column) {
-		height: $global-spacing * 2;
-	}
-}
-
-// align footer content somewhat
-.ucla-iam-footer-content {
-  max-width: 60rem;
-}
-
 // logo etc
 .page-header {
   max-width: 444px;
@@ -79,7 +54,7 @@ body {
     text-decoration: none;
   }
   .content h1 {
-    margin-bottom: $global-margin * 7;
+    margin-bottom: $global-margin * 4;
   }
 }
 
@@ -111,4 +86,16 @@ body {
   @extend %content-styling;
   max-width: 48rem;
   margin: 0 auto;
+}
+
+.ucla-iam-footer {
+  height: $global-spacing * 4;
+	@include breakpoint(multi-column) {
+		height: $global-spacing * 2;
+	}
+}
+
+// align footer content somewhat
+.ucla-iam-footer-content {
+  max-width: 60rem;
 }
