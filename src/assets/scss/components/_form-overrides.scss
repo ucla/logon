@@ -1,5 +1,5 @@
 legend {
-  font-size: map-get($header-sizes, h2);
+  font-size: rem-calc(nested-map-get($header-sizes, large-type, h2));
   margin-bottom: ($global-spacing / 2);
   display: block;
   width: 100%;

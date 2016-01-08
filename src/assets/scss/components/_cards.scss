@@ -59,7 +59,7 @@
     margin-top: $global-margin;
     margin-bottom: -($global-margin * 4);
     padding: ($global-padding);
-    font-size: map-get($header-sizes, h2);
+    font-size: rem-calc(nested-map-get($header-sizes, large-type, h2));
     font-weight: $header-font-weight;
     &:first-child {
       margin-top: 0;
