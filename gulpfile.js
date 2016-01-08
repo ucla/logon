@@ -26,6 +26,7 @@ var PATHS = {
     'bower_components/foundation-sites/scss',
     'bower_components/singularity/stylesheets',
     'bower_components/breakpoint/stylesheets',
+    'bower_components/sass-toolkit/stylesheets',
     'bower_components/motion-ui/src/'
   ],
   javascript: [
@@ -64,7 +65,7 @@ gulp.task('clean', function(done) {
   rimraf('dist', done);
 });
 
-// Browser Sync wrapper task 
+// Browser Sync wrapper task
 // allows for proper injection of css files
 gulp.task('reload', function(cb) {
   browser.reload();

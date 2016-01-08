@@ -7,12 +7,20 @@
 // Fonts
 @import 'ucla/proxima-nova';
 
-// Main includes
+// Main library includes
 @import 'settings';
 @import 'foundation';
 @import 'motion-ui';
-// @import 'singularitygs'
+
+// Some useful tools
+@import 'uc/uc-general-utilities';
+@import 'toolkit' // https://github.com/at-import/toolkit
+
+// For a better grid system (tho breakpoint namespacing)
+// https://github.com/at-import/breakpoint/wiki
+// https://github.com/at-import/Singularity/wiki
 // @import 'breakpoint'
+// @import 'singularitygs'
 
 /////////////////////////////////////////
 ///  CSS CLASSES OUTPUT BY FOUNDATION
