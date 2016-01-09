@@ -21,12 +21,12 @@ legend {
    margin: 1rem 0 0;
  }
  
- button {
-   @extend .button;
+  button {
+   @include button();
  }
 
 .primary-button {
-  background-color: $primary-color;
+  background-color: $primary-color-safe;
   color: $ucla-gold;
   &:hover {
     background-color: $secondary-color;
@@ -34,7 +34,9 @@ legend {
   }
 }
 
-.cancel-button:hover {
-  background-color: mix($ucla-pink, $white, 80%);
-  color: $white;
+.cancel-button {
+  &:hover {
+    background-color: mix($ucla-pink, $white, 80%);
+    color: $white;
+  }
 }
