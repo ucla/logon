@@ -1,0 +1,47 @@
+// display like it's a header
+legend {
+  font-size: rem-calc(nested-map-get($header-sizes, large-type, h2));
+  margin-bottom: ($global-spacing / 2);
+  display: block;
+  width: 100%;
+  font-weight: normal;
+  color: $primary-color-safe;
+}
+
+// have label text that wraps not have a giant gap
+[type='file'], [type='checkbox'], [type='radio'] {
+  margin: $global-margin 0 0;
+}
+
+// compensate for extra large margin above first one
+label:first-child [type='file'], label:first-child [type='checkbox'], label:first-child [type='radio'] {
+  margin-top: 0;
+}
+
+// make sure we still have a nice rhythm on the bottom
+label:last-child [type='file'], label:last-child [type='checkbox'], label:last-child [type='radio'] {
+  margin-bottom: $global-margin;
+}
+ 
+// no CSS output for Foundation buttons component :)
+button {
+  @include button();
+ }
+
+// blue + gold, action that changes page/etc
+.primary-button {
+  background-color: $primary-color-safe;
+  color: $ucla-gold;
+  &:hover {
+    background-color: $secondary-color;
+    color: $ucla-blue-dark;
+  }
+}
+
+// button that cancels/clears
+.cancel-button {
+  &:hover {
+    background-color: mix($ucla-pink, $white, 80%);
+    color: $white;
+  }
+}
