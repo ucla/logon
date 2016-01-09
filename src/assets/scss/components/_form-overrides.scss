@@ -20,31 +20,14 @@ legend {
  input + .for-checkbox, input + .for-radio {
    margin: 1rem 0 0;
  }
-
-
-button, .button {
-  background-color: $light-gray;
-  text-decoration: none;
-  border-radius: $global-radius;
-  &:focus {
-    outline: 0;
-  }
-  &:hover {
-    background-color: $lighter-gray;
-    text-decoration: none;
-    color: $anchor-color-hover;
-  }
-  &:active {
-    box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
-  }
-  a {
-    text-decoration: none;
-  }
-}
+ 
+ button {
+   @extend .button;
+ }
 
 .primary-button {
   background-color: $primary-color;
-  color: $white;
+  color: $ucla-gold;
   &:hover {
     background-color: $secondary-color;
     color: $ucla-blue-dark;

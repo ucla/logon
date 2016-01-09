@@ -16,7 +16,6 @@ body {
 
 // general layout of pages
 .page, .home {
-  padding-bottom: $global-spacing * 3;
   @include grid-row();
   .content {
     @include grid-column(16);
@@ -88,6 +87,12 @@ body {
   margin: 0 auto;
 }
 
+// padding on bottom to leave space for fixed footer
+.page, .home, .cards-wrapper {
+  margin-bottom: $global-spacing * 4;
+}
+
+// footer height may need to change between applications, so keep outside framework
 .ucla-iam-footer {
   height: $global-spacing * 4;
 	@include breakpoint(multi-column) {

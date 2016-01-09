@@ -20,5 +20,5 @@
     "webshim": "~1.15.10",
     "sass-toolkit": "~2.9.0"
   },
-  "private": true,
+  "private": true
 }

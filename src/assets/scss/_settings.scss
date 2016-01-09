@@ -97,7 +97,7 @@ $grid-row-width: $global-width;
 $grid-column-count: 16;
 $grid-column-responsive-gutter: (
   single-column: 24px,
-  multi-column: 36px,
+  multi-column: 32px,
 );
 $grid-column-align-edge: true;
 $block-grid-max: 8;
@@ -127,7 +127,7 @@ $header-sizes: (
     'h6': 16,
   ),
 );
-$header-color: $primary-color;
+$header-color: $primary-color-safe;
 $header-lineheight: 1.2;
 $header-margin-bottom: 0.5rem;
 $header-text-rendering: optimizeLegibility;
@@ -237,13 +237,13 @@ $breadcrumbs-item-slash: true;
 // 11. Button
 // ----------
 
-$button-padding: 0.85em 1em;
+$button-padding: .75rem $global-padding;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
-$button-background: $primary-color;
-$button-background-hover: scale-color($button-background, $lightness: -15%);
-$button-color: #fff;
-$button-color-alt: #000;
+$button-background: $lighter-gray;
+$button-background-hover: $light-gray;
+$button-color: $anchor-color;
+$button-color-alt: $anchor-color;
 $button-radius: $global-radius;
 $button-sizes: (
   single-column: 0.6rem,

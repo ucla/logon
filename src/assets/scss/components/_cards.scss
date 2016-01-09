@@ -5,7 +5,7 @@
 // basic card styling
 .card {
   background: $white;
-  padding: $global-padding ($global-padding *3) ;
+  padding: $global-padding ($global-padding * 2) ;
   font-weight: $header-font-weight;
   margin-bottom: ($global-margin / 2);
   @extend %ucla-box-shadow;
@@ -19,9 +19,9 @@
     padding: ($global-padding / 2);
   }
   .profile-pic {
-    max-width: ($global-spacing * 8);
-    max-height: ($global-spacing * 8);
-    margin-left: -9em;
+    max-width: ($global-spacing * 6);
+    max-height: ($global-spacing * 6);
+    margin-left: -($global-spacing * 7.5);
     margin-top: $global-padding;
     float: left;
     border-radius: $global-radius;
@@ -57,8 +57,8 @@
     color: $ucla-yellow;
     margin-left: $global-spacing * 16;
     margin-top: $global-margin;
-    margin-bottom: -($global-margin * 4);
-    padding: ($global-padding);
+    margin-bottom: -$global-margin;
+    padding: $global-padding;
     font-size: rem-calc(nested-map-get($header-sizes, large-type, h2));
     font-weight: $header-font-weight;
     &:first-child {
@@ -79,6 +79,7 @@
     dt {
       padding-top: $global-padding;
       border-top: 1px solid $light-gray;
+      font-weight: normal;
       &:first-child {
         border-top: none;
       }
