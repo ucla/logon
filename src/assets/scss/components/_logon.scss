@@ -50,9 +50,9 @@ hr {
     padding-left: $global-spacing;
   }
   h1 {
-    font-size: rem-calc(nested-map-get($header-sizes, large-type, h2));
+    font-size: rem-calc(nested-map-get($header-sizes, large-type, h3));
   }
   h2 {
-    font-size: rem-calc(nested-map-get($header-sizes, large-type, h3));
+    font-size: rem-calc(nested-map-get($header-sizes, large-type, h4));
   }
 }

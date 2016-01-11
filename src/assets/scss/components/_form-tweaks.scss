@@ -8,16 +8,6 @@ legend {
   color: $primary-color-safe;
 }
 
-// have label text that wraps not have a giant gap
-[type='file'], [type='checkbox'], [type='radio'] {
-  margin: $global-margin 0 0;
-}
-
-// compensate for extra margin above first one
-label:first-child [type='file'], label:first-child [type='checkbox'], label:first-child [type='radio'] {
-  margin-top: 0;
-}
-
 input {
   border-radius: $global-radius;
 }

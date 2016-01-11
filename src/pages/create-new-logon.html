@@ -27,18 +27,18 @@
       <p>Users may be held accountable for their conduct under any applicable University or campus policies, procedures, or collective bargaining agreements. Any actions which deter other users from doing their work or which would otherwise be deemed malicious by the University will result in the loss of access to the system and possible University disciplinary action or civil or criminal action.  Unauthorized use of computing resources and use for personal gain constitute theft under California law and will be prosecuted by the University.</p>
   
       <p>Complaints alleging misuse of resources will be directed to those responsible for taking appropriate disciplinary action.</p>
-  
-      <h2>Acceptance of Terms</h2>
-  
-      <p>In order to create a UCLA Logon, you must first agree to these terms.  You may not create an account if you do not accept the terms.  Continuing with the account creation process constitutes agreement.</p>
-  
-      <p>You may not agree to the terms and may not proceed with account creation if you are barred from accepting the terms under the laws of the United States or the country from which you are creating this account.</p>
     </div>
   </aside>
 
   <article class="content">
     <div>
       <h1>Create a UCLA Logon ID</h1>
+      
+      <ul id="form-step-bar">
+    		<li class="active">Affiliation Status</li>
+    		<li>Verify Identity</li>
+    		<li>Create ID</li>
+    	</ul>
     
       <p>By completing this procedure, you will activate your UCLA Logon. Before proceeding you must identify yourself to the system.</p>
     
@@ -60,15 +60,18 @@
       
           <label><input type="checkbox" id="ucopormerced" name="ucopormerced" value="uid">UCOP or UC Merced Staff Member</label>
       
-          <label><input type="checkbox" id="nouid" name="nouid" value="nouid">
-          I do not have a UCLA Identification Number and I am <b>NONE OF THE ABOVE</b>. Accounts created without a UCLA ID number can be used to authenticate to many UCLA applications, but are not generally eligible to receive campus services.</label>
+          <label><input type="checkbox" id="nouid" name="nouid" value="nouid">I do not have a UCLA Identification Number and am <strong>NONE OF THE ABOVE</strong>.</label> 
+          
+          <p class="help-text">Accounts created without a UCLA ID number can be used to authenticate to many UCLA applications, but are not generally eligible to receive campus services.</p>
         </fieldset>
     
         <hr>
         
         <fieldset>
-        <label><input type="checkbox" id="tos" name="tos" value="tos">I agree to the Terms of Service</label>
-    
+        <label><input type="checkbox" id="tos" name="tos" value="tos">I agree to the Terms of Service.</label>
+        
+        <p class="help-text">You may not create an account if you do not accept the terms. Continuing with the account creation process constitutes agreement. You may not agree to the terms and may not proceed with account creation if you are barred from accepting the terms under the laws of the United States or the country from which you are creating this account.</p>
+            
         <button type="submit" class="primary-button">Next</button>
         </fieldset>
         
@@ -76,7 +79,7 @@
         
       </form>
     
-      <p>For further assistance, contact the Help Desk by telephone at 310-267-HELP (4357) or email at <a href="mailto:accounts@ucla.edu">accounts@ucla.edu</a>.</p>
+      <p>For further assistance, contact the Help Desk at 310-267-HELP (4357) or <a href="mailto:accounts@ucla.edu">accounts@ucla.edu</a>.</p>
     </div>
   </article>
 
