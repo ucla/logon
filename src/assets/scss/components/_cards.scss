@@ -46,9 +46,11 @@
 
 // interior card listing
 .cards-column {
+  margin-bottom: $global-margin * 5;
   @include breakpoint(collapse-cards) {
     width: 36rem;
     float: right;
+    margin-bottom: $global-margin * 2;
   }
   overflow: visible;
   h1 {
