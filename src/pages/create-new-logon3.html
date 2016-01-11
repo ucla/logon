@@ -50,15 +50,20 @@
   
       <form action="/activate.php" method="post">
   
-        <label for="user1">Desired UCLA Logon ID</label>
-        <input name="user1" maxlength="15" placeholder="joebruin42" id="user1" value="" alt="Your username will be assigned for life and CAN NOT BE CHANGED. Select carefully.">
-        <label for="user2">Confirm desired UCLA Logon ID</label>
-        <input name="user2" maxlength="15" placeholder="joebruin42" id="user2" value="" alt="Your username will be assigned for life and CAN NOT BE CHANGED. Select carefully.">
-  
-        <label for="pass1">Password</label>
-        <input name="pass1" type="password" placeholder="Your desired password" maxlength="128" size="48" id="pass1" value="">
-        <label for="pass2">Confirm Password</label>
-        <input name="pass2" type="password" placeholder="Your desired password (again)" maxlength="128" size="48" id="pass2" value="">
+        <fieldset>
+          <label for="user1">Desired UCLA Logon ID</label>
+          <input name="user1" type="text" maxlength="15" placeholder="joebruin42" id="user1" value="" alt="Your username will be assigned for life and CAN NOT BE CHANGED. Select carefully." autofocus required>
+          <label for="user2">Confirm desired UCLA Logon ID</label>
+          <input name="user2" type="text" maxlength="15" placeholder="joebruin42" id="user2" value="" alt="Your username will be assigned for life and CAN NOT BE CHANGED. Select carefully." required>
+        </fieldset>
+
+        
+        <fieldset>
+          <label for="pass1">Password</label>
+          <input name="pass1" type="password" maxlength="128" id="pass1" value="" placeholder="Your desired password" required>
+          <label for="pass2">Confirm Password</label>
+          <input name="pass2" type="password" maxlength="128" id="pass2" value="" placeholder="Your desired password (again)" required>
+        </fieldset>
   
         <p><span id="strength_human">password strength</span>: <span id="strength_score">0</span></p>
   
@@ -114,7 +119,7 @@
         </script>
   
         <label for="selectChallenge">Type your Response</label>
-        <input name="response" size="60" maxlength="128" placeholder="Your response to the challenge question" id="response" alt="Your Response is the answer to your Challenge question.">
+        <input name="response" type="text" maxlength="128" placeholder="Your response to the challenge question" id="response" alt="Your Response is the answer to your Challenge question.">
   
         <button class="primary-button" type="submit">Create UCLA Logon ID</button>
       </form>

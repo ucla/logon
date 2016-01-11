@@ -13,14 +13,13 @@ legend {
   margin: $global-margin 0 0;
 }
 
-// compensate for extra large margin above first one
+// compensate for extra margin above first one
 label:first-child [type='file'], label:first-child [type='checkbox'], label:first-child [type='radio'] {
   margin-top: 0;
 }
 
-// make sure we still have a nice rhythm on the bottom
-label:last-child [type='file'], label:last-child [type='checkbox'], label:last-child [type='radio'] {
-  margin-bottom: $global-margin;
+input {
+  border-radius: $global-radius;
 }
  
 // no CSS output for Foundation buttons component :)

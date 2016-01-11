@@ -6,7 +6,7 @@
       <form action="/userlookup.php" method="post">
   
         <label title="Enter your last name as it is on file with UCLA. Do not include any suffix." for="sn">Last Name</label>
-        <input name="sn" size="40" maxlength="40" value="" placeholder="Bruin" id="sn" required>
+        <input name="sn" type="text" maxlength="40" value="" placeholder="Bruin" id="sn" required>
   
         <label title="Enter the date you were born in year-month-day format." for="dob">Date of Birth</label>
         <input name="dob" type="date" placeholder="YYYY-MM-DD" id="dob" required>
@@ -14,9 +14,7 @@
         <label title="Your UCLA ID Number is nine (9) digits long and is printed on your UCLA ID Card." for="uclaid">9 Digit UCLA ID Number</label>
         <input name="uclaid" pattern="" type="password" placeholder="123-456-789" value="" id="uclaid">
   
-        <label class="for-checkbox">
-          <input type="checkbox" id="email-toggler" required>But... I don't have a 9 Digit UCLA ID Number. :(
-        </label>
+        <label><input type="checkbox" id="email-toggler" required>But... I don't have a 9 Digit UCLA ID Number. :(</label>
   
         <div id="email-toggle">
           <label title="A valid contact email address is required to continue" for="email">We got your back, enter your email address on file instead</label>
