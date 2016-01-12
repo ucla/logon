@@ -1,7 +1,20 @@
 #form-step-bar {
-  margin: 0 0 $global-margin;
+  margin: 0 0 ($global-margin * 2);
   padding: 0;
-  list-style-type: none;
+  .form-step-todo {
+    color: $medium-gray; 
+    border-bottom: 3px double $light-gray;
+  }
+  .form-step-doing {
+    color: $primary-color-safe; 
+    border-bottom: 3px double $primary-color-safe;
+    background: $lighter-gray;
+    border-radius: $global-radius;
+  }
+  .form-step-done {
+    color: $primary-color-safe;
+    border-bottom: 3px solid $primary-color-safe;
+  }
 }
 
 #form-step-bar li {
@@ -10,44 +23,4 @@
   width: 32%;
   line-height: 3em;
   font-size: $small-font-size;
-}
-
-#form-step-bar li.form-step-done {
-  color: $primary-color-safe;
-  border-bottom: 4px solid $primary-color-safe;
-}
-#form-step-bar li.form-step-todo {
-  color: $medium-gray; 
-  border-bottom: 4px solid $light-gray;
-}
-
-#form-step-bar li:after {
-  content: "\00a0\00a0";
-}
-
-#form-step-bar li:before {
-  position: relative;
-  bottom: -2.5em;
-  float: left;
-  left: 45%;
-  line-height: 1em;
-}
-
-#form-step-bar li.form-step-done:before {
-  content: "\2713";
-  color: $primary-color-safe;
-  background-color: $primary-color-safe;
-  height: 1.2em;
-  width: 1.2em;
-  line-height: 1.2em;
-  border: none;
-  border-radius: 1.2em;
-}
-
-#form-step-bar li.form-step-todo:before {
-  content: "\039F";
-  color: $light-gray;
-  background-color: white;
-  font-size: 1.5em;
-  bottom: -1.65em;
 }
