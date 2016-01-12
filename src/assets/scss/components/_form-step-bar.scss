@@ -1,5 +1,5 @@
 #form-step-bar {
-  margin: 0 0 ($global-margin * 2);
+  margin: 0 0 ($global-margin * 1.5);
   padding: 0;
   .form-step-todo {
     color: $medium-gray; 
@@ -21,6 +21,6 @@
   display: inline-block;
   text-align: center;
   width: 32%;
-  line-height: 3em;
+  line-height: $global-spacing * 2;
   font-size: $small-font-size;
 }
