@@ -15,12 +15,14 @@ input {
 // no CSS output for Foundation buttons component :)
 button {
   @include button();
+  border: 1px solid $light-gray;
  }
 
 // blue + gold, action that changes page/etc
 .primary-button {
   background-color: $primary-color-safe;
   color: $ucla-gold;
+  border: none;
   &:hover {
     background-color: $secondary-color;
     color: $ucla-blue-dark;
@@ -29,8 +31,9 @@ button {
 
 // button that cancels/clears
 .cancel-button {
+  color: $alert-color;
   &:hover {
-    background-color: mix($ucla-pink, $white, 80%);
+    background-color: mix($alert-color, $white, 80%);
     color: $white;
   }
 }
