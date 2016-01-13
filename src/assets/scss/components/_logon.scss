@@ -13,7 +13,7 @@ hr {
 .floating-side-nav {
   float: left;
   position: fixed;
-  margin-top: $global-spacing;
+  margin-top: $global-spacing * 3;
   ul {
     list-style: none;
   }

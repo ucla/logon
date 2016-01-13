@@ -58,7 +58,7 @@ $warning-color: $ucla-orange;
 $alert-color: $ucla-pink;
 $alert-color-dark: darken($ucla-pink, 42%);
 $alert-color-dark-alternate: darken($ucla-pink, 46%);
-$lighter-gray: lighten($ucla-neutral, 18%);
+$lighter-gray: lighten($ucla-neutral, 18.5%);
 $light-gray: lighten($ucla-neutral, 12%);
 $medium-gray: $ucla-neutral;
 $dark-gray: darken($ucla-neutral, 15%);
@@ -187,12 +187,12 @@ $stat-font-size: 2.5rem;
 
 $abide-inputs: true;
 $abide-labels: true;
-$input-background-invalid: $alert-color;
+$input-background-invalid: lighten($alert-color, 30%);
 $form-label-color-invalid: $alert-color;
-$input-warning-color: $warning-color;
-$input-error-font-size: rem-calc(12);
+$input-error-color: $alert-color;
+$input-error-font-size: rem-calc(13);
 $input-error-font-weight: $global-weight-bold;
-$form-valid-color: $success-color;
+$form-valid-color: lighten($success-color, 48%);
 
 // 7. Accordion
 // ------------

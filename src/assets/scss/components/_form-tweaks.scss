@@ -1,3 +1,7 @@
+/////////////////////////////////////////
+//   FOUNDATION OVERRIDES / ADDITIONS
+/////////////////////////////////////////
+
 // display like it's a header
 legend {
   font-size: rem-calc(nested-map-get($header-sizes, large-type, h2));
@@ -6,10 +10,6 @@ legend {
   width: 100%;
   font-weight: normal;
   color: $primary-color-safe;
-}
-
-input {
-  border-radius: $global-radius;
 }
  
 // no CSS output for Foundation buttons component :)
@@ -29,11 +29,42 @@ button {
   }
 }
 
-// button that cancels/clears
+// button that cancels/clears changes
 .cancel-button {
   color: $alert-color;
   &:hover {
     background-color: mix($alert-color, $white, 80%);
     color: $white;
   }
+}
+
+/////////////////////////////////////////
+///           FORM STEPS
+/////////////////////////////////////////
+
+#form-step-bar {
+  margin: 0 0 ($global-margin * 1.5);
+  padding: 0;
+  .form-step-todo {
+    color: $medium-gray; 
+    border-bottom: 3px double $light-gray;
+  }
+  .form-step-doing {
+    color: $primary-color-safe; 
+    border-bottom: 3px double $primary-color-safe;
+    background: $lighter-gray;
+    border-radius: $global-radius;
+  }
+  .form-step-done {
+    color: $primary-color-safe;
+    border-bottom: 3px solid $primary-color-safe;
+  }
+}
+
+#form-step-bar li {
+  display: inline-block;
+  text-align: center;
+  width: 32%;
+  line-height: $global-spacing * 2;
+  font-size: $small-font-size;
 }

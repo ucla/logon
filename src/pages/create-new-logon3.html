@@ -52,13 +52,13 @@
       
       <h2>Choose your Username & Password</h2>
   
-      <form action="/activate.php" method="post">
+      <form action="/activate.php" method="post" data-abide>
   
         <fieldset>
           <label for="user1">Desired UCLA Logon ID</label>
           <input name="user1" type="text" maxlength="15" placeholder="joebruin42" id="user1" value="" alt="Your username will be assigned for life and CAN NOT BE CHANGED. Select carefully." autofocus required>
           <label for="user2">Confirm desired UCLA Logon ID</label>
-          <input name="user2" type="text" maxlength="15" placeholder="joebruin42" id="user2" value="" alt="Your username will be assigned for life and CAN NOT BE CHANGED. Select carefully." required>
+          <input name="user2" type="text" maxlength="15" placeholder="joebruin42" id="user2" value="" alt="Your username will be assigned for life and CAN NOT BE CHANGED. Select carefully." required data-equalto="user1">
         </fieldset>
 
         
@@ -66,7 +66,7 @@
           <label for="pass1">Password</label>
           <input name="pass1" type="password" maxlength="128" id="pass1" value="" placeholder="Your desired password" required>
           <label for="pass2">Confirm Password</label>
-          <input name="pass2" type="password" maxlength="128" id="pass2" value="" placeholder="Your desired password (again)" required>
+          <input name="pass2" type="password" maxlength="128" id="pass2" value="" placeholder="Your desired password (again)" required data-equalto="pass1">
         </fieldset>
   
         <p><span id="strength_human">password strength</span>: <span id="strength_score">0</span></p>
