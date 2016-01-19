@@ -21,7 +21,7 @@
   .profile-pic {
     max-width: ($global-spacing * 6);
     max-height: ($global-spacing * 6);
-    margin-left: -($global-spacing * 7.5);
+    margin-left: -($global-spacing * 7);
     margin-top: $global-padding;
     float: left;
     border-radius: $global-radius;
@@ -38,6 +38,12 @@
   padding: 0 ($global-padding / 2);
   color: $anchor-color;
   cursor: pointer;
+  + div {
+    padding-top: $global-padding;
+    h2 {
+      font-size: rem-calc(nested-map-get($header-sizes, large-type, h3));
+    }
+  }
 }
 
 /////////////////////////////////////////
@@ -60,7 +66,7 @@
     margin-left: $global-spacing * 16;
     margin-top: $global-margin;
     margin-bottom: -$global-margin;
-    padding: $global-padding;
+    padding: ($global-padding * .75) $global-padding;
     font-size: rem-calc(nested-map-get($header-sizes, large-type, h2));
     font-weight: $header-font-weight;
     &:first-child {

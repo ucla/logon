@@ -18,6 +18,10 @@ var COMPATIBILITY = ['last 2 versions', 'ie >= 9'];
 
 // File paths to various assets are defined here.
 var PATHS = {
+  bowerDirectLinked: [
+    'bower_components/webshim/js-webshim/minified/**/*',
+    'bower_components/zxcvbn/dist/zxcvbn.js'
+  ],
   assets: [
     'src/assets/**/*',
     '!src/assets/{img,js,scss}/**/*'
@@ -32,8 +36,6 @@ var PATHS = {
   javascript: [
     'bower_components/jquery/dist/jquery.js',
     'bower_components/what-input/what-input.js',
-    'bower_components/zxcvbn/dist/zxcvbn.js',
-    'bower_components/webshim/js-webshim/dev/polyfiller.js',
     'bower_components/foundation-sites/js/foundation.core.js',
     'bower_components/foundation-sites/js/foundation.util.*.js',
     // Paths to individual JS components defined below
@@ -79,6 +81,11 @@ gulp.task('reload', function(cb) {
 gulp.task('copy', function() {
   return gulp.src(PATHS.assets)
     .pipe(gulp.dest('dist/assets'));
+});
+
+gulp.task('copy-bower', function() {
+  return gulp.src(PATHS.bowerDirectLinked)
+    .pipe(gulp.dest('dist/assets/bower_components'));
 });
 
 // Copy page templates into finished HTML files
@@ -165,7 +172,7 @@ gulp.task('images', function() {
 
 // Build the "dist" folder by running all of the above tasks
 gulp.task('build', function(done) {
-  sequence('clean', ['pages', 'sass', 'javascript', 'images', 'copy'], 'styleguide', done);
+  sequence('clean', ['pages', 'sass', 'javascript', 'images', 'copy', 'copy-bower'], 'styleguide', done);
 });
 
 // Start a server with LiveReload to preview the site in
@@ -178,6 +185,7 @@ gulp.task('server', ['build'], function() {
 // Build the site, run the server, and watch for file changes
 gulp.task('default', ['build', 'server'], function() {
   gulp.watch(PATHS.assets, ['copy', 'reload']);
+  gulp.watch(PATHS.bowerDirectLinked, ['copy-bower', 'reload']);
   gulp.watch(['src/pages/**/*.html'], ['pages', 'reload']);
   gulp.watch(['src/{layouts,partials}/**/*.html'], ['pages:reset', 'reload']);
   gulp.watch(['src/assets/scss/**/*.scss'], ['sass']);

@@ -24,6 +24,7 @@ webshim.polyfill('forms forms-ext');
 
 $('.card-action').click(function() {
   $(this).next('div').toggle();
+  // $(this).prev('dd').toggle();
 });
 
 /////////////////////////////////////////
@@ -31,6 +32,7 @@ $('.card-action').click(function() {
 /////////////////////////////////////////
 
 $('.logon-success').click(function() {
-  $('#result').load('includes/logon-exists.html');
+  $('#result').load('assets/includes/logon-exists.html');
 });
 
+    
