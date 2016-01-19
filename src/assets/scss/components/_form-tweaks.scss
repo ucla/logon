@@ -83,13 +83,18 @@ meter {
   appearance: none;
   padding: 0;
   width: 100%;
-  height: $global-margin / 2;
-  vertical-align: $global-margin / 2;
+  height: $global-margin / 4;
+  vertical-align: $global-margin;
   border-bottom-left-radius: $global-radius;
   border-bottom-right-radius: $global-radius;
   /* Applicable only to Firefox */
   background: none;
   background-color: $medium-gray;
+}
+
+#password-strength-text .help-text {
+  display: inline-block;
+  padding: ($global-margin / 2) 0 $global-margin;
 }
 
 meter::-webkit-meter-bar {
