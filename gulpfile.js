@@ -28,8 +28,8 @@ var PATHS = {
   ],
   sass: [
     'bower_components/foundation-sites/scss',
-    'bower_components/singularity/stylesheets',
-    'bower_components/breakpoint/stylesheets',
+    // 'bower_components/singularity/stylesheets',
+    // 'bower_components/breakpoint/stylesheets',
     'bower_components/sass-toolkit/stylesheets',
     'bower_components/motion-ui/src/'
   ],

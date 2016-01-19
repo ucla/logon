@@ -69,11 +69,11 @@ layout: create-password
         <fieldset>
           <label for="pass1">Password</label>
           <input name="pass1" type="password" maxlength="128" id="pass1" value="" placeholder="Your desired password" required>
+          <meter max="4" id="password-strength-meter"></meter>
+          <span id="password-strength-text"></span>
           <label for="pass2">Confirm Password</label>
           <input name="pass2" type="password" maxlength="128" id="pass2" value="" placeholder="Your desired password (again)" required data-equalto="pass1">
         </fieldset>
-  
-        <p><span id="strength_human">password strength</span>: <span id="strength_score">0</span></p>
   
         <h2>Challenge Question & Response</h2>
   
