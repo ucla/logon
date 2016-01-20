@@ -43,30 +43,49 @@ button {
 /////////////////////////////////////////
 
 #form-step-bar {
-  margin: 0 0 ($global-margin * 1.5);
+  margin: $global-margin 0;
   padding: 0;
+  display: block;
+  position: relative;
+  max-width: 25rem;
   .form-step-todo {
-    color: $medium-gray; 
-    border-bottom: 3px double $light-gray;
+    color: $medium-gray;
   }
   .form-step-doing {
     color: $primary-color-safe; 
-    border-bottom: 3px double $primary-color-safe;
     background: $lighter-gray;
-    border-radius: $global-radius;
   }
   .form-step-done {
-    color: $primary-color-safe;
-    border-bottom: 3px solid $primary-color-safe;
+    color: $dark-gray;
   }
 }
 
 #form-step-bar li {
   display: inline-block;
   text-align: center;
+  padding: 0;
+  border-radius: 99rem;
   width: 32%;
   line-height: $global-spacing * 2;
   font-size: $small-font-size;
+  &:nth-child(1)::before {
+    position: absolute;
+    font-size: $global-font-size / 2;
+    content: "Step 1";
+    top: -$global-margin;
+  }
+  &:nth-child(2)::before {
+    position: absolute;
+    font-size: $global-font-size / 2;
+    content: "Step 2";
+    top: -$global-margin;
+  }
+  &:nth-child(3)::before {
+    position: absolute;
+    font-size: $global-font-size / 2;
+    content: "Step 3";
+    top: -$global-margin;
+  }
 }
 
 /////////////////////////////////////////
@@ -75,21 +94,22 @@ button {
 
 #pass1 {
   margin-bottom: 0;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+
 }
 
 meter {
   appearance: none;
   padding: 0;
-  width: 100%;
-  height: $global-margin / 4;
+  width: 98.5%;
+  display: block;
+  margin: 0 auto $global-margin;
+  height: $global-margin / 6;
   vertical-align: $global-margin;
   border-bottom-left-radius: $global-radius;
   border-bottom-right-radius: $global-radius;
   /* Applicable only to Firefox */
   background: none;
-  background-color: $medium-gray;
+  background-color: transparent;
 }
 
 #password-strength-text .help-text {
@@ -99,7 +119,7 @@ meter {
 
 meter::-webkit-meter-bar {
   background: none;
-  background-color: $medium-gray;
+  background-color: transparent;
 }
 
 /* Webkit based browsers */

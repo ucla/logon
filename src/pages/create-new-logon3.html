@@ -11,18 +11,16 @@ layout: create-password
       <p>Your username must be between 3 and 15 characters in length. All usernames
       must begin with a letter. The remaining characters can consist of any
       combination of letters and numbers.  All letters default to lowercase.
-      Both usernames must match. Because usernames are permanent, most iterations
-      of common names have probably already been used. If you are having
-      trouble selecting a username, please continue trying alternates.</p>
+      Because usernames are permanent, many iterations of common names have been used.
+      If you are having trouble selecting a username, please continue trying alternates.</p>
   
       <h2>Choosing your password</h2>
   
       <p>Passwords must be between 8 and 128 characters in length and must contain
-      a minimum of 1 letter, and 1 number or special character. Both passwords
-      entered must match. Passwords will not appear as you type. Please note
-      that unlike usernames, <strong>passwords are case sensitive</strong>.  Valid
-      characters can consist of upper and lower case letters, numbers, and any
-      characters from the following set: !@#$%^&amp;*().,</p>
+      a minimum of 1 letter, and 1 number or special character. Please note
+      that unlike usernames, <strong>passwords are case sensitive</strong>.  
+      Passwords can consist of upper and lower case letters, numbers, and any
+      of the following characters: !@#$%^&amp;*().,</p>
   
       <p>Your password is used to safeguard access to your account. You
       will want to select something that is both easy for you to remember and
@@ -46,7 +44,7 @@ layout: create-password
     <div>
       <h1>Create your UCLA Logon ID</h1>
       
-      <ol id="form-step-bar" data-progtrckr-steps="3">
+      <ol id="form-step-bar">
         <li class="form-step-done">Set Affiliation Status</li>
         <li class="form-step-done">Verify Identity</li>
         <li class="form-step-doing">Create Logon ID</li>
@@ -56,23 +54,26 @@ layout: create-password
       
       <h2>Choose your Username & Password</h2>
   
-      <form action="/activate.php" method="post" data-abide>
+      <form action="/activate.php" method="post" data-abide novalidate>
   
         <fieldset>
-          <label for="user1">Desired UCLA Logon ID</label>
-          <input name="user1" type="text" maxlength="15" placeholder="joebruin42" id="user1" value="" alt="Your username will be assigned for life and CAN NOT BE CHANGED. Select carefully." autofocus required>
-          <label for="user2">Confirm desired UCLA Logon ID</label>
-          <input name="user2" type="text" maxlength="15" placeholder="joebruin42" id="user2" value="" alt="Your username will be assigned for life and CAN NOT BE CHANGED. Select carefully." required data-equalto="user1">
+          <label for="user1">Desired UCLA Logon ID
+          <input name="user1" type="text" maxlength="15" placeholder="joebruin42" id="user1" value="" alt="Your username will be assigned for life and CAN NOT BE CHANGED. Select carefully." pattern="[a-z0-9]{3,15}" autofocus required></label>
+          <label for="user2">Confirm desired UCLA Logon ID
+          <input name="user2" type="text" maxlength="15" placeholder="joebruin42" id="user2" value="" alt="Your username will be assigned for life and CAN NOT BE CHANGED. Select carefully." pattern="[a-z0-9]{3,15}" required data-equalto="user1">
+          <span class="form-error">Your usernames don't match! Please double check.</span></label>
         </fieldset>
 
         
         <fieldset>
-          <label for="pass1">Password</label>
-          <input name="pass1" type="password" maxlength="128" id="pass1" value="" placeholder="Your desired password" required>
+          <label for="pass1">Password
+          <input name="pass1" type="password" maxlength="128" id="pass1" value="" placeholder="Your desired password" pattern="[a-zA-Z0-9 !@#$%^&*().,]{8,128}" required>
+          <span class="form-error">Your passwords don't match!</span></label>
           <meter max="4" id="password-strength-meter"></meter>
           <span id="password-strength-text"></span>
-          <label for="pass2">Confirm Password</label>
-          <input name="pass2" type="password" maxlength="128" id="pass2" value="" placeholder="Your desired password (again)" required data-equalto="pass1">
+          <label for="pass2">Confirm Password
+          <input name="pass2" type="password" maxlength="128" id="pass2" value="" placeholder="Your desired password (again)" pattern="[a-zA-Z0-9 !@#$%^&*().,]{8,128}" required data-equalto="pass1">
+          <span class="form-error">Your passwords don't match!</span></label>
         </fieldset>
   
         <h2>Challenge Question & Response</h2>
