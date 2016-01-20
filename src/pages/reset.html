@@ -5,11 +5,12 @@
   
       <p>If you've forgotten your password, enter your UCLA Logon ID below then answer your challenge question.</p>
   
-      <form action="/passreset.php" method="post">
+      <form action="/passreset.php" method="post" data-abide novalidate>
   
         <fieldset>
-          <label class="help" for="uid" hidden>UCLA Logon ID</label>
+          <label class="help" for="uid">UCLA Logon ID
           <input name="uid" type="text" maxlength="15" value="" id="uid" placeholder="Your UCLA Logon ID" autofocus required>
+          <span class="form-error">Your UCLA ID number is exactly 9 numbers long.</span></label>
     
           <button type="submit">Check for security challenge question</button> 
         </fieldset>
