@@ -54,7 +54,7 @@
 .cards-column {
   margin-bottom: $global-margin * 5;
   @include breakpoint(collapse-cards) {
-    width: 36rem;
+    width: 38rem;
     float: right;
     margin-bottom: $global-margin * 2;
   }
