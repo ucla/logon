@@ -2,6 +2,7 @@
 ///     load & configure webshims
 /////////////////////////////////////////
 
+// https://afarkas.github.io/webshim/demos/index.html
 // start polyfilling
 webshim.polyfill('forms-ext');
 
@@ -13,7 +14,7 @@ webshim.polyfill('forms-ext');
 $(document).foundation();
 
 /////////////////////////////////////////
-///  action toggles for cards
+///    action toggles for cards
 /////////////////////////////////////////
 
 $('.card-action').click(function() {
@@ -22,7 +23,7 @@ $('.card-action').click(function() {
 });
 
 /////////////////////////////////////////
-///  show email field if no UID
+///  swap to email if no UID on lookup
 /////////////////////////////////////////
 
 $('#email-toggler').click(function() {
@@ -40,5 +41,5 @@ $('#email-toggler').click(function() {
 /////////////////////////////////////////
 
 $('.logon-success').click(function() {
-  $('#result').load('assets/includes/logon-exists.html');
+  $('#ajax-container').load('assets/includes/logon-exists.html');
 });

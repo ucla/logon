@@ -9,13 +9,15 @@
   
         <fieldset>
           <label class="help" for="uid">UCLA Logon ID
-          <input name="uid" type="text" maxlength="15" value="" id="uid" placeholder="Your UCLA Logon ID" autofocus required>
+          <input name="uid" type="text" maxlength="15" value="" id="uid" placeholder="janebruin42" autofocus required>
           <span class="form-error">Your UCLA ID number is exactly 9 numbers long.</span></label>
     
           <button type="submit">Check for security challenge question</button> 
         </fieldset>
         
         <p><span class="message-fail"><a href="reset-fail.html">(fail)</a></span> <span class="logon-success message-success">(success)</span></p>
+        
+        <div id="ajax-container"></div>
   
       </form>
   
