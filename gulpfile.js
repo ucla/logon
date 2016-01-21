@@ -207,7 +207,7 @@ gulp.task('default', ['build', 'server'], function() {
 gulp.task('a11y', function() {
   gulp.run('pages');
   return gulp.src('dist/*.html')
-  .pipe(access({accessibilityLevel: 'WCAG2A'}))
+  .pipe(access({accessibilityLevel: 'WCAG2AA'}))
 //.pipe(arialinter({level: 'AA'}))
   done();
 });

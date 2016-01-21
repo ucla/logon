@@ -27,9 +27,11 @@ $('.card-action').click(function() {
 
 $('#email-toggler').click(function() {
   if ($(this).is(':checked') ) {
-    $('#email-toggle' ).show('fast');
+    $('#email-toggle').show('fast');
+    $('#uclaid').prop('disabled',true);
   } else {
     $('#email-toggle').hide('fast');
+    $('#uclaid').prop('disabled',false);
   }
 });
 
