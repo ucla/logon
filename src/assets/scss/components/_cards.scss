@@ -54,7 +54,7 @@
 .cards-column {
   margin-bottom: $global-margin * 5;
   @include breakpoint(collapse-cards) {
-    width: 38rem;
+    width: 40rem;
     float: right;
     margin-bottom: $global-margin * 2;
   }
@@ -63,7 +63,7 @@
     display: inline-block;
     background: rgba($ucla-blue-dark, .9);
     color: $ucla-yellow;
-    margin-left: $global-spacing * 16;
+    margin-left: $global-spacing * 20;
     margin-top: $global-margin;
     margin-bottom: -$global-margin;
     padding: ($global-padding * .75) $global-padding;
