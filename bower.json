@@ -19,7 +19,8 @@
     "singularity": "~1.6.2",
     "webshim": "~1.15.10",
     "sass-toolkit": "~2.9.0",
-    "zxcvbn": "~4.2.0"
+    "zxcvbn": "~4.2.0",
+    "duo_php": "git@github.com:duosecurity/duo_php.git#master"
   },
   "private": true
 }
