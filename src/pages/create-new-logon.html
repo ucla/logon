@@ -44,7 +44,7 @@
     
       <p>I am a (select all that apply):</p>
     
-      <form action="/activate.php" method="post">
+      <form action="/activate.php" method="post" data-abide novalidate>
         <fieldset>
           <label><input type="checkbox" id="newstudent" name="newstudent" value="uid">New UCLA Student (including admitted applicants)</label>
       
@@ -68,7 +68,10 @@
         <hr>
         
         <fieldset>
-        <label><input type="checkbox" id="tos" name="tos" value="tos">I agree to the Terms of Service.</label>
+        <label>
+          <input type="checkbox" id="tos" name="tos" value="tos">I agree to the Terms of Service.
+          <span class="form-error">You must agree to the Terms of Service to continue.</span>
+        </label>
         
         <p class="help-text">You may not create an account if you do not accept the terms. Continuing with the account creation process constitutes agreement. You may not agree to the terms and may not proceed with account creation if you are barred from accepting the terms under the laws of the United States or the country from which you are creating this account.</p>
             

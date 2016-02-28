@@ -3,6 +3,10 @@
   margin: -($global-spacing / 2) 0 0;
 }
 
+a {
+  font-weight: bold;
+}
+
 hr {
   height: 1px;
   color: $body-font-color;
@@ -30,8 +34,6 @@ hr {
 }
 
 %content-styling {
-  background: $white;
-  @extend %ucla-box-shadow;
   padding: $global-spacing;
   margin-bottom: ($global-spacing * 4);
 }
@@ -41,7 +43,7 @@ hr {
 }
 
 .supporting-info > div {
-  background: rgba(#fff, .8);
+  background: $white;
   padding: $global-spacing $global-spacing;
   p, li {
     font-size: $small-font-size;

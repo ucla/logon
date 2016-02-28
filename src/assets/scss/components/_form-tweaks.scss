@@ -15,17 +15,19 @@ legend {
 // no CSS output for Foundation buttons component :)
 button {
   @include button();
-  border: 1px solid $light-gray;
+  border: 1px solid $medium-gray;
+  text-transform: uppercase;
+  font-weight: $global-weight-bold;
  }
 
 // blue + gold, action that changes page/etc
 .primary-button {
-  background-color: $primary-color-safe;
-  color: $ucla-gold;
+  background-color: $ucla-its-primary-button-color;
+  color: $white;
   border: none;
   &:hover {
-    background-color: $secondary-color;
-    color: $ucla-blue-dark;
+    background-color: $ucla-its-primary-button-color-hover;
+    color: $white;
   }
 }
 

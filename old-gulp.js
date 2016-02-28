@@ -159,6 +159,7 @@ gulp.task('javascript', function() {
 
   return gulp.src(PATHS.javascript)
     .pipe($.sourcemaps.init())
+    .pipe($.babel())
     .pipe($.concat('app.js'))
     .pipe(uglify)
     .pipe($.if(!isProduction, $.sourcemaps.write()))

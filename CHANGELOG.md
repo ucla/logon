@@ -1,5 +1,5 @@
 # Changelog
 
-## Version 1.0 (November 19, 2015)
+## Version 0.9 (January 20, 2016)
 
-Initial release.
+Pages more or less finalized aside from card management.

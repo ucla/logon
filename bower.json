@@ -16,10 +16,10 @@
   ],
   "dependencies": {
     "motion-ui": "~1.1.0",
-    "singularity": "~1.6.2",
     "webshim": "~1.15.10",
     "sass-toolkit": "~2.9.0",
+    "what-input": "^1.2.5",
     "zxcvbn": "~4.2.0"
   },
-  "private": true
+  "private": true,
 }
