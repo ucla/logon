@@ -22,7 +22,8 @@ var COMPATIBILITY = ['last 2 versions', 'ie >= 9'];
 var PATHS = {
   bowerDirectLinked: [
     'bower_components/webshim/js-webshim/minified/**/*',
-    'bower_components/zxcvbn/dist/zxcvbn.js'
+    'bower_components/zxcvbn/dist/zxcvbn.js',
+    'bower_components/duo_php/js/Duo-Web-v2.min.js'
   ],
   assets: [
     'src/assets/**/*',
