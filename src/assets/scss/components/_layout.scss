@@ -16,7 +16,7 @@ body {
   margin-bottom: $global-margin * 3;
   h1 a {
     color: $white;
-    line-height: $global-spacing * 6;
+    font-size: rem-calc(nested-map-get($header-sizes, large-type, h2));
   } 
   .logo {
     @include grid-column(2);
