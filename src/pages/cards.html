@@ -6,7 +6,7 @@
       <li><a href="#change-pass">Change UCLA Logon password</a></li>
       <li><a href="#2fa">Manage two factor authentication</a></li>
       <li><a href="#question">Manage your security question</a></li>
-      <li><a href="#forwarding">Set official email forwarding</a></li>
+      <li><a href="#forwarding">Manage your @ucla.edu email account</a></li>
     </ul>
   </aside>
   
@@ -49,14 +49,17 @@
   
       <form id="user-requested-password" role="form" action="/" method="post" class="ws-validate">
         
-        <label for="pass-current">Your Current Password</label>
-        <input id="pass-current" name="pass-current" type="password" placeholder="NVAEAUv7k%eDkiGaidTuwi4dUupHf@" aria-required="true" pattern="[a-zA-Z0-9 !@#$%^&*().,]{8,128}" required>
+        <label for="pass-current">Enter Your Current Password
+          <input id="pass-current" name="pass-current" type="password" placeholder="NVAEAUv7k%eDkiGaidTuwi4dUupHf@" aria-required="true" pattern="[a-zA-Z0-9 !@#$%^&*().,]{8,128}" required>
+        </label>
   
-        <label for="pass-requested">Your New Password</label>
-        <input id="pass-requested" name="pass-requested" type="password" placeholder="Your New Password" aria-required="true" pattern="[a-zA-Z0-9 !@#$%^&*().,]{8,128}" required>
-  
+        <label for="pass-requested">Enter Your New Password
+          <input id="pass-requested" name="pass-requested" type="password" placeholder="Your New Password" aria-required="true" pattern="[a-zA-Z0-9 !@#$%^&*().,]{8,128}" required>
+        </label>
+        
         <label for="pass-requested-confirm">Confirm Your New Password</label>
-        <input id="pass-requested" name="pass-requested" type="password" placeholder="Confirm Your New Password" aria-required="true" pattern="[a-zA-Z0-9 !@#$%^&*().,]{8,128}" required>
+          <input id="pass-requested" name="pass-requested" type="password" placeholder="Confirm Your New Password" aria-required="true" pattern="[a-zA-Z0-9 !@#$%^&*().,]{8,128}" required>
+        </label>
   
         <fieldset class="confirm-staff-submit">
         	<button class="primary-button" type="submit" name="sso">Change your password</button>
@@ -126,8 +129,9 @@
         </select>
         <input name="challenge" maxlength="128" id="challenge" style="display:none;z-index:5;top:0;position:relative;">
     
-        <label for="response">Response</label>
-        <input type="text" name="response" maxlength="128" placeholder="Answer to above" id="response">
+        <label for="response">Response
+          <input type="text" name="response" maxlength="128" placeholder="Answer to above" id="response">
+        </label>
     
         <button class="primary-button" type="submit">Change Challenge Phrase</button>
       </form>
@@ -137,9 +141,29 @@
   
   
     <article class="card" id="2fa">
-      <h1>Manage Official Email Forwarding</h1>
+      <h1>Manage Your @ucla.edu Email Account</h1>
       
-      <p>Four dollar toast swag fingerstache vinyl sustainable.  PBR&amp;B tempor do, pariatur ramps cornhole echo park ullamco delectus XOXO nesciunt four dollar toast pinterest.  Gentrify pabst hoodie, shoreditch cillum  tofu four loko.  Irure  PBR&amp;B bespoke aute  beard adipisicing chicharrones leggings, ethical sartorial pop-up before they sold out shoreditch.  Retro distillery banh mi, occaecat  microdosing gastropub seitan fixie nesciunt vinyl.  Mixtape offal delectus, franzen odio plaid organic truffaut keffiyeh locavore tofu.  Plaid helvetica raw denim, PBR&amp;B officia  gochujang sunt 90's fingerstache actually letterpress.</p>
+      <p class="alert-info"><strong>Current students, alumni, and retirees:</strong> Have you considered switching to <a target="_blank" href="http://g.ucla.edu">Google Apps for UCLA</a>?</p>
+      
+      <p>Anyone possessing an @ucla.edu email address can choose to have messages sent to it forwarded elsewhere, or simply deactivate the account.</p>
+      
+      <ul>
+        <li>Current status: active</li>
+        <li>Current forwarding address: carl@ubelhardt.net</li>
+      </ul>
+      
+      <form action="/mailprefs.php" method="post">
+        <label>Forward email to this address
+        <input class="focus" id="e1" name="e1" type="email" placeholder="foobruin@gmail.com" title="Enter email address" required>
+        </label>
+        <label>Confirm email address to have mail forwarded to
+          <input class="focus" id="e2" name="e2" type="email" placeholder="foobruin@gmail.com" title="Re-enter email address" required>
+        </label>
+        <button id="verify-forwarding" class="primary-button" type="submit" name="action">Forward @ucla.edu emails to this address</button>
+        <button id="cancel-email" class="cancel-button" type="submit" name="action2">Disable my @ucla.edu email account</button>
+        <p>A verification link will be sent to the new address to confirm.</p>
+      </form>
+
     </article>
   
   </section>
