@@ -1,0 +1,73 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UCLA Logon</title>
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body>
+
+  <header class="page-header" role="banner"><h1><a href="./"><img src="assets/img/ucla-white.png" alt="UCLA" class="logo">Identity & Access Management</a></h1></header>
+
+  <section class="page info-first">
+  
+    <aside class="supporting-info">
+      <div>
+        <h1>Third Party Accounts</h1>
+    
+        <p>You are creating an account without a UCLA Identification Number.  Accounts created without a UCLA ID Number can be used to authenticate to many UCLA applications, but are not generally eligible to receive campus services (email, network access).</p>
+    
+        <p>If you are a <b>NEW STUDENT</b> or <b>UCLA ALUMNI</b>, please <a href="/activate.php">create</a> a UCLA Logon with your UCLA ID number.  Failure to do so will prevent you from using your UCLA Logon to access your Student Records and other student applications.</p>
+      </div>
+    </aside>
+  
+    <article class="content">
+      <div>
+        <h1>Verify Your Identity</h1>
+        
+        <ol id="form-step-bar">
+          <li class="form-step-done">Set Affiliation Status</li>
+          <li class="form-step-doing">Verify Identity</li>
+          <li class="form-step-todo">Create Logon ID</li>
+        </ol>
+          
+        <form action="/activate.php" method="post" data-abide novalidate>
+          <label for="gn">First Name
+          <input name="gn" type="text" placeholder="Joe" value="" id="gn" required>
+          <span class="form-error">You must enter your first name to continue.</span></label>
+    
+          <label for="sn">Last Name
+          <input name="sn" type="text" placeholder="Bruin" value="" id="sn" required>
+          <span class="form-error">You must enter your last name to continue.</span></label>
+    
+          <label for="sn">Date of Birth (YYYY-MM-DD)
+          <input name="dob" type="date" placeholder="(YYYY-MM-DD)" maxlength="10" value="" id="dob" required>
+          <span class="form-error">You must use a valid date (YYYY-MM-DD) format.</span></label>
+    
+          <label for="email">Email Address
+          <input name="email" type="email" placeholder="joe.bruin@gmail.com" value="" id="email" required>
+          <span class="form-error">This doesn't look like a valid email address.</span></label>
+    
+          <button type="submit" class="primary-button">Next</button> 
+          
+          <p><span class="message-success"><a href="create-new-logon3.html">(next)</a></span></p>
+        </form>
+    
+        <p>For further assistance, contact the Help Desk at 310-267-HELP (4357) or <a href="mailto:accounts@ucla.edu">accounts@ucla.edu</a>.</p>
+      </div>
+    </article>
+  
+  </section>
+
+  <script src="assets/bower_components/polyfiller.js"></script>
+  <script src="assets/js/app.js"></script>
+
+</body>
+
+</html>

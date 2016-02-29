@@ -1,0 +1,86 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UCLA Logon</title>
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body>
+
+  <header class="page-header" role="banner"><h1><a href="./"><img src="assets/img/ucla-white.png" alt="UCLA" class="logo">Identity & Access Management</a></h1></header>
+
+  <section class="page info-first">
+  
+    <aside class="supporting-info">
+      <div>
+        
+        <h1>University Affiliates</h1>
+          
+        <p>You must have your 9-digit UCLA Identification Number to continue. You can find this number:</p>
+    
+        <ul>
+          <li>On your online or paper letter of admission (new students, waitlisted applicants)</li>
+          <li>On your BruinCard (current students, alumni, faculty, staff)</li>
+          <li>On your UCLA transcript (current students, alumni)</li>
+          <li>On your paycheck stub or online earnings statement (faculty, staff)</li>
+        </ul>
+    
+        <h2>Forgot your UCLA ID Number?</h2>
+    
+        <p><strong>Students, Alumni, Faculty, & Staff:</strong> If you do not remember your 9-digit UCLA ID number please bring photo identification that clearly displays both your full name and date of birth (Driver's License, Passport, or other Government issued ID) to the Bruin OnLine Help Desk located in Suite 124, Kerckhoff Hall.  If you are not able to visit the Help Desk, please fax in a completed copy of the <a href='javascript:warn_pii("/forms/service_request.pdf");'>UCLA Logon Service Request Form</a>, with all required supporting documentation.</p>
+    
+        <p>For further assistance, contact the Help Desk at 310-267-HELP (4357) or <a href="mailto:accounts@ucla.edu">accounts@ucla.edu</a>.</p>
+      </div>
+    </aside>
+  
+    <article class="content">
+      <div>
+        <h1>Verify Your Identity</h1>
+        
+        <ol id="form-step-bar">
+          <li class="form-step-done">Set Affiliation Status</li>
+          <li class="form-step-doing">Verify Identity</li>
+          <li class="form-step-todo">Create Logon ID</li>
+        </ol>
+    
+        <form action="/activate.php" method="post" data-abide novalidate>
+          <label for="gn">First Name
+          <input name="gn" type="text" placeholder="Joe" value="" id="gn" required>
+          <span class="form-error">You must enter your first name to continue.</span></label>
+    
+          <label for="sn">Last Name
+          <input name="sn" type="text" placeholder="Bruin" value="" id="sn" required>
+          <span class="form-error">You must enter your last name to continue.</span></label>
+    
+          <label for="sn">Date of Birth (YYYY-MM-DD)
+          <input name="dob" type="date" placeholder="(YYYY-MM-DD)" maxlength="10" value="" id="dob" required>
+          <span class="form-error">You must use a valid date format.</span></label>
+    
+          <label for="uclaid">UCLA ID Number</label>
+          <input name="uclaid" pattern="[0-9]{0-9}" type="password" placeholder="123456789" value="" pattern="[0-9{9}" id="uclaid" required>
+          <span class="form-error">Your UCLA ID number is exactly 9 numbers long.</span></label>
+    
+          <button type="submit" class="primary-button">Next</button> 
+        
+          <p>For further assistance, contact the Help Desk at 310-267-HELP (4357) or <a href="mailto:accounts@ucla.edu">accounts@ucla.edu</a>.</p>
+          
+          <p><span class="message-success"><a href="create-new-logon3.html">(next)</a></span></p>
+        </form>
+      </div>
+    </article>
+  
+  </section>
+  
+
+  <script src="assets/bower_components/polyfiller.js"></script>
+  <script src="assets/js/app.js"></script>
+
+</body>
+
+</html>

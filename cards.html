@@ -1,0 +1,170 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UCLA Logon</title>
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body>
+
+  <header class="page-header" role="banner"><h1><a href="./"><img src="assets/img/ucla-white.png" alt="UCLA" class="logo">Identity & Access Management</a></h1></header>
+
+  <section class="page">
+    
+    <aside class="anchor-nav" data-sticky-container>
+      <ul class="sticky" data-sticky data-top-anchor="150">
+        <li><a href="#personal-info">Confirm your personal information</a></li>
+        <li><a href="#change-pass">Change UCLA Logon password</a></li>
+        <li><a href="#2fa">Manage two factor authentication</a></li>
+        <li><a href="#question">Manage your security question</a></li>
+        <li><a href="#forwarding">Set official email forwarding</a></li>
+      </ul>
+    </aside>
+    
+    <section class="cards-column">
+      
+      <article class="card" id="personal-info">
+        <h1>Confirm your personal information</h1>
+    
+        <ul>
+          <li><strong>UCLA Logon:</strong> ubelhardt</li>
+          <li><strong>Name:</strong> Carl Übelhardt</li>
+          <li><strong>UCLA ID Number:</strong> 123456789</li>
+          <li><strong>Official Email Address:</strong> ubelhardt@ucla.edu</li>
+          <li><strong>Affiliations:</strong> student-degreed@ucla.edu; google-apps-eligible@ucla.edu</li>
+          <li><strong>Bruin OnLine Provisioned Email Address:</strong> ubelhardt@ucla.edu</li>
+          <li><strong>Email Delivery Address:</strong> carl@ubelhardt.net</li>
+          <li><strong>Bruin OnLine Supported Services:</strong> UCLA Logon ID</li>
+        </ul>
+        
+        <h2>See something that needs to be changed?</h2>
+    
+        <p>
+          <strong>Students</strong>: To update your Official Email Address, please log in to <a href="https://be.my.ucla.edu/">MyUCLA</a>.<br>
+          <strong>Faculty and Staff</strong>: To update your Name or Official Email Address, contact your department <a href="http://directory.ucla.edu/updaters.php">directory updater</a>.<br>
+          <strong>All Others</strong>:  For assistance, contact the Bruin OnLine Help Desk by telephone at 310-267-HELP (4357) or email at <a href="mailto:accounts@ucla.edu">accounts@ucla.edu</a>.
+        </p>
+      
+      </article>
+    
+      <article class="card" id="change-pass">
+        <h1>Change your UCLA Logon ID Password</h1>
+    
+        <p>Your new password must be <strong>different from</strong> the old password, between <strong>8 and 128 characters</strong> long, is <strong>case-sensitive</strong>, and must use at least <strong>one character from two of the three sets</strong> of allowed characters:</p>
+    
+        <ul>
+          <li>letters: a-z or A-Z</li>
+          <li>numbers: 0-9</li>
+          <li>special characters: !@#$%^&*().,</li>
+        </ul>
+    
+        <form id="user-requested-password" role="form" action="/" method="post" class="ws-validate">
+          
+          <label for="pass-current">Your Current Password</label>
+          <input id="pass-current" name="pass-current" type="password" placeholder="NVAEAUv7k%eDkiGaidTuwi4dUupHf@" aria-required="true" pattern="[a-zA-Z0-9 !@#$%^&*().,]{8,128}" required>
+    
+          <label for="pass-requested">Your New Password</label>
+          <input id="pass-requested" name="pass-requested" type="password" placeholder="Your New Password" aria-required="true" pattern="[a-zA-Z0-9 !@#$%^&*().,]{8,128}" required>
+    
+          <label for="pass-requested-confirm">Confirm Your New Password</label>
+          <input id="pass-requested" name="pass-requested" type="password" placeholder="Confirm Your New Password" aria-required="true" pattern="[a-zA-Z0-9 !@#$%^&*().,]{8,128}" required>
+    
+          <fieldset class="confirm-staff-submit">
+          	<button class="primary-button" type="submit" name="sso">Change your password</button>
+          </fieldset>
+    
+        </form>
+      </article>
+      
+      
+      
+      <article class="card" id="2fa">
+        <h1>Manage Two Factor Authentication</h1>
+        
+        <p>As of May 2016 you will not be able to use the following services without using two factor authentication: DACCS & VPN.</p>
+    
+        <img src="assets/img/duo-iframe.png">
+      </article>
+      
+      
+      
+      <article class="card" id="question">
+        <h1>Manage your Security Question</h1>
+    
+        <p>A Challenge Phrase allows you reset your password online. Both the challenge and response must be between <strong>8 and 128 characters</strong> long. They cannot be the same, and the response is <strong>case-sensitive</strong>.</p>
+      
+        <form action="/passoptions.php" method="post">
+      
+          <script type="text/javascript">
+          var cbh;
+      
+          function updateChallenge(obj) {
+            var c = document.getElementById("challenge");
+      
+            if (obj == 'self') {
+              var s = document.getElementById("selectChallenge");
+      
+              s.style.display = 'none';
+              s.style.zIndex = '5';
+      
+              c.style.zIndex = '10';
+              c.style.display = 'inline';
+      
+              c.value = '';
+              c.focus();
+            } else {
+              c.value = obj;
+            }
+          }
+          </script>
+      
+          <label title="Your Challenge phrase is a question or phrase that only you know the response to." for="selectChallenge">Challenge</label>
+      
+          <select id="selectChallenge" onchange="updateChallenge(this.value);">
+            <option value="What is the name of your first pet?">What is the name of your first pet?</option>
+            <option value="What was your maternal grandmother's maiden name?">What was your maternal grandmother's maiden name?</option>
+            <option value="Who is your favorite actor, musician, or artist?">Who is your favorite actor, musician, or artist?</option>
+            <option value="What is your favorite color?">What is your favorite color?</option>
+            <option value="What is the name of your elementary school?">What is the name of your elementary school?</option>
+            <option value="What was your favorite place to visit as a child?">What was your favorite place to visit as a child?</option>
+            <option value="What is your favorite movie?">What is your favorite movie?</option>
+            <option value="Which phone number do you remember most from your childhood?">Which phone number do you remember most from your childhood?</option>
+            <option value="What is the nickname you gave your favorite grandparent?">What is the nickname you gave your favorite grandparent?</option>
+            <option value="What city were you born in?">What city were you born in?</option>
+            <option value="What is the model of your first car?">What is the model of your first car?</option>
+            <option value="What was the first name of your date for your high school prom?">What was the first name of your date for your high school prom?</option>
+            <option value="self">Write your own question</option>
+          </select>
+          <input name="challenge" maxlength="128" id="challenge" style="display:none;z-index:5;top:0;position:relative;">
+      
+          <label for="response">Response</label>
+          <input type="text" name="response" maxlength="128" placeholder="Answer to above" id="response">
+      
+          <button class="primary-button" type="submit">Change Challenge Phrase</button>
+        </form>
+      
+      </article>
+    
+    
+    
+      <article class="card" id="2fa">
+        <h1>Manage Official Email Forwarding</h1>
+        
+        <p>Four dollar toast swag fingerstache vinyl sustainable.  PBR&amp;B tempor do, pariatur ramps cornhole echo park ullamco delectus XOXO nesciunt four dollar toast pinterest.  Gentrify pabst hoodie, shoreditch cillum  tofu four loko.  Irure  PBR&amp;B bespoke aute  beard adipisicing chicharrones leggings, ethical sartorial pop-up before they sold out shoreditch.  Retro distillery banh mi, occaecat  microdosing gastropub seitan fixie nesciunt vinyl.  Mixtape offal delectus, franzen odio plaid organic truffaut keffiyeh locavore tofu.  Plaid helvetica raw denim, PBR&amp;B officia  gochujang sunt 90's fingerstache actually letterpress.</p>
+      </article>
+    
+    </section>
+  </section>
+
+  <script src="assets/bower_components/polyfiller.js"></script>
+  <script src="assets/js/app.js"></script>
+
+</body>
+
+</html>
