@@ -49,6 +49,13 @@
 $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.6;
+$foundation-palette: (
+  primary: $ucla-blue,
+  secondary: $ucla-gold,
+  success: $ucla-green,
+  warning: $ucla-orange,
+  alert: $ucla-pink,
+);
 $primary-color: $ucla-blue;
 $primary-color-safe: $ucla-blue-safe;
 $primary-color-alternate: $ucla-blue-dark;
