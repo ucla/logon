@@ -41,11 +41,3 @@ $('#email-toggler').click(function() {
     $('#uclaid').prop('disabled',false);
   }
 });
-
-/////////////////////////////////////////
-/// placeholder behaviour for prototype
-/////////////////////////////////////////
-
-$('.logon-success').click(function() {
-  $('#ajax-container').load('assets/includes/logon-exists.html');
-});
