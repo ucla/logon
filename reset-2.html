@@ -18,25 +18,18 @@
   <section class="page">
     <article class="content">
       <div>
-        <h1>Forgot your password?</h1>
-    
-        <p>If you've forgotten your password, enter your UCLA Logon ID below then answer your challenge question.</p>
-    
-        <form action="/passreset.php" method="post" data-abide novalidate>
-    
-          <fieldset>
-            <label class="help" for="uid">UCLA Logon ID
-            <input name="uid" type="text" maxlength="15" value="" id="uid" placeholder="janebruin42" autofocus required>
-            <span class="form-error">Your UCLA ID number is exactly 9 numbers long.</span></label>
-      
-            <button type="submit">Check for security challenge question</button> 
-          </fieldset>
+        <h1>Hello there [insertusernamehere]</h1>
+        
+        <p>Just to make sure that you're actually who you say you are, answer the challenge question below. If you get it right, your password will be reset. If you've forgotten it (it happens to the best of us), you'll need to do things meatspace style.</p>
           
-          <p><span class="message-fail"><a href="reset-fail.html">(fail)</a></span> <span class="logon-success message-success"><a href="reset-2.html">(success)</a></span></p>
+        <p><strong>Challenge Question:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        
+        <fieldset>
+          <label for="response">Challenge Question Response:
+          <input type="text" name="response" size="40" value="" id="response" placeholder="Rosebud" required></label>
           
-          <div id="ajax-container"></div>
-    
-        </form>
+          <button class="primary-button" type="submit">Reset your password</button>
+        </fieldset>
     
         <p>pro-tip: If you can't remember your UCLA Logon ID, go <a href="lookup.html">look it up</a>!</p>
       </div>
@@ -51,6 +44,9 @@
     </aside>
   
   </section>
+  
+  
+  
 
   <script src="assets/bower_components/polyfiller.js"></script>
   <script src="assets/js/app.js"></script>
