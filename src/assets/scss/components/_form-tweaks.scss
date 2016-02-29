@@ -11,6 +11,10 @@ legend {
   font-weight: normal;
   color: $primary-color-safe;
 }
+
+input {
+  font-weight: $global-weight-normal;
+}
  
 // no CSS output for Foundation buttons component :)
 button {

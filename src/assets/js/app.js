@@ -17,10 +17,16 @@ $(document).foundation();
 ///    action toggles for cards
 /////////////////////////////////////////
 
-$('.card-action').click(function() {
-  $(this).next('div').toggle();
-  // $(this).prev('dd').toggle();
+$('.countdown').countdown({
+  date: +(new Date) + 1200000,
+  render: function(data) {
+    $(this.el).text(this.leadingZeros(data.min, 2) + ":" + data.sec, 2);
+  },
+  onEnd: function() {
+    $(this.el).addClass('ended');
+  )}
 });
+    
 
 /////////////////////////////////////////
 ///  swap to email if no UID on lookup

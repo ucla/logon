@@ -6,8 +6,7 @@
 .card {
   background: $white;
   padding: $global-padding ($global-padding * 2) ;
-  margin-bottom: ($global-margin / 2);
-  overflow: visible;
+  margin-bottom: $global-margin * 3;
   border-radius: $global-radius;
 }
 
@@ -17,11 +16,6 @@
 
 // interior card listing
 .cards-column {
-  margin-bottom: $global-margin * 5;
-  @include breakpoint(collapse-cards) {
-    margin-bottom: $global-margin * 2;
-  }
-  overflow: visible;
   p {
     margin-top: 0;
   }

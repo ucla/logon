@@ -15,12 +15,13 @@
     "tests"
   ],
   "dependencies": {
-    "duo_php": "git@github.com:duosecurity/duo_php.git#master"
+    "countdown": "^2.1.0",
+    "duo_php": "git@github.com:duosecurity/duo_php.git#master",
     "motion-ui": "~1.1.0",
     "webshim": "~1.15.10",
     "sass-toolkit": "~2.9.0",
     "what-input": "^1.2.5",
     "zxcvbn": "~4.2.0"
   },
-  "private": true,
+  "private": true
 }
