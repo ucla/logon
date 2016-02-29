@@ -29,7 +29,7 @@ PATHS:
     - "bower_components/sass-toolkit/stylesheets"
   # Paths to (JS) assets that need to be loaded separately
   bowerDirectLinked:
-    - "bower_components/duo_php/js/Duo-Web-v2.min.js"
+    # - "bower_components/duo_php/js/Duo-Web-v2.min.js"
     - "bower_components/webshim/js-webshim/minified/**/*"
     - "bower_components/zxcvbn/dist/zxcvbn.js"
   # Paths to JavaScript libraries, which are compined into one file
@@ -62,6 +62,6 @@ PATHS:
     - "bower_components/foundation-sites/js/foundation.toggler.js"
     - "bower_components/foundation-sites/js/foundation.tooltip.js"
     # Paths to your own project code are here
-    - "bower_components/countdown/dest/countdown/jquery.countdown.js"
+    - "bower_components/countdown/dest/jquery.countdown.js"
     - "src/assets/js/!(app).js"
     - "src/assets/js/app.js"

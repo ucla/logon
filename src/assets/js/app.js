@@ -24,7 +24,7 @@ $('.countdown').countdown({
   },
   onEnd: function() {
     $(this.el).addClass('ended');
-  )}
+  }
 });
     
 
