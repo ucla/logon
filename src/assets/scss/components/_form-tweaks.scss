@@ -18,6 +18,9 @@ button {
   border: 1px solid $medium-gray;
   text-transform: uppercase;
   font-weight: $global-weight-bold;
+  &:hover {
+    color: $white;
+  }
  }
 
 // blue + gold, action that changes page/etc

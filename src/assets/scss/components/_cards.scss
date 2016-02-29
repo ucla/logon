@@ -6,44 +6,9 @@
 .card {
   background: $white;
   padding: $global-padding ($global-padding * 2) ;
-  font-weight: $header-font-weight;
   margin-bottom: ($global-margin / 2);
-  @extend %ucla-box-shadow;
   overflow: visible;
-  border-radius: $card-radius;
-  a {
-    text-decoration: none;
-    display: block;
-    width: 100%;
-    height: 100%;
-    padding: ($global-padding / 2);
-  }
-  .profile-pic {
-    max-width: ($global-spacing * 6);
-    max-height: ($global-spacing * 6);
-    margin-left: -($global-spacing * 7);
-    margin-top: $global-padding;
-    float: left;
-    border-radius: $global-radius;
-  }
-}
-
-// the button that toggles it on desktop/tablet view
-.card-action {
-  background: $light-gray;
-  border: 1px solid $lighter-gray;
   border-radius: $global-radius;
-  float: right;
-  margin-top: -($global-margin * 3);
-  padding: 0 ($global-padding / 2);
-  color: $anchor-color;
-  cursor: pointer;
-  + div {
-    padding-top: $global-padding;
-    h2 {
-      font-size: rem-calc(nested-map-get($header-sizes, large-type, h3));
-    }
-  }
 }
 
 /////////////////////////////////////////
@@ -54,47 +19,10 @@
 .cards-column {
   margin-bottom: $global-margin * 5;
   @include breakpoint(collapse-cards) {
-    width: 40rem;
-    float: right;
     margin-bottom: $global-margin * 2;
   }
   overflow: visible;
-  h1 {
-    display: inline-block;
-    background: rgba($ucla-blue-dark, .9);
-    color: $ucla-yellow;
-    margin-left: $global-spacing * 20;
-    margin-top: $global-margin;
-    margin-bottom: -$global-margin;
-    padding: ($global-padding * .75) $global-padding;
-    font-size: rem-calc(nested-map-get($header-sizes, large-type, h2));
-    font-weight: $header-font-weight;
-    &:first-child {
-      margin-top: 0;
-    }
-  }
   p {
     margin-top: 0;
-  }
-  a .card {
-    color: $body-font-color;
-  }
-  .card {
-    font-size: $small-font-size;
-    dl {
-      border-bottom: 1px solid $light-gray;
-    }
-    dt {
-      padding-top: $global-padding;
-      border-top: 1px solid $light-gray;
-      font-weight: normal;
-      &:first-child {
-        border-top: none;
-      }
-    }
-    dd {
-      margin-left: 0;
-      font-weight: bold;
-    }
   }
 }
