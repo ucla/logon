@@ -14,15 +14,18 @@ hr {
   border: none;
 }
 
+// basic styles applied to all major chunks of content
 %content-styling {
   padding: $global-spacing;
   margin-bottom: ($global-spacing * 4);
 }
 
+// need nested containers due to foundation's grid system
 .content > div {
   @extend %content-styling;
 }
 
+// need nested containers due to foundation's grid system
 .supporting-info > div {
   background: $white;
   padding: $global-spacing $global-spacing;
@@ -37,5 +40,30 @@ hr {
   }
   h2 {
     font-size: rem-calc(nested-map-get($header-sizes, large-type, h4));
+  }
+}
+
+/////////////////////////////////////////
+///            CARDS
+/////////////////////////////////////////
+
+// basic card styling
+.card {
+  background: $white;
+  padding: $global-padding ($global-padding * 2) ;
+  margin-bottom: $global-margin * 3;
+  border-radius: $global-radius;
+}
+
+.anchor-nav ul {
+  background: $ucla-its-primary-button-color;
+  border-radius: $global-radius;
+  font-size: rem-calc(13);
+  a:link, a:visited {
+    color: $white;
+  }
+  a:hover {
+    background: $ucla-its-primary-button-color-hover;
+    color: $white;
   }
 }

@@ -11,7 +11,7 @@ body {
 // logo etc
 .page-header {
   @include grid-row();
-  background: $ucla-blue url('../img/skyline.jpg') right top;
+  background: $ucla-blue url('../img/skyline.jpg') left top;
   border-bottom: 2px solid $ucla-blue;
   margin-bottom: $global-margin * 3;
 }
