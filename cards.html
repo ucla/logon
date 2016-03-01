@@ -13,23 +13,23 @@
 
 <body>
 
-  <header class="page-header" role="banner"><h1><a href="./"><img src="assets/img/ucla-white.png" alt="UCLA" class="logo">Identity & Access Management</a></h1></header>
+  <header class="page-header" role="banner"><a href="./"><img src="assets/img/logo.png" alt="UCLA" class="logo"></a></header>
 
   <section class="page">
     
-    <aside class="anchor-nav" data-sticky-container>
-      <ul class="sticky" data-sticky data-top-anchor="150">
+    <nav class="anchor-nav" data-sticky-container>
+      <ul class="menu vertical sticky" data-sticky  data-margin-top="9">
         <li><a href="#personal-info">Confirm your personal information</a></li>
         <li><a href="#change-pass">Change UCLA Logon password</a></li>
         <li><a href="#2fa">Manage two factor authentication</a></li>
         <li><a href="#forwarding">Manage your @ucla.edu email account</a></li>
-        <li><a href="#question">Set your security question</a></li>
+        <li><a href="#question">Set your challenge phrase</a></li>
       </ul>
-    </aside>
+    </nav>
     
     <section class="cards-column">
       
-      <article class="card" id="personal-info">
+      <article class="card" id="personal-info" data-magellan-target="personal-info">
         <h1>Confirm your personal information</h1>
     
         <ul>
@@ -53,7 +53,7 @@
       
       </article>
     
-      <article class="card" id="change-pass">
+      <article class="card" id="change-pass" data-magellan-target="change-pass">
         <h1>Change your UCLA Logon ID Password</h1>
     
         <p>Your new password must be <strong>different from</strong> the old password, between <strong>8 and 128 characters</strong> long, is <strong>case-sensitive</strong>, and must use at least <strong>one character from two of the three sets</strong> of allowed characters:</p>
@@ -87,7 +87,7 @@
       
       
       
-      <article class="card" id="2fa">
+      <article class="card" id="2fa" data-magellan-target="2fa">
         <h1>Manage Two Factor Authentication</h1>
         
         <p>As of May 2016 you will not be able to use the following services without using two factor authentication: DACCS & VPN.</p>
@@ -97,7 +97,7 @@
       
       
       
-      <article class="card" id="2fa">
+      <article class="card" id="forwarding" data-magellan-target="forwarding">
         <h1>Manage Your @ucla.edu Email Account</h1>
         
         <p class="alert-info"><strong>Current students, alumni, and retirees:</strong> Have you considered switching to <a target="_blank" href="http://g.ucla.edu">Google Apps for UCLA</a>?</p>
@@ -110,23 +110,23 @@
         </ul>
         
         <form action="/mailprefs.php" method="post">
-          <label>Forward email to this address
+          <label>Enter address to forward all @ucla.edu email to
           <input class="focus" id="e1" name="e1" type="email" placeholder="foobruin@gmail.com" title="Enter email address" required>
           </label>
-          <label>Confirm forwarding email to this address
+          <label>Confirm address to forward all @ucla.edu email to
             <input class="focus" id="e2" name="e2" type="email" placeholder="foobruin@gmail.com" title="Re-enter email address" required>
           </label>
-          <button id="verify-forwarding" class="primary-button" type="submit" name="action">Forward @ucla.edu emails to this address</button>
-          <button id="cancel-email" class="cancel-button" type="submit" name="action2">Disable my @ucla.edu email account</button>
-          <p>A verification link will be sent to the new address to confirm.</p>
+          <button id="verify-forwarding" class="primary-button" type="submit" name="action">Forward @ucla.edu emails to new address</button>
+          <p>Note: A verification link will be sent to the new email address.</p>
+          <button id="cancel-email" class="cancel-button" type="submit" name="action2">Disable @ucla.edu email account</button>
         </form>
   
       </article>
       
       
       
-      <article class="card" id="question">
-        <h1>Set your Security Question</h1>
+      <article class="card" id="question" data-magellan-target="question">
+        <h1>Set your Challenge Phrase</h1>
     
         <p>A Challenge Phrase allows you reset your password online. Both the challenge and response must be between <strong>8 and 128 characters</strong> long. They cannot be the same, and the response is <strong>case-sensitive</strong>.</p>
       
@@ -155,7 +155,7 @@
           }
           </script>
       
-          <label title="Your Challenge phrase is a question or phrase that only you know the response to." for="selectChallenge">Challenge</label>
+          <label title="Your Challenge phrase is a question or phrase that only you know the response to." for="selectChallenge">Select your Challenge Question</label>
       
           <select id="selectChallenge" onchange="updateChallenge(this.value);">
             <option value="What is the name of your first pet?">What is the name of your first pet?</option>
@@ -174,8 +174,8 @@
           </select>
           <input name="challenge" maxlength="128" id="challenge" style="display:none;z-index:5;top:0;position:relative;">
       
-          <label for="response">Response
-            <input type="text" name="response" maxlength="128" placeholder="Answer to above" id="response">
+          <label for="response">Type your Response
+            <input type="text" name="response" maxlength="128" placeholder="Answer to the above question" id="response">
           </label>
       
           <button class="primary-button" type="submit">Change Challenge Phrase</button>
