@@ -6,7 +6,7 @@
       <li><a href="#change-pass">Change UCLA Logon password</a></li>
       <li><a href="#2fa">Manage two factor authentication</a></li>
       <li><a href="#forwarding">Manage your @ucla.edu email account</a></li>
-      <li><a href="#question">Set your security question</a></li>
+      <li><a href="#question">Set your challenge phrase</a></li>
     </ul>
   </aside>
   
@@ -93,10 +93,10 @@
       </ul>
       
       <form action="/mailprefs.php" method="post">
-        <label>Forward email to this address
+        <label>Enter address to forward all @ucla.edu email to
         <input class="focus" id="e1" name="e1" type="email" placeholder="foobruin@gmail.com" title="Enter email address" required>
         </label>
-        <label>Confirm forwarding email to this address
+        <label>Confirm address to forward all @ucla.edu email to
           <input class="focus" id="e2" name="e2" type="email" placeholder="foobruin@gmail.com" title="Re-enter email address" required>
         </label>
         <button id="verify-forwarding" class="primary-button" type="submit" name="action">Forward @ucla.edu emails to new address</button>
@@ -109,7 +109,7 @@
     
     
     <article class="card" id="question">
-      <h1>Set your Security Question</h1>
+      <h1>Set your Challenge Phrase</h1>
   
       <p>A Challenge Phrase allows you reset your password online. Both the challenge and response must be between <strong>8 and 128 characters</strong> long. They cannot be the same, and the response is <strong>case-sensitive</strong>.</p>
     
@@ -138,7 +138,7 @@
         }
         </script>
     
-        <label title="Your Challenge phrase is a question or phrase that only you know the response to." for="selectChallenge">Challenge</label>
+        <label title="Your Challenge phrase is a question or phrase that only you know the response to." for="selectChallenge">Select your Challenge Question</label>
     
         <select id="selectChallenge" onchange="updateChallenge(this.value);">
           <option value="What is the name of your first pet?">What is the name of your first pet?</option>
@@ -157,8 +157,8 @@
         </select>
         <input name="challenge" maxlength="128" id="challenge" style="display:none;z-index:5;top:0;position:relative;">
     
-        <label for="response">Response
-          <input type="text" name="response" maxlength="128" placeholder="Answer to above" id="response">
+        <label for="response">Type your Response
+          <input type="text" name="response" maxlength="128" placeholder="Answer to the above question" id="response">
         </label>
     
         <button class="primary-button" type="submit">Change Challenge Phrase</button>
