@@ -14,25 +14,6 @@ hr {
   border: none;
 }
 
-.floating-side-nav {
-  float: left;
-  position: fixed;
-  margin-top: $global-spacing * 3;
-  ul {
-    list-style: none;
-  }
-  a {
-    text-decoration: none;
-    color: $white;
-    font-size: rem-calc(nested-map-get($header-sizes, large-type, h2));
-    margin-bottom: $global-spacing;
-    font-weight: $header-font-weight;
-    &:hover {
-      color: $ucla-yellow;
-    }
-  }
-}
-
 %content-styling {
   padding: $global-spacing;
   margin-bottom: ($global-spacing * 4);
