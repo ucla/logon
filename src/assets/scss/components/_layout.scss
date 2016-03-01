@@ -14,9 +14,6 @@ body {
   background: $ucla-blue url('../img/skyline.jpg') right top;
   border-bottom: 2px solid $ucla-blue;
   margin-bottom: $global-margin * 3;
-  .logo {
-    @include grid-column(2);
-  }
 }
 
 // general layout of pages
