@@ -14,19 +14,10 @@
 ///           CARD LAYOUTS
 /////////////////////////////////////////
 
-// interior card listing
-.cards-column {
-  p {
-    margin-top: 0;
-  }
-}
-
 .anchor-nav ul {
   background: $ucla-its-primary-button-color;
   border-radius: $global-radius;
   font-size: rem-calc(13);
-  list-style: none;
-  padding: $global-padding;
   a {
     color: $white;
   }
