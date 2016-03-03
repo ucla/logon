@@ -74,9 +74,14 @@ body {
 
 //single column pages
 .content-full {
+  background: $white;
+  border-radius: $global-radius;
   @extend %content-styling;
-  max-width: 40rem;
-  margin: 0 auto;
+    @include grid-column(12);
+    @include breakpoint(multi-column) {
+      @include grid-column(8);
+      @include grid-column-position(2);
+    }
 }
 
 // padding on bottom to leave space for fixed footer
