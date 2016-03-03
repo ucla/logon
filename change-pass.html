@@ -1,0 +1,70 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UCLA Logon</title>
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body>
+
+  <header class="page-header" role="banner"><a href="./"><img src="assets/img/logo.png" alt="UCLA" class="logo"></a></header>
+
+  <section class="management">
+    
+      <nav class="anchor-nav" data-sticky-container>
+        <ul class="menu vertical sticky" data-sticky  data-margin-top="10">
+          <li><a href="personal-info.html">Confirm your personal information</a></li>
+          <li><a href="change-pass.html">Change UCLA Logon password</a></li>
+          <li><a href="2fa.html">Manage two factor authentication</a></li>
+          <li><a href="forwarding.html">Manage your @ucla.edu email account</a></li>
+          <li><a href="question.html">Set your challenge phrase</a></li>
+        </ul>
+      </nav>
+      
+      <article class="content" id="change-pass" data-magellan-target="change-pass">
+        <h1>Change your UCLA Logon ID Password</h1>
+    
+        <p>Your new password must be <strong>different from</strong> the old password, between <strong>8 and 128 characters</strong> long, is <strong>case-sensitive</strong>, and must use at least <strong>one character from two of the three sets</strong> of allowed characters:</p>
+    
+        <ul>
+          <li>letters: a-z or A-Z</li>
+          <li>numbers: 0-9</li>
+          <li>special characters: !@#$%^&*().,</li>
+        </ul>
+    
+        <form id="user-requested-password" role="form" action="/" method="post" class="ws-validate">
+          
+          <label for="pass-current">Enter Your Current Password
+            <input id="pass-current" name="pass-current" type="password" placeholder="NVAEAUv7k%eDkiGaidTuwi4dUupHf@" aria-required="true" pattern="[a-zA-Z0-9 !@#$%^&*().,]{8,128}" required>
+          </label>
+    
+          <label for="pass-requested">Enter Your New Password
+            <input id="pass-requested" name="pass-requested" type="password" placeholder="Your New Password" aria-required="true" pattern="[a-zA-Z0-9 !@#$%^&*().,]{8,128}" required>
+          </label>
+          
+          <label for="pass-requested-confirm">Confirm Your New Password</label>
+            <input id="pass-requested" name="pass-requested" type="password" placeholder="Confirm Your New Password" aria-required="true" pattern="[a-zA-Z0-9 !@#$%^&*().,]{8,128}" required>
+          </label>
+    
+          <fieldset class="confirm-staff-submit">
+          	<button class="primary-button" type="submit" name="sso">Change your password</button>
+          </fieldset>
+    
+        </form>
+      </article>  
+    
+    </section>
+  </section>
+
+  <script src="assets/bower_components/polyfiller.js"></script>
+  <script src="assets/js/app.js"></script>
+
+</body>
+
+</html>

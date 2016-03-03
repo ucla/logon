@@ -1,0 +1,64 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UCLA Logon</title>
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body>
+
+  <header class="page-header" role="banner"><a href="./"><img src="assets/img/logo.png" alt="UCLA" class="logo"></a></header>
+
+  <section class="management">
+    
+      <nav class="anchor-nav" data-sticky-container>
+        <ul class="menu vertical sticky" data-sticky  data-margin-top="10">
+          <li><a href="personal-info.html">Confirm your personal information</a></li>
+          <li><a href="change-pass.html">Change UCLA Logon password</a></li>
+          <li><a href="2fa.html">Manage two factor authentication</a></li>
+          <li><a href="forwarding.html">Manage your @ucla.edu email account</a></li>
+          <li><a href="question.html">Set your challenge phrase</a></li>
+        </ul>
+      </nav>
+      
+      <article class="content" id="forwarding" data-magellan-target="forwarding">
+        <h1>Manage Your @ucla.edu Email Account</h1>
+        
+        <p class="alert-info"><strong>Current students, alumni, and retirees:</strong> Have you considered switching to <a target="_blank" href="http://g.ucla.edu">Google Apps for UCLA</a>?</p>
+        
+        <p>Anyone possessing an @ucla.edu email address can choose to have messages sent to it forwarded elsewhere, or simply deactivate the account.</p>
+        
+        <ul>
+          <li>Current status: <strong>active</strong></li>
+          <li>Current forwarding address: <strong>carl@ubelhardt.net</strong></li>
+        </ul>
+        
+        <form action="/mailprefs.php" method="post">
+          <label>Enter address to forward all @ucla.edu email to
+          <input class="focus" id="e1" name="e1" type="email" placeholder="foobruin@gmail.com" title="Enter email address" required>
+          </label>
+          <label>Confirm address to forward all @ucla.edu email to
+            <input class="focus" id="e2" name="e2" type="email" placeholder="foobruin@gmail.com" title="Re-enter email address" required>
+          </label>
+          <button id="verify-forwarding" class="primary-button" type="submit" name="action">Forward @ucla.edu emails to new address</button>
+          <p>Note: A verification link will be sent to the new email address.</p>
+          <button id="cancel-email" class="cancel-button" type="submit" name="action2">Disable @ucla.edu email account</button>
+        </form>
+  
+      </article>
+      
+    </section>
+  </section>
+
+  <script src="assets/bower_components/polyfiller.js"></script>
+  <script src="assets/js/app.js"></script>
+
+</body>
+
+</html>
