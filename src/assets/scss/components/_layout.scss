@@ -79,8 +79,8 @@ body {
   @extend %content-styling;
     @include grid-column(12);
     @include breakpoint(multi-column) {
-      @include grid-column(8);
-      @include grid-column-position(2);
+      @include grid-column(6);
+      @include grid-column-position(3);
     }
 }
 
