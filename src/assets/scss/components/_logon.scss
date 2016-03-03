@@ -14,6 +14,22 @@ hr {
   border: none;
 }
 
+.home .menu {
+  border-radius: $global-radius;
+  li {
+    margin-bottom: 1px;
+    background: $white;
+    &:first-child {
+      border-top-left-radius: $global-radius;
+      border-top-right-radius: $global-radius;
+    }
+    &:last-child {
+      border-bottom-left-radius: $global-radius;
+      border-bottom-right-radius: $global-radius;
+    }
+  }
+}
+
 // basic styles applied to all major chunks of content
 %content-styling {
   padding: $global-spacing;
@@ -56,14 +72,7 @@ hr {
 }
 
 .anchor-nav ul {
-  background: $ucla-its-primary-button-color;
+  background: $light-gray;
   border-radius: $global-radius;
   font-size: rem-calc(13);
-  a:link, a:visited {
-    color: $white;
-  }
-  a:hover {
-    background: $ucla-its-primary-button-color-hover;
-    color: $white;
-  }
 }
