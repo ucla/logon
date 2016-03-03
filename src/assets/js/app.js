@@ -14,18 +14,60 @@ webshim.polyfill('forms-ext');
 $(document).foundation();
 
 /////////////////////////////////////////
-///    action toggles for cards
+///    timer countdown
 /////////////////////////////////////////
 
-$('.countdown').countdown({
-  date: +(new Date) + 1200000,
-  render: function(data) {
-    $(this.el).text(this.leadingZeros(data.min, 2) + ":" + data.sec, 2);
-  },
-  onEnd: function() {
-    $(this.el).addClass('ended');
+var intervalId = null;
+var e = null;
+var f = null;
+
+var sesslen;
+var timeleft;
+
+// housekeeping, called every 1s
+function countdown() {
+  timeleft -= 1;
+  if (timeleft <= 0) {
+    var cancelbox = document.getElementById('cancelbox');
+    if (cancelbox) cancelbox.style.display = 'none';
+    e.innerHTML = "0:00";
+    e.style.color = "#f00";
+    e.style.fontWeight = "bold";
+    f.style.background = "#c00";
+    f.style.width = '100%';
+
+    if (intervalId) clearInterval(intervalId);
+    return;
   }
-});
+  m = timeleft / 60 - (timeleft % 60) / 60;
+  m = Math.round(m); //m.toFixed();
+  s = timeleft % 60;
+  if (s < 10) s = "0" + s;
+  e.innerHTML = m + ":" + s;
+  e.style.fontWeight = "bold";
+
+  var width = 12 - timeleft / sesslen * 12.0;
+  if (width) f.style.width = width + 'em';
+}
+
+// initialize the timer and set up "cancel" colors
+function init_timers(_timeleft, _sesslen) {
+  if (! document.getElementById) return;
+
+  timeleft = _timeleft;
+  sesslen = _sesslen;
+
+  var cancel = document.getElementById('cancel');
+  if (cancel) {
+    cancel.onmouseover = function() { this.style.color = '#33f'; };
+    cancel.onmouseout = function() { this.style.color = '#000'; };
+  }
+  f = document.getElementById("barfill");
+  if (f) f.style.width = (12 - timeleft / sesslen * 12.0) + 'em'
+
+  e = document.getElementById("counter");
+  if (e) intervalId = setInterval('countdown()', 1000);
+}
     
 
 /////////////////////////////////////////

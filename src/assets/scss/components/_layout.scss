@@ -16,7 +16,24 @@ body {
   margin-bottom: $global-margin * 3;
 }
 
-// general layout of pages
+// layout of logged in pages with nav-menu
+.management {
+  @include grid-row();
+  .content {
+    @include grid-column(12);
+    @include breakpoint(multi-column) {
+      @include grid-column(9);
+    }
+  }
+  .anchor-nav {
+    @include grid-column(12);
+    @include breakpoint(multi-column) {
+      @include grid-column(3);
+    }
+  }
+}
+
+// general layout of other pages
 .page, .home {
   @include grid-row();
   .content {
@@ -55,22 +72,6 @@ body {
   }
 }
 
-// cards to manage content once logged in
-.cards-column {
-  @include breakpoint(multi-column) {
-    @include grid-column(9);
-    @include grid-column-position(-3);
-  }
-}
-
-// inline links to cards on tablet/desktop
-.anchor-nav {
-  @include breakpoint(multi-column) {
-    @include grid-column(3);
-    @include grid-column-position(9);
-  }
-}
-
 //single column pages
 .content-full {
   @extend %content-styling;
@@ -79,7 +80,7 @@ body {
 }
 
 // padding on bottom to leave space for fixed footer
-.page, .home, .cards-wrapper {
+.page, .home {
   margin-bottom: $global-spacing * 4;
 }
 
