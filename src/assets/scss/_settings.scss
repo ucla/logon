@@ -163,7 +163,7 @@ $list-lineheight: $paragraph-lineheight;
 $list-margin-bottom: $paragraph-margin-bottom;
 $list-style-type: disc;
 $list-style-position: outside;
-$list-side-margin: 0;
+$list-side-margin: $global-spacing;
 $list-nested-side-margin: $global-margin;
 $defnlist-margin-bottom: $global-margin;
 $defnlist-term-weight: $global-weight-bold;

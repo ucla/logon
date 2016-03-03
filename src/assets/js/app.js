@@ -63,7 +63,7 @@ function init_timers(_timeleft, _sesslen) {
     cancel.onmouseout = function() { this.style.color = '#000'; };
   }
   f = document.getElementById("barfill");
-  if (f) f.style.width = (12 - timeleft / sesslen * 12.0) + 'em'
+  if (f) f.style.width = (100 - timeleft / sesslen * 100) + '%'
 
   e = document.getElementById("counter");
   if (e) intervalId = setInterval('countdown()', 1000);

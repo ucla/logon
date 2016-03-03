@@ -1,38 +1,40 @@
 <section class="management">
   
+  <nav class="anchor-nav">
   {{> nav-menu}}
+  {{> timer}}
+  </nav>
     
-    <article class="content" id="change-pass" data-magellan-target="change-pass">
-      <h1>Change your UCLA Logon ID Password</h1>
-  
-      <p>Your new password must be <strong>different from</strong> the old password, between <strong>8 and 128 characters</strong> long, is <strong>case-sensitive</strong>, and must use at least <strong>one character from two of the three sets</strong> of allowed characters:</p>
-  
-      <ul>
-        <li>letters: a-z or A-Z</li>
-        <li>numbers: 0-9</li>
-        <li>special characters: !@#$%^&*().,</li>
-      </ul>
-  
-      <form id="user-requested-password" role="form" action="/" method="post" class="ws-validate">
-        
-        <label for="pass-current">Enter Your Current Password
-          <input id="pass-current" name="pass-current" type="password" placeholder="NVAEAUv7k%eDkiGaidTuwi4dUupHf@" aria-required="true" pattern="[a-zA-Z0-9 !@#$%^&*().,]{8,128}" required>
-        </label>
-  
-        <label for="pass-requested">Enter Your New Password
-          <input id="pass-requested" name="pass-requested" type="password" placeholder="Your New Password" aria-required="true" pattern="[a-zA-Z0-9 !@#$%^&*().,]{8,128}" required>
-        </label>
-        
-        <label for="pass-requested-confirm">Confirm Your New Password</label>
-          <input id="pass-requested" name="pass-requested" type="password" placeholder="Confirm Your New Password" aria-required="true" pattern="[a-zA-Z0-9 !@#$%^&*().,]{8,128}" required>
-        </label>
-  
-        <fieldset class="confirm-staff-submit">
-        	<button class="primary-button" type="submit" name="sso">Change your password</button>
-        </fieldset>
-  
-      </form>
-    </article>  
-  
-  </section>
+  <article class="content" id="change-pass" data-magellan-target="change-pass">
+    <h1>Change your UCLA Logon ID Password</h1>
+
+    <p>Your new password must be <strong>different from</strong> the old password, between <strong>8 and 128 characters</strong> long, is <strong>case-sensitive</strong>, and must use at least <strong>one character from two of the three sets</strong> of allowed characters:</p>
+
+    <ul>
+      <li>letters: a-z or A-Z</li>
+      <li>numbers: 0-9</li>
+      <li>special characters: !@#$%^&*().,</li>
+    </ul>
+
+    <form id="user-requested-password" role="form" action="/" method="post" class="ws-validate">
+      
+      <label for="pass-current">Enter Your Current Password
+        <input id="pass-current" name="pass-current" type="password" placeholder="NVAEAUv7k%eDkiGaidTuwi4dUupHf@" aria-required="true" pattern="[a-zA-Z0-9 !@#$%^&*().,]{8,128}" required>
+      </label>
+
+      <label for="pass-requested">Enter Your New Password
+        <input id="pass-requested" name="pass-requested" type="password" placeholder="Your New Password" aria-required="true" pattern="[a-zA-Z0-9 !@#$%^&*().,]{8,128}" required>
+      </label>
+      
+      <label for="pass-requested-confirm">Confirm Your New Password</label>
+        <input id="pass-requested" name="pass-requested" type="password" placeholder="Confirm Your New Password" aria-required="true" pattern="[a-zA-Z0-9 !@#$%^&*().,]{8,128}" required>
+      </label>
+
+      <fieldset class="confirm-staff-submit">
+      	<button class="primary-button" type="submit" name="sso">Change your password</button>
+      </fieldset>
+
+    </form>
+  </article>  
+
 </section>

@@ -60,6 +60,37 @@ hr {
 }
 
 /////////////////////////////////////////
+///        TIMER & COUNTDOWN
+/////////////////////////////////////////
+
+#timeout {
+  font-size: $small-font-size;
+  margin: $global-spacing 0;
+  width: 100%;
+}
+
+/* counter */
+#counter {
+  font-weight: $global-weight-bold;
+}
+
+/* countdown bar */
+#bar {
+  background: $light-gray;
+  border: solid 1px $medium-gray;
+  height: rem-calc(13);
+  width: 100%;
+  border-radius: $global-radius;
+}
+
+#barfill {
+  background: $ucla-blue;
+  border-radius: $global-radius;
+  height: rem-calc(13);
+  width: 0;
+}
+
+/////////////////////////////////////////
 ///            CARDS
 /////////////////////////////////////////
 
