@@ -20,6 +20,8 @@ $(document).foundation();
 var intervalId = null;
 var e = null;
 var f = null;
+var m = null;
+var s = null;
 
 var sesslen;
 var timeleft;
