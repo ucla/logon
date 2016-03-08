@@ -9,39 +9,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UCLA Logon</title>
   <link rel="stylesheet" href="assets/css/app.css">
+  <script src="assets/bower_components/polyfiller.js"></script>
   <script src="assets/js/app.js"></script>
 </head>
 
 <body>
 
-  <header class="page-header" role="banner"><a href="./"><img src="assets/img/logo.png" alt="UCLA" class="logo"></a></header>
+  <header class="page-header" role="banner">
+    <section class="page-header-contents">
+      <span class="logo"><a href="./"><img src="assets/img/logo.png" alt="UCLA"></a></span>
+      <span class="logged"><a href="#">Login</a>
+    </span>
+  </header>
 
   <section class="home">
-  
-    <article class="content">
-      <div>
-        <h1>Manage your identity & security</h1>
-        
-      <ul class="menu vertical">
-        <li><a href="personal-info.html">Confirm your personal information</a></li>
-        <li><a href="change-pass.html">Change UCLA Logon password</a></li>
-        <li><a href="2fa.html">Manage two factor authentication</a></li>
-        <li><a href="forwarding.html">Manage your @ucla.edu email account</a></li>
-        <li><a href="question.html">Set your challenge phrase</a></li>
-      </ul>
     
-        <h2>Having trouble signing in?</h2>
-        <p>You can <a href="reset.html">reset your password online</a> if you have a security question set, or <a href="lookup.html">lookup your UCLA Logon ID</a> if you don't remember it.</p>
+    <header>
+      <h1>Welcome to UCLA Logon</h1>
+      
+      <p>Here you'll find an ever-expanding range of options to manage your identity and security at UCLA, as well as tools to assist you if you cannot access your account.</p>
+    </header>
+  
+    <article class="card" id="management">
+      <div>
+        <h2>Manage your identity & security</h2>
         
-        <p>If you're sure you don't have one, go ahead and <a href="create-new-logon.html">create a UCLA Logon ID</a>.</p>
+        <ul class="menu vertical">
+          <li><a href="personal-info.html">Confirm your personal information</a></li>
+          <li><a href="change-pass.html">Change UCLA Logon password</a></li>
+          <li><a href="2fa.html">Manage two factor authentication</a></li>
+          <li><a href="forwarding.html">Manage @ucla.edu email account</a></li>
+          <li><a href="question.html">Set your challenge phrase</a></li>
+        </ul>
+      </div>
+    </article>
+    
+    <article class="card" id="help">
+      <div>
+        <h2>Can't sign in?</h2>
+        
+        <ul class="menu vertical">
+          <li><a href="reset.html">Reset your password</a></li>
+          <li><a href="lookup.html">Lookup your UCLA Logon ID</a></li>
+          <li><a href="create-new-logon.html">Create a UCLA Logon ID</a></li>
+        </ul>
       </div>
     </article>
   
-      <aside class="supporting-info"><div><p>The UCLA Logon ID is your campus online identifier. It is used for authentication to most online services on campus. It also provides eligible users with access to Bruin OnLine services such as an e-mail account, network access, web hosting service, etc. Previously, the UCLA Logon ID was called a Bruin OnLine ID or BOLid.</p></div></aside>
+      <aside class="home-info"><div><p>The UCLA Logon ID is your campus online identifier. It is used for authentication to most online services on campus. It also provides eligible users with access to Bruin OnLine services such as an e-mail account, network access, web hosting service, etc. Previously, the UCLA Logon ID was called a Bruin OnLine ID or BOLid.</p></div></aside>
   
   </section>
-
-  <script src="assets/bower_components/polyfiller.js"></script>
+  
+  <footer role="contentinfo" class="ucla-iam-footer">
+  	<div class="ucla-iam-footer-content">
+  		<p><a href="/ucla-logon-mocks/cms-policies.html">Privacy, Security & Legal</a></p>
+  	</div>
+  </footer>
   
 </body>
 

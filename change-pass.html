@@ -9,12 +9,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UCLA Logon</title>
   <link rel="stylesheet" href="assets/css/app.css">
+  <script src="assets/bower_components/polyfiller.js"></script>
   <script src="assets/js/app.js"></script>
 </head>
 
 <body>
 
-  <header class="page-header" role="banner"><a href="./"><img src="assets/img/logo.png" alt="UCLA" class="logo"></a></header>
+  <header class="page-header" role="banner">
+    <section class="page-header-contents">
+      <span class="logo"><a href="./"><img src="assets/img/logo.png" alt="UCLA"></a></span>
+      <span class="logged"><a href="#">Login</a>
+    </span>
+  </header>
 
   <section class="management">
     
@@ -23,12 +29,12 @@
           <li><a href="personal-info.html">Confirm your personal information</a></li>
           <li><a href="change-pass.html">Change UCLA Logon password</a></li>
           <li><a href="2fa.html">Manage two factor authentication</a></li>
-          <li><a href="forwarding.html">Manage your @ucla.edu email account</a></li>
+          <li><a href="forwarding.html">Manage @ucla.edu email account</a></li>
           <li><a href="question.html">Set your challenge phrase</a></li>
         </ul>
     <div id="timeout">Time Remaining:
-      <span id="counter">13:12</span><br>
-      <div id="bar"><div id="barfill" style="width: 4.08em;"></div></div>
+      <span id="counter">20:00</span><br>
+      <div id="bar"><div id="barfill"></div></div>
     </div>
     
     <script type="text/javascript">
@@ -69,8 +75,12 @@
     </article>  
   
   </section>
-
-  <script src="assets/bower_components/polyfiller.js"></script>
+  
+  <footer role="contentinfo" class="ucla-iam-footer">
+  	<div class="ucla-iam-footer-content">
+  		<p><a href="/ucla-logon-mocks/cms-policies.html">Privacy, Security & Legal</a></p>
+  	</div>
+  </footer>
   
 </body>
 
