@@ -20,18 +20,9 @@
     </span>
   </header>
 
-  <section class="home">
+  <section class="management">
     
-    <header>
-      <h1>Welcome to UCLA Logon</h1>
-      
-      <p>Here you'll find an ever-expanding range of options to manage your identity and security at UCLA, as well as tools to assist you if you cannot access your account.</p>
-    </header>
-  
-    <article class="card" id="management">
-      <div>
-        <h2>Manage your identity & security</h2>
-        
+    <nav class="primary-nav">
         <ul class="menu vertical">
           <li><a href="manage-personal-info.html">Confirm your personal information</a></li>
           <li><a href="manage-password.html">Change UCLA Logon password</a></li>
@@ -39,22 +30,32 @@
           <li><a href="manage-email.html">Manage @ucla.edu email account</a></li>
           <li><a href="manage-phrase.html">Set your challenge phrase</a></li>
         </ul>
-      </div>
-    </article>
+    <div id="timeout">Time Remaining:
+      <span id="counter">20:00</span><br>
+      <div id="bar"><div id="barfill"></div></div>
+    </div>
     
-    <article class="card" id="help">
-      <div>
-        <h2>Can't sign in?</h2>
-        
-        <ul class="menu vertical">
-          <li><a href="reset.html">Reset your password</a></li>
-          <li><a href="lookup.html">Lookup your UCLA Logon ID</a></li>
-          <li><a href="create-new-logon.html">Create a UCLA Logon ID</a></li>
-        </ul>
-      </div>
-    </article>
+    <script type="text/javascript">
+      init_timers(1200, 1200);
+    </script>
+    </nav>
+      
+    <article class="content" id="2fa" data-magellan-target="2fa">
+      <h1>Manage Two Factor Authentication</h1>
+      
+      <p>As of May 2016 you will not be able to use the following services without using two factor authentication:</p> 
+      
+      <ul>
+        <li>DACSS</li>
+        <li>VPN</li>
+      </ul>
   
-      <aside class="alert-info"><div><p>The UCLA Logon ID is your campus online identifier. It is used for authentication to most online services on campus. It also provides eligible users with access to Bruin OnLine services such as an e-mail account, network access, web hosting service, etc. Previously, the UCLA Logon ID was called a Bruin OnLine ID or BOLid.</p></div></aside>
+      <img src="assets/img/duo-iframe.png">
+      
+      <p></p>
+      <p><span class="message-fail"><a href="mfa-connection-fail.html">(fail)</a></span></p>
+  
+    </article>
   
   </section>
   
