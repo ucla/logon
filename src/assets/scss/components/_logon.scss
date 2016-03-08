@@ -22,23 +22,12 @@ hr {
 ///          LARGER CHUNKS
 /////////////////////////////////////////
 
+// logo, top bar, login/out
 .page-header {
 	display: block;
   border-bottom: 3px solid $ucla-blue;
   margin-bottom: $global-margin * 3;
 	background: rgba($black, .6) ;
-}
-
-dl.info-list {
-  dt {
-    font-size: $small-font-size;
-    font-weight: $global-weight-bold;
-    display: block;
-    margin-bottom: 0;
-  }
-  dd {
-    margin-bottom: $global-margin;
-  }
 }
 
 // basic styles applied to all major chunks of content
@@ -117,7 +106,21 @@ dl.info-list {
   }
 }
 
-.anchor-nav ul {
+// list of links in card/buckets
+dl.info-list {
+  dt {
+    font-size: $small-font-size;
+    font-weight: $global-weight-bold;
+    display: block;
+    margin-bottom: 0;
+  }
+  dd {
+    margin-bottom: $global-margin;
+  }
+}
+
+// side nav for logged in pages
+.primary-nav ul {
   background: $light-gray;
   border-radius: $global-radius;
   font-size: rem-calc(13);

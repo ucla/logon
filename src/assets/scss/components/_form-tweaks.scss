@@ -18,6 +18,10 @@ input {
     max-width: 28rem;
   }
 }
+
+button[disabled] {
+  @include button-disabled;
+}
  
 // no CSS output for Foundation buttons component :)
 button {

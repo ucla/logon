@@ -1,6 +1,6 @@
 <section class="management">
   
-  <nav class="anchor-nav">
+  <nav class="primary-nav">
   {{> nav-menu}}
   {{> timer}}
   </nav>
@@ -32,8 +32,14 @@
       <p>Note: A verification link will be sent to the new email address.</p>
     </form>
     
-    <button id="cancel-email" class="cancel-button" type="submit" name="action2">Disable @ucla.edu email account</button>
+    <h2>Not using your @ucla.edu email anymore?</h2>
+    <p>You can disable the account so it won't receive or forward on any emails. If you want to enable it again in the future, just head on back.</p>
+    <form>
+      <button id="cancel-email" class="cancel-button" type="submit" name="action2">Disable @ucla.edu email account</button>
+    </form>
+    
+    <p><span class="message-fail"><a href="manage-email-disabled.html">(account disabled)</a></span></p>
 
-    </article>
+  </article>
     
 </section>

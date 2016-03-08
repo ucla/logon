@@ -42,7 +42,7 @@ body {
       @include grid-column(8);
     }
   }
-  .anchor-nav {
+  .primary-nav {
     @include grid-column(12);
     @include breakpoint(multi-column) {
       @include grid-column(4);
