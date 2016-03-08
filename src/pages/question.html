@@ -10,7 +10,7 @@
 
     <p>A Challenge Phrase allows you reset your password online. Both the challenge and response must be between <strong>8 and 128 characters</strong> long. They cannot be the same, and the response is <strong>case-sensitive</strong>.</p>
   
-    <form action="/passoptions.php" method="post">
+    <form action="/passoptions.php" method="post" data-abide novalidate>
   
       <script type="text/javascript">
       var cbh;
@@ -37,7 +37,7 @@
   
       <label title="Your Challenge phrase is a question or phrase that only you know the response to." for="selectChallenge">Select your Challenge Question</label>
   
-      <select id="selectChallenge" onchange="updateChallenge(this.value);">
+      <select id="selectChallenge" onchange="updateChallenge(this.value);" required>
         <option value="What is the name of your first pet?">What is the name of your first pet?</option>
         <option value="What was your maternal grandmother's maiden name?">What was your maternal grandmother's maiden name?</option>
         <option value="Who is your favorite actor, musician, or artist?">Who is your favorite actor, musician, or artist?</option>
@@ -52,10 +52,11 @@
         <option value="What was the first name of your date for your high school prom?">What was the first name of your date for your high school prom?</option>
         <option value="self">Write your own question</option>
       </select>
-      <input name="challenge" maxlength="128" id="challenge" style="display:none;z-index:5;top:0;position:relative;">
+      <input name="challenge" maxlength="128" id="challenge" style="display:none;z-index:5;top:0;position:relative;" required>
   
       <label for="response">Type your Response
-        <input type="text" name="response" maxlength="128" placeholder="Answer to the above question" id="response">
+        <input type="text" name="response" maxlength="128" placeholder="Answer to the above question" id="response" required>
+        <span class="form-error">Challenge responses must be between 8 and 128 characters long.</span>
       </label>
   
       <button class="primary-button" type="submit">Change Challenge Phrase</button>

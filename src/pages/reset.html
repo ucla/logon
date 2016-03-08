@@ -9,7 +9,7 @@
   
         <fieldset>
           <label class="help" for="uid">UCLA Logon ID
-          <input name="uid" type="text" maxlength="15" value="" id="uid" placeholder="janebruin42" autofocus required>
+          <input name="uid" type="text" pattern="[0-9]{9}" id="uid" placeholder="janebruin42" autofocus required>
           <span class="form-error">Your UCLA ID number is exactly 9 numbers long.</span></label>
     
           <button class="primary-button" type="submit">Check for security challenge question</button> 

@@ -16,18 +16,21 @@
       <li>special characters: !@#$%^&*().,</li>
     </ul>
 
-    <form id="user-requested-password" role="form" action="/" method="post" class="ws-validate">
+    <form id="user-requested-password" role="form" action="/" method="post" data-abide novalidate>
       
       <label for="pass-current">Enter Your Current Password
         <input id="pass-current" name="pass-current" type="password" placeholder="NVAEAUv7k%eDkiGaidTuwi4dUupHf@" aria-required="true" pattern="[a-zA-Z0-9 !@#$%^&*().,]{8,128}" required>
+        <span class="form-error">Passwords must be at least 8 characters long and must contain one letter and either a number or one of the following symbols: !@#$%^&*()., other symbols are not allowed.</span>
       </label>
 
       <label for="pass-requested">Enter Your New Password
         <input id="pass-requested" name="pass-requested" type="password" placeholder="Your New Password" aria-required="true" pattern="[a-zA-Z0-9 !@#$%^&*().,]{8,128}" required>
+        <span class="form-error">Passwords must be at least 8 characters long and must contain one letter and either a number or one of the following symbols: !@#$%^&*()., other symbols are not allowed.</span>
       </label>
       
       <label for="pass-requested-confirm">Confirm Your New Password</label>
-        <input id="pass-requested" name="pass-requested" type="password" placeholder="Confirm Your New Password" aria-required="true" pattern="[a-zA-Z0-9 !@#$%^&*().,]{8,128}" required>
+        <input id="pass-requested-confirm" name="pass-requested-confirm" type="password" placeholder="Confirm Your New Password" aria-required="true" pattern="[a-zA-Z0-9 !@#$%^&*().,]{8,128}" data-equalto="pass-requested" required>
+        <span class="form-error">Your passwords don't match and/or this doesn't follow the rules above!</span></label>
       </label>
 
       <fieldset class="confirm-staff-submit">

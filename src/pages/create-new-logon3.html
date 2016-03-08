@@ -59,7 +59,7 @@ layout: create-password
   
         <fieldset>
           <label for="user1">Desired UCLA Logon ID
-          <input name="user1" type="text" maxlength="15" placeholder="joebruin42" id="user1" value="" alt="Your username will be assigned for life and CAN NOT BE CHANGED. Select carefully." pattern="[a-z0-9]{3,15}" autofocus required><span class="form-error">Usernames must be between 3-15 letters or numbers long, and must start with a letter.</span></label>
+          <input name="user1" type="text" maxlength="15" placeholder="joebruin42" id="user1" value="" alt="Your username will be assigned for life and CAN NOT BE CHANGED. Select carefully." pattern="[a-z0-9]{3,15}" autofocus required><span class="form-error">Usernames must be between 3-15 characters long, and must start with a letter.</span></label>
           <label for="user2">Confirm desired UCLA Logon ID
           <input name="user2" type="text" maxlength="15" placeholder="joebruin42" id="user2" value="" alt="Your username will be assigned for life and CAN NOT BE CHANGED. Select carefully." pattern="[a-z0-9]{3,15}" required data-equalto="user1">
           <span class="form-error">Your usernames don't match and/or this doesn't follow the rules above!</span></label>
@@ -69,7 +69,7 @@ layout: create-password
         <fieldset>
           <label for="pass1">Password
           <input name="pass1" type="password" maxlength="128" id="pass1" value="" placeholder="Your desired password" pattern="[a-zA-Z0-9 !@#$%^&*().,]{8,128}" required>
-          <span class="form-error">Passwords must be at least 8 characters and must contain one letter and either a number or one of the following symbols: !@#$%^&*()., other symbols are not allowed.</span></label>
+          <span class="form-error">Passwords must be at least 8 characters long and must contain one letter and either a number or one of the following symbols: !@#$%^&*()., other symbols are not allowed.</span></label>
           <meter max="4" id="password-strength-meter"></meter>
           <span id="password-strength-text"></span>
           <label for="pass2">Confirm Password
@@ -103,7 +103,7 @@ layout: create-password
         </script>
   
         <label for="selectChallenge">Select your Challenge Question</label>
-        <select id="selectChallenge" onchange="updateChallenge(this.value);" style="z-index:10;top:0;position:relative">
+        <select id="selectChallenge" onchange="updateChallenge(this.value);">
           <option value="What city were you born in?">What city were you born in?</option>
           <option value="What is the nickname you gave your favorite grandparent?">What is the nickname you gave your favorite grandparent?</option>
           <option value="What is the name of your first pet?">What is the name of your first pet?</option>
@@ -121,7 +121,7 @@ layout: create-password
           </option>
         </select>
   
-        <input type="text" name="challenge" maxlength="128" id="challenge" style="display:none;z-index:5;top:0;position:relative;">
+        <input name="challenge" maxlength="128" id="challenge" style="display:none;z-index:5;top:0;position:relative;" required>
   
         <script type="text/javascript">
           var element = document.getElementById("selectChallenge");
@@ -129,7 +129,8 @@ layout: create-password
         </script>
   
         <label for="selectChallenge">Type your Response
-        <input name="response" type="text" maxlength="128" placeholder="Answer to the above question" id="response" alt="Your Response is the answer to your Challenge question." pattern="[a-zA-Z0-9 !@#$%^&*().,]{8,128}"><span class="form-error">Challenge responses must be between 8 and 128 characters long.</span></label>
+        <input name="response" type="text" maxlength="128" placeholder="Answer to the above question" id="response" alt="Your Response is the answer to your Challenge question." pattern="[a-zA-Z0-9 !@#$%^&*().,]{8,128}" required>
+        <span class="form-error">Challenge responses must be between 8 and 128 characters long.</span></label>
   
         <button class="primary-button" type="submit">Create UCLA Logon ID</button>
         
