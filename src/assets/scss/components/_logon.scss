@@ -18,11 +18,14 @@ hr {
   border: none;
 }
 
-.alert-info div {
+.alert-info p {
   border-left: 5px solid $ucla-blue;
   background: $off-white;
   padding: $global-padding / 2;
   font-size: $small-font-size;
+  p {
+    margin-bottom: 0;
+  }
 }
 
 /////////////////////////////////////////
