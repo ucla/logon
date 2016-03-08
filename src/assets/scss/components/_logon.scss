@@ -49,6 +49,7 @@ dl.info-list {
 
 // need nested containers due to foundation's grid system
 .management, .page, .home, .message {
+  margin-top: $global-margin * 4;
   @extend %content-styling;
 }
 
