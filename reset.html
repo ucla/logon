@@ -9,8 +9,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UCLA Logon</title>
   <link rel="stylesheet" href="assets/css/app.css">
-  <script src="assets/bower_components/polyfiller.js"></script>
-  <script src="assets/js/app.js"></script>
 </head>
 
 <body>
@@ -18,7 +16,7 @@
   <header class="page-header" role="banner">
     <section class="page-header-contents">
       <span class="logo"><a href="./"><img src="assets/img/logo.png" alt="UCLA"></a></span>
-      <span class="logged"><a href="#">Login</a>
+      <span class="logged"><a href="#">Login/out</a>
     </span>
   </header>
 
@@ -33,7 +31,7 @@
     
           <fieldset>
             <label class="help" for="uid">UCLA Logon ID
-            <input name="uid" type="text" maxlength="15" value="" id="uid" placeholder="janebruin42" autofocus required>
+            <input name="uid" type="text" pattern="[0-9]{9}" id="uid" placeholder="janebruin42" autofocus required>
             <span class="form-error">Your UCLA ID number is exactly 9 numbers long.</span></label>
       
             <button class="primary-button" type="submit">Check for security challenge question</button> 
@@ -64,6 +62,8 @@
   		<p><a href="/ucla-logon-mocks/cms-policies.html">Privacy, Security & Legal</a></p>
   	</div>
   </footer>
+  
+  <script src="assets/js/app.js"></script>
   
 </body>
 

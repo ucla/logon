@@ -9,8 +9,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UCLA Logon</title>
   <link rel="stylesheet" href="assets/css/app.css">
-  <script src="assets/bower_components/polyfiller.js"></script>
-  <script src="assets/js/app.js"></script>
 </head>
 
 <body>
@@ -18,7 +16,7 @@
   <header class="page-header" role="banner">
     <section class="page-header-contents">
       <span class="logo"><a href="./"><img src="assets/img/logo.png" alt="UCLA"></a></span>
-      <span class="logged"><a href="#">Login</a>
+      <span class="logged"><a href="#">Login/out</a>
     </span>
   </header>
 
@@ -31,15 +29,21 @@
           
         <p><strong>Challenge Question:</strong> Lost youth and better times, lost to fire.</p>
         
-        <fieldset>
-          <label for="response">Challenge Question Response:
-          <input type="text" name="response" size="40" value="" id="response" placeholder="Rosebud" required></label>
+        <form action="/passreset.php" method="post" data-abide novalidate>
           
-          <button class="primary-button" type="submit">Reset your password</button>
-          
-          <p><span class="message-fail"><a href="reset-fail.html">(fail)</a></span> <span class="logon-success message-success"><a href="reset-2.html">(success)</a></span></p>
-  
-        </fieldset>
+          <fieldset>
+            <label for="response">Challenge Question Response:
+              <input type="text" name="response" size="40" value="" id="response" placeholder="Rosebud" required>
+              <span class="form-error">Challenge responses must be between 8 and 128 characters long.</span>
+            </label>
+            
+            <button class="primary-button" type="submit">Reset your password</button>
+            
+            <p><span class="message-fail"><a href="reset-fail.html">(fail)</a></span> <span class="logon-success message-success"><a href="reset-2.html">(success)</a></span></p>
+    
+          </fieldset>
+        
+        </form>
     
       </div>
     </article>
@@ -62,6 +66,8 @@
   		<p><a href="/ucla-logon-mocks/cms-policies.html">Privacy, Security & Legal</a></p>
   	</div>
   </footer>
+  
+  <script src="assets/js/app.js"></script>
   
 </body>
 

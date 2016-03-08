@@ -9,8 +9,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UCLA Logon</title>
   <link rel="stylesheet" href="assets/css/app.css">
-  <script src="assets/bower_components/polyfiller.js"></script>
-  <script src="assets/js/app.js"></script>
 </head>
 
 <body>
@@ -18,7 +16,7 @@
   <header class="page-header" role="banner">
     <section class="page-header-contents">
       <span class="logo"><a href="./"><img src="assets/img/logo.png" alt="UCLA"></a></span>
-      <span class="logged"><a href="#">Login</a>
+      <span class="logged"><a href="#">Login/out</a>
     </span>
   </header>
 
@@ -38,13 +36,13 @@
           <span class="form-error">You must use a valid date (YYYY-MM-DD) format.</span></label>
     
           <label title="Your UCLA ID Number is nine (9) digits long and is printed on your UCLA ID Card." for="uclaid">9 Digit UCLA ID Number
-          <input name="uclaid" pattern="" type="password" placeholder="123-456-789" value="" id="uclaid">
+          <input name="uclaid" pattern="[0-9]{9}" type="password" placeholder="123-456-789" value="" id="uclaid">
           <span class="form-error">Your UCLA ID number is exactly 9 numbers long.</span></label>
     
           <label><input type="checkbox" id="email-toggler">Don't have a 9 digit UCLA ID number?</label>
     
           <div id="email-toggle" hidden>
-            <label title="A valid contact email address is required to continue" for="email">Please enter your email address on file instead!
+            <label title="A valid contact email address is required to continue" for="email">Please enter an email address on file instead!
             <input name="email" type="email" placeholder="joe.bruin@gmail.com" id="email">
             <span class="form-error">This doesn't look like a valid email address.</span></label>
   
@@ -73,6 +71,8 @@
   		<p><a href="/ucla-logon-mocks/cms-policies.html">Privacy, Security & Legal</a></p>
   	</div>
   </footer>
+  
+  <script src="assets/js/app.js"></script>
   
 </body>
 
