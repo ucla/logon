@@ -18,6 +18,13 @@ hr {
   border: none;
 }
 
+.alert-info div {
+  border-left: 5px solid $ucla-blue;
+  background: $off-white;
+  padding: $global-padding / 2;
+  font-size: $small-font-size;
+}
+
 /////////////////////////////////////////
 ///          LARGER CHUNKS
 /////////////////////////////////////////
@@ -43,7 +50,7 @@ hr {
 }
 
 // need nested containers due to foundation's grid system
-.supporting-info > div, .home-info div {
+.supporting-info > div {
   background: $off-white;
   padding: $global-spacing $global-spacing;
   p, li {

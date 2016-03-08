@@ -87,7 +87,7 @@ body {
   header {
     @include grid-column(12);
   }
-  .home-info {
+  .alert-info {
     @include grid-column(12);
   }
 }
