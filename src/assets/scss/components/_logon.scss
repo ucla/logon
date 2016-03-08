@@ -1,3 +1,7 @@
+/////////////////////////////////////////
+///          BITS & PIECES
+/////////////////////////////////////////
+
 .line-thru {
   @include line-thru();
   margin: -($global-spacing / 2) 0 0;
@@ -14,6 +18,17 @@ hr {
   border: none;
 }
 
+/////////////////////////////////////////
+///          LARGER CHUNKS
+/////////////////////////////////////////
+
+.page-header {
+	display: block;
+  border-bottom: 3px solid $ucla-blue;
+  margin-bottom: $global-margin * 3;
+	background: rgba($black, .6) ;
+}
+
 dl.info-list {
   dt {
     font-size: $small-font-size;
@@ -26,36 +41,20 @@ dl.info-list {
   }
 }
 
-.home .menu {
-  border-radius: $global-radius;
-  li {
-    margin-bottom: 1px;
-    background: $white;
-    &:first-child {
-      border-top-left-radius: $global-radius;
-      border-top-right-radius: $global-radius;
-    }
-    &:last-child {
-      border-bottom-left-radius: $global-radius;
-      border-bottom-right-radius: $global-radius;
-    }
-  }
-}
-
 // basic styles applied to all major chunks of content
 %content-styling {
-  padding: $global-spacing;
   margin-bottom: ($global-spacing * 4);
+  background: $white;
 }
 
 // need nested containers due to foundation's grid system
-.content > div {
+.management, .page, .home, .message {
   @extend %content-styling;
 }
 
 // need nested containers due to foundation's grid system
-.supporting-info > div {
-  background: $white;
+.supporting-info > div, .home-info div {
+  background: $off-white;
   padding: $global-spacing $global-spacing;
   p, li {
     font-size: $small-font-size;
@@ -97,6 +96,7 @@ dl.info-list {
 
 #barfill {
   background: $ucla-blue;
+  border: solid 1px $ucla-blue;
   border-radius: $global-radius;
   height: rem-calc(13);
   width: 0;
@@ -108,14 +108,20 @@ dl.info-list {
 
 // basic card styling
 .card {
-  background: $white;
-  padding: $global-padding ($global-padding * 2) ;
-  margin-bottom: $global-margin * 3;
-  border-radius: $global-radius;
+  &> div {
+    background: $lighter-gray;
+    padding: $global-padding;
+    margin-bottom: $global-margin;
+    border-radius: $global-radius;
+  }
 }
 
 .anchor-nav ul {
   background: $light-gray;
   border-radius: $global-radius;
   font-size: rem-calc(13);
+  a {
+    padding-left: $global-spacing;
+//    text-transform: uppercase;
+  }
 }

@@ -47,7 +47,7 @@
 // ---------
 
 $global-font-size: 100%;
-$global-width: rem-calc(1200);
+$global-width: rem-calc(960);
 $global-lineheight: 1.6;
 $foundation-palette: (
   primary: $ucla-blue,
@@ -71,7 +71,8 @@ $medium-gray: $ucla-neutral;
 $dark-gray: #333;
 $black: $ucla-black;
 $white: $ucla-white;
-$body-background: $lighter-gray;
+$off-white: #e8f2fc;
+$body-background: url('../img/skyline.jpg') no-repeat fixed;
 $body-font-color: #555;
 $body-font-family: $ucla-font-stack;
 $body-antialiased: true;
@@ -391,7 +392,7 @@ $mediaobject-image-width-stacked: 100%;
 
 $menu-margin: 0;
 $menu-margin-nested: 1rem;
-$menu-item-padding: 0.7rem 1rem;
+$menu-item-padding: 0.7rem 0;
 $menu-icon-spacing: 0.25rem;
 $menu-item-color-active: $black;
 $menu-item-background-active: $primary-color;
