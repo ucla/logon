@@ -109,7 +109,7 @@ button {
 /////////////////////////////////////////
 
 #pass1 {
-  margin-bottom: 0;
+  margin-bottom: 0.5rem;
 
 }
 
@@ -118,7 +118,7 @@ meter {
   padding: 0;
   width: 98.5%;
   display: block;
-  margin: 0 auto $global-margin;
+  margin: 0 0 $global-margin;
   height: $global-margin / 6;
   vertical-align: $global-margin;
   border-bottom-left-radius: $global-radius;
@@ -126,6 +126,9 @@ meter {
   /* Applicable only to Firefox */
   background: none;
   background-color: transparent;
+  @include breakpoint(multi-column) {
+    max-width: 28rem;
+  }
 }
 
 #password-strength-text .help-text {
