@@ -21,8 +21,7 @@
     "webshim": "~1.15.10",
     "sass-toolkit": "~2.9.0",
     "what-input": "^1.2.5",
-    "zxcvbn": "~4.2.0",
-    "better-dateinput-polyfill": "^1.5.2"
+    "zxcvbn": "~4.2.0"
   },
   "private": true
 }

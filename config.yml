@@ -61,8 +61,5 @@ PATHS:
     # - "bower_components/foundation-sites/js/foundation.tooltip.js"
     # Paths to your own project code are here
     # - "bower_components/countdown/dest/jquery.countdown.js"
-    - "bower_components/better-dom/dist/better-dom.js"
-    - "bower_components/better-i18n-plugin/dist/better-i18n-plugin.js"
-    - "bower_components/better-dateinput-polyfill/dist/better-dateinput-polyfill.js"
     - "src/assets/js/!(app).js"
     - "src/assets/js/app.js"
