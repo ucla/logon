@@ -25,9 +25,9 @@ function countdown() {
     var cancelbox = document.getElementById('cancelbox');
     if (cancelbox) cancelbox.style.display = 'none';
     e.innerHTML = "0:00";
-    e.style.color = "#f00";
+    e.style.color = "#ff00a5";
     e.style.fontWeight = "bold";
-    f.style.background = "#c00";
+    f.style.background = "#f9f9f9";
     f.style.width = '100%';
 
     if (intervalId) clearInterval(intervalId);
@@ -53,7 +53,7 @@ function init_timers(_timeleft, _sesslen) {
 
   var cancel = document.getElementById('cancel');
   if (cancel) {
-    cancel.onmouseover = function() { this.style.color = '#33f'; };
+    cancel.onmouseover = function() { this.style.color = '#3399cc'; };
     cancel.onmouseout = function() { this.style.color = '#000'; };
   }
   f = document.getElementById("barfill");

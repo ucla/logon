@@ -41,6 +41,7 @@
 // @include foundation-label;
 // @include foundation-media-object;
 @include foundation-menu;
+// @include foundation-menu-icon;
 // @include foundation-off-canvas;
 // @include foundation-orbit;
 // @include foundation-pagination;
@@ -74,6 +75,8 @@
 @import 'ucla/ucla-decorative';
 @import 'ucla/ucla-messages';
 @import 'ucla/iam-footer';
+@import 'ucla/errors';
+@import 'ucla/prototyping-controls';
 
 // Polyfill Overrides
 @import 'ucla/webshim-styling';

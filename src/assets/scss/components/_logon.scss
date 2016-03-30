@@ -7,25 +7,8 @@
   margin: -($global-spacing / 2) 0 0;
 }
 
-a {
-  font-weight: bold;
-}
-
-hr {
-  height: 1px;
-  color: $body-font-color;
-  background-color: $body-font-color;
-  border: none;
-}
-
-.alert-info p {
-  border-left: 5px solid $ucla-blue;
-  background: $off-white;
-  padding: $global-padding / 2;
-  font-size: $small-font-size;
-  p {
-    margin-bottom: 0;
-  }
+.menu a {
+  font-weight: $global-weight-bold;
 }
 
 /////////////////////////////////////////
