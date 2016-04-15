@@ -110,14 +110,29 @@
 
 // list of links in card/buckets
 dl.info-list {
+  @include grid-row();
+  padding: $global-padding 0 0;
+  background: $white;
+  border-radius: $global-radius;
   dt {
-    font-size: $small-font-size;
-    font-weight: $global-weight-bold;
-    display: block;
-    margin-bottom: 0;
+    font-weight: $global-weight-normal;
+    border-bottom: 1px solid $light-gray;
+    padding-bottom: $global-padding;
+    margin-bottom: $global-margin;
+    @include grid-column(12);
+    @include breakpoint(multi-column) {
+      @include grid-column(5);
+    }
   }
   dd {
+    font-weight: $global-weight-bold;
+    border-bottom: 1px solid $light-gray;
+    padding-bottom: $global-padding;
     margin-bottom: $global-margin;
+    @include grid-column(12);
+    @include breakpoint(multi-column) {
+      @include grid-column(7);
+    }
   }
 }
 
