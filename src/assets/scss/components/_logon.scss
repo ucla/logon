@@ -30,7 +30,7 @@
 // basic styles applied to all major chunks of content
 %content-styling {
   margin-bottom: ($global-spacing * 4);
-  background: $white;
+  background: $lighter-gray;
 }
 
 // need nested containers due to foundation's grid system
@@ -41,8 +41,9 @@
 
 // need nested containers due to foundation's grid system
 .supporting-info > div {
-  background: $off-white;
+  background: $white;
   padding: $global-spacing $global-spacing;
+  border-radius: $global-radius;
   p, li {
     font-size: $small-font-size;
   }
@@ -50,10 +51,15 @@
     padding-left: $global-spacing;
   }
   h1 {
-    font-size: rem-calc(nested-map-get($header-sizes, large-type, h3));
+    background: $ucla-gold;
+    color: $ucla-blue-dark;
+    padding: $global-padding / 2;
+    display: inline-block;
+    margin-left: -$global-margin * 1.75;
+    font-size: rem-calc(nested-map-get($header-sizes, large-type, h5));
   }
   h2 {
-    font-size: rem-calc(nested-map-get($header-sizes, large-type, h4));
+    font-size: rem-calc(nested-map-get($header-sizes, large-type, h6));
   }
 }
 
@@ -97,7 +103,6 @@
 .card {
   &> div {
     background: $lighter-gray;
-    padding: $global-padding;
     margin-bottom: $global-margin;
     border-radius: $global-radius;
   }
