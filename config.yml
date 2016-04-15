@@ -29,6 +29,7 @@ PATHS:
   bowerDirectLinked:
     # - "bower_components/duo_php/js/Duo-Web-v2.min.js"
     # - "bower_components/webshim/js-webshim/minified/**/*"
+    # - "bower_components/iframe-resizer/js/iframeResizer.min.js"
     - "bower_components/zxcvbn/dist/zxcvbn.js"
   # Paths to JavaScript libraries, which are compined into one file
   javascript:
