@@ -58,13 +58,13 @@ body {
   .content {
     @include grid-column(12);
     @include breakpoint(multi-column) {
-      @include grid-column(7);
+      @include grid-column(8);
     }
   }
   .supporting-info {
     @include grid-column(12);
     @include breakpoint(multi-column) {
-      @include grid-column(5);
+      @include grid-column(4);
     }
   }
 }
