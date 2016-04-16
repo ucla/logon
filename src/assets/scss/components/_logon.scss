@@ -20,9 +20,8 @@ ul.listless {
   list-style: none;
   padding-left: 0;
   margin-left: 0;
-  ul {
-    list-style: none;
-    padding-left: $global-padding;
+  li li {
+    font-size: $helptext-font-size;
   }
 }
 
