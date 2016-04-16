@@ -130,9 +130,9 @@ $header-sizes: (
     'h6': 16,
   ),
   large-type: (
-    'h1': 32,
-    'h2': 24,
-    'h3': 22,
+    'h1': 36,
+    'h2': 28,
+    'h3': 24,
     'h4': 20,
     'h5': 18,
     'h6': 16,
@@ -143,7 +143,7 @@ $header-lineheight: 1.4;
 $header-margin-bottom: 0.5rem;
 $header-text-rendering: optimizeLegibility;
 $small-font-size: 81.25%; // 13px for base 16px
-$header-small-font-color: $medium-gray;
+$header-small-font-color: $dark-gray;
 $paragraph-lineheight: 1.6;
 $paragraph-margin-bottom: 1rem;
 $paragraph-text-rendering: optimizeLegibility;

@@ -25,6 +25,11 @@ ul.listless {
   }
 }
 
+section > h1 {
+  @include grid-column-row();
+  margin-bottom: $global-margin * 1.5;
+}
+
 /////////////////////////////////////////
 ///          LARGER CHUNKS
 /////////////////////////////////////////
