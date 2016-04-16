@@ -69,20 +69,6 @@ body {
   }
 }
 
-// have source ordering of aside appear above article in mobile
-.info-first {
-  .content {
-    @include breakpoint(multi-column) {
-      @include grid-column-position(-5);
-    }
-  }
-  .supporting-info {
-    @include breakpoint(multi-column) {
-      @include grid-column-position(7);
-    }
-  }
-}
-
 // home page specific styling
 .home {
   header {
