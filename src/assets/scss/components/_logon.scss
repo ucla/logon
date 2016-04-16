@@ -15,6 +15,17 @@
   left: 1.25rem;
 }
 
+ul.listless {
+  padding-left: $global-spacing;
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+  ul {
+    list-style: none;
+    padding-left: $global-padding;
+  }
+}
+
 /////////////////////////////////////////
 ///          LARGER CHUNKS
 /////////////////////////////////////////
@@ -46,15 +57,6 @@
   border-radius: $global-radius;
   p, li {
     font-size: $small-font-size;
-  }
-  ul {
-    padding-left: $global-spacing;
-    list-style: none;
-    padding-left: 0;
-    margin-left: 0;
-  }
-  li li {
-    padding-left: $global-padding;
   }
   h1 {
     background: $ucla-gold;
