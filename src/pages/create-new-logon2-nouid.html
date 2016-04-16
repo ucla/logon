@@ -3,49 +3,56 @@
   <aside class="supporting-info">
     <div>
       <h1>Third Party Accounts</h1>
-  
+
       <p>You are creating an account without a UCLA Identification Number.  Accounts created without a UCLA ID Number can be used to authenticate to many UCLA applications, but are not generally eligible to receive campus services (email, network access).</p>
-  
+
       <p>If you are a <b>NEW STUDENT</b> or <b>UCLA ALUMNI</b>, please <a href="/activate.php">create</a> a UCLA Logon with your UCLA ID number.  Failure to do so will prevent you from using your UCLA Logon to access your Student Records and other student applications.</p>
-      
-      <h2>Need help?</h2>
-      
-      <p>For further assistance, contact the Help Desk at 310-267-HELP (4357) or <a href="mailto:accounts@ucla.edu">accounts@ucla.edu</a>.</p>
+
+      <h2>Get Help</h2>
+
+      <ul class="listless">
+        <li>Contact the Bruin Online Help Desk
+          <ul>
+            <li><a href="mailto:consult@ucla.edu">consult@ucla.edu</a></li>
+            <li>310-267-HELP (4357)</li>
+          </ul>
+        </li>
+      </ul>
     </div>
   </aside>
 
   <article class="content">
     <div>
       <h1>Verify Your Identity</h1>
-      
+
       <ol id="form-step-bar">
         <li class="form-step-done">Set Affiliation Status</li>
         <li class="form-step-doing">Verify Identity</li>
         <li class="form-step-todo">Create Logon ID</li>
       </ol>
-        
+
       <form action="/activate.php" method="post" data-abide novalidate>
         <label for="gn">First Name
         <input name="gn" type="text" placeholder="Joe" value="" id="gn" required>
         <span class="form-error">You must enter your first name to continue.</span></label>
-  
+
         <label for="sn">Last Name
         <input name="sn" type="text" placeholder="Bruin" value="" id="sn" required>
         <span class="form-error">You must enter your last name to continue.</span></label>
-  
+
         <label for="sn">Date of Birth (YYYY-MM-DD)
         <input name="dob" type="date" placeholder="(YYYY-MM-DD)" maxlength="10" value="" id="dob" required>
         <span class="form-error">You must use a valid date (YYYY-MM-DD) format.</span></label>
-  
+
         <label for="email">Email Address
         <input name="email" type="email" placeholder="joe.bruin@gmail.com" value="" id="email" required>
         <span class="form-error">This doesn't look like a valid email address.</span></label>
-  
+
         <button type="submit" class="primary-button">Next</button> <button type="submit" class="cancel-button">Cancel</button>
-        
+
         <p><span class="message-success"><a href="create-new-logon3.html">(next)</a></span></p>
       </form>
-  
+
     </div>
   </article>
 
