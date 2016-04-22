@@ -82,7 +82,7 @@ body {
 .card {
   @include grid-column(12);
   @include breakpoint(multi-column) {
-    @include grid-column(6);
+    @include grid-column(4);
   }
 }
 
