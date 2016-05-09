@@ -127,6 +127,7 @@ dl.info-list {
   border-radius: $global-radius;
   dt {
     padding: ($global-padding * 1.25) 0;
+    margin-bottom: 0;
     @include grid-column(12);
     @include breakpoint(multi-column) {
       @include grid-column(4);
@@ -135,6 +136,7 @@ dl.info-list {
     &:nth-of-type(even) {
       border-top: 1px solid $light-gray;
       border-bottom: 1px solid $light-gray;
+      padding-bottom: $global-padding * 1.55;
     }
   }
   dd {
