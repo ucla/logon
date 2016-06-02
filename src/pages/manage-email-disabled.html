@@ -1,47 +1,50 @@
 <section class="management">
+  <div>
   
-  <h1>Manage Your @ucla.edu Email Account</h1>
+    <header>
+      <h1>Manage Your @ucla.edu Email Account</h1>
+    </header>
+    
+    <nav class="primary-nav">
+    {{> nav-menu}}
+    {{> timer}}
+    </nav>
+      
+    <article class="content" id="forwarding" data-magellan-target="forwarding">
+      
+      <div class="alert-info"><i>i</i><p><strong>Current students, alumni, and retirees:</strong> Have you considered switching to <a target="_blank" href="http://g.ucla.edu">Google Apps for UCLA</a>?</p></div>
+      
+      <p>Anyone possessing an @ucla.edu email address can choose to have messages sent to it forwarded elsewhere, or simply deactivate the account.</p>
+      
+      <ul>
+        <li>Current status: <strong>disabled</strong></li>
+        <li>Current forwarding address: <strong>none</strong></li>
+      </ul>
+      
+      <form action="/mailprefs.php" method="post" data-abide novalidate>
+        <label>Enter address to forward all @ucla.edu email to
+        <input class="focus" id="e1" name="e1" type="email" placeholder="foobruin@gmail.com" title="Enter email address" required disabled>
+        <span class="form-error">This doesn't look like a valid email address.</span>
+        </label>
+        
+        <label>Confirm address to forward all @ucla.edu email to
+          <input class="focus" id="e2" name="e2" type="email" placeholder="foobruin@gmail.com" data-equalto="e1" title="Re-enter email address" required disabled>
+          <span class="form-error">This doesn't look like a valid email address and/or doesn't match the one above.</span>
+        </label>
+        
+        <button id="verify-forwarding" class="primary-button" type="submit" name="action" disabled>Forward @ucla.edu emails to new address</button>
+        <p>Note: A verification link will be sent to the new email address.</p>
+      </form>
+      
+      <h2>Want to use your @ucla.edu email again?</h2>
+      <p>Once you enable your account, you can recieve emails at your @ucla.edu email address, or choose to have them forwarded elsewhere.</p>
+      <form>
+        <button id="cancel-email" class="primary-button" type="submit" name="action2">Enable @ucla.edu email account</button>
+      </form>
   
-  <nav class="primary-nav">
-  {{> nav-menu}}
-  {{> timer}}
-  </nav>
+      <p><span class="message-success"><a href="manage-email.html">(account active)</a></span></p>
+  
+    </article>
     
-  <article class="content" id="forwarding" data-magellan-target="forwarding">
-    
-    <div class="alert-info"><i>i</i><p><strong>Current students, alumni, and retirees:</strong> Have you considered switching to <a target="_blank" href="http://g.ucla.edu">Google Apps for UCLA</a>?</p></div>
-    
-    <p>Anyone possessing an @ucla.edu email address can choose to have messages sent to it forwarded elsewhere, or simply deactivate the account.</p>
-    
-    <ul>
-      <li>Current status: <strong>disabled</strong></li>
-      <li>Current forwarding address: <strong>none</strong></li>
-    </ul>
-    
-    <form action="/mailprefs.php" method="post" data-abide novalidate>
-      <label>Enter address to forward all @ucla.edu email to
-      <input class="focus" id="e1" name="e1" type="email" placeholder="foobruin@gmail.com" title="Enter email address" required disabled>
-      <span class="form-error">This doesn't look like a valid email address.</span>
-      </label>
-      
-      <label>Confirm address to forward all @ucla.edu email to
-        <input class="focus" id="e2" name="e2" type="email" placeholder="foobruin@gmail.com" data-equalto="e1" title="Re-enter email address" required disabled>
-        <span class="form-error">This doesn't look like a valid email address and/or doesn't match the one above.</span>
-      </label>
-      
-      <button id="verify-forwarding" class="primary-button" type="submit" name="action" disabled>Forward @ucla.edu emails to new address</button>
-      <p>Note: A verification link will be sent to the new email address.</p>
-    </form>
-    
-    <h2>Want to use your @ucla.edu email again?</h2>
-    <p>Once you enable your account, you can recieve emails at your @ucla.edu email address, or choose to have them forwarded elsewhere.</p>
-    <form>
-      <button id="cancel-email" class="primary-button" type="submit" name="action2">Enable @ucla.edu email account</button>
-    </form>
-
-    <p><span class="message-success"><a href="manage-email.html">(account active)</a></span></p>
-
-
-  </article>
-    
+  </div>
 </section>

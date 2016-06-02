@@ -38,26 +38,27 @@ section > h1 {
 .page-header {
 	display: block;
   border-bottom: 3px solid $ucla-blue;
-  margin-bottom: $global-margin * 3;
+  padding-top: $global-spacing;
+  margin-bottom: $global-margin * 4;
 	background: rgba($black, .6) ;
 }
 
 // basic styles applied to all major chunks of content
 %content-styling {
-  margin-bottom: ($global-spacing * 4);
+  margin-top: $global-spacing * 2;
+  margin-bottom: $global-spacing * 4;
   background: $lighter-gray;
 }
 
 // need nested containers due to foundation's grid system
-.management, .page, .home, .message {
-  margin-top: $global-margin * 4;
+.management > div, .page > div, .home > div, .message > div {
   @extend %content-styling;
 }
 
 // need nested containers due to foundation's grid system
 .supporting-info > div {
   background: $white;
-  padding: $global-spacing $global-spacing;
+  padding: $global-spacing;
   border-radius: $global-radius;
   p, li {
     font-size: $small-font-size;
@@ -67,7 +68,7 @@ section > h1 {
     color: $ucla-blue-dark;
     padding: $global-padding / 2;
     display: inline-block;
-    margin-left: -$global-margin * 1.75;
+    margin-left: -$global-margin * 1.8;
     font-size: rem-calc(nested-map-get($header-sizes, large-type, h5));
   }
   h2 {

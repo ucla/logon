@@ -47,7 +47,7 @@
 // ---------
 
 $global-font-size: 100%;
-$global-width: rem-calc(960);
+$global-width: rem-calc(1200);
 $global-lineheight: 1.6;
 $foundation-palette: (
   primary: $ucla-blue,
@@ -107,8 +107,8 @@ $breakpoint-classes: ();
 $grid-row-width: $global-width;
 $grid-column-count: 12;
 $grid-column-gutter: (
-  small: 24px,
-  multi-column: 30px,
+  small: 1.5rem,
+  multi-column: 2rem,
 );
 $grid-column-align-edge: true;
 $block-grid-max: 8;
@@ -130,7 +130,7 @@ $header-sizes: (
     'h6': 16,
   ),
   large-type: (
-    'h1': 36,
+    'h1': 42,
     'h2': 28,
     'h3': 24,
     'h4': 20,

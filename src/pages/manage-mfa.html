@@ -1,19 +1,39 @@
 <section class="management">
+  <div>
   
-  <h1>Manage Multi-Factor Authentication</h1>
+    <header>
+      <h1>Manage Multi-Factor Authentication</h1>
+    </header>
+    
+    <nav class="primary-nav">
+      {{> nav-menu}}
+      {{> timer}}
+    </nav>
+      
+    <article class="content" id="2fa" data-magellan-target="2fa">
+      <div>
+        
+        <p>How would you like to receive your authentication codes? You will be asked for an authentication code when you sign in to your account.</p>
+        
+        <a href="mfa-2-app.html">
+          <h2>Use the Duo Push App</h2>
+          <p>Use your smartphone or tablet for one tap authentication via push notifications.</p>
+        </a>
+        
+        <a href="mfa-2-sms.html">
+          <h2>SMS Text Message</h2>
+          <p>Receive a text message with a passcode when signing in. Useful if you may be without internet access but can receive texts.</p>
+        </a>
+        
+        <a href="mfa-2-phone.html">
+          <h2>Phone Callback</h2>
+          <p>Receive a text message to your mobile device when signing in.</p>
+        </a>
   
-  <nav class="primary-nav">
-  {{> nav-menu}}
-  {{> timer}}
-  </nav>
-    
-  <article class="content" id="2fa" data-magellan-target="2fa">
+        <p><span class="message-fail"><a href="mfa-connection-fail.html">(fail)</a></span></p>
+      </div>
+  
+    </article>
 
-    <img src="assets/img/duo-iframe.png">
-    
-    <p></p>
-    <p><span class="message-fail"><a href="mfa-connection-fail.html">(fail)</a></span></p>
-
-  </article>
-
+  </div>
 </section>

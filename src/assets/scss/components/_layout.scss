@@ -11,11 +11,9 @@ body {
 // page header with logo and log in/out links etc
 .page-header {
   width: 100%;
-  padding-top: $global-spacing;
 }
 
 .page-header-contents {
-  max-width: 960px;
   margin: 0 auto;
   @include grid-row();
 }
@@ -28,15 +26,28 @@ body {
   @include grid-column(6, 0);
   a {
     float: right;
-    margin-top: 2.3rem;
+    padding-top: 2.3rem;
+    padding-right: 1rem;
     color: $white;
+  }
+}
+
+// layout that applies to all pages
+.page, .home, .management {
+  margin-bottom: $global-margin * 2;
+  padding: 0 $global-padding;
+  &> div {
+    @include grid-column-row(0);
+    padding-bottom: $global-padding;
+  }
+  header {
+    padding: $global-padding 0;
+    @include grid-column(12);
   }
 }
 
 // layout of logged in pages with nav-menu
 .management {
-  @include grid-row();
-  padding: $global-padding 0;
   .content {
     @include grid-column(12);
     @include breakpoint(multi-column) {
@@ -52,9 +63,7 @@ body {
 }
 
 // layout of help / non-logged in pages
-.page, .home {
-  @include grid-row();
-  padding: $global-padding 0;
+.page, .home, {
   .content {
     @include grid-column(12);
     @include breakpoint(multi-column) {
@@ -71,9 +80,6 @@ body {
 
 // home page specific styling
 .home {
-  header {
-    @include grid-column(12);
-  }
   .alert-info {
     @include grid-column(12);
   }
@@ -99,14 +105,9 @@ body {
   }
 }
 
-// padding on bottom to leave space for fixed footer
-.page, .home {
-  margin-bottom: $global-spacing * 4;
-}
-
 // footer height may need to change between applications, so keep outside framework
 .ucla-iam-footer {
-  height: $global-spacing * 4;
+  height: $global-spacing * 4; // match bottom margin of .page, .home, .management
 	@include breakpoint(multi-column) {
 		height: $global-spacing * 2;
 	}
@@ -114,5 +115,6 @@ body {
 
 // align footer content somewhat
 .ucla-iam-footer-content {
-  max-width: 960px;
+  padding-left: 1rem;
+  max-width: 1200px;
 }

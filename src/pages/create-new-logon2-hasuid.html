@@ -1,46 +1,50 @@
 <section class="page">
+  <div>
 
-  <h1>Create a UCLA Logon ID: <small>Verify Your Identity</small></h1>
+    <header>
+      <h1>Create a UCLA Logon ID: <small>Verify Your Identity</small></h1>
+    </header>
+  
+    <article class="content">
+      <div>
+  
+        <ol id="form-step-bar">
+          <li class="form-step-done">Set Affiliation Status</li>
+          <li class="form-step-doing">Verify Identity</li>
+          <li class="form-step-todo">Create Logon ID</li>
+        </ol>
+  
+        <form action="/activate.php" method="post" data-abide novalidate>
+          <label for="gn">First Name
+          <input name="gn" type="text" placeholder="Joe" value="" id="gn" required>
+          <span class="form-error">You must enter your first name to continue.</span></label>
+  
+          <label for="sn">Last Name
+          <input name="sn" type="text" placeholder="Bruin" value="" id="sn" required>
+          <span class="form-error">You must enter your last name to continue.</span></label>
+  
+          <label for="sn">Date of Birth (YYYY-MM-DD)
+          <input name="dob" type="date" placeholder="(YYYY-MM-DD)" maxlength="10" value="" id="dob" required>
+          <span class="form-error">You must use a valid date format.</span></label>
+  
+          <label for="uclaid">UCLA ID Number</label>
+          <input name="uclaid" pattern="[0-9]{0-9}" type="password" placeholder="123456789" value="" pattern="[0-9{9}" id="uclaid" required>
+          <span class="form-error">Your UCLA ID number is exactly 9 numbers long.</span></label>
+  
+          <button type="submit" class="primary-button">Next</button> <button type="submit" class="cancel-button">Cancel</button>
+  
+          <p><span class="message-success"><a href="create-new-logon3.html">(next)</a></span></p>
+        </form>
+      </div>
+    </article>
+  
+    <aside class="supporting-info">
+      <div>
+  
+        {{> create-logon-find-uid-info }}
+  
+      </div>
+    </aside>
 
-  <article class="content">
-    <div>
-
-      <ol id="form-step-bar">
-        <li class="form-step-done">Set Affiliation Status</li>
-        <li class="form-step-doing">Verify Identity</li>
-        <li class="form-step-todo">Create Logon ID</li>
-      </ol>
-
-      <form action="/activate.php" method="post" data-abide novalidate>
-        <label for="gn">First Name
-        <input name="gn" type="text" placeholder="Joe" value="" id="gn" required>
-        <span class="form-error">You must enter your first name to continue.</span></label>
-
-        <label for="sn">Last Name
-        <input name="sn" type="text" placeholder="Bruin" value="" id="sn" required>
-        <span class="form-error">You must enter your last name to continue.</span></label>
-
-        <label for="sn">Date of Birth (YYYY-MM-DD)
-        <input name="dob" type="date" placeholder="(YYYY-MM-DD)" maxlength="10" value="" id="dob" required>
-        <span class="form-error">You must use a valid date format.</span></label>
-
-        <label for="uclaid">UCLA ID Number</label>
-        <input name="uclaid" pattern="[0-9]{0-9}" type="password" placeholder="123456789" value="" pattern="[0-9{9}" id="uclaid" required>
-        <span class="form-error">Your UCLA ID number is exactly 9 numbers long.</span></label>
-
-        <button type="submit" class="primary-button">Next</button> <button type="submit" class="cancel-button">Cancel</button>
-
-        <p><span class="message-success"><a href="create-new-logon3.html">(next)</a></span></p>
-      </form>
-    </div>
-  </article>
-
-  <aside class="supporting-info">
-    <div>
-
-      {{> create-logon-find-uid }}
-
-    </div>
-  </aside>
-
+  </div>
 </section>

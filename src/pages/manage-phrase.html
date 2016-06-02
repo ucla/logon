@@ -1,68 +1,72 @@
 <section class="management">
+  <div>
   
-  <h1>Set your Challenge Phrase</h1>
-  
-  <nav class="primary-nav">
-  {{> nav-menu}}
-  {{> timer}}
-  </nav>
+    <header>
+      <h1>Set your Challenge Phrase</h1>
+    </header>
     
-  <article class="content" id="question" data-magellan-target="question">
-
-    <p>A Challenge Phrase allows you reset your password online. Both the challenge and response must be between <strong>8 and 128 characters</strong> long. They cannot be the same, and the response is <strong>case-sensitive</strong>.</p>
+    <nav class="primary-nav">
+    {{> nav-menu}}
+    {{> timer}}
+    </nav>
+      
+    <article class="content" id="question" data-magellan-target="question">
   
-    <form action="/passoptions.php" method="post" data-abide novalidate>
-  
-      <script type="text/javascript">
-      var cbh;
-  
-      function updateChallenge(obj) {
-        var c = document.getElementById("challenge");
-  
-        if (obj == 'self') {
-          var s = document.getElementById("selectChallenge");
-  
-          s.style.display = 'none';
-          s.style.zIndex = '5';
-  
-          c.style.zIndex = '10';
-          c.style.display = 'inline';
-  
-          c.value = '';
-          c.focus();
-        } else {
-          c.value = obj;
+      <p>A Challenge Phrase allows you reset your password online. Both the challenge and response must be between <strong>8 and 128 characters</strong> long. They cannot be the same, and the response is <strong>case-sensitive</strong>.</p>
+    
+      <form action="/passoptions.php" method="post" data-abide novalidate>
+    
+        <script type="text/javascript">
+        var cbh;
+    
+        function updateChallenge(obj) {
+          var c = document.getElementById("challenge");
+    
+          if (obj == 'self') {
+            var s = document.getElementById("selectChallenge");
+    
+            s.style.display = 'none';
+            s.style.zIndex = '5';
+    
+            c.style.zIndex = '10';
+            c.style.display = 'inline';
+    
+            c.value = '';
+            c.focus();
+          } else {
+            c.value = obj;
+          }
         }
-      }
-      </script>
-  
-      <label title="Your Challenge phrase is a question or phrase that only you know the response to." for="selectChallenge">Select your Challenge Question</label>
-  
-      <select id="selectChallenge" onchange="updateChallenge(this.value);" required>
-        <option value="What is the name of your first pet?">What is the name of your first pet?</option>
-        <option value="What was your maternal grandmother's maiden name?">What was your maternal grandmother's maiden name?</option>
-        <option value="Who is your favorite actor, musician, or artist?">Who is your favorite actor, musician, or artist?</option>
-        <option value="What is your favorite color?">What is your favorite color?</option>
-        <option value="What is the name of your elementary school?">What is the name of your elementary school?</option>
-        <option value="What was your favorite place to visit as a child?">What was your favorite place to visit as a child?</option>
-        <option value="What is your favorite movie?">What is your favorite movie?</option>
-        <option value="Which phone number do you remember most from your childhood?">Which phone number do you remember most from your childhood?</option>
-        <option value="What is the nickname you gave your favorite grandparent?">What is the nickname you gave your favorite grandparent?</option>
-        <option value="What city were you born in?">What city were you born in?</option>
-        <option value="What is the model of your first car?">What is the model of your first car?</option>
-        <option value="What was the first name of your date for your high school prom?">What was the first name of your date for your high school prom?</option>
-        <option value="self">Write your own question</option>
-      </select>
-      <input name="challenge" maxlength="128" id="challenge" style="display:none;z-index:5;top:0;position:relative;" required>
-  
-      <label for="response">Type your Response
-        <input type="text" name="response" maxlength="128" placeholder="Answer to the above question" id="response" required>
-        <span class="form-error">Challenge responses must be between 8 and 128 characters long.</span>
-      </label>
-  
-      <button class="primary-button" type="submit">Change Challenge Phrase</button>
-    </form>
-  
-  </article>
+        </script>
+    
+        <label title="Your Challenge phrase is a question or phrase that only you know the response to." for="selectChallenge">Select your Challenge Question</label>
+    
+        <select id="selectChallenge" onchange="updateChallenge(this.value);" required>
+          <option value="What is the name of your first pet?">What is the name of your first pet?</option>
+          <option value="What was your maternal grandmother's maiden name?">What was your maternal grandmother's maiden name?</option>
+          <option value="Who is your favorite actor, musician, or artist?">Who is your favorite actor, musician, or artist?</option>
+          <option value="What is your favorite color?">What is your favorite color?</option>
+          <option value="What is the name of your elementary school?">What is the name of your elementary school?</option>
+          <option value="What was your favorite place to visit as a child?">What was your favorite place to visit as a child?</option>
+          <option value="What is your favorite movie?">What is your favorite movie?</option>
+          <option value="Which phone number do you remember most from your childhood?">Which phone number do you remember most from your childhood?</option>
+          <option value="What is the nickname you gave your favorite grandparent?">What is the nickname you gave your favorite grandparent?</option>
+          <option value="What city were you born in?">What city were you born in?</option>
+          <option value="What is the model of your first car?">What is the model of your first car?</option>
+          <option value="What was the first name of your date for your high school prom?">What was the first name of your date for your high school prom?</option>
+          <option value="self">Write your own question</option>
+        </select>
+        <input name="challenge" maxlength="128" id="challenge" style="display:none;z-index:5;top:0;position:relative;" required>
+    
+        <label for="response">Type your Response
+          <input type="text" name="response" maxlength="128" placeholder="Answer to the above question" id="response" required>
+          <span class="form-error">Challenge responses must be between 8 and 128 characters long.</span>
+        </label>
+    
+        <button class="primary-button" type="submit">Change Challenge Phrase</button>
+      </form>
+    
+    </article>
 
+  </div>
 </section>

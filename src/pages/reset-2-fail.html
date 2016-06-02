@@ -1,42 +1,42 @@
 <section class="page">
+  <div>
   
-  <h1>Hello there [insertusernamehere]</h1>
-  
-  <article class="content">
-    <div>
-      <p>To make sure that someone else can't reset your password posing as you, you'll have to answer the challenge question below.</p>
-        
-      <p><strong>Challenge Question: </strong>Youth and better times, lost to fire.</p>
-      
-      <form action="/passreset.php" method="post" data-abide novalidate>
-        
-        <fieldset>
-          <label for="response">Challenge Question Response:
-            <input type="text" name="response" size="40" value="" id="response" placeholder="Rosebud" required>
-            <span class="form-error">Challenge responses must be between 8 and 128 characters long.</span>
-          </label>
+    <header>
+      <h1>Hello there [insertusernamehere]</h1>
+    </header>
+    
+    <article class="content">
+      <div>
+        <p>To make sure that someone else can't reset your password posing as you, you'll have to answer the challenge question below.</p>
           
-          <p class="error-title">Your challenge response did not match what we have on file.</p>
+        <p><strong>Challenge Question: </strong>Youth and better times, lost to fire.</p>
+        
+        <form action="/passreset.php" method="post" data-abide novalidate>
           
-          <button class="primary-button" type="submit">Reset your password</button> <button type="submit" class="cancel-button">Cancel</button>
-                    
-          <p><span class="message-fail"><a href="reset-fail.html">(fail)</a></span> <span class="logon-success message-success"><a href="reset-2.html">(success)</a></span></p>
+          <fieldset>
+            <label for="response">Challenge Question Response:
+              <input type="text" name="response" size="40" value="" id="response" placeholder="Rosebud" required>
+              <span class="form-error">Challenge responses must be between 8 and 128 characters long.</span>
+            </label>
+            
+            <p class="error-title">Your challenge response did not match what we have on file.</p>
+            
+            <button class="primary-button" type="submit">Reset your password</button> <button type="submit" class="cancel-button">Cancel</button>
+                      
+            <p><span class="message-fail"><a href="reset-fail.html">(fail)</a></span> <span class="logon-success message-success"><a href="reset-2.html">(success)</a></span></p>
+    
+          </fieldset>
+        
+        </form>
+    
+      </div>
+    </article>
   
-        </fieldset>
-      
-      </form>
-  
-    </div>
-  </article>
+    <aside class="supporting-info">
+      <div>
+        {{> reset-info }}
+      </div>
+    </aside>
 
-  <aside class="supporting-info">
-    <div>
-      
-      {{> reset-info }}
-      
-    </div>
-  </aside>
-
+  </div>
 </section>
-
-
