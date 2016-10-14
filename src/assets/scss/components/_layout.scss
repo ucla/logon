@@ -34,8 +34,7 @@ body {
 
 // layout that applies to all pages
 .page, .home, .management {
-  margin-bottom: $global-margin * 2;
-  padding: 0 $global-padding;
+  padding: $global-padding;
   &> div {
     @include grid-column-row(0);
     padding-bottom: $global-padding;

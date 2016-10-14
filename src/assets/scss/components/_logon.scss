@@ -41,14 +41,9 @@ section > h1 {
 	background: rgba($black, .6) ;
 }
 
-.top-bar {
-  
-}
-
 #nav-menu {
   width: 100%;
   background: $nav-background-alt;
-  margin-bottom: $global-margin * 4;
   border-bottom: 3px solid $ucla-blue;
   a {
     color: $white;
