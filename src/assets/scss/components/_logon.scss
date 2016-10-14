@@ -43,10 +43,13 @@ section > h1 {
 
 #nav-menu {
   width: 100%;
-  background: $nav-background-alt;
+  background: linear-gradient($nav-background, $nav-background-alt);
   border-bottom: 3px solid $ucla-blue;
   a {
     color: $white;
+  }
+  a:hover {
+    color: $ucla-gold;
   }
 }
 
