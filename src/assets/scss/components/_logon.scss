@@ -88,6 +88,56 @@ section > h1 {
 }
 
 /////////////////////////////////////////
+///     CREATE PASSWORD PROGRESS
+/////////////////////////////////////////
+
+#form-step-bar {
+  margin: 1rem 0;
+  padding: 0;
+  display: block;
+  position: relative;
+  max-width: 25rem;
+  .form-step-todo {
+    color: #ccc; 
+  }
+  .form-step-doing {
+    color: #347bad;
+    background: #f9f9f9; 
+  }
+  .form-step-done {
+    color: #333; 
+  }
+}
+
+#form-step-bar li {
+  display: inline-block;
+  text-align: center;
+  padding: 0;
+  border-radius: 99rem;
+  width: 32%;
+  line-height: 2rem;
+  font-size: 81.25%;
+  &:nth-child(1)::before {
+    position: absolute;
+    font-size: 50%;
+    content: "Step 1";
+    top: -1rem; 
+  }
+  &:nth-child(2)::before {
+    position: absolute;
+    font-size: 50%;
+    content: "Step 2";
+    top: -1rem; 
+  }
+  &:nth-child(3)::before {
+    position: absolute;
+    font-size: 50%;
+    content: "Step 3";
+    top: -1rem; 
+  }
+}
+
+/////////////////////////////////////////
 ///        TIMER & COUNTDOWN
 /////////////////////////////////////////
 
