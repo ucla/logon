@@ -31,17 +31,33 @@ section > h1 {
 }
 
 /////////////////////////////////////////
-///          LARGER CHUNKS
+///             HEADER
 /////////////////////////////////////////
 
 // logo, top bar, login/out
-.page-header {
+.page-header-contents {
 	display: block;
-  border-bottom: 3px solid $ucla-blue;
   padding-top: $global-spacing;
-  margin-bottom: $global-margin * 4;
 	background: rgba($black, .6) ;
 }
+
+.top-bar {
+  
+}
+
+#nav-menu {
+  width: 100%;
+  background: $nav-background-alt;
+  margin-bottom: $global-margin * 4;
+  border-bottom: 3px solid $ucla-blue;
+  a {
+    color: $white;
+  }
+}
+
+/////////////////////////////////////////
+///         OVERALL CONTENT 
+/////////////////////////////////////////
 
 // basic styles applied to all major chunks of content
 %content-styling {
@@ -150,16 +166,5 @@ dl.info-list {
       border-top: 1px solid $light-gray;
       border-bottom: 1px solid $light-gray;
     }
-  }
-}
-
-// side nav for logged in pages
-.primary-nav ul {
-  background: $light-gray;
-  border-radius: $global-radius;
-  font-size: rem-calc(13);
-  a {
-    padding-left: $global-spacing;
-//    text-transform: uppercase;
   }
 }

@@ -4,6 +4,7 @@
 //  Table of Contents:
 //
 //   1. Global
+//   1.5 Application Specific
 //   2. Breakpoints
 //   3. The Grid
 //   4. Base Typography
@@ -38,7 +39,6 @@
 //  33. Title Bar
 //  34. Tooltip
 //  35. Top Bar
-//  36. Application Specific
 
 @import 'uc/uc-branding';
 @import 'util/util';
@@ -88,6 +88,14 @@ $global-flexbox: false;
 $print-transparent-backgrounds: true;
 
 // @include add-foundation-colors;
+
+
+// 1.5 Application Specific
+// ---------
+
+$global-letter-spacing: 0.5px;
+$nav-background: rgba($black, .6);
+$nav-background-alt: rgba($black, .8);
 
 // 2. Breakpoints
 // --------------
@@ -321,10 +329,10 @@ $dropdown-sizes: (
 // -----------------
 
 $dropdownmenu-arrows: true;
-$dropdownmenu-arrow-color: $anchor-color;
-$dropdownmenu-min-width: 200px;
-$dropdownmenu-background: $white;
-$dropdownmenu-border: 1px solid $medium-gray;
+$dropdownmenu-arrow-color: $white;
+$dropdownmenu-min-width: 325px;
+$dropdownmenu-background: $nav-background;
+$dropdownmenu-border: 1px solid $black;
 
 // 18. Flex Video
 // --------------
@@ -392,7 +400,7 @@ $mediaobject-image-width-stacked: 100%;
 
 $menu-margin: 0;
 $menu-margin-nested: 1rem;
-$menu-item-padding: 0.7rem 0;
+$menu-item-padding: 0.5rem 1rem;
 $menu-icon-spacing: 0.25rem;
 $menu-item-color-active: $black;
 $menu-item-background-active: $primary-color;
@@ -539,7 +547,7 @@ $thumbnail-radius: $global-radius;
 // 33. Title Bar
 // -------------
 
-$titlebar-background: $black;
+$titlebar-background: $nav-background-alt;
 $titlebar-color: $white;
 $titlebar-padding: 0.5rem;
 $titlebar-text-font-weight: bold;
@@ -564,13 +572,8 @@ $tooltip-radius: $global-radius;
 // -----------
 
 $topbar-padding: 0.5rem;
-$topbar-background: $light-gray;
-$topbar-submenu-background: $topbar-background;
+$topbar-background: transparent;
+$topbar-submenu-background: $nav-background-alt;
 $topbar-unstack-breakpoint: large-type;
 $topbar-title-spacing: 1rem;
 $topbar-input-width: 200px;
-
-// 36. Application Specific
-// ---------
-
-$global-letter-spacing: 0.5px;
