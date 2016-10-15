@@ -62,7 +62,19 @@ function init_timers(_timeleft, _sesslen) {
   e = document.getElementById("counter");
   if (e) intervalId = setInterval('countdown()', 1000);
 }
-    
+
+/////////////////////////////////////////
+///       TOS enable/disable
+/////////////////////////////////////////
+
+document.getElementsByName("tos")[0].addEventListener("scroll", checkScrollHeight, false);
+
+function checkScrollHeight(){
+    var agreementTextElement = document.getElementsByName("tos")[0] 
+    if ((agreementTextElement.scrollTop + agreementTextElement.offsetHeight) >= agreementTextElement.scrollHeight){
+        document.getElementsByName("agree-to-tos")[0].disabled = false;
+    }
+}
 
 /////////////////////////////////////////
 ///  swap to email if no UID on lookup

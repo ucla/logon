@@ -22,16 +22,6 @@ body {
   @include grid-column(6, 0);
 }
 
-.logged {
-  @include grid-column(6, 0);
-  a {
-    float: right;
-    padding-top: 2.3rem;
-    padding-right: 1rem;
-    color: $white;
-  }
-}
-
 // layout that applies to all pages
 .page, .home, .management {
   padding: $global-padding;

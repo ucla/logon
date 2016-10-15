@@ -60,7 +60,6 @@ PATHS:
     # - "bower_components/foundation-sites/js/foundation.tabs.js"
     - "bower_components/foundation-sites/js/foundation.toggler.js"
     # - "bower_components/foundation-sites/js/foundation.tooltip.js"
-    - "bower_components/foundation-sites/js/foundation.topbar.js"
     # Paths to your own project code are here
     # - "bower_components/countdown/dest/jquery.countdown.js"
     - "src/assets/js/!(app).js"
