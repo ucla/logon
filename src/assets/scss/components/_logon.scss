@@ -95,20 +95,20 @@ section > h1 {
 /////////////////////////////////////////
 
 #form-step-bar {
-  margin: 1rem 0;
+  margin: $global-margin 0;
   padding: 0;
   display: block;
   position: relative;
   max-width: 25rem;
   .form-step-todo {
-    color: #ccc; 
+    color: $medium-gray;
   }
   .form-step-doing {
-    color: #347bad;
-    background: #f9f9f9; 
+    color: $primary-color-safe; 
+    background: $lighter-gray;
   }
   .form-step-done {
-    color: #333; 
+    color: $dark-gray;
   }
 }
 
@@ -118,27 +118,76 @@ section > h1 {
   padding: 0;
   border-radius: 99rem;
   width: 32%;
-  line-height: 2rem;
-  font-size: 81.25%;
+  line-height: $global-spacing * 2;
+  font-size: $small-font-size;
   &:nth-child(1)::before {
     position: absolute;
-    font-size: 50%;
+    font-size: $global-font-size / 2;
     content: "Step 1";
-    top: -1rem; 
+    top: -$global-margin;
   }
   &:nth-child(2)::before {
     position: absolute;
-    font-size: 50%;
+    font-size: $global-font-size / 2;
     content: "Step 2";
-    top: -1rem; 
+    top: -$global-margin;
   }
   &:nth-child(3)::before {
     position: absolute;
-    font-size: 50%;
+    font-size: $global-font-size / 2;
     content: "Step 3";
-    top: -1rem; 
+    top: -$global-margin;
   }
 }
+
+/////////////////////////////////////////
+///           ZXCVBN Meter
+/////////////////////////////////////////
+
+#pass1 {
+  margin-bottom: 0.5rem;
+
+}
+
+meter {
+  appearance: none;
+  padding: 0;
+  width: 98.5%;
+  display: block;
+  margin: 0 0 $global-margin;
+  height: $global-margin / 6;
+  vertical-align: $global-margin;
+  border-bottom-left-radius: $global-radius;
+  border-bottom-right-radius: $global-radius;
+  /* Applicable only to Firefox */
+  background: none;
+  background-color: transparent;
+  @include breakpoint(multi-column) {
+    max-width: 28rem;
+  }
+}
+
+#password-strength-text .help-text {
+  display: inline-block;
+  padding: ($global-margin / 2) 0 $global-margin;
+}
+
+meter::-webkit-meter-bar {
+  background: none;
+  background-color: transparent;
+}
+
+/* Webkit based browsers */
+meter[value="1"]::-webkit-meter-optimum-value { background: $alert-color; }
+meter[value="2"]::-webkit-meter-optimum-value { background: $warning-color; }
+meter[value="3"]::-webkit-meter-optimum-value { background: $success-color; }
+meter[value="4"]::-webkit-meter-optimum-value { background: $success-color; }
+
+/* Gecko based browsers */
+meter[value="1"]::-moz-meter-bar { background: $alert-color; }
+meter[value="2"]::-moz-meter-bar { background: $warning-color; }
+meter[value="3"]::-moz-meter-bar { background: $success-color; }
+meter[value="4"]::-moz-meter-bar { background: $success-color; }
 
 /////////////////////////////////////////
 ///        TIMER & COUNTDOWN
