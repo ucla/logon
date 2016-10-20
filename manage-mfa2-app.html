@@ -48,59 +48,69 @@
     </nav>
   </header>
 
-  <section class="page">
+  <section class="management">
     <div>
-  
-      <header>
-        <h1>Create a UCLA Logon ID: <small>Verify Your Identity</small></h1>
-      </header>
     
+      <header>
+        <h1>Manage Multi-Factor Authentication</h1>
+      </header>
+  
       <article class="content">
         <div>
+          
+          <h2>What kind of phone do you have?</h2>
+          
+          <form method="post" data-abide novalidate>
+            
+            <fieldset>
+              <label><input type="radio" id="iphone" name="phone-type" checked>iPhone.</label>
+              <label><input type="radio" id="android" name="phone-type">Android.</label>
+            </fieldset>
+  
+            <button class="primary-button" type="submit">Save</button> <button type="submit" class="cancel-button">Cancel</button>
     
-          <ol id="form-step-bar">
-            <li class="form-step-done">Set Affiliation Status</li>
-            <li class="form-step-doing">Verify Identity</li>
-            <li class="form-step-todo">Create Logon ID</li>
-          </ol>
-    
-          <form action="/activate.php" method="post" data-abide novalidate>
-            <label for="gn">First Name
-            <input name="gn" type="text" placeholder="Joe" value="" id="gn" required>
-            <span class="form-error">You must enter your first name to continue.</span></label>
-    
-            <label for="sn">Last Name
-            <input name="sn" type="text" placeholder="Bruin" value="" id="sn" required>
-            <span class="form-error">You must enter your last name to continue.</span></label>
-    
-            <label for="sn">Date of Birth (YYYY-MM-DD)
-            <input name="dob" type="date" placeholder="(YYYY-MM-DD)" maxlength="10" value="" id="dob" required>
-            <span class="form-error">You must use a valid date (YYYY-MM-DD) format.</span></label>
-    
-            <label for="email">Email Address
-            <input name="email" type="email" placeholder="joe.bruin@gmail.com" value="" id="email" required>
-            <span class="form-error">This doesn't look like a valid email address.</span></label>
-    
-            <button type="submit" class="primary-button">Next</button> <button type="submit" class="cancel-button">Cancel</button>
-    
-            <p><span class="message-success"><a href="create-new-logon3.html">(next)</a></span></p>
-          </form>
-    
+          </form>  
         </div>
       </article>
-    
+      
       <aside class="supporting-info">
         <div>
-        
-          <h1>Third Party Accounts</h1>
+          <h1>Session Length Remaining</h1>
           
-          <p>You are creating an account without a UCLA Identification Number (UID). Although usable with some UCLA applications, an account created without a UID is not generally eligible to receive campus services (email, network access).</p>
+          <p>In order to protect your account, you will be logged out if you do not save your changes or move to another page within 20 minutes.</p>
           
-          <p>If you are a <strong>student, alumnus, faculty, stafff, or contractor, please <a href="/activate.php">create</a> a UCLA Logon with your UID to ensure access to univeristy resources.</p>
-            
+          <div id="timeout">Time until logged out:
+            <span id="counter">20:00</span><br>
+            <div id="bar"><div id="barfill"></div></div>
+          </div>
+          
+          <script type="text/javascript">
+            init_timers(1200, 1200);
+          </script>
+          
+          <h1>About MFA in UCLA Logon</h1>
+          
+          <p>Multi-Factor Authentication (MFA) adds extra protection for your  
+          UCLA Logon account. With MFA enabled, you'll be asked to take an extra step to confirm
+          your identity when signing in. This extra step prevents a hacker from accessing your
+          account using a stolen password.</p>
+          
+          <p class="get-more-info"><a href="#"> > Learn More about MFA</a></p>
+          
+          <h2>Setting Up MFA with your Smartphone</h2>
+          
+          <p>If you have a smartphone, we recommend downloading the Duo Mobile app on your phone before starting the setup process. You will need to use the app when setting up MFA.
+          
+          <ul class="listless">
+            <li><a href="https://itunes.apple.com/us/app/duo-mobile/id422663827?mt=8" target="_blank">Download Duo Mobile from iTunes</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.duosecurity.duomobile&amp;hl=en" target="_blank">Download Duo Mobile from Google Play</a></li>
+          </ul>
+          
           <h1>Get Help</h1>
           
           <ul class="listless">
+            <li><a href="#" target="tutorial">Show me how to set up MFA</a></li>
+            <li><a href="#" target="tutorial">Frequently Asked Questions</a></li>
             <li>Contact the Bruin Online Help Desk
               <ul>
                 <li><a href="mailto:consult@ucla.edu">consult@ucla.edu</a></li>
@@ -108,13 +118,12 @@
               </ul>
             </li>
           </ul>
-    
         </div>
       </aside>
   
+  
     </div>
   </section>
-  
   
   <footer role="contentinfo" class="ucla-iam-footer">
   	<div class="ucla-iam-footer-content">

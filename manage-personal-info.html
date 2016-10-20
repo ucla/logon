@@ -16,64 +16,94 @@
   <header class="page-header" role="banner">
     <section class="page-header-contents">
       <span class="logo"><a href="./"><img src="assets/img/logo.png" alt="UCLA"></a></span>
-      <span class="logged"><a href="#">Login/out</a>
-    </span>
+    </section>
+    <nav class="page-nav" role="navigation" data-sticky-container>
+      
+      <div class="title-bar" data-responsive-toggle="nav-menu" data-hide-for="large-type">
+        <button class="menu-icon" type="button" data-toggle></button>
+        <div class="title-bar-title">Menu</div>
+      </div>
+      
+      <div class="top-bar sticky" id="nav-menu" data-sticky data-margin-top="0" data-top-anchor="nav-menu" data-anchor="foo">
+        <ul class="dropdown menu top-bar-left" data-dropdown-menu>
+          <li>
+            <a href="#">Manage...</a>
+            <ul class="menu">
+              <li><a href="manage-personal-info.html">Personal Info</a></li>
+              <li><a href="manage-password.html">UCLA Logon Password</a></li>
+              <li><a href="manage-mfa.html">Multi-Factor Authentication</a></li>
+              <li><a href="manage-email.html">@ucla.edu Email Account & Forwarding</a></li>
+              <li><a href="manage-phrase.html">Challenge Phrase</a></li>
+            </ul>
+          </li>
+          <li><a href="reset.html">Reset Password</a></li>
+          <li><a href="lookup.html">Lookup Logon ID</a></li>
+          <li><a href="create-new-logon.html">Create Logon ID</a></li>
+        </ul>
+        
+        <ul class="dropdown menu top-bar-right">
+          <li><a href="#">Login/out</a></li>
+      </div>
+      
+    </nav>
   </header>
 
   <section class="management">
+    <div>
     
-    <h1>Confirm your personal information</h1>
-    
-    <nav class="primary-nav">
-        <ul class="menu vertical">
-          <li><a href="./">Home</a></li>
-          <li><a href="manage-personal-info.html">Confirm personal information</a></li>
-          <li><a href="manage-password.html">Change your UCLA Logon password</a></li>
-          <li><a href="manage-mfa.html">Manage multi-factor authentication</a></li>
-          <li><a href="manage-email.html">Manage your @ucla.edu email account & forwarding</a></li>
-          <li><a href="manage-phrase.html">Set your challenge phrase</a></li>
-        </ul>
-    <div id="timeout">Time Remaining:
-      <span id="counter">20:00</span><br>
-      <div id="bar"><div id="barfill"></div></div>
+      <header>
+        <h1>Confirm your personal information</h1>
+      </header>
+        
+      <article class="content">
+        <dl class="info-list">
+          <dt>UCLA Logon:</dt>
+          <dd>ubelhardt</dd>  
+          <dt>Name:</dt>
+          <dd>Carl Übelhardt</dd>
+          <dt>UCLA ID Number:</dt>
+          <dd>123456789</dd>
+          <dt>Official Email Address:</dt>
+          <dd>ubelhardt@ucla.edu</dd>
+          <dt>Affiliations:</dt>
+          <dd>student-degreed@ucla.edu<br> google-apps-eligible@ucla.edu</dd>
+          <dt>BOL Email Address:</dt>
+          <dd>ubelhardt@ucla.edu</dd>
+          <dt>Email Delivery Address:</dt>
+          <dd>carl@ubelhardt.net</dd>
+          <dt>BOL Supported Services:</dt>
+          <dd>UCLA Logon ID</dd>
+        </dl>
+  
+      </article>
+      
+      <aside class="supporting-info">
+        <div>
+          <h1>Session Length Remaining</h1>
+          
+          <p>In order to protect your account, you will be logged out if you do not save your changes or move to another page within 20 minutes.</p>
+          
+          <div id="timeout">Time until logged out:
+            <span id="counter">20:00</span><br>
+            <div id="bar"><div id="barfill"></div></div>
+          </div>
+          
+          <script type="text/javascript">
+            init_timers(1200, 1200);
+          </script>
+          
+          <h1>Something need to be changed?</h1>
+          
+          <ul class="listless">
+            <li><strong>Students</strong>: To update your Official Email Address, please log in to <a href="https://be.my.ucla.edu/">MyUCLA</a>.</li>
+            <li><strong>Faculty and Staff</strong>: To update your Name or Official Email Address, contact your department <a href="http://directory.ucla.edu/updaters.php">directory updater</a>.</li>
+            <li><strong>All Others</strong>:  For assistance, contact the Bruin OnLine Help Desk by telephone at 310-267-HELP (4357) or email at <a href="mailto:accounts@ucla.edu">accounts@ucla.edu</a>.</li>
+          </ul>
+        </div>
+      </aside>
+  
+      
     </div>
-    
-    <script type="text/javascript">
-      init_timers(1200, 1200);
-    </script>
-    </nav>
-      
-    <article class="content" id="personal-info" data-magellan-target="personal-info">
-  
-      <dl class="info-list">
-        <dt>UCLA Logon:</dt>
-        <dd>ubelhardt</dd>  
-        <dt>Name:</dt>
-        <dd>Carl Übelhardt</dd>
-        <dt>UCLA ID Number:</dt>
-        <dd>123456789</dd>
-        <dt>Official Email Address:</dt>
-        <dd>ubelhardt@ucla.edu</dd>
-        <dt>Affiliations:</dt>
-        <dd>student-degreed@ucla.edu<br> google-apps-eligible@ucla.edu</dd>
-        <dt>BOL Email Address:</dt>
-        <dd>ubelhardt@ucla.edu</dd>
-        <dt>Email Delivery Address:</dt>
-        <dd>carl@ubelhardt.net</dd>
-        <dt>BOL Supported Services:</dt>
-        <dd>UCLA Logon ID</dd>
-      </dl>
-      
-      <h2>See something that needs to be changed?</h2>
-  
-      <p>
-        <strong>Students</strong>: To update your Official Email Address, please log in to <a href="https://be.my.ucla.edu/">MyUCLA</a>.<br>
-        <strong>Faculty and Staff</strong>: To update your Name or Official Email Address, contact your department <a href="http://directory.ucla.edu/updaters.php">directory updater</a>.<br>
-        <strong>All Others</strong>:  For assistance, contact the Bruin OnLine Help Desk by telephone at 310-267-HELP (4357) or email at <a href="mailto:accounts@ucla.edu">accounts@ucla.edu</a>.
-      </p>
-    
-    </article>
-    
   </section>
   
   <footer role="contentinfo" class="ucla-iam-footer">

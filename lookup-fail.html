@@ -16,60 +16,103 @@
   <header class="page-header" role="banner">
     <section class="page-header-contents">
       <span class="logo"><a href="./"><img src="assets/img/logo.png" alt="UCLA"></a></span>
-      <span class="logged"><a href="#">Login/out</a>
-    </span>
+    </section>
+    <nav class="page-nav" role="navigation" data-sticky-container>
+      
+      <div class="title-bar" data-responsive-toggle="nav-menu" data-hide-for="large-type">
+        <button class="menu-icon" type="button" data-toggle></button>
+        <div class="title-bar-title">Menu</div>
+      </div>
+      
+      <div class="top-bar sticky" id="nav-menu" data-sticky data-margin-top="0" data-top-anchor="nav-menu" data-anchor="foo">
+        <ul class="dropdown menu top-bar-left" data-dropdown-menu>
+          <li>
+            <a href="#">Manage...</a>
+            <ul class="menu">
+              <li><a href="manage-personal-info.html">Personal Info</a></li>
+              <li><a href="manage-password.html">UCLA Logon Password</a></li>
+              <li><a href="manage-mfa.html">Multi-Factor Authentication</a></li>
+              <li><a href="manage-email.html">@ucla.edu Email Account & Forwarding</a></li>
+              <li><a href="manage-phrase.html">Challenge Phrase</a></li>
+            </ul>
+          </li>
+          <li><a href="reset.html">Reset Password</a></li>
+          <li><a href="lookup.html">Lookup Logon ID</a></li>
+          <li><a href="create-new-logon.html">Create Logon ID</a></li>
+        </ul>
+        
+        <ul class="dropdown menu top-bar-right">
+          <li><a href="#">Login/out</a></li>
+      </div>
+      
+    </nav>
   </header>
 
   <section class="page">
-    <article class="content">
-      <div>
+    <div>
+      
+      <header>
         <h1>Lookup your UCLA Logon ID</h1>
-        
-        <h2 class="error-title">Your UCLA Logon ID wasn't found.</h2>
+      </header>
     
-        <p class="error-title">Try <a href="lookup.html">validating your identity again</a> if you're pretty sure you have one, or go <a href="create.html">create a UCLA Logon ID</a> if you don't.</p>
+      <article class="content">
+        <div>
+          <h2 class="error-title">Your UCLA Logon ID wasn't found.</h2>
+      
+          <p class="error-title">Try <a href="lookup.html">validating your identity again</a> if you're pretty sure you have one, or go <a href="create.html">create a UCLA Logon ID</a> if you don't.</p>
+      
+          <form action="/userlookup.php" method="post" data-abide novalidate>
+      
+            <label title="Enter your last name as it is on file with UCLA. Do not include any suffix." for="sn">Last Name
+            <input name="sn" type="text" maxlength="40" value="" placeholder="Bruin" id="sn" required>
+            <span class="form-error">You must enter your last name to continue.</span></label>
+      
+            <label title="Enter the date you were born in year-month-day format." for="dob">Date of Birth
+            <input name="dob" type="date" placeholder="YYYY-MM-DD" id="dob" required>
+            <span class="form-error">You must use a valid date (YYYY-MM-DD) format.</span></label>
+      
+            <label title="Your UCLA ID Number is nine (9) digits long and is printed on your UCLA ID Card." for="uclaid">9 Digit UCLA ID Number
+            <input name="uclaid" pattern="[0-9]{9}" type="password" placeholder="123-456-789" value="" id="uclaid">
+            <span class="form-error">Your UCLA ID number is exactly 9 numbers long.</span></label>
+      
+            <label><input type="checkbox" id="email-toggler">Don't have a 9 digit UCLA ID number?</label>
+      
+            <div id="email-toggle" hidden>
+              <label title="A valid contact email address is required to continue" for="email">Please enter an email address on file instead!
+              <input name="email" type="email" placeholder="joe.bruin@gmail.com" id="email">
+              <span class="form-error">This doesn't look like a valid email address.</span></label>
     
-        <form action="/userlookup.php" method="post" data-abide novalidate>
-    
-          <label title="Enter your last name as it is on file with UCLA. Do not include any suffix." for="sn">Last Name
-          <input name="sn" type="text" maxlength="40" value="" placeholder="Bruin" id="sn" required>
-          <span class="form-error">You must enter your last name to continue.</span></label>
-    
-          <label title="Enter the date you were born in year-month-day format." for="dob">Date of Birth
-          <input name="dob" type="date" placeholder="YYYY-MM-DD" id="dob" required>
-          <span class="form-error">You must use a valid date (YYYY-MM-DD) format.</span></label>
-    
-          <label title="Your UCLA ID Number is nine (9) digits long and is printed on your UCLA ID Card." for="uclaid">9 Digit UCLA ID Number
-          <input name="uclaid" pattern="[0-9]{9}" type="password" placeholder="123-456-789" value="" id="uclaid">
-          <span class="form-error">Your UCLA ID number is exactly 9 numbers long.</span></label>
-    
-          <label><input type="checkbox" id="email-toggler">Don't have a 9 digit UCLA ID number?</label>
-    
-          <div id="email-toggle" hidden>
-            <label title="A valid contact email address is required to continue" for="email">Please enter an email address on file instead!
-            <input name="email" type="email" placeholder="joe.bruin@gmail.com" id="email">
-            <span class="form-error">This doesn't look like a valid email address.</span></label>
-  
-          </div>
-    
-          <button type="submit" class="primary-button">Lookup your Logon ID</button> <button type="submit" class="cancel-button">Cancel</button>
+            </div>
+      
+            <button type="submit" class="primary-button">Lookup your Logon ID</button> <button type="submit" class="cancel-button">Cancel</button>
+            
+            <p><span class="message-fail"><a href="lookup-fail.html">(fail)</a></span> <span class="message-success"><a href="lookup-success.html">(success)</a></span></p>
+      
+          </form>
           
-          <p><span class="message-fail"><a href="lookup-fail.html">(fail)</a></span> <span class="message-success"><a href="lookup-success.html">(success)</a></span></p>
+        </div>
+      </article>
     
-        </form>
-      </div>
-    </article>
+      <aside class="supporting-info">
+        <div>
+          
+          <h1>Get Help</h1>
+          
+          <p>If you cannot lookup your Logon ID, please bring University-issued photo identification to the Bruin OnLine Help Desk located in Suite 124, Kerckhoff Hall. If you are not able to visit the Help Desk, please fax in a completed copy of the <a href='/files/service_request.pdf");'>UCLA Logon Service Request Form</a>, with all required supporting documentation.</p>
+          
+          <ul class="listless">
+            <li>Contact the Bruin Online Help Desk
+              <ul>
+                <li><a href="mailto:consult@ucla.edu">consult@ucla.edu</a></li>
+                <li>310-267-HELP (4357)</li>
+              </ul>
+            </li>
+          </ul>
+          
+        </div>
+      </aside>
   
-    <aside class="supporting-info">
-      <div>
-        <h1>Need help?</h1>
-        
-        <p>If you cannot lookup your Logon ID, please bring University-issued photo identification to the Bruin OnLine Help Desk located in Suite 124, Kerckhoff Hall.  If you are not able to visit the Help Desk, please fax in a completed copy of the <a href='javascript:warn_pii("/forms/service_request.pdf");'>UCLA Logon Service Request Form</a>, with all required supporting documentation.</p>
-    
-        <p>For further assistance, contact the Help Desk by telephone at 310-267-HELP (4357) or email at <a href="mailto:accounts@ucla.edu">accounts@ucla.edu</a>.</p>
-      </div>
-    </aside>
-  
+    </div>
   </section>
   
   

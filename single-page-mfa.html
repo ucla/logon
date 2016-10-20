@@ -16,42 +16,72 @@
   <header class="page-header" role="banner">
     <section class="page-header-contents">
       <span class="logo"><a href="./"><img src="assets/img/logo.png" alt="UCLA"></a></span>
-      <span class="logged"><a href="#">Login/out</a>
-    </span>
+    </section>
+    <nav class="page-nav" role="navigation" data-sticky-container>
+      
+      <div class="title-bar" data-responsive-toggle="nav-menu" data-hide-for="large-type">
+        <button class="menu-icon" type="button" data-toggle></button>
+        <div class="title-bar-title">Menu</div>
+      </div>
+      
+      <div class="top-bar sticky" id="nav-menu" data-sticky data-margin-top="0" data-top-anchor="nav-menu" data-anchor="foo">
+        <ul class="dropdown menu top-bar-left" data-dropdown-menu>
+          <li>
+            <a href="#">Manage...</a>
+            <ul class="menu">
+              <li><a href="manage-personal-info.html">Personal Info</a></li>
+              <li><a href="manage-password.html">UCLA Logon Password</a></li>
+              <li><a href="manage-mfa.html">Multi-Factor Authentication</a></li>
+              <li><a href="manage-email.html">@ucla.edu Email Account & Forwarding</a></li>
+              <li><a href="manage-phrase.html">Challenge Phrase</a></li>
+            </ul>
+          </li>
+          <li><a href="reset.html">Reset Password</a></li>
+          <li><a href="lookup.html">Lookup Logon ID</a></li>
+          <li><a href="create-new-logon.html">Create Logon ID</a></li>
+        </ul>
+        
+        <ul class="dropdown menu top-bar-right">
+          <li><a href="#">Login/out</a></li>
+      </div>
+      
+    </nav>
   </header>
 
   <section class="page">
-    
-    <h1>Manage Multi-Factor Authentication</h1>
-    
+    <div>
+  
+    <header>
+      <h1>Manage Multi-Factor Authentication</h1>
+    </header>
+  
     <article class="content">
   
       <img src="assets/img/duo-iframe.png">
-      
+  
     </article>
-    
+  
     <aside class="supporting-info">
       <div>
-        
         <h1>About MFA in UCLA Logon</h1>
         
-        <p>Multi-Factor Authentiation (MFA) adds extra protection for your  
-        UCLA Logon account. With MFA enabled, you'll be asked to take an extra step to confirm 
-        your identity when signing in. This extra step prevents a hacker from accessing your 
-        account using a stolen password.</p> 
+        <p>Multi-Factor Authentication (MFA) adds extra protection for your  
+        UCLA Logon account. With MFA enabled, you'll be asked to take an extra step to confirm
+        your identity when signing in. This extra step prevents a hacker from accessing your
+        account using a stolen password.</p>
         
         <p class="get-more-info"><a href="#"> > Learn More about MFA</a></p>
-                
+        
         <h2>Setting Up MFA with your Smartphone</h2>
         
         <p>If you have a smartphone, we recommend downloading the Duo Mobile app on your phone before starting the setup process. You will need to use the app when setting up MFA.
         
         <ul class="listless">
           <li><a href="https://itunes.apple.com/us/app/duo-mobile/id422663827?mt=8" target="_blank">Download Duo Mobile from iTunes</a></li>
-          <li><a class="thumb-link external" href="https://play.google.com/store/apps/details?id=com.duosecurity.duomobile&amp;hl=en">Download Duo Mobile from Google Play</a></li>
+          <li><a href="https://play.google.com/store/apps/details?id=com.duosecurity.duomobile&amp;hl=en" target="_blank">Download Duo Mobile from Google Play</a></li>
         </ul>
         
-        <h2>Get Help</h2>
+        <h1>Get Help</h1>
         
         <ul class="listless">
           <li><a href="#" target="tutorial">Show me how to set up MFA</a></li>
@@ -59,15 +89,15 @@
           <li>Contact the Bruin Online Help Desk
             <ul>
               <li><a href="mailto:consult@ucla.edu">consult@ucla.edu</a></li>
-              <li>310-267-HELP (4357)</li> 
+              <li>310-267-HELP (4357)</li>
             </ul>
           </li>
         </ul>
-       
       </div>
     </aside>
   
   </section>
+  
   
   <footer role="contentinfo" class="ucla-iam-footer">
   	<div class="ucla-iam-footer-content">

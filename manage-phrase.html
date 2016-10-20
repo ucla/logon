@@ -16,90 +16,134 @@
   <header class="page-header" role="banner">
     <section class="page-header-contents">
       <span class="logo"><a href="./"><img src="assets/img/logo.png" alt="UCLA"></a></span>
-      <span class="logged"><a href="#">Login/out</a>
-    </span>
+    </section>
+    <nav class="page-nav" role="navigation" data-sticky-container>
+      
+      <div class="title-bar" data-responsive-toggle="nav-menu" data-hide-for="large-type">
+        <button class="menu-icon" type="button" data-toggle></button>
+        <div class="title-bar-title">Menu</div>
+      </div>
+      
+      <div class="top-bar sticky" id="nav-menu" data-sticky data-margin-top="0" data-top-anchor="nav-menu" data-anchor="foo">
+        <ul class="dropdown menu top-bar-left" data-dropdown-menu>
+          <li>
+            <a href="#">Manage...</a>
+            <ul class="menu">
+              <li><a href="manage-personal-info.html">Personal Info</a></li>
+              <li><a href="manage-password.html">UCLA Logon Password</a></li>
+              <li><a href="manage-mfa.html">Multi-Factor Authentication</a></li>
+              <li><a href="manage-email.html">@ucla.edu Email Account & Forwarding</a></li>
+              <li><a href="manage-phrase.html">Challenge Phrase</a></li>
+            </ul>
+          </li>
+          <li><a href="reset.html">Reset Password</a></li>
+          <li><a href="lookup.html">Lookup Logon ID</a></li>
+          <li><a href="create-new-logon.html">Create Logon ID</a></li>
+        </ul>
+        
+        <ul class="dropdown menu top-bar-right">
+          <li><a href="#">Login/out</a></li>
+      </div>
+      
+    </nav>
   </header>
 
   <section class="management">
+    <div>
     
-    <nav class="primary-nav">
-        <ul class="menu vertical">
-          <li><a href="./">Home</a></li>
-          <li><a href="manage-personal-info.html">Confirm personal information</a></li>
-          <li><a href="manage-password.html">Change your UCLA Logon password</a></li>
-          <li><a href="manage-mfa.html">Manage multi-factor authentication</a></li>
-          <li><a href="manage-email.html">Manage your @ucla.edu email account & forwarding</a></li>
-          <li><a href="manage-phrase.html">Set your challenge phrase</a></li>
-        </ul>
-    <div id="timeout">Time Remaining:
-      <span id="counter">20:00</span><br>
-      <div id="bar"><div id="barfill"></div></div>
-    </div>
+      <header>
+        <h1>Set your Challenge Phrase</h1>
+      </header>
+        
+      <article class="content">
     
-    <script type="text/javascript">
-      init_timers(1200, 1200);
-    </script>
-    </nav>
+        <p>A Challenge Phrase allows you reset your password online. Both the challenge and response must be between <strong>8 and 128 characters</strong> long. They cannot be the same, and the response is <strong>case-sensitive</strong>.</p>
       
-    <article class="content" id="question" data-magellan-target="question">
-      <h1>Set your Challenge Phrase</h1>
-  
-      <p>A Challenge Phrase allows you reset your password online. Both the challenge and response must be between <strong>8 and 128 characters</strong> long. They cannot be the same, and the response is <strong>case-sensitive</strong>.</p>
-    
-      <form action="/passoptions.php" method="post" data-abide novalidate>
-    
-        <script type="text/javascript">
-        var cbh;
-    
-        function updateChallenge(obj) {
-          var c = document.getElementById("challenge");
-    
-          if (obj == 'self') {
-            var s = document.getElementById("selectChallenge");
-    
-            s.style.display = 'none';
-            s.style.zIndex = '5';
-    
-            c.style.zIndex = '10';
-            c.style.display = 'inline';
-    
-            c.value = '';
-            c.focus();
-          } else {
-            c.value = obj;
+        <form action="/passoptions.php" method="post" data-abide novalidate>
+      
+          <script type="text/javascript">
+          var cbh;
+      
+          function updateChallenge(obj) {
+            var c = document.getElementById("challenge");
+      
+            if (obj == 'self') {
+              var s = document.getElementById("selectChallenge");
+      
+              s.style.display = 'none';
+              s.style.zIndex = '5';
+      
+              c.style.zIndex = '10';
+              c.style.display = 'inline';
+      
+              c.value = '';
+              c.focus();
+            } else {
+              c.value = obj;
+            }
           }
-        }
-        </script>
-    
-        <label title="Your Challenge phrase is a question or phrase that only you know the response to." for="selectChallenge">Select your Challenge Question</label>
-    
-        <select id="selectChallenge" onchange="updateChallenge(this.value);" required>
-          <option value="What is the name of your first pet?">What is the name of your first pet?</option>
-          <option value="What was your maternal grandmother's maiden name?">What was your maternal grandmother's maiden name?</option>
-          <option value="Who is your favorite actor, musician, or artist?">Who is your favorite actor, musician, or artist?</option>
-          <option value="What is your favorite color?">What is your favorite color?</option>
-          <option value="What is the name of your elementary school?">What is the name of your elementary school?</option>
-          <option value="What was your favorite place to visit as a child?">What was your favorite place to visit as a child?</option>
-          <option value="What is your favorite movie?">What is your favorite movie?</option>
-          <option value="Which phone number do you remember most from your childhood?">Which phone number do you remember most from your childhood?</option>
-          <option value="What is the nickname you gave your favorite grandparent?">What is the nickname you gave your favorite grandparent?</option>
-          <option value="What city were you born in?">What city were you born in?</option>
-          <option value="What is the model of your first car?">What is the model of your first car?</option>
-          <option value="What was the first name of your date for your high school prom?">What was the first name of your date for your high school prom?</option>
-          <option value="self">Write your own question</option>
-        </select>
-        <input name="challenge" maxlength="128" id="challenge" style="display:none;z-index:5;top:0;position:relative;" required>
-    
-        <label for="response">Type your Response
-          <input type="text" name="response" maxlength="128" placeholder="Answer to the above question" id="response" required>
-          <span class="form-error">Challenge responses must be between 8 and 128 characters long.</span>
-        </label>
-    
-        <button class="primary-button" type="submit">Change Challenge Phrase</button>
-      </form>
-    
-    </article>
+          </script>
+      
+          <label title="Your Challenge phrase is a question or phrase that only you know the response to." for="selectChallenge">Select your Challenge Question</label>
+      
+          <select id="selectChallenge" onchange="updateChallenge(this.value);" required>
+            <option value="What is the name of your first pet?">What is the name of your first pet?</option>
+            <option value="What was your maternal grandmother's maiden name?">What was your maternal grandmother's maiden name?</option>
+            <option value="Who is your favorite actor, musician, or artist?">Who is your favorite actor, musician, or artist?</option>
+            <option value="What is your favorite color?">What is your favorite color?</option>
+            <option value="What is the name of your elementary school?">What is the name of your elementary school?</option>
+            <option value="What was your favorite place to visit as a child?">What was your favorite place to visit as a child?</option>
+            <option value="What is your favorite movie?">What is your favorite movie?</option>
+            <option value="Which phone number do you remember most from your childhood?">Which phone number do you remember most from your childhood?</option>
+            <option value="What is the nickname you gave your favorite grandparent?">What is the nickname you gave your favorite grandparent?</option>
+            <option value="What city were you born in?">What city were you born in?</option>
+            <option value="What is the model of your first car?">What is the model of your first car?</option>
+            <option value="What was the first name of your date for your high school prom?">What was the first name of your date for your high school prom?</option>
+            <option value="self">Write your own question</option>
+          </select>
+          <input name="challenge" maxlength="128" id="challenge" style="display:none;z-index:5;top:0;position:relative;" required>
+      
+          <label for="response">Type your Response
+            <input type="text" name="response" maxlength="128" placeholder="Answer to the above question" id="response" required>
+            <span class="form-error">Challenge responses must be between 8 and 128 characters long.</span>
+          </label>
+      
+          <button class="primary-button" type="submit">Change Challenge Phrase</button>
+        </form>
+      
+      </article>
+      
+      <aside class="supporting-info">
+        <div>
+          <h1>Session Length Remaining</h1>
+          
+          <p>In order to protect your account, you will be logged out if you do not save your changes or move to another page within 20 minutes.</p>
+          
+          <div id="timeout">Time until logged out:
+            <span id="counter">20:00</span><br>
+            <div id="bar"><div id="barfill"></div></div>
+          </div>
+          
+          <script type="text/javascript">
+            init_timers(1200, 1200);
+          </script>
+          
+          <h1>Get Help</h1>
+          
+          <p>If you're having problems managing your account, please bring University-issued photo identification to the Bruin OnLine Help Desk located in Suite 124, Kerckhoff Hall. If you are not able to visit the Help Desk, please fax in a completed copy of the <a href='/files/service_request.pdf");'>UCLA Logon Service Request Form</a>, with all required supporting documentation.</p>
+          
+          <ul class="listless">
+            <li>Contact the Bruin Online Help Desk
+              <ul>
+                <li><a href="mailto:consult@ucla.edu">consult@ucla.edu</a></li>
+                <li>310-267-HELP (4357)</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </aside>
   
+    </div>
   </section>
   
   <footer role="contentinfo" class="ucla-iam-footer">

@@ -16,83 +16,116 @@
   <header class="page-header" role="banner">
     <section class="page-header-contents">
       <span class="logo"><a href="./"><img src="assets/img/logo.png" alt="UCLA"></a></span>
-      <span class="logged"><a href="#">Login/out</a>
-    </span>
+    </section>
+    <nav class="page-nav" role="navigation" data-sticky-container>
+      
+      <div class="title-bar" data-responsive-toggle="nav-menu" data-hide-for="large-type">
+        <button class="menu-icon" type="button" data-toggle></button>
+        <div class="title-bar-title">Menu</div>
+      </div>
+      
+      <div class="top-bar sticky" id="nav-menu" data-sticky data-margin-top="0" data-top-anchor="nav-menu" data-anchor="foo">
+        <ul class="dropdown menu top-bar-left" data-dropdown-menu>
+          <li>
+            <a href="#">Manage...</a>
+            <ul class="menu">
+              <li><a href="manage-personal-info.html">Personal Info</a></li>
+              <li><a href="manage-password.html">UCLA Logon Password</a></li>
+              <li><a href="manage-mfa.html">Multi-Factor Authentication</a></li>
+              <li><a href="manage-email.html">@ucla.edu Email Account & Forwarding</a></li>
+              <li><a href="manage-phrase.html">Challenge Phrase</a></li>
+            </ul>
+          </li>
+          <li><a href="reset.html">Reset Password</a></li>
+          <li><a href="lookup.html">Lookup Logon ID</a></li>
+          <li><a href="create-new-logon.html">Create Logon ID</a></li>
+        </ul>
+        
+        <ul class="dropdown menu top-bar-right">
+          <li><a href="#">Login/out</a></li>
+      </div>
+      
+    </nav>
   </header>
 
   <section class="page">
-    
-    <h1>Create a UCLA Logon ID: <small>Verify Your Identity</small></h1>
+    <div>
   
-    <article class="content">
-      <div>
-        
-        <ol id="form-step-bar">
-          <li class="form-step-done">Set Affiliation Status</li>
-          <li class="form-step-doing">Verify Identity</li>
-          <li class="form-step-todo">Create Logon ID</li>
-        </ol>
+      <header>
+        <h1>Create a UCLA Logon ID: <small>Verify Your Identity</small></h1>
+      </header>
     
-        <form action="/activate.php" method="post" data-abide novalidate>
-          <label for="gn">First Name
-          <input name="gn" type="text" placeholder="Joe" value="" id="gn" required>
-          <span class="form-error">You must enter your first name to continue.</span></label>
+      <article class="content">
+        <div>
     
-          <label for="sn">Last Name
-          <input name="sn" type="text" placeholder="Bruin" value="" id="sn" required>
-          <span class="form-error">You must enter your last name to continue.</span></label>
+          <ol id="form-step-bar">
+            <li class="form-step-done">Set Affiliation Status</li>
+            <li class="form-step-doing">Verify Identity</li>
+            <li class="form-step-todo">Create Logon ID</li>
+          </ol>
     
-          <label for="sn">Date of Birth (YYYY-MM-DD)
-          <input name="dob" type="date" placeholder="(YYYY-MM-DD)" maxlength="10" value="" id="dob" required>
-          <span class="form-error">You must use a valid date format.</span></label>
+          <form action="/activate.php" method="post" data-abide novalidate>
+            <label for="gn">First Name
+            <input name="gn" type="text" placeholder="Joe" value="" id="gn" required>
+            <span class="form-error">You must enter your first name to continue.</span></label>
     
-          <label for="uclaid">UCLA ID Number</label>
-          <input name="uclaid" pattern="[0-9]{0-9}" type="password" placeholder="123456789" value="" pattern="[0-9{9}" id="uclaid" required>
-          <span class="form-error">Your UCLA ID number is exactly 9 numbers long.</span></label>
+            <label for="sn">Last Name
+            <input name="sn" type="text" placeholder="Bruin" value="" id="sn" required>
+            <span class="form-error">You must enter your last name to continue.</span></label>
     
-          <button type="submit" class="primary-button">Next</button> <button type="submit" class="cancel-button">Cancel</button>
+            <label for="sn">Date of Birth (YYYY-MM-DD)
+            <input name="dob" type="date" placeholder="(YYYY-MM-DD)" maxlength="10" value="" id="dob" required>
+            <span class="form-error">You must use a valid date format.</span></label>
+    
+            <label for="uclaid">UCLA ID Number</label>
+            <input name="uclaid" pattern="[0-9]{0-9}" type="password" placeholder="123456789" value="" pattern="[0-9{9}" id="uclaid" required>
+            <span class="form-error">Your UCLA ID number is exactly 9 numbers long.</span></label>
+    
+            <button type="submit" class="primary-button">Next</button> <button type="submit" class="cancel-button">Cancel</button>
+    
+            <p><span class="message-success"><a href="create-new-logon3.html">(next)</a></span></p>
+          </form>
+        </div>
+      </article>
+    
+      <aside class="supporting-info">
+        <div>
+    
+          <h1>Finding your UCLA Identification Number </h1>
           
-          <p><span class="message-success"><a href="create-new-logon3.html">(next)</a></span></p>
-        </form>
-      </div>
-    </article>
+          <p>A UCLA Identification Number (UID) is a 9-digit permenant record identifier number. Every student,
+            faculty, staff, and contactor have a UID. You can find your UID:</p>
+          
+          <ul>
+            <li>on your online or paper letter of admission (new students, waitlisted applicants).</li>
+            <li>on your BruinCard (current students, alumni, faculty, staff).</li>
+            <li>on your UCLA transcript (current students, alumni).</li>
+            <li>on your paycheck stub or online earnings statement (faculty, staff).</li>
+          </ul>
+          
+          <p> If you do not remember or cannot find your UID, please bring photo
+          identification that clearly displays both your full name and date of birth
+          (Driver's License, Passport, or other government issued ID) to the Bruin
+          OnLine Help Desk located in Suite 124, Kerckhoff Hall. If you are not able to
+          visit the Help Desk, please fax in a completed copy of the
+          <a href="/files/ervice_request.pdf">UCLA Logon Service Request Form</a>,
+          with all required supporting documentation.</p>
+          
+          <h1>Get Help</h1>
+          
+          <ul class="listless">
+            <li>Contact the Bruin Online Help Desk
+              <ul>
+                <li><a href="mailto:consult@ucla.edu">consult@ucla.edu</a></li>
+                <li>310-267-HELP (4357)</li>
+              </ul>
+            </li>
+          </ul>
     
-    <aside class="supporting-info">
-      <div>
+        </div>
+      </aside>
   
-        <h1>Finding your UCLA Identification Number </h1>
-  
-        <p>A UCLA Identification Number (UID) is a 9-digit permenant record identifier number. All students,
-          faculty, staff, and contactors have a UID. You can find this number:</p>
-  
-        <ul>
-          <li>on your online or paper letter of admission (new students, waitlisted applicants).</li>
-          <li>on your BruinCard (current students, alumni, faculty, staff).</li>
-          <li>on your UCLA transcript (current students, alumni).</li>
-          <li>on your paycheck stub or online earnings statement (faculty, staff).</li>
-        </ul>
-  
-        <p> If you do not remember or cannot find your UID, please bring photo
-        identification that clearly displays both your full name and date of birth
-        (Driver's License, Passport, or other government issued ID) to the Bruin
-        OnLine Help Desk located in Suite 124, Kerckhoff Hall. If you are not able to
-        visit the Help Desk, please fax in a completed copy of the
-        <a href='javascript:warn_pii("/forms/service_request.pdf");'>UCLA Logon Service Request Form</a>,
-        with all required supporting documentation.</p>
-  
-        <h2>Get Help</h2>
-  
-        <ul class="listless">
-          <li>Contact the Bruin Online Help Desk
-            <ul>
-              <li><a href="mailto:consult@ucla.edu">consult@ucla.edu</a></li>
-              <li>310-267-HELP (4357)</li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </aside>
-  
+    </div>
   </section>
   
   

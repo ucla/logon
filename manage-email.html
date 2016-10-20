@@ -16,68 +16,112 @@
   <header class="page-header" role="banner">
     <section class="page-header-contents">
       <span class="logo"><a href="./"><img src="assets/img/logo.png" alt="UCLA"></a></span>
-      <span class="logged"><a href="#">Login/out</a>
-    </span>
+    </section>
+    <nav class="page-nav" role="navigation" data-sticky-container>
+      
+      <div class="title-bar" data-responsive-toggle="nav-menu" data-hide-for="large-type">
+        <button class="menu-icon" type="button" data-toggle></button>
+        <div class="title-bar-title">Menu</div>
+      </div>
+      
+      <div class="top-bar sticky" id="nav-menu" data-sticky data-margin-top="0" data-top-anchor="nav-menu" data-anchor="foo">
+        <ul class="dropdown menu top-bar-left" data-dropdown-menu>
+          <li>
+            <a href="#">Manage...</a>
+            <ul class="menu">
+              <li><a href="manage-personal-info.html">Personal Info</a></li>
+              <li><a href="manage-password.html">UCLA Logon Password</a></li>
+              <li><a href="manage-mfa.html">Multi-Factor Authentication</a></li>
+              <li><a href="manage-email.html">@ucla.edu Email Account & Forwarding</a></li>
+              <li><a href="manage-phrase.html">Challenge Phrase</a></li>
+            </ul>
+          </li>
+          <li><a href="reset.html">Reset Password</a></li>
+          <li><a href="lookup.html">Lookup Logon ID</a></li>
+          <li><a href="create-new-logon.html">Create Logon ID</a></li>
+        </ul>
+        
+        <ul class="dropdown menu top-bar-right">
+          <li><a href="#">Login/out</a></li>
+      </div>
+      
+    </nav>
   </header>
 
   <section class="management">
+    <div>
     
-    <nav class="primary-nav">
-        <ul class="menu vertical">
-          <li><a href="./">Home</a></li>
-          <li><a href="manage-personal-info.html">Confirm personal information</a></li>
-          <li><a href="manage-password.html">Change your UCLA Logon password</a></li>
-          <li><a href="manage-mfa.html">Manage multi-factor authentication</a></li>
-          <li><a href="manage-email.html">Manage your @ucla.edu email account & forwarding</a></li>
-          <li><a href="manage-phrase.html">Set your challenge phrase</a></li>
+      <header>
+        <h1>Manage Your @ucla.edu Email Account</h1>
+      </header>
+        
+      <article class="content">
+        
+        <div class="alert-info"><i>i</i><p><strong>Current students, alumni, and retirees:</strong> Have you considered switching to <a target="_blank" href="http://g.ucla.edu">Google Apps for UCLA</a>?</p></div>
+        
+        <p>Anyone possessing an @ucla.edu email address can choose to have messages sent to it forwarded elsewhere, or simply deactivate the account.</p>
+        
+        <ul>
+          <li>Current status: <strong>active</strong></li>
+          <li>Current forwarding address: <strong>carl@ubelhardt.net</strong></li>
         </ul>
-    <div id="timeout">Time Remaining:
-      <span id="counter">20:00</span><br>
-      <div id="bar"><div id="barfill"></div></div>
-    </div>
+        
+        <form action="/mailprefs.php" method="post" data-abide novalidate>
+          <label>Enter address to forward all @ucla.edu email to
+          <input class="focus" id="e1" name="e1" type="email" placeholder="foobruin@gmail.com" title="Enter email address" required>
+          <span class="form-error">This doesn't look like a valid email address.</span>
+          </label>
+          
+          <label>Confirm address to forward all @ucla.edu email to
+            <input class="focus" id="e2" name="e2" type="email" placeholder="foobruin@gmail.com" data-equalto="e1" title="Re-enter email address" required>
+            <span class="form-error">This doesn't look like a valid email address and/or doesn't match the one above.</span>
+          </label>
+          
+          <button id="verify-forwarding" class="primary-button" type="submit" name="action">Forward @ucla.edu emails to new address</button>
+          <p>Note: A verification link will be sent to the new email address.</p>
+        </form>
+        
+        <h2>Not using your @ucla.edu email anymore?</h2>
+        <p>You can disable the account so it won't receive or forward on any emails. If you want to enable it again in the future, just head on back.</p>
+        <form>
+          <button id="cancel-email" class="cancel-button" type="submit" name="action2">Disable @ucla.edu email account</button>
+        </form>
+        
+        <p><span class="message-fail"><a href="manage-email-disabled.html">(account disabled)</a></span></p>
     
-    <script type="text/javascript">
-      init_timers(1200, 1200);
-    </script>
-    </nav>
+      </article>
       
-    <article class="content" id="forwarding" data-magellan-target="forwarding">
-      <h1>Manage Your @ucla.edu Email Account</h1>
-      
-      <div class="alert-info"><i>i</i><p><strong>Current students, alumni, and retirees:</strong> Have you considered switching to <a target="_blank" href="http://g.ucla.edu">Google Apps for UCLA</a>?</p></div>
-      
-      <p>Anyone possessing an @ucla.edu email address can choose to have messages sent to it forwarded elsewhere, or simply deactivate the account.</p>
-      
-      <ul>
-        <li>Current status: <strong>active</strong></li>
-        <li>Current forwarding address: <strong>carl@ubelhardt.net</strong></li>
-      </ul>
-      
-      <form action="/mailprefs.php" method="post" data-abide novalidate>
-        <label>Enter address to forward all @ucla.edu email to
-        <input class="focus" id="e1" name="e1" type="email" placeholder="foobruin@gmail.com" title="Enter email address" required>
-        <span class="form-error">This doesn't look like a valid email address.</span>
-        </label>
-        
-        <label>Confirm address to forward all @ucla.edu email to
-          <input class="focus" id="e2" name="e2" type="email" placeholder="foobruin@gmail.com" data-equalto="e1" title="Re-enter email address" required>
-          <span class="form-error">This doesn't look like a valid email address and/or doesn't match the one above.</span>
-        </label>
-        
-        <button id="verify-forwarding" class="primary-button" type="submit" name="action">Forward @ucla.edu emails to new address</button>
-        <p>Note: A verification link will be sent to the new email address.</p>
-      </form>
-      
-      <h2>Not using your @ucla.edu email anymore?</h2>
-      <p>You can disable the account so it won't receive or forward on any emails. If you want to enable it again in the future, just head on back.</p>
-      <form>
-        <button id="cancel-email" class="cancel-button" type="submit" name="action2">Disable @ucla.edu email account</button>
-      </form>
-      
-      <p><span class="message-fail"><a href="manage-email-disabled.html">(account disabled)</a></span></p>
+      <aside class="supporting-info">
+        <div>
+          <h1>Session Length Remaining</h1>
+          
+          <p>In order to protect your account, you will be logged out if you do not save your changes or move to another page within 20 minutes.</p>
+          
+          <div id="timeout">Time until logged out:
+            <span id="counter">20:00</span><br>
+            <div id="bar"><div id="barfill"></div></div>
+          </div>
+          
+          <script type="text/javascript">
+            init_timers(1200, 1200);
+          </script>
+          
+          <h1>Get Help</h1>
+          
+          <p>If you're having problems managing your account, please bring University-issued photo identification to the Bruin OnLine Help Desk located in Suite 124, Kerckhoff Hall. If you are not able to visit the Help Desk, please fax in a completed copy of the <a href='/files/service_request.pdf");'>UCLA Logon Service Request Form</a>, with all required supporting documentation.</p>
+          
+          <ul class="listless">
+            <li>Contact the Bruin Online Help Desk
+              <ul>
+                <li><a href="mailto:consult@ucla.edu">consult@ucla.edu</a></li>
+                <li>310-267-HELP (4357)</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </aside>
   
-    </article>
-      
+    </div>
   </section>
   
   <footer role="contentinfo" class="ucla-iam-footer">
