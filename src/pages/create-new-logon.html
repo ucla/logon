@@ -95,3 +95,14 @@ Complaints alleging misuse of resources will be directed to those responsible fo
 
   </div>
 </section>
+
+<script>
+  document.getElementsByName("tos")[0].addEventListener("scroll", checkScrollHeight, false);
+  
+  function checkScrollHeight(){
+      var agreementTextElement = document.getElementsByName("tos")[0] 
+      if ((agreementTextElement.scrollTop + agreementTextElement.offsetHeight) >= agreementTextElement.scrollHeight){
+          document.getElementsByName("agree-to-tos")[0].disabled = false;
+      }
+  }
+</script>
