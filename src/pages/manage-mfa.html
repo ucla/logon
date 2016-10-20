@@ -4,12 +4,8 @@
     <header>
       <h1>Manage Multi-Factor Authentication</h1>
     </header>
-    
-    <nav class="primary-nav">
-      {{> timer}}
-    </nav>
-      
-    <article class="content" id="2fa" data-magellan-target="2fa">
+
+    <article class="content" id="2fa">
       <div>
         
         <p>How would you like to receive your authentication codes? You will be asked for an authentication code when you sign in to your account.</p>
@@ -33,6 +29,15 @@
       </div>
   
     </article>
+    
+    <aside class="supporting-info">
+      <div>
+        {{> timer}}
+        
+        {{> mfa-info}}
+      </div>
+    </aside>
+
 
   </div>
 </section>

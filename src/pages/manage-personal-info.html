@@ -4,12 +4,8 @@
     <header>
       <h1>Confirm your personal information</h1>
     </header>
-    
-    <nav class="primary-nav">
-    {{> timer}}
-    </nav>
       
-    <article class="content" id="personal-info" data-magellan-target="personal-info">
+    <article class="content" id="personal-info">
       <dl class="info-list">
         <dt>UCLA Logon:</dt>
         <dd>ubelhardt</dd>  
@@ -37,6 +33,15 @@
         <strong>All Others</strong>:  For assistance, contact the Bruin OnLine Help Desk by telephone at 310-267-HELP (4357) or email at <a href="mailto:accounts@ucla.edu">accounts@ucla.edu</a>.
       </p>
     </article>
+    
+    <aside class="supporting-info">
+      <div>
+        {{> timer}}
+        
+        {{> manage-info}}
+      </div>
+    </aside>
+
     
   </div>
 </section>

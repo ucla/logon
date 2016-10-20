@@ -4,10 +4,6 @@
     <header>
       <h1>Manage Your @ucla.edu Email Account</h1>
     </header>
-    
-    <nav class="primary-nav">
-    {{> timer}}
-    </nav>
       
     <article class="content" id="forwarding" data-magellan-target="forwarding">
       
@@ -44,6 +40,14 @@
       <p><span class="message-fail"><a href="manage-email-disabled.html">(account disabled)</a></span></p>
   
     </article>
+    
+    <aside class="supporting-info">
+      <div>
+        {{> timer}}
+        
+        {{> manage-info}}
+      </div>
+    </aside>
 
   </div>
 </section>

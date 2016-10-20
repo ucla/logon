@@ -5,10 +5,6 @@
       <h1>Manage Your @ucla.edu Email Account</h1>
     </header>
     
-    <nav class="primary-nav">
-    {{> timer}}
-    </nav>
-      
     <article class="content" id="forwarding" data-magellan-target="forwarding">
       
       <div class="alert-info"><i>i</i><p><strong>Current students, alumni, and retirees:</strong> Have you considered switching to <a target="_blank" href="http://g.ucla.edu">Google Apps for UCLA</a>?</p></div>
@@ -44,6 +40,14 @@
       <p><span class="message-success"><a href="manage-email.html">(account active)</a></span></p>
   
     </article>
+    
+    <aside class="supporting-info">
+      <div>
+        {{> timer}}
+        
+        {{> manage-info}}
+      </div>
+    </aside>
     
   </div>
 </section>

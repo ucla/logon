@@ -4,12 +4,8 @@
     <header>
       <h1>Set your Challenge Phrase</h1>
     </header>
-    
-    <nav class="primary-nav">
-    {{> timer}}
-    </nav>
       
-    <article class="content" id="question" data-magellan-target="question">
+    <article class="content" id="question">
   
       <p>A Challenge Phrase allows you reset your password online. Both the challenge and response must be between <strong>8 and 128 characters</strong> long. They cannot be the same, and the response is <strong>case-sensitive</strong>.</p>
     
@@ -66,6 +62,14 @@
       </form>
     
     </article>
+    
+    <aside class="supporting-info">
+      <div>
+        {{> timer}}
+        
+        {{> manage-info}}
+      </div>
+    </aside>
 
   </div>
 </section>
