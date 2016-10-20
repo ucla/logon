@@ -1,0 +1,40 @@
+<section class="management">
+  <div>
+  
+    <header>
+      <h1>Manage Multi-Factor Authentication</h1>
+    </header>
+
+    <article class="content">
+      <div>
+        
+        <h2>Setup your phone.</h2>
+        
+        <form method="post" data-abide novalidate>
+          <label class="help" for="phone">Phone Number
+          <input name="uid" type="tel" id="phone" placeholder="310-123-4567" autofocus required>
+          <span class="form-error">That is not a valid phone number.</span></label>
+          
+          <fieldset>
+            <label><input type="radio" id="sms" name="phone-type" checked>Send authentication code by SMS.</label>
+            <label><input type="radio" id="call" name="phone-type">Give me a call.</label>
+          </fieldset>
+
+          <button class="primary-button" type="submit">Save</button> <button type="submit" class="cancel-button">Cancel</button>
+  
+        </form>
+  
+      </div>
+    </article>
+    
+    <aside class="supporting-info">
+      <div>
+        {{> timer}}
+        
+        {{> mfa-info}}
+      </div>
+    </aside>
+
+
+  </div>
+</section>
