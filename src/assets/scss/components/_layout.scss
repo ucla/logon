@@ -23,7 +23,7 @@ body {
 }
 
 // layout that applies to all pages
-.page, .home, .management {
+.page, .home, .management, .mfa {
   padding: $global-padding;
   &> div {
     @include grid-column-row(0);
@@ -36,7 +36,7 @@ body {
 }
 
 // column layout for content
-.page, .home, .management {
+.page, .home, .management, .mfa {
   .content {
     @include grid-column(12);
     @include breakpoint(multi-column) {

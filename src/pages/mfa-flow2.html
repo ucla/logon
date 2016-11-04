@@ -1,0 +1,44 @@
+---
+layout: mfa-solo
+---
+
+<section class="mfa">
+  <div>
+
+    <article class="content">
+      <div>
+        
+        <h1>Link Cellular Phone</h1>
+        
+        <p>Enter the information for the phone you want to link below.</p>
+        
+        <form method="post" data-abide novalidate>
+          
+          <fieldset>
+            <label>Phone Number:
+              <input type="tel" placeholder="(310) 123-4567">
+            </label>
+            <label>Label to remember this device:
+              <input type="tel" placeholder="Trusty Nokia">
+            </label>
+          </fieldset>
+
+          <button class="primary-button" type="submit">Activate with Phone Call</button> 
+          
+          <button type="submit" class="cancel-button">Cancel</button>
+          
+          <p class="note-that">Note: standard carrier usage charges may apply.</p>
+  
+        </form>  
+      </div>
+    </article>
+    
+    <aside class="supporting-info">
+      <div>        
+        {{> mfa-info}}
+      </div>
+    </aside>
+
+
+  </div>
+</section>

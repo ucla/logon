@@ -69,7 +69,7 @@ section > h1 {
 }
 
 // need nested containers due to foundation's grid system
-.management > div, .page > div, .home > div, .message > div {
+.management > div, .page > div, .home > div, .message > div, .mfa > div {
   @extend %content-styling;
 }
 
