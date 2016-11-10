@@ -5,6 +5,10 @@
   }
 }
 
+fieldgroup.inline {
+  @include button-group-expand();
+}
+
 .get-help {
   margin-top: $global-margin;
   background: $nav-background;

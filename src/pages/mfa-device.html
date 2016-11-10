@@ -6,7 +6,7 @@ layout: mfa-solo
   <div>
   
     <header>
-      <h1>Manage Multi-Factor Authentication</h1>
+      <h1>MFA Active</h1>
     </header>
 
     <article class="content">
@@ -14,19 +14,36 @@ layout: mfa-solo
         
         <h2>What kind of phone do you have?</h2>
         
-        <form method="post" data-abide novalidate>
-          
-          <fieldset>
-            <label><input type="radio" id="iphone" name="phone-type" checked>iPhone.</label>
-            <label><input type="radio" id="android" name="phone-type">Android.</label>
-          </fieldset>
+        <div class="device">
+          <span><a href="#"><img src="{{root}}assets/img/round.png" alt="landline"/></a></span>
 
-          <button class="primary-button" type="submit">Save</button> <button type="submit" class="cancel-button">Cancel</button>
-  
-        </form>  
+          <div class="device-info">
+            <h3>Landline</h3>
+            <form method="post" data-abide novalidate>
+              <fieldset>
+                <label>Phone Number:
+                  <input type="tel" placeholder="(310) 123-4567">
+                  <span class="form-error">That is not a valid phone number.</span>
+                </label>
+                <label>Label to remember this device:
+                  <input type="tel" placeholder="Sad Cubicle">
+                  <span class="form-error">You must enter a label for this device.</span>
+                </label>
+              </fieldset>
+                
+              <fieldgroup class="inline">
+                <button class="primary-button" type="submit">Save</button>
+                <button class="button" type="submit">Back</button>
+                <button class="cancel-button" type="submit">Cancel</button>
+              </fieldgroup>
+            </form>  
+          </div>
+
+        </div>
+
       </div>
     </article>
-    
+
     <aside class="supporting-info">
       <div>
         {{> timer}}
@@ -34,7 +51,6 @@ layout: mfa-solo
         {{> mfa-info}}
       </div>
     </aside>
-
 
   </div>
 </section>
