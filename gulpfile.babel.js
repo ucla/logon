@@ -11,6 +11,8 @@ import sherpa   from 'style-sherpa';
 import yaml     from 'js-yaml';
 import fs       from 'fs';
 import access   from 'gulp-accessibility';
+import path     from 'path';
+
 // import arialinter  from 'gulp-arialinter';
 
 // Load all Gulp plugins into one variable
@@ -20,6 +22,7 @@ const $ = plugins();
 const PRODUCTION = !!(yargs.argv.production);
 
 const DESTINATION = yargs.argv.dest || 'dist';
+const NO_STYLEGUIDE = yargs.argv.no_styleguide;
 
 // Load settings from settings.yml
 const { COMPATIBILITY, PORT, UNCSS_OPTIONS, PATHS } = loadConfig();
@@ -29,9 +32,17 @@ function loadConfig() {
   return yaml.load(ymlFile);
 }
 
+let buildSeries = [
+  clean,
+  gulp.parallel(pages, sass, javascript, copy, copyBower)
+].concat(NO_STYLEGUIDE ? [] : [styleGuide]);
+
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
- gulp.series(clean, gulp.parallel(pages, sass, javascript, images, copy, copyBower), styleGuide));
+  gulp.series.apply(gulp.series, buildSeries));
+
+//gulp.task('build',
+// gulp.series(clean, gulp.parallel(pages, sass, javascript, images, copy, copyBower), styleGuide));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
@@ -40,7 +51,7 @@ gulp.task('default',
 // Delete the "dist" folder
 // This happens every time a build starts
 function clean(done) {
-  rimraf(DESTINATION, done);
+  rimraf(path.join(DESTINATION, '*'), done);
 }
 
 // Copy files out of the assets folder
