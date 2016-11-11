@@ -1,21 +1,56 @@
----
-layout: mfa-solo
----
-
 <section class="mfa">
   <div>
   
     <header>
-      <h1>Manage Multi-Factor Authentication</h1>
+      <h1>MFA Components / Docu</h1>
     </header>
 
     <article class="content">
+      
+      <h2>Typography</h2>
+      
+      <p>It should "just work". Don't worry about pixel matching the visual comps, the framework wins (code > design artifacts). That said if something looks really off let me know and I can add a class to the framework.</p> 
+      
+      <p>Semantic headers - for content <code><h1></code> is at the top of the page describing what that page does. <code><h2></code> labels sections within a page (activated, unactivated, advanced). <code><h3></code> is used for device names/types within the <code><div class="device-info"></code> as featured on the <a href="mfa-device.html">MFA device page</a>. For the sidebars/help <code><h1></code> appears in an offset yellow box, the rest follows in standard fashion.</p>
+      
+      <p>Small disclaimer text at the bottom of pages is wrapped with <code><p class="note-that">standard rates apply</p></code>.</p>
+      
+      <h2>Layout</h2>
+      
+      <p><code><article class="content"></article></code> holds the main content, with <code><aside class="supporting-info"></aside></code> holding the sidebar of help text on desktop/tablet view and being a toggle on mobile. It's a simple structure. :)</p>
+      
+      <h2>Forms</h2>
+      
+      <p>Client side validation is done with <a href="http://foundation.zurb.com/sites/docs/abide.html">Zurb's Abide</a>. While their documentation is far more thorough, following the basic example below (error span, attributes on form element) is the basic template to follow. It extends HTML5 form validation in ways I find useful.</p>
+      
+      <code>
+        <form data-abide novalidate>
+          <label>
+            <input type="checkbox" required>I have installed Duo Mobile on my device.
+            <span class="form-error">You must have installed Duo Mobile to Continue.</span>
+          </label>
+  
+          <button type="submit" class="primary-button">Sync Duo Mobile App</button> 
+          <button type="submit" class="cancel-button">Cancel</button>
+        </form>
+      </code>
+      
+      <h2>Buttons</h2>
+      
+      <p>For inline buttons on device management, wrap in the classed fieldgroup. The button element on it's own gives the default button, .primary-button gives a solid blue primary choice, and .cancel-button the warningish cancel/back to break application flow.</p>
+        
+      <code>
+        <fieldgroup class="inline">
+          <button class="primary-button" type="submit">Save</button>
+          <button type="submit">Back</button>
+          <button class="cancel-button" type="submit">Cancel</button>
+        </fieldgroup>
+      <code>
 
     </article>
     
     <aside class="supporting-info">
-      <div>        
-        {{> timer}}
+      <div>
         
         {{> mfa-info}}
       </div>
