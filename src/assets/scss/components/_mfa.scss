@@ -5,6 +5,10 @@
   }
 }
 
+code, kbd, pre, samp {
+  font-size: $helptext-font-size;
+}
+
 fieldgroup.inline {
   @include button-group-expand();
 }

@@ -15,41 +15,40 @@
       
       <p>It should "just work". Don't worry about pixel matching the visual comps, the framework wins (code > design artifacts). That said if something looks really off let me know and I can add a class to the framework.</p> 
       
-      <p>Semantic headers - for content <code><h1></code> is at the top of the page describing what that page does. <code><h2></code> labels sections within a page (activated, unactivated, advanced). <code><h3></code> is used for device names/types within the <code><div class="device-info"></code> as featured on the <a href="mfa-device.html">MFA device page</a>. For the sidebars/help <code><h1></code> appears in an offset yellow box, the rest follows in standard fashion.</p>
+      <p>Semantic headers - for content <code>&lt;h1&gt;</code> is at the top of the page describing what that page does. <code>&lt;h2&gt;</code> labels sections within a page (activated, unactivated, advanced). <code>&lt;h3&gt;</code> is used for device names/types within the <code>&lt;div class="device-info"&gt;</code> as featured on the <a href="mfa-device.html">MFA device page</a>. For the sidebars/help <code>&lt;h1&gt;</code> appears in an offset yellow box, the rest follows in standard fashion.</p>
       
-      <p>Small disclaimer text at the bottom of pages is wrapped with <code><p class="note-that">standard rates apply</p></code>.</p>
+      <p>Small disclaimer text at the bottom of pages is wrapped with <code>&lt;p class="note-that"&gt;standard rates apply&lt;/p&gt;</code>.</p>
       
       <h2>Layout</h2>
       
-      <p><code><section class="mfa"></code> is the main wrapper for the page (floats above the blue Los Angeles sky). <code><article class="content"></article></code> holds the main content, with <code><aside class="supporting-info"></aside></code> holding the sidebar of help text on desktop/tablet view and being a toggle on mobile. It's a simple structure. :) The major structural elements require a div inside them because I can't swap singularity.gs/breakpoint into foundation due to name-space conflicts with media queries (without causing more trouble than it's worth).</p>
+      <p><code>&lt;section class="mfa"&gt;</code> is the main wrapper for the page (floats above the blue Los Angeles sky). <code>&lt;article class="content"&gt;</code> holds the main content, with <code>&lt;aside class="supporting-info"&gt;</code> holding the sidebar of help text on desktop/tablet view and being a toggle on mobile. It's a simple structure. :) The major structural elements require a div inside them because I can't swap singularity.gs/breakpoint into foundation due to name-space conflicts with media queries (without causing more trouble than it's worth).</p>
       
       <h2>Forms</h2>
       
       <p>Client side validation is done with <a href="http://foundation.zurb.com/sites/docs/abide.html">Zurb's Abide</a>. While their documentation is far more thorough, following the basic example below (error span, attributes on form element) is the basic template to follow. It extends HTML5 form validation in ways I find useful.</p>
       
-      <code>
-        <form data-abide novalidate>
-          <label>
-            <input type="checkbox" required>I have installed Duo Mobile on my device.
-            <span class="form-error">You must have installed Duo Mobile to Continue.</span>
-          </label>
-  
-          <button type="submit" class="primary-button">Sync Duo Mobile App</button> 
-          <button type="submit" class="cancel-button">Cancel</button>
-        </form>
-      </code>
+<pre>
+&lt;form data-abide novalidate&gt;
+  &lt;label&gt;
+    &lt;input type=&quot;checkbox&quot; required&gt;I have installed Duo Mobile on my device.
+    &lt;span class=&quot;form-error&quot;&gt;You must have installed Duo Mobile to Continue.&lt;/span&gt;
+  &lt;/label&gt;
+  &lt;button type=&quot;submit&quot; class=&quot;primary-button&quot;&gt;Sync Duo Mobile App&lt;/button&gt; 
+  &lt;button type=&quot;submit&quot; class=&quot;cancel-button&quot;&gt;Cancel&lt;/button&gt;
+&lt;/form&gt;
+</pre>
       
       <h2>Buttons</h2>
       
       <p>For inline buttons on device management, wrap in the classed fieldgroup. The button element on it's own gives the default button, .primary-button gives a solid blue primary choice, and .cancel-button the warningish cancel/back to break application flow.</p>
         
-      <code>
-        <fieldgroup class="inline">
-          <button class="primary-button" type="submit">I'm a primary button we think people should look at first!</button>
-          <button type="submit">I'm just a button.</button>
-          <button class="cancel-button" type="submit">You might want to think twice before clicking this button.</button>
-        </fieldgroup>
-      <code>
+<pre>
+&lt;fieldgroup class=&quot;inline&quot;&gt;
+  &lt;button class=&quot;primary-button&quot; type=&quot;submit&quot;&gt;I'm a primary button look at me!&lt;/button&gt;
+  &lt;button type=&quot;submit&quot;&gt;I'm just a button.&lt;/button&gt;
+  &lt;button class=&quot;cancel-button&quot; type=&quot;submit&quot;&gt;Think twice before clicking me.&lt;/button&gt;
+&lt;/fieldgroup&gt;
+</pre>
 
     </article>
     
