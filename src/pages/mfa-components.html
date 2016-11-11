@@ -7,6 +7,10 @@
 
     <article class="content">
       
+      <h2>Overview</h2>
+      
+      <p>This is running a (gently) forked <a href="https://github.com/ucla/foundation-sites">Zurb Foundation</a> framework along with our SSO interface. The build process is (again) a fork of a related project <a href="https://github.com/ucla/foundation-zurb-template">Template</a>, see the readme there. NPM, Bower, Gulp, Git Submodules - pretty modular / manageable.</p>
+      
       <h2>Typography</h2>
       
       <p>It should "just work". Don't worry about pixel matching the visual comps, the framework wins (code > design artifacts). That said if something looks really off let me know and I can add a class to the framework.</p> 
@@ -17,7 +21,7 @@
       
       <h2>Layout</h2>
       
-      <p><code><article class="content"></article></code> holds the main content, with <code><aside class="supporting-info"></aside></code> holding the sidebar of help text on desktop/tablet view and being a toggle on mobile. It's a simple structure. :)</p>
+      <p><code><section class="mfa"></code> is the main wrapper for the page (floats above the blue Los Angeles sky). <code><article class="content"></article></code> holds the main content, with <code><aside class="supporting-info"></aside></code> holding the sidebar of help text on desktop/tablet view and being a toggle on mobile. It's a simple structure. :) The major structural elements require a div inside them because I can't swap singularity.gs/breakpoint into foundation due to name-space conflicts with media queries (without causing more trouble than it's worth).</p>
       
       <h2>Forms</h2>
       
@@ -41,9 +45,9 @@
         
       <code>
         <fieldgroup class="inline">
-          <button class="primary-button" type="submit">Save</button>
-          <button type="submit">Back</button>
-          <button class="cancel-button" type="submit">Cancel</button>
+          <button class="primary-button" type="submit">I'm a primary button we think people should look at first!</button>
+          <button type="submit">I'm just a button.</button>
+          <button class="cancel-button" type="submit">You might want to think twice before clicking this button.</button>
         </fieldgroup>
       <code>
 
