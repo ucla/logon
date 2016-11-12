@@ -34,7 +34,7 @@ function loadConfig() {
 
 const buildSeries = [
   clean,
-  gulp.parallel(pages, sass, javascript, copy, copyBower)
+  gulp.parallel(pages, sass, javascript, images, copy, copyBower)
 ].concat(NO_STYLEGUIDE ? [] : [styleGuide]);
 
 // Build the "dist" folder by running all of the below tasks
