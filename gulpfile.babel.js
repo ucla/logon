@@ -32,7 +32,7 @@ function loadConfig() {
   return yaml.load(ymlFile);
 }
 
-let buildSeries = [
+const buildSeries = [
   clean,
   gulp.parallel(pages, sass, javascript, copy, copyBower)
 ].concat(NO_STYLEGUIDE ? [] : [styleGuide]);
