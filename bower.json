@@ -16,14 +16,15 @@
   ],
   "dependencies": {
     "countdown": "^2.1.0",
-    "duo_php": "git@github.com:duosecurity/duo_php.git#master",
     "font-awesome": "^4.6.1",
-    "iframe-resizer": "^3.5.3",
     "motion-ui": "~1.1.0",
     "webshim": "~1.15.10",
     "sass-toolkit": "~2.9.0",
     "what-input": "^1.2.5",
     "zxcvbn": "~4.2.0"
+  },
+  "resolutions": {
+    "jquery": "2.1.4"
   },
   "private": true
 }

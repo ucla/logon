@@ -1,3 +1,4 @@
+/*eslint-env es6*/
 'use strict';
 
 import plugins  from 'gulp-load-plugins';
@@ -10,6 +11,8 @@ import sherpa   from 'style-sherpa';
 import yaml     from 'js-yaml';
 import fs       from 'fs';
 import access   from 'gulp-accessibility';
+import path     from 'path';
+
 // import arialinter  from 'gulp-arialinter';
 
 // Load all Gulp plugins into one variable
@@ -17,6 +20,9 @@ const $ = plugins();
 
 // Check for --production flag
 const PRODUCTION = !!(yargs.argv.production);
+
+const DESTINATION = yargs.argv.dest || 'dist';
+const NO_STYLEGUIDE = yargs.argv.no_styleguide;
 
 // Load settings from settings.yml
 const { COMPATIBILITY, PORT, UNCSS_OPTIONS, PATHS } = loadConfig();
@@ -26,9 +32,17 @@ function loadConfig() {
   return yaml.load(ymlFile);
 }
 
+const buildSeries = [
+  clean,
+  gulp.parallel(pages, sass, javascript, images, copy, copyBower)
+].concat(NO_STYLEGUIDE ? [] : [styleGuide]);
+
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
- gulp.series(clean, gulp.parallel(pages, sass, javascript, images, copy, copyBower), styleGuide));
+  gulp.series.apply(gulp.series, buildSeries));
+
+//gulp.task('build',
+// gulp.series(clean, gulp.parallel(pages, sass, javascript, images, copy, copyBower), styleGuide));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
@@ -37,19 +51,19 @@ gulp.task('default',
 // Delete the "dist" folder
 // This happens every time a build starts
 function clean(done) {
-  rimraf('dist', done);
+  rimraf(path.join(DESTINATION, '*'), done);
 }
 
 // Copy files out of the assets folder
 // This task skips over the "img", "js", and "scss" folders, which are parsed separately
 function copy() {
   return gulp.src(PATHS.assets)
-    .pipe(gulp.dest('dist/assets'));
+    .pipe(gulp.dest(`${DESTINATION}/assets`));
 }
 
 function copyBower() {
   return gulp.src(PATHS.bowerDirectLinked)
-    .pipe(gulp.dest('dist/assets/bower_components'));
+    .pipe(gulp.dest(`${DESTINATION}/assets/bower_components`));
 }
 
 // Copy page templates into finished HTML files
@@ -62,7 +76,7 @@ function pages() {
       data: 'src/data/',
       helpers: 'src/helpers/'
     }))
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest(DESTINATION));
 }
 
 // Load updated HTML templates and partials into Panini
@@ -74,7 +88,7 @@ function resetPages(done) {
 // Generate a style guide from the Markdown content and HTML template in styleguide/
 function styleGuide(done) {
   sherpa('src/styleguide/index.md', {
-    output: 'dist/styleguide.html',
+    output: `${DESTINATION}/styleguide.html`,
     template: 'src/styleguide/template.html'
   }, done);
 }
@@ -94,7 +108,7 @@ function sass() {
     .pipe($.if(PRODUCTION, $.uncss(UNCSS_OPTIONS)))
     .pipe($.if(PRODUCTION, $.cssnano()))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
-    .pipe(gulp.dest('dist/assets/css'))
+    .pipe(gulp.dest(`${DESTINATION}/assets/css`))
     .pipe(browser.reload({ stream: true }));
 }
 
@@ -109,7 +123,7 @@ function javascript() {
       .on('error', e => { console.log(e); })
     ))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
-    .pipe(gulp.dest('dist/assets/js'));
+    .pipe(gulp.dest(`${DESTINATION}/assets/js`));
 }
 
 // Copy images to the "dist" folder
@@ -119,13 +133,13 @@ function images() {
     .pipe($.if(PRODUCTION, $.imagemin({
       progressive: true
     })))
-    .pipe(gulp.dest('dist/assets/img'));
+    .pipe(gulp.dest(`${DESTINATION}/assets/img`));
 }
 
 // Start a server with BrowserSync to preview the site in
 function server(done) {
   browser.init({
-    server: 'dist', port: PORT
+    server: DESTINATION, port: PORT
   });
   done();
 }
