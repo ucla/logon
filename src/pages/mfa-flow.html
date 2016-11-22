@@ -1,0 +1,46 @@
+---
+layout: mfa-solo
+---
+
+<section class="mfa">
+  <div>
+
+    <article class="content">
+      <div>
+        
+        <h1>Link Your Smartphone</h1>
+        
+        <p>You will need to download the Duo Mobile app your smartphone in order to sync it with your UCLA Logon ID.<p>
+          
+        <p><strong>For iOS (iPhone):</strong><br>
+        Download Duo Mobile from <a href="#">iTunes</a></p>
+
+        <p><strong>For Android (Samsung, Google, etc):</strong><br>
+        Download Duo Mobile from <a href="#">Google Play</a></p>
+        
+        <form data-abide novalidate>
+          <label>
+            <input type="checkbox" required>I have installed Duo Mobile on my device.
+            <span class="form-error">You must have installed Duo Mobile to Continue.</span>
+          </label>
+
+          <button type="submit" class="primary-button">Sync Duo Mobile App</button> 
+          <button type="submit" class="cancel-button">Cancel</button>
+        </form>
+        
+        <p class="note-that">If you don’t remember your Apple ID to log into iTunes, Apple has a lookup/reset page. Google Play also has a sign-in help page.</p>
+  
+      </div>
+    </article>
+    
+    <aside class="supporting-info">
+      <div>
+        {{> timer}}
+        
+        {{> mfa-info}}
+      </div>
+    </aside>
+
+
+  </div>
+</section>

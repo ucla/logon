@@ -1,0 +1,41 @@
+<section class="page">
+  <div>
+
+  <header>
+    <h1>Hello there [insertusernamehere]</h1>
+  </header>
+
+  <article class="content">
+    <div>
+      <p>To reset your password, please answer the following question:</p>
+
+      <p><strong>[insert challenge question here]</strong></p>
+
+      <form action="/passreset.php" method="post" data-abide novalidate>
+
+        <fieldset>
+          <label for="response">Answer:
+            <input type="text" name="response" size="40" value="" id="response" placeholder="Rosebud" required>
+            <span class="form-error">Challenge responses must be between 8 and 128 characters long.</span>
+          </label>
+
+          <button class="primary-button" type="submit">Reset my password</button> <button type="submit" class="cancel-button">Cancel</button>
+
+          <p><span class="message-fail"><a href="reset-2-fail.html">(fail)</a></span> <span class="logon-success message-success"><a href="reset-2-success.html">(success)</a></span></p>
+
+        </fieldset>
+
+      </form>
+    </div>
+  </article>
+
+  <aside class="supporting-info">
+    <div>
+      
+      {{> reset-info }}
+      
+    </div>
+  </aside>
+
+  </div>
+</section>

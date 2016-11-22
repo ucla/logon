@@ -1,0 +1,93 @@
+html {
+	height: 100% !important;
+}
+
+body {
+  background-size: cover;
+  letter-spacing: $global-letter-spacing;
+	height: 100% !important;
+}
+
+// page header with logo and log in/out links etc
+.page-header {
+  width: 100%;
+}
+
+.page-header-contents {
+  margin: 0 auto;
+  @include grid-row();
+}
+
+.logo {
+  @include grid-column(6, 0);
+}
+
+// layout that applies to all pages
+.page, .home, .management, .mfa {
+  padding: $global-padding;
+  &> div {
+    @include grid-column-row(0);
+    padding-bottom: $global-padding;
+  }
+  header {
+    padding: $global-padding 0;
+    @include grid-column(12);
+  }
+}
+
+// column layout for content
+.page, .home, .management, .mfa {
+  .content {
+    @include grid-column(12);
+    @include breakpoint(multi-column) {
+      @include grid-column(8);
+    }
+  }
+  .supporting-info {
+    @include grid-column(12);
+    @include breakpoint(multi-column) {
+      @include grid-column(4);
+    }
+  }
+}
+
+// home page specific styling
+.home {
+  .alert-info {
+    @include grid-column(12);
+  }
+}
+
+.card {
+  @include grid-column(12);
+  @include breakpoint(multi-column) {
+    @include grid-column(4);
+  }
+}
+
+//single column pages
+.message {
+  background: $white;
+  border-radius: $global-radius;
+  padding: $global-padding 0;
+  @extend %content-styling;
+  @include grid-column(12);
+  @include breakpoint(multi-column) {
+    @include grid-column(8);
+    @include grid-column-position(2);
+  }
+}
+
+// footer height may need to change between applications, so keep outside framework
+.ucla-iam-footer {
+  height: $global-spacing * 4; // match bottom margin of .page, .home, .management
+	@include breakpoint(multi-column) {
+		height: $global-spacing * 2;
+	}
+}
+
+// align footer content somewhat
+.ucla-iam-footer-content {
+  padding-left: 1rem;
+  max-width: 1200px;
+}

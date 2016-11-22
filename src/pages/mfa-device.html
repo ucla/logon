@@ -1,0 +1,56 @@
+---
+layout: mfa-solo
+---
+
+<section class="mfa">
+  <div>
+  
+    <header>
+      <h1>MFA Active</h1>
+    </header>
+
+    <article class="content">
+      <div>
+        
+        <h2>What kind of phone do you have?</h2>
+        
+        <div class="device">
+          <span><a href="#"><img src="{{root}}assets/img/round.png" alt="landline"/></a></span>
+
+          <div class="device-info">
+            <h3>Landline</h3>
+            <form method="post" data-abide novalidate>
+              <fieldset>
+                <label>Phone Number:
+                  <input type="tel" placeholder="(310) 123-4567" required>
+                  <span class="form-error">That is not a valid phone number.</span>
+                </label>
+                <label>Label to remember this device:
+                  <input type="tel" placeholder="Sad Cubicle" required>
+                  <span class="form-error">You must enter a label for this device.</span>
+                </label>
+              </fieldset>
+                
+              <fieldgroup class="inline">
+                <button class="primary-button" type="submit">Save</button>
+                <button type="submit">Back</button>
+                <button class="cancel-button" type="submit">Cancel</button>
+              </fieldgroup>
+            </form>  
+          </div>
+
+        </div>
+
+      </div>
+    </article>
+
+    <aside class="supporting-info">
+      <div>
+        {{> timer}}
+        
+        {{> mfa-info}}
+      </div>
+    </aside>
+
+  </div>
+</section>

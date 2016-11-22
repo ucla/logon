@@ -1,0 +1,39 @@
+<section class="page">
+  <div>
+
+    <header>
+      <h1>Forgot your password?</h1>
+    </header>
+
+    <article class="content">
+      <div>
+        <p>To reset your password, enter your UCLA Logon ID below then answer your challenge question.</p>
+  
+        <form action="/passreset.php" method="post" data-abide novalidate>
+  
+          <fieldset>
+            <label class="help" for="uid">UCLA Logon ID
+            <input name="uid" type="text" pattern="[0-9]{9}" id="uid" placeholder="janebruin42" autofocus required>
+            <span class="form-error">Your UCLA ID number is exactly 9 numbers long.</span></label>
+  
+            <button class="primary-button" type="submit">Check for security challenge</button> <button type="submit" class="cancel-button">Cancel</button>
+          </fieldset>
+  
+          <p><span class="message-fail"><a href="reset-fail.html">(fail)</a></span> <span class="logon-success message-success"><a href="reset-2.html">(success)</a></span></p>
+  
+          <div id="ajax-container"></div>
+  
+        </form>
+  
+        <p>tip: If you can't remember your UCLA Logon ID, go <a href="lookup.html">look it up</a>!</p>
+      </div>
+    </article>
+  
+    <aside class="supporting-info">
+      <div>
+        {{> reset-info }}
+      </div>
+    </aside>
+
+  </div>
+</section>

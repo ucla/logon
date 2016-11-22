@@ -1,0 +1,282 @@
+/////////////////////////////////////////
+///          BITS & PIECES
+/////////////////////////////////////////
+
+.line-thru {
+  @include line-thru();
+  margin: -($global-spacing / 2) 0 0;
+}
+
+.menu a {
+  font-weight: $global-weight-bold;
+}
+
+.management .alert-info i {
+  left: 1.25rem;
+}
+
+ul.listless {
+  padding-left: $global-spacing;
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+  li li {
+    font-size: $helptext-font-size;
+  }
+}
+
+section > h1 {
+  @include grid-column-row();
+  margin-bottom: $global-margin * 1.5;
+}
+
+.home .menu a {
+  padding-left: 0;
+}
+
+/////////////////////////////////////////
+///             HEADER
+/////////////////////////////////////////
+
+// logo, top bar, login/out
+.page-header-contents {
+	display: block;
+  padding-top: $global-spacing;
+	background: rgba($black, .6) ;
+}
+
+#nav-menu {
+  width: 100%;
+  background: linear-gradient($nav-background, $nav-background-alt);
+  border-bottom: 3px solid $ucla-blue;
+  a {
+    color: $white;
+  }
+  a:hover {
+    color: $ucla-gold;
+  }
+}
+
+/////////////////////////////////////////
+///         OVERALL CONTENT 
+/////////////////////////////////////////
+
+// basic styles applied to all major chunks of content
+%content-styling {
+  margin-top: $global-spacing * 2;
+  margin-bottom: $global-spacing * 4;
+  background: $lighter-gray;
+}
+
+// need nested containers due to foundation's grid system
+.management > div, .page > div, .home > div, .message > div, .mfa > div {
+  @extend %content-styling;
+}
+
+// need nested containers due to foundation's grid system
+.supporting-info > div {
+  background: $white;
+  padding: $global-spacing;
+  border-radius: $global-radius;
+  p, li {
+    font-size: $small-font-size;
+  }
+  h1 {
+    background: $ucla-gold;
+    color: $ucla-blue-dark;
+    padding: $global-padding / 2;
+    display: inline-block;
+    margin-left: -$global-margin * 1.8;
+    font-size: rem-calc(nested-map-get($header-sizes, large-type, h5));
+  }
+  h2 {
+    font-size: rem-calc(nested-map-get($header-sizes, large-type, h6));
+  }
+}
+
+/////////////////////////////////////////
+///               MFA
+/////////////////////////////////////////
+
+.mfa-method {
+  display: block;
+  background: $white;
+  padding: $global-padding;
+  margin-bottom: $global-margin;
+}
+
+/////////////////////////////////////////
+///      CREATE ACCOUNT PROGRESS
+/////////////////////////////////////////
+
+#form-step-bar {
+  margin: $global-margin 0;
+  padding: 0;
+  display: block;
+  position: relative;
+  max-width: 25rem;
+  .form-step-todo {
+    color: $medium-gray;
+  }
+  .form-step-doing {
+    color: $primary-color-safe; 
+    background: $lighter-gray;
+  }
+  .form-step-done {
+    color: $dark-gray;
+  }
+}
+
+#form-step-bar li {
+  display: inline-block;
+  text-align: center;
+  padding: 0;
+  border-radius: 99rem;
+  width: 32%;
+  line-height: $global-spacing * 2;
+  font-size: $small-font-size;
+  &:nth-child(1)::before {
+    position: absolute;
+    font-size: $global-font-size / 2;
+    content: "Step 1";
+    top: -$global-margin;
+  }
+  &:nth-child(2)::before {
+    position: absolute;
+    font-size: $global-font-size / 2;
+    content: "Step 2";
+    top: -$global-margin;
+  }
+  &:nth-child(3)::before {
+    position: absolute;
+    font-size: $global-font-size / 2;
+    content: "Step 3";
+    top: -$global-margin;
+  }
+}
+
+/////////////////////////////////////////
+///           ZXCVBN Meter
+/////////////////////////////////////////
+
+#pass1 {
+  margin-bottom: 0.5rem;
+
+}
+
+meter {
+  appearance: none;
+  padding: 0;
+  width: 98.5%;
+  display: block;
+  margin: 0 0 $global-margin;
+  height: $global-margin / 6;
+  vertical-align: $global-margin;
+  border-bottom-left-radius: $global-radius;
+  border-bottom-right-radius: $global-radius;
+  /* Applicable only to Firefox */
+  background: none;
+  background-color: transparent;
+  @include breakpoint(multi-column) {
+    max-width: 28rem;
+  }
+}
+
+#password-strength-text .help-text {
+  display: inline-block;
+  padding: ($global-margin / 2) 0 $global-margin;
+}
+
+meter::-webkit-meter-bar {
+  background: none;
+  background-color: transparent;
+}
+
+/* Webkit based browsers */
+meter[value="1"]::-webkit-meter-optimum-value { background: $alert-color; }
+meter[value="2"]::-webkit-meter-optimum-value { background: $warning-color; }
+meter[value="3"]::-webkit-meter-optimum-value { background: $success-color; }
+meter[value="4"]::-webkit-meter-optimum-value { background: $success-color; }
+
+/* Gecko based browsers */
+meter[value="1"]::-moz-meter-bar { background: $alert-color; }
+meter[value="2"]::-moz-meter-bar { background: $warning-color; }
+meter[value="3"]::-moz-meter-bar { background: $success-color; }
+meter[value="4"]::-moz-meter-bar { background: $success-color; }
+
+/////////////////////////////////////////
+///        TIMER & COUNTDOWN
+/////////////////////////////////////////
+
+#timeout {
+  font-size: $small-font-size;
+  margin: $global-spacing 0;
+  width: 100%;
+}
+
+/* counter */
+#counter {
+  font-weight: $global-weight-bold;
+}
+
+/* countdown bar */
+#bar {
+  background: $light-gray;
+  border: solid 1px $medium-gray;
+  height: rem-calc(13);
+  width: 100%;
+  border-radius: $global-radius;
+}
+
+#barfill {
+  background: $ucla-blue;
+  border: solid 1px $ucla-blue;
+  border-radius: $global-radius;
+  height: rem-calc(13);
+  width: 0;
+}
+
+/////////////////////////////////////////
+///            CARDS
+/////////////////////////////////////////
+
+// basic card styling
+.card {
+  &> div {
+    background: $lighter-gray;
+    margin-bottom: $global-margin;
+    border-radius: $global-radius;
+  }
+}
+
+// list of links in card/buckets
+dl.info-list {
+  @include grid-row();
+  background: $white;
+  border-radius: $global-radius;
+  dt {
+    padding: ($global-padding * 1.25) 0;
+    margin-bottom: 0;
+    @include grid-column(12);
+    @include breakpoint(multi-column) {
+      @include grid-column(4);
+      font-size: $helptext-font-size;
+    }
+    &:nth-of-type(even) {
+      border-top: 1px solid $light-gray;
+      border-bottom: 1px solid $light-gray;
+      padding-bottom: $global-padding * 1.55;
+    }
+  }
+  dd {
+    padding: ($global-padding * 1.25) 0;
+    @include grid-column(12);
+    @include breakpoint(multi-column) {
+      @include grid-column(8);
+    }
+    &:nth-of-type(even) {
+      border-top: 1px solid $light-gray;
+      border-bottom: 1px solid $light-gray;
+    }
+  }
+}

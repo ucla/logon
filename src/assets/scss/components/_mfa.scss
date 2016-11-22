@@ -1,0 +1,55 @@
+.mfa .supporting-info {
+  display: none;
+  @include breakpoint(multi-column) {
+    display: block;
+  }
+}
+
+code, kbd, pre, samp {
+  font-size: $helptext-font-size;
+}
+
+fieldgroup.inline {
+  @include button-group-expand();
+}
+
+.get-help {
+  display: block;
+  @include breakpoint(multi-column) {
+    display: none;
+  }
+  margin-top: $global-margin;
+  background: $nav-background;
+  p {
+    margin-bottom: 0;
+  }
+  a {
+    color: $white;
+    font-weight: $global-weight-bold;
+    padding: $global-padding * .5;
+    display: block;
+  }
+}
+
+.note-that {
+  font-size: $helptext-font-size;
+}
+
+.device {
+  background: $white;
+  padding: $global-padding;
+  margin-bottom: $global-margin;
+  @include grid-row();
+  img {
+    @include grid-column(3);
+    @include breakpoint(large-type) {
+      @include grid-column(2);
+    }
+  }
+  .device-info {
+    @include grid-column(9);
+    @include breakpoint(large-type) {
+      @include grid-column(10);
+    }
+  }
+}
