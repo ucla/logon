@@ -17,6 +17,7 @@
   "dependencies": {
     "countdown": "^2.1.0",
     "font-awesome": "^4.6.1",
+    "foundation-sites": "ucla/foundation-sites#61e6494f8b8fd1af67729a726714b45ccc394d7e",
     "motion-ui": "~1.1.0",
     "webshim": "~1.15.10",
     "sass-toolkit": "~2.9.0",
@@ -24,7 +25,9 @@
     "zxcvbn": "~4.2.0"
   },
   "resolutions": {
-    "jquery": "2.1.4"
+    "jquery": "~2.2.0",
+    "motion-ui": "~1.2.2",
+    "what-input": "~2.0.0"
   },
   "private": true
 }
