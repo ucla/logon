@@ -2,13 +2,42 @@
 layout: mfa-solo
 ---
 
+<div class="banner-alert">
+  <p>Error Updating Device.</p>
+  <aside><a href="#">X</a></aside>
+</div>
+
 <section class="mfa">
   <div>
     
     <article class="content">
       <div>
         
-        <h1>MFA Inactive</h1>
+        <h1>MFA Active</h1>
+        
+        <h2>Linked Devices:</h2>
+        
+        <div class="device">
+          <span><a href="mfa-device.html"><img src="{{root}}assets/img/round-blue.png" alt="smartphone"/></a></span>
+          <div class="device-info">
+            <h3><a href="mfa-device.html">iPhone 7</a></h3>
+            <p>
+              Smartphone <br>
+              (310) 123-4567
+            </p>
+          </div>
+        </div>
+        
+        <div class="device">
+          <span><a href="mfa-device.html"><img src="{{root}}assets/img/round-blue.png" alt="landline"/></a></span>
+          <div class="device-info">
+            <h3><a href="mfa-device.html">Sad Cubicle</a></h3>
+            <p>
+              Landline <br>
+              (310) 345-6789
+            </p>
+          </div>
+        </div>
         
         <h2>Add a Device:</h2>
         
@@ -44,11 +73,11 @@ layout: mfa-solo
             <p>Method: Phone Call.</p>
           </div>
         </div>
-        
+                
         <div class="device">
           <span><a href="#"><img src="{{root}}assets/img/round.png" alt="u2f token"/></a></span>
           <div class="device-info">
-            <h3><a href="#">U2F Token<a href="#"></h3>
+            <h3><a href="#">U2F Token</a></h3>
             <p>Method: Token.</p>
           </div>
         </div>
