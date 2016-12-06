@@ -54,13 +54,15 @@ fieldgroup.inline {
   }
 }
 
-%notification-banner {
+@mixin notification-banner($background: $ucla-blue, $color: $white) {
   position: absolute;
   top: 0;
   right: 0;
   @include grid-row();
   width: 100%;
   height: $global-spacing * 3;
+  background: $background;
+  color: $color;
   padding: $global-padding;
   p {
     @include grid-column(11);
@@ -79,13 +81,9 @@ fieldgroup.inline {
 }
 
 .banner-success {
-  @extend %notification-banner;
-  background: $success-color;
-  color: $white;
+  @include notification-banner(#0ccf70)
 }
 
 .banner-alert {
-  @extend %notification-banner;
-  background: $alert-color;
-  color: $white;
+  @include notification-banner($alert-color)
 }
