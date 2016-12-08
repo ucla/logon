@@ -11,7 +11,7 @@ code, kbd, pre, samp {
 
 fieldgroup.inline {
   @include button-group-expand();
-}
+} 
 
 .get-help {
   display: block;
@@ -52,4 +52,38 @@ fieldgroup.inline {
       @include grid-column(10);
     }
   }
+}
+
+@mixin notification-banner($background: $ucla-blue, $color: $white) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  @include grid-row();
+  width: 100%;
+  height: $global-spacing * 3;
+  background: $background;
+  color: $color;
+  padding: $global-padding;
+  p {
+    @include grid-column(11);
+    font-size: $helptext-font-size;
+    @include breakpoint(large-type) {
+      font-size: $global-font-size;
+    }
+    font-weight: $global-weight-bold;
+  }
+  aside {
+    @include grid-column(1);
+    a {
+      color: $white;
+    }
+  }
+}
+
+.banner-success {
+  @include notification-banner(#0ccf70)
+}
+
+.banner-alert {
+  @include notification-banner($alert-color)
 }
