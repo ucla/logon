@@ -1,5 +1,8 @@
 .mfa .supporting-info {
   display: none;
+  &.show {
+    display: block;
+  }
   @include breakpoint(multi-column) {
     display: block;
   }
