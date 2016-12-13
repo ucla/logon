@@ -57,8 +57,15 @@ fieldgroup.inline {
   }
 }
 
+.device-image svg {
+  fill: $medium-gray;
+  &:hover {
+    fill: $anchor-color;
+  }
+}
+
 .device-linked svg {
-  fill: $ucla-blue;
+  fill: $black;
 }
 
 @mixin notification-banner($background: $ucla-blue, $color: $white) {
