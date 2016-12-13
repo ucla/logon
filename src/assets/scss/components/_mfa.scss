@@ -43,7 +43,7 @@ fieldgroup.inline {
   padding: $global-padding;
   margin-bottom: $global-margin;
   @include grid-row();
-  .device-image {
+  .device-image, .device-image-linked {
     @include grid-column(3);
     @include breakpoint(large-type) {
       @include grid-column(2);
@@ -59,13 +59,16 @@ fieldgroup.inline {
 
 .device-image svg {
   fill: $medium-gray;
+}
+
+.device-image-linked svg {
+  fill: $black;
+}
+
+.device-image-linked a svg, .device-image a svg {
   &:hover {
     fill: $anchor-color;
   }
-}
-
-.device-linked svg {
-  fill: $black;
 }
 
 @mixin notification-banner($background: $ucla-blue, $color: $white) {
