@@ -1,10 +1,8 @@
 .mfa .supporting-info {
   display: none;
-
   &.show {
-      display: block;
+    display: block;
   }
-
   @include breakpoint(multi-column) {
     display: block;
   }
@@ -45,7 +43,7 @@ fieldgroup.inline {
   padding: $global-padding;
   margin-bottom: $global-margin;
   @include grid-row();
-  img {
+  .device-image, .device-image-linked {
     @include grid-column(3);
     @include breakpoint(large-type) {
       @include grid-column(2);
@@ -56,6 +54,20 @@ fieldgroup.inline {
     @include breakpoint(large-type) {
       @include grid-column(10);
     }
+  }
+}
+
+.device-image svg {
+  fill: $medium-gray;
+}
+
+.device-image-linked svg {
+  fill: $black;
+}
+
+.device-image-linked a svg, .device-image a svg {
+  &:hover {
+    fill: $anchor-color;
   }
 }
 
