@@ -1,0 +1,9 @@
+// TODO add in duplicate number id verification page
+
+// TODO wrong OTP / timed out?
+
+// TODO wrapper instructions: supported tokens, desktop only
+
+// OPTIMIZE send a sms with url on mobile?
+
+// TODO help text
