@@ -87,10 +87,10 @@ section > h1 {
     padding: $global-padding / 2;
     display: inline-block;
     margin-left: -$global-margin * 1.8;
-    font-size: rem-calc(nested-map-get($header-sizes, large-type, h5));
+    font-size: rem-calc(map-deep-get($header-styles, large-type, h5, font-size));
   }
   h2 {
-    font-size: rem-calc(nested-map-get($header-sizes, large-type, h6));
+    font-size: rem-calc(map-deep-get($header-styles, large-type, h6, font-size));
   }
 }
 

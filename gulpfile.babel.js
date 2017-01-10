@@ -1,4 +1,3 @@
-/*eslint-env es6*/
 'use strict';
 
 import plugins  from 'gulp-load-plugins';
@@ -10,19 +9,12 @@ import rimraf   from 'rimraf';
 import sherpa   from 'style-sherpa';
 import yaml     from 'js-yaml';
 import fs       from 'fs';
-import access   from 'gulp-accessibility';
-import path     from 'path';
-
-// import arialinter  from 'gulp-arialinter';
 
 // Load all Gulp plugins into one variable
 const $ = plugins();
 
 // Check for --production flag
 const PRODUCTION = !!(yargs.argv.production);
-
-const DESTINATION = yargs.argv.dest || 'dist';
-const NO_STYLEGUIDE = yargs.argv.no_styleguide;
 
 // Load settings from settings.yml
 const { COMPATIBILITY, PORT, UNCSS_OPTIONS, PATHS } = loadConfig();
@@ -32,17 +24,9 @@ function loadConfig() {
   return yaml.load(ymlFile);
 }
 
-const buildSeries = [
-  clean,
-  gulp.parallel(pages, sass, javascript, images, copy, copyBower)
-].concat(NO_STYLEGUIDE ? [] : [styleGuide]);
-
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
-  gulp.series.apply(gulp.series, buildSeries));
-
-//gulp.task('build',
-// gulp.series(clean, gulp.parallel(pages, sass, javascript, images, copy, copyBower), styleGuide));
+ gulp.series(clean, gulp.parallel(pages, sass, javascript, images, copy), styleGuide));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
@@ -51,19 +35,14 @@ gulp.task('default',
 // Delete the "dist" folder
 // This happens every time a build starts
 function clean(done) {
-  rimraf(path.join(DESTINATION, '*'), done);
+  rimraf(PATHS.dist, done);
 }
 
 // Copy files out of the assets folder
 // This task skips over the "img", "js", and "scss" folders, which are parsed separately
 function copy() {
   return gulp.src(PATHS.assets)
-    .pipe(gulp.dest(`${DESTINATION}/assets`));
-}
-
-function copyBower() {
-  return gulp.src(PATHS.bowerDirectLinked)
-    .pipe(gulp.dest(`${DESTINATION}/assets/bower_components`));
+    .pipe(gulp.dest(PATHS.dist + '/assets'));
 }
 
 // Copy page templates into finished HTML files
@@ -76,7 +55,7 @@ function pages() {
       data: 'src/data/',
       helpers: 'src/helpers/'
     }))
-    .pipe(gulp.dest(DESTINATION));
+    .pipe(gulp.dest(PATHS.dist));
 }
 
 // Load updated HTML templates and partials into Panini
@@ -88,7 +67,7 @@ function resetPages(done) {
 // Generate a style guide from the Markdown content and HTML template in styleguide/
 function styleGuide(done) {
   sherpa('src/styleguide/index.md', {
-    output: `${DESTINATION}/styleguide.html`,
+    output: PATHS.dist + '/styleguide.html',
     template: 'src/styleguide/template.html'
   }, done);
 }
@@ -105,10 +84,11 @@ function sass() {
     .pipe($.autoprefixer({
       browsers: COMPATIBILITY
     }))
-    .pipe($.if(PRODUCTION, $.uncss(UNCSS_OPTIONS)))
+    // Comment in the pipe below to run UnCSS in production
+    //.pipe($.if(PRODUCTION, $.uncss(UNCSS_OPTIONS)))
     .pipe($.if(PRODUCTION, $.cssnano()))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
-    .pipe(gulp.dest(`${DESTINATION}/assets/css`))
+    .pipe(gulp.dest(PATHS.dist + '/assets/css'))
     .pipe(browser.reload({ stream: true }));
 }
 
@@ -117,13 +97,13 @@ function sass() {
 function javascript() {
   return gulp.src(PATHS.javascript)
     .pipe($.sourcemaps.init())
-    .pipe($.babel())
+    .pipe($.babel({ignore: ['what-input.js']}))
     .pipe($.concat('app.js'))
     .pipe($.if(PRODUCTION, $.uglify()
       .on('error', e => { console.log(e); })
     ))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
-    .pipe(gulp.dest(`${DESTINATION}/assets/js`));
+    .pipe(gulp.dest(PATHS.dist + '/assets/js'));
 }
 
 // Copy images to the "dist" folder
@@ -133,14 +113,20 @@ function images() {
     .pipe($.if(PRODUCTION, $.imagemin({
       progressive: true
     })))
-    .pipe(gulp.dest(`${DESTINATION}/assets/img`));
+    .pipe(gulp.dest(PATHS.dist + '/assets/img'));
 }
 
 // Start a server with BrowserSync to preview the site in
 function server(done) {
   browser.init({
-    server: DESTINATION, port: PORT
+    server: PATHS.dist, port: PORT
   });
+  done();
+}
+
+// Reload the browser with BrowserSync
+function reload(done) {
+  browser.reload();
   done();
 }
 

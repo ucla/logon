@@ -17,6 +17,8 @@ UNCSS_OPTIONS:
 
 # Gulp will reference these paths when it copies files
 PATHS:
+  # Path to dist folder
+  dist: "dist"
   # Paths to static assets that aren't images, CSS, or JavaScript
   assets:
     - "src/assets/**/*"
@@ -25,16 +27,16 @@ PATHS:
   sass:
     - "bower_components/foundation-sites/scss"
     - "bower_components/motion-ui/src"
+#    - "bower_components/singularity/stylesheets"
+#    - "bower_components/breakpoint/stylesheets"
     - "bower_components/sass-toolkit/stylesheets"
   # Paths to (JS) assets that need to be loaded separately
   bowerDirectLinked:
-    # - "bower_components/duo_php/js/Duo-Web-v2.min.js"
     # - "bower_components/webshim/js-webshim/minified/**/*"
-    # - "bower_components/iframe-resizer/js/iframeResizer.min.js"
     - "bower_components/zxcvbn/dist/zxcvbn.js"
-  # Paths to JavaScript libraries, which are compined into one file
+  # Paths to JavaScript libraries, which are combined into one file
   javascript:
-    # Libraries requried by Foundation
+    # Libraries required by Foundation
     - "bower_components/jquery/dist/jquery.js"
     - "bower_components/what-input/what-input.js"
     # Core Foundation files
@@ -61,6 +63,7 @@ PATHS:
     # - "bower_components/foundation-sites/js/foundation.tabs.js"
     - "bower_components/foundation-sites/js/foundation.toggler.js"
     # - "bower_components/foundation-sites/js/foundation.tooltip.js"
+    # - "bower_components/foundation-sites/js/foundation.zf.responsiveAccordionTabs.js"
     # Paths to your own project code are here
     # - "bower_components/countdown/dest/jquery.countdown.js"
     - "src/assets/js/!(app).js"

@@ -16,15 +16,13 @@
   ],
   "dependencies": {
     "countdown": "^2.1.0",
-    "font-awesome": "^4.6.1",
-    "motion-ui": "~1.1.0",
-    "webshim": "~1.15.10",
-    "sass-toolkit": "~2.9.0",
+    "motion-ui": "~1.2.2",
+    "sass-toolkit": "~2.10.2",
     "what-input": "^1.2.5",
     "zxcvbn": "~4.2.0"
   },
   "resolutions": {
-    "jquery": "2.1.4"
+    "jquery": ">= 1.8.2"
   },
   "private": true
 }
