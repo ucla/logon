@@ -55,6 +55,9 @@ fieldgroup.inline {
       @include grid-column(10);
     }
   }
+  .note-that {
+    margin-bottom: 0;
+  }
 }
 
 .device-image svg {
