@@ -104,3 +104,7 @@ fieldgroup.inline {
 .banner-alert {
   @include notification-banner($alert-color)
 }
+
+.app-source {
+  max-width: 135px;
+}
