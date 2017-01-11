@@ -111,3 +111,8 @@ fieldgroup.inline {
 .app-source {
   max-width: 135px;
 }
+
+// spinner for the redirect
+#loading-spinner {
+  height: $global-spacing * 6;
+}

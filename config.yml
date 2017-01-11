@@ -66,5 +66,6 @@ PATHS:
     # - "bower_components/foundation-sites/js/foundation.zf.responsiveAccordionTabs.js"
     # Paths to your own project code are here
     # - "bower_components/countdown/dest/jquery.countdown.js"
+    - "bower_components/spin.js/spin.js"
     - "src/assets/js/!(app).js"
     - "src/assets/js/app.js"
