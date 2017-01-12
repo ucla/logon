@@ -75,9 +75,10 @@ fieldgroup.inline {
 }
 
 @mixin notification-banner($background: $ucla-blue, $color: $white) {
-  position: absolute;
+  position: fixed;
   top: 0;
-  right: 0;
+  left: 50%;
+  transform: translateX(-50%);
   @include grid-row();
   width: 100%;
   height: $global-spacing * 3;
