@@ -4,6 +4,7 @@ import plugins  from 'gulp-load-plugins';
 import yargs    from 'yargs';
 import browser  from 'browser-sync';
 import gulp     from 'gulp';
+import gutil    from 'gulp-util';
 import panini   from 'panini';
 import rimraf   from 'rimraf';
 import sherpa   from 'style-sherpa';
@@ -15,6 +16,8 @@ const $ = plugins();
 
 // Check for --production flag
 const PRODUCTION = !!(yargs.argv.production);
+const NO_STYLEGUIDE = !!(yargs.argv.no_styleguide);
+const NO_UNCSS = !!(yargs.argv.no_uncss);
 
 // Load settings from settings.yml
 const { COMPATIBILITY, PORT, UNCSS_OPTIONS, PATHS } = loadConfig();
@@ -66,10 +69,17 @@ function resetPages(done) {
 
 // Generate a style guide from the Markdown content and HTML template in styleguide/
 function styleGuide(done) {
-  sherpa('src/styleguide/index.md', {
-    output: PATHS.dist + '/styleguide.html',
-    template: 'src/styleguide/template.html'
-  }, done);
+
+  if (NO_STYLEGUIDE) {
+    gutil.log(gutil.colors.yellow('--no_styleguide. Skipping...'));
+    done();
+  } else {
+    sherpa('src/styleguide/index.md', {
+      output: PATHS.dist + '/styleguide.html',
+      template: 'src/styleguide/template.html'
+    }, done);
+  }
+
 }
 
 // Compile Sass into CSS
@@ -84,8 +94,7 @@ function sass() {
     .pipe($.autoprefixer({
       browsers: COMPATIBILITY
     }))
-    // Comment in the pipe below to run UnCSS in production
-    //.pipe($.if(PRODUCTION, $.uncss(UNCSS_OPTIONS)))
+    .pipe($.if(PRODUCTION && !NO_UNCSS, $.uncss(UNCSS_OPTIONS)))
     .pipe($.if(PRODUCTION, $.cssnano()))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest(PATHS.dist + '/assets/css'))
