@@ -15,6 +15,7 @@
     "tests"
   ],
   "dependencies": {
+    "foundation-sites": "ucla/foundation-sites#43c2a622c85146a1c01478b65d3ffd7c0c4149b2",
     "countdown": "^2.1.0",
     "motion-ui": "~1.2.2",
     "sass-toolkit": "~2.10.2",
@@ -22,7 +23,8 @@
     "zxcvbn": "~4.2.0"
   },
   "resolutions": {
-    "jquery": ">= 1.8.2"
+    "jquery": "1.12.4",
+    "what-input": "1.2.5"
   },
   "private": true,
   "devDependencies": {
