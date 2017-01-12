@@ -15,19 +15,19 @@
     "tests"
   ],
   "dependencies": {
+    "foundation-sites": "ucla/foundation-sites#43c2a622c85146a1c01478b65d3ffd7c0c4149b2",
     "countdown": "^2.1.0",
-    "font-awesome": "^4.6.1",
-    "foundation-sites": "ucla/foundation-sites#61e6494f8b8fd1af67729a726714b45ccc394d7e",
-    "motion-ui": "~1.1.0",
-    "webshim": "~1.15.10",
-    "sass-toolkit": "~2.9.0",
+    "motion-ui": "~1.2.2",
+    "sass-toolkit": "~2.10.2",
     "what-input": "^1.2.5",
     "zxcvbn": "~4.2.0"
   },
   "resolutions": {
-    "jquery": "~2.2.0",
-    "motion-ui": "~1.2.2",
-    "what-input": "~2.0.0"
+    "jquery": "1.12.4",
+    "what-input": "1.2.5"
   },
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "spin.js": "^2.3.2"
+  }
 }
