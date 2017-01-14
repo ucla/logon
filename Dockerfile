@@ -21,6 +21,8 @@ RUN npm install && bower --allow-root install && node_modules/.bin/gulp build --
 
 CMD ["node_modules/.bin/gulp", "--dest=/var/templates/dist", "--no_styleguide", "--no_uncss"]
 
+EXPOSE 8000
+
 
 
 
