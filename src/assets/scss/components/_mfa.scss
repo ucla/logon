@@ -74,6 +74,12 @@ fieldgroup.inline {
   }
 }
 
+.mfa-inactive {
+  background: $light-gray;
+  border-radius: 3px;
+  box-shadow: inset 0px 0px 10px 0px $medium-gray;
+}
+
 @mixin notification-banner($background: $ucla-blue, $color: $white) {
   position: fixed;
   top: 0;
