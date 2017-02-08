@@ -92,6 +92,18 @@ fieldgroup.inline {
   box-shadow: inset 0px 0px 10px 0px $medium-gray;
 }
 
+#additional-options {
+  display: none;
+}
+
+#additional-options-toggle {
+  color: $anchor-color;
+  &:hover {
+    color: $anchor-color-hover;
+    cursor: pointer;
+  }
+}
+
 @mixin notification-banner($background: $ucla-blue, $color: $white) {
   position: fixed;
   top: 0;
