@@ -74,16 +74,40 @@ fieldgroup.inline {
   fill: $black;
 }
 
-.device-image-linked a svg, .device-image a svg {
+.device-editable {
+  @extend .device;
+  .device-info p {
+    color: $body-font-color;
+  }
+  transition: all .2s ease-in-out;
   &:hover {
-    fill: $anchor-color;
+    transform: scale(1.05);
+    .device-image-linked svg, .device-image svg {
+      fill: $anchor-color;
+    }
+    .device-info p {
+      color: $anchor-color-hover;
+    }
   }
 }
 
 .mfa-inactive {
+  @extend .device;
   background: $light-gray;
   border-radius: 3px;
   box-shadow: inset 0px 0px 10px 0px $medium-gray;
+}
+
+#additional-options {
+  display: none;
+}
+
+#additional-options-toggle {
+  color: $anchor-color;
+  &:hover {
+    color: $anchor-color-hover;
+    cursor: pointer;
+  }
 }
 
 @mixin notification-banner($background: $ucla-blue, $color: $white) {
