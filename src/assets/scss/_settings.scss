@@ -84,7 +84,7 @@ $global-padding: $global-spacing;
 $global-weight-light: 300;
 $global-weight-normal: 400;
 $global-weight-bold: 600;
-$global-radius: 3px;
+$global-radius: 5px;
 $global-text-direction: ltr;
 $global-flexbox: false;
 $print-transparent-backgrounds: true;
@@ -166,7 +166,7 @@ $code-padding: rem-calc(2 5 1);
 $anchor-color: $ucla-its-link-color;
 $anchor-color-hover: #193747;
 $anchor-text-decoration: none;
-$anchor-text-decoration-hover: none;
+$anchor-text-decoration-hover: underline;
 $hr-width: $global-width;
 $hr-border: 1px solid $body-font-color;
 $hr-margin: rem-calc(8) auto;
@@ -263,8 +263,8 @@ $breadcrumbs-item-slash: true;
 // 11. Button
 // ----------
 
-$button-padding: .85rem $global-padding;
-$button-margin: 0 0 $global-margin 0;
+$button-padding: .625rem ($global-padding * 1.25);
+$button-margin: 0 $global-margin $global-margin 0;
 $button-fill: solid;
 $button-background: transparent;
 $button-background-hover: $ucla-its-primary-button-color;
@@ -272,8 +272,8 @@ $button-color: $anchor-color;
 $button-color-alt: $anchor-color;
 $button-radius: $global-radius;
 $button-sizes: (
-  small: 0.6rem,
-  multi-column: 0.9rem,
+  small: 0.875rem,
+  multi-column: 1rem,
   wide: 1.25rem,
 );
 $button-palette: $foundation-palette;
