@@ -94,7 +94,7 @@ fieldgroup.inline {
 .mfa-inactive {
   @extend .device;
   background: $light-gray;
-  border-radius: 3px;
+  border-radius: $global-radius;
   box-shadow: inset 0px 0px 10px 0px $medium-gray;
 }
 
@@ -106,6 +106,7 @@ fieldgroup.inline {
   color: $anchor-color;
   &:hover {
     color: $anchor-color-hover;
+    text-decoration: underline;
     cursor: pointer;
   }
 }
@@ -121,28 +122,27 @@ fieldgroup.inline {
   background: $background;
   color: $color;
   padding: $global-padding;
+    font-weight: $global-weight-bold;
   p {
     @include grid-column(11);
     font-size: $helptext-font-size;
     @include breakpoint(large-type) {
       font-size: $global-font-size;
     }
-    font-weight: $global-weight-bold;
   }
   aside {
     @include grid-column(1);
-    a {
-      color: $white;
-    }
+    text-align: right;
+    cursor: pointer;
   }
 }
 
 .banner-success {
-  @include notification-banner(#0ccf70)
+  @include notification-banner(#0ccf70);
 }
 
 .banner-alert {
-  @include notification-banner($alert-color)
+  @include notification-banner($alert-color);
 }
 
 .app-source {

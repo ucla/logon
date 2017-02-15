@@ -16,10 +16,23 @@ body {
 .page-header-contents {
   margin: 0 auto;
   @include grid-row();
+  a {
+    color: $white;
+    &:hover {
+      color: $ucla-yellow;
+      text-decoration: none;
+    }
+  }
 }
 
 .logo {
-  @include grid-column(6, 0);
+  @include grid-column(8);
+}
+
+.logout {
+  @include grid-column(4);
+  text-align: right;
+  margin-top: $global-margin * 2.2;
 }
 
 // layout that applies to all pages
