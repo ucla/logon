@@ -116,28 +116,27 @@ fieldgroup.inline {
   background: $background;
   color: $color;
   padding: $global-padding;
+    font-weight: $global-weight-bold;
   p {
     @include grid-column(11);
     font-size: $helptext-font-size;
     @include breakpoint(large-type) {
       font-size: $global-font-size;
     }
-    font-weight: $global-weight-bold;
   }
   aside {
     @include grid-column(1);
-    a {
-      color: $white;
-    }
+    text-align: right;
+    cursor: pointer;
   }
 }
 
 .banner-success {
-  @include notification-banner(#0ccf70)
+  @include notification-banner(#0ccf70);
 }
 
 .banner-alert {
-  @include notification-banner($alert-color)
+  @include notification-banner($alert-color);
 }
 
 .app-source {
