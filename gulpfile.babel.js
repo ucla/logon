@@ -10,6 +10,7 @@ import rimraf   from 'rimraf';
 import sherpa   from 'style-sherpa';
 import yaml     from 'js-yaml';
 import fs       from 'fs';
+import path     from 'path';
 
 // Load all Gulp plugins into one variable
 const $ = plugins();
@@ -18,9 +19,16 @@ const $ = plugins();
 const PRODUCTION = !!(yargs.argv.production);
 const NO_STYLEGUIDE = !!(yargs.argv.no_styleguide);
 const NO_UNCSS = !!(yargs.argv.no_uncss);
+const DESTINATION = yargs.argv.dest;
 
 // Load settings from settings.yml
 const { COMPATIBILITY, PORT, UNCSS_OPTIONS, PATHS } = loadConfig();
+
+PATHS.dist = DESTINATION || PATHS.dist;
+
+if (DESTINATION) {
+  gutil.log(gutil.colors.yellow(`Overriding destination: ${DESTINATION}`));
+}
 
 function loadConfig() {
   let ymlFile = fs.readFileSync('config.yml', 'utf8');
@@ -38,7 +46,7 @@ gulp.task('default',
 // Delete the "dist" folder
 // This happens every time a build starts
 function clean(done) {
-  rimraf(PATHS.dist, done);
+  rimraf(path.join(PATHS.dist, '*'), done);
 }
 
 // Copy files out of the assets folder

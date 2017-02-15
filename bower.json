@@ -20,14 +20,12 @@
     "motion-ui": "~1.2.2",
     "sass-toolkit": "~2.10.2",
     "what-input": "^1.2.5",
-    "zxcvbn": "~4.2.0"
+    "zxcvbn": "~4.2.0",
+    "spin.js": "^2.3.2"
   },
   "resolutions": {
     "jquery": "1.12.4",
     "what-input": "1.2.5"
   },
-  "private": true,
-  "devDependencies": {
-    "spin.js": "^2.3.2"
-  }
+  "private": true
 }
