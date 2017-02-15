@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y \
   git \
   curl
 
-RUN npm install yarn phantomjs bower --global
+RUN npm install yarn phantomjs bower --global && npm cache clean
 
 ENV TEMPLATES_COMPILE_DESTINATION /var/templates/dist
 
