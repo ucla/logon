@@ -16,6 +16,13 @@ body {
 .page-header-contents {
   margin: 0 auto;
   @include grid-row();
+  a {
+    color: $white;
+    &:hover {
+      color: $ucla-yellow;
+      text-decoration: none;
+    }
+  }
 }
 
 .logo {
@@ -26,12 +33,6 @@ body {
   @include grid-column(4);
   text-align: right;
   margin-top: $global-margin * 2.2;
-  a {
-    color: $white;
-    &:hover {
-      color: $ucla-yellow;
-    }
-  }
 }
 
 // layout that applies to all pages
