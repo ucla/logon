@@ -157,3 +157,10 @@ fieldgroup.inline {
 .terse {
     text-align: center;
 }
+
+.querying-phone-indicator {
+  @include form-error;
+  font-weight: normal;
+  color: $ucla-black;
+  font-style: italic;
+}
