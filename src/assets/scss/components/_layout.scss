@@ -59,6 +59,7 @@ body {
   .supporting-info {
     @include grid-column(12);
     @include breakpoint(multi-column) {
+      margin-top: $global-margin * 3.5;
       @include grid-column(4);
     }
   }

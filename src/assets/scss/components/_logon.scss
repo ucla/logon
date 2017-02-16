@@ -25,9 +25,8 @@ ul.listless {
   }
 }
 
-section > h1 {
-  @include grid-column-row();
-  margin-bottom: $global-margin * 1.5;
+article h1 {
+  margin-top: $global-margin;
 }
 
 .home .menu a {
@@ -56,6 +55,20 @@ section > h1 {
     color: $ucla-gold;
   }
 }
+
+#skip a { 
+  position: absolute; 
+  left: -10000px; 
+  top: auto; 
+  width: 1px; 
+  height: 1px; 
+  overflow: hidden;
+  &:focus { 
+    position: static; 
+    width: auto; 
+    height: auto; 
+  }
+} 
 
 /////////////////////////////////////////
 ///         OVERALL CONTENT 
