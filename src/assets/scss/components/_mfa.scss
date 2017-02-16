@@ -145,6 +145,10 @@ fieldgroup.inline {
   @include notification-banner($alert-color);
 }
 
+.get-more-info svg {
+  fill: $ucla-gold;
+}
+
 .app-source {
   max-width: 135px;
 }
