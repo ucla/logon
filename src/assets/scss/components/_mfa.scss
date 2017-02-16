@@ -159,5 +159,9 @@ fieldgroup.inline {
 }
 
 .terse {
-    text-align: center;
+  text-align: center;
+}
+
+.is-invalid-input:not(:focus) {
+    background-color: #f9f3f6
 }
