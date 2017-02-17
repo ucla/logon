@@ -122,13 +122,16 @@ fieldgroup.inline {
   background: $background;
   color: $color;
   padding: $global-padding;
-    font-weight: $global-weight-bold;
+  font-weight: $global-weight-bold;
   p {
     @include grid-column(11);
     font-size: $helptext-font-size;
     @include breakpoint(large-type) {
       font-size: $global-font-size;
     }
+  }
+  a {
+    color: $white;
   }
   aside {
     @include grid-column(1);
@@ -159,12 +162,9 @@ fieldgroup.inline {
 }
 
 .terse {
-    text-align: center;
+  text-align: center;
 }
 
-.querying-phone-indicator {
-  @include form-error;
-  font-weight: normal;
-  color: $ucla-black;
-  font-style: italic;
+.is-invalid-input:not(:focus) {
+    background-color: #f9f3f6
 }
