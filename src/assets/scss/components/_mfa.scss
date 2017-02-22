@@ -22,11 +22,7 @@ fieldgroup.inline {
     display: none;
   }
 
-  margin-top: $global-margin * 5;
-
-  @include breakpoint($topbar-unstack-breakpoint) {
-    margin-top: $global-margin;
-  }
+  margin-top: $global-margin;
 
   background: $nav-background;
   p {

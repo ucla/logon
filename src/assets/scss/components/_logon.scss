@@ -56,16 +56,20 @@ article h1 {
   }
 }
 
-#skip a { 
-  position: absolute; 
+#skip {
+  margin-left: 1rem;
+}
+
+#skip a {
+  position: absolute;
   left: -10000px; 
   top: auto; 
   width: 1px; 
   height: 1px; 
   overflow: hidden;
-  &:focus { 
-    position: static; 
-    width: auto; 
+  &:focus {
+    position: static;
+    width: auto;
     height: auto; 
   }
 } 
