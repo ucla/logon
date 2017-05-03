@@ -102,15 +102,6 @@ fieldgroup.inline {
   display: none;
 }
 
-#additional-options-toggle {
-  color: $anchor-color;
-  &:hover {
-    color: $anchor-color-hover;
-    text-decoration: underline;
-    cursor: pointer;
-  }
-}
-
 @mixin notification-banner($background: $ucla-blue, $color: $white) {
   position: fixed;
   top: 0;

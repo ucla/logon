@@ -38,14 +38,14 @@ PATHS:
   javascript:
     # Libraries required by Foundation
     - "bower_components/jquery/dist/jquery.js"
-    #--logon - "bower_components/what-input/what-input.js"
+    - "bower_components/what-input/what-input.js"
     # Core Foundation files
-    #--logon - "bower_components/foundation-sites/js/foundation.core.js"
-    #--logon - "bower_components/foundation-sites/js/foundation.util.*.js"
+    --logon - "bower_components/foundation-sites/js/foundation.core.js"
+   s--logon - "bower_components/foundation-sites/js/foundation.util.*.js"
     # Individual Foundation components
     # If you aren't using a component, just remove it from the list
     #--logon - "bower_components/foundation-sites/js/foundation.abide.js"
-    # - "bower_components/foundation-sites/js/foundation.accordion.js"
+     - "bower_components/foundation-sites/js/foundation.accordion.js"
     # - "bower_components/foundation-sites/js/foundation.accordionMenu.js"
     # - "bower_components/foundation-sites/js/foundation.drilldown.js"
     #--logon - "bower_components/foundation-sites/js/foundation.dropdown.js"
@@ -55,14 +55,14 @@ PATHS:
     # - "bower_components/foundation-sites/js/foundation.magellan.js"
     # - "bower_components/foundation-sites/js/foundation.offcanvas.js"
     # - "bower_components/foundation-sites/js/foundation.orbit.js"
-    #--logon - "bower_components/foundation-sites/js/foundation.responsiveMenu.js"
-    #--logon - "bower_components/foundation-sites/js/foundation.responsiveToggle.js"
+    # - "bower_components/foundation-sites/js/foundation.responsiveMenu.js"
+    # - "bower_components/foundation-sites/js/foundation.responsiveToggle.js"
     # - "bower_components/foundation-sites/js/foundation.reveal.js"
     # - "bower_components/foundation-sites/js/foundation.slider.js"
-    #--logon - "bower_components/foundation-sites/js/foundation.sticky.js"
+    - "bower_components/foundation-sites/js/foundation.sticky.js"
     # - "bower_components/foundation-sites/js/foundation.tabs.js"
-    #--logon - "bower_components/foundation-sites/js/foundation.toggler.js"
-    # - "bower_components/foundation-sites/js/foundation.tooltip.js"
+    - "bower_components/foundation-sites/js/foundation.toggler.js"
+    - "bower_components/foundation-sites/js/foundation.tooltip.js"
     # - "bower_components/foundation-sites/js/foundation.zf.responsiveAccordionTabs.js"
     # Paths to your own project code are here
     # - "bower_components/countdown/dest/jquery.countdown.js"
