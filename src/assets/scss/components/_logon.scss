@@ -41,19 +41,7 @@ article h1 {
 .page-header-contents {
 	display: block;
   padding-top: $global-spacing;
-	background: rgba($black, .6) ;
-}
-
-#nav-menu {
-  width: 100%;
-  background: linear-gradient($nav-background, $nav-background-alt);
-  border-bottom: 3px solid $ucla-blue;
-  a {
-    color: $white;
-  }
-  a:hover {
-    color: $ucla-gold;
-  }
+	background: linear-gradient(to right, #00a5e5, #215394);
 }
 
 #skip a { 
@@ -78,7 +66,7 @@ article h1 {
 %content-styling {
   margin-top: $global-spacing * 2;
   margin-bottom: $global-spacing * 4;
-  background: $lighter-gray;
+  background: $white;
 }
 
 // need nested containers due to foundation's grid system

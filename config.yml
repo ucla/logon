@@ -40,16 +40,16 @@ PATHS:
     - "bower_components/jquery/dist/jquery.js"
     - "bower_components/what-input/what-input.js"
     # Core Foundation files
-    --logon - "bower_components/foundation-sites/js/foundation.core.js"
-   s--logon - "bower_components/foundation-sites/js/foundation.util.*.js"
+    - "bower_components/foundation-sites/js/foundation.core.js"
+    - "bower_components/foundation-sites/js/foundation.util.*.js"
     # Individual Foundation components
     # If you aren't using a component, just remove it from the list
     #--logon - "bower_components/foundation-sites/js/foundation.abide.js"
-     - "bower_components/foundation-sites/js/foundation.accordion.js"
+    - "bower_components/foundation-sites/js/foundation.accordion.js"
     # - "bower_components/foundation-sites/js/foundation.accordionMenu.js"
     # - "bower_components/foundation-sites/js/foundation.drilldown.js"
-    #--logon - "bower_components/foundation-sites/js/foundation.dropdown.js"
-    #--logon - "bower_components/foundation-sites/js/foundation.dropdownMenu.js"
+    # - "bower_components/foundation-sites/js/foundation.dropdown.js"
+    # - "bower_components/foundation-sites/js/foundation.dropdownMenu.js"
     # - "bower_components/foundation-sites/js/foundation.equalizer.js"
     # - "bower_components/foundation-sites/js/foundation.interchange.js"
     # - "bower_components/foundation-sites/js/foundation.magellan.js"
@@ -68,5 +68,5 @@ PATHS:
     # - "bower_components/countdown/dest/jquery.countdown.js"
     - "bower_components/spin.js/spin.js"
     - "src/assets/js/!(app).js"
-    #--logon - "src/assets/js/app.js"
+    - "src/assets/js/app.js"
     - "src/assets/js/mfa.js"

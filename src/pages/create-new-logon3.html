@@ -98,8 +98,21 @@ layout: create-password
           <label for="selectChallenge">Type your Response
           <input name="response" type="text" maxlength="128" placeholder="Answer to the above question" id="response" alt="Your Response is the answer to your Challenge question." pattern="[a-zA-Z0-9 !@#$%^&*().,]{8,128}" required>
           <span class="form-error">Challenge responses must be between 8 and 128 characters long.</span></label>
+          
+          <h2>Additional Security Methods</h2>
+          
+          <p><a href="https://www.it.ucla.edu/services/it-security/multi-factor-authentication-mfa" target="_new">Multi-factor Authentication</a> adds a second step to your sign in process to protect your data and accounts in case your password is compromised. It is strongly recommended to continue on and set up MFA, but most individuals can choose to opt-out.</p>
+          
+          <input id="opt-out-mfa" type="checkbox"><label for="opt-out-mfa">Opt out of MFA.</label>
+
+          <fieldset>
+            <label for="sn">Bruin Alert SMS Number
+            <input name="dob" type="tel" placeholder="310 123-4567" maxlength="10" value="" id="dob" required>
+            <span class="form-error">You must use a valid phone number</span></label>
+            <input id="opt-out-bruin-alert" type="checkbox"><label for="opt-out-bruin-alert">Opt out of Bruin Alert.</label>
+          </fieldset>
     
-          <button class="primary-button" type="submit">Create UCLA Logon ID</button> <button type="submit" class="cancel-button">Cancel</button>
+          <button class="primary-button" type="submit">Create UCLA Logon ID</button> <button type="submit" class="button">Cancel</button>
           
         </form>
         
