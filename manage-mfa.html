@@ -14,40 +14,17 @@
 <body>
 
   <header class="page-header" role="banner">
-    <section class="page-header-contents">
-      <span class="logo"><a href="./"><img src="assets/img/logo.png" alt="UCLA"></a></span>
-    </section>
-    <nav class="page-nav" role="navigation" data-sticky-container>
-      
-      <div class="title-bar" data-responsive-toggle="nav-menu" data-hide-for="large-type">
-        <button class="menu-icon" type="button" data-toggle></button>
-        <div class="title-bar-title">Menu</div>
-      </div>
-      
-      <div class="top-bar sticky" id="nav-menu" data-sticky data-margin-top="0" data-top-anchor="nav-menu" data-anchor="foo">
-        <ul class="dropdown menu top-bar-left" data-dropdown-menu>
-          <li>
-            <a href="#">Manage...</a>
-            <ul class="menu">
-              <li><a href="manage-personal-info.html">Personal Info</a></li>
-              <li><a href="manage-password.html">UCLA Logon Password</a></li>
-              <li><a href="manage-mfa.html">Multi-Factor Authentication</a></li>
-              <li><a href="manage-email.html">@ucla.edu Email Account & Forwarding</a></li>
-              <li><a href="manage-phrase.html">Challenge Phrase</a></li>
-            </ul>
-          </li>
-          <li><a href="reset.html">Reset Password</a></li>
-          <li><a href="lookup.html">Lookup Logon ID</a></li>
-          <li><a href="create-new-logon.html">Create Logon ID</a></li>
-        </ul>
-        
-        <ul class="dropdown menu top-bar-right">
-          <li><a href="#">Login/out</a></li>
-      </div>
-      
-    </nav>
+    <div class="page-header-contents">
+      <span class="logo"><a href="./"><img src="assets/img/logo.png" alt="UCLA MY Logon"></a></span>
+      <span class="logout"><a href="#">Logout</a></span>
+    </div>
   </header>
+  
+  <aside class="get-help">
+    <p><a href="#">Get Help / More Information »</a></p>
+  </aside>
 
+  
   <section class="management">
     <div>
       
@@ -64,6 +41,10 @@
         <li><a href="mfa-device.html">Manage a Device</a></li>
         <li><a href="mfa-flow.html">Sample enroll flow 1</a></li>
         <li><a href="mfa-flow2.html">Sample enroll flow 2</a></li>
+        <li><a href="mfa-banner.html">Sample page with notification banner</a></li>
+        <li><a href="mfa-error.html">Generic error page</a></li>
+        <li><a href="mfa-beachball.html">Loading spinner</a></li>
+  
       </ul>
       
     </article>
@@ -80,12 +61,6 @@
   
     </div>
   </section>
-  
-  <footer role="contentinfo" class="ucla-iam-footer">
-  	<div class="ucla-iam-footer-content">
-  		<p><a href="/ucla-logon-mocks/cms-policies.html">Privacy, Security & Legal</a></p>
-  	</div>
-  </footer>
   
   <script src="assets/js/app.js"></script>
   

@@ -15,37 +15,8 @@
 
   <header class="page-header" role="banner">
     <section class="page-header-contents">
-      <span class="logo"><a href="./"><img src="assets/img/logo.png" alt="UCLA"></a></span>
+      <span class="logo"><a href="./"><img src="assets/img/logo.png" alt="UCLA MY Logon"></a></span>
     </section>
-    <nav class="page-nav" role="navigation" data-sticky-container>
-      
-      <div class="title-bar" data-responsive-toggle="nav-menu" data-hide-for="large-type">
-        <button class="menu-icon" type="button" data-toggle></button>
-        <div class="title-bar-title">Menu</div>
-      </div>
-      
-      <div class="top-bar sticky" id="nav-menu" data-sticky data-margin-top="0" data-top-anchor="nav-menu" data-anchor="foo">
-        <ul class="dropdown menu top-bar-left" data-dropdown-menu>
-          <li>
-            <a href="#">Manage...</a>
-            <ul class="menu">
-              <li><a href="manage-personal-info.html">Personal Info</a></li>
-              <li><a href="manage-password.html">UCLA Logon Password</a></li>
-              <li><a href="manage-mfa.html">Multi-Factor Authentication</a></li>
-              <li><a href="manage-email.html">@ucla.edu Email Account & Forwarding</a></li>
-              <li><a href="manage-phrase.html">Challenge Phrase</a></li>
-            </ul>
-          </li>
-          <li><a href="reset.html">Reset Password</a></li>
-          <li><a href="lookup.html">Lookup Logon ID</a></li>
-          <li><a href="create-new-logon.html">Create Logon ID</a></li>
-        </ul>
-        
-        <ul class="dropdown menu top-bar-right">
-          <li><a href="#">Login/out</a></li>
-      </div>
-      
-    </nav>
   </header>
 
   <section class="mfa">
@@ -100,6 +71,13 @@
   &lt;/fieldgroup&gt;
   </pre>
   
+      <h2>Banners</h2>
+      
+      <p>Alert is shown as an example on <a href="mfa-banner.html">sample page with notification banner</a>.</p>
+      
+      <p>Usage is a container div, either <code>&lt;div class=&quot;banner-alerts&quot;&gt;</code> for alerts/fails, or <code>&lt;div class=&quot;banner-success&quot;&gt;</code> to notify of a successful operation. Message contents are with an un-classed <code>&lt;p&gt;</code> tag inside, the x to close in an un-classed <code>&lt;aside&gt;</code>.</p>
+  
+  
       </article>
       
       <aside class="supporting-info">
@@ -112,7 +90,8 @@
           your identity when signing in. This extra step prevents a hacker from accessing your
           account using a stolen password.</p>
           
-          <p class="get-more-info"><a href="#"> > Learn More about MFA</a></p>
+          <p class="get-more-info"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 85" width="13px" height="13px"><polygon points="32.6 0 17.5 15.1 52.4 50 17.5 84.9 32.6 100 82.5 50 "/></svg>
+           Learn More about MFA</a></p>
           
           <h2>Setting Up MFA with your Smartphone</h2>
           
@@ -121,6 +100,7 @@
           <ul class="listless">
             <li><a href="https://itunes.apple.com/us/app/duo-mobile/id422663827?mt=8" target="_blank">Download Duo Mobile from iTunes</a></li>
             <li><a href="https://play.google.com/store/apps/details?id=com.duosecurity.duomobile&amp;hl=en" target="_blank">Download Duo Mobile from Google Play</a></li>
+            <li><a href="https://www.microsoft.com/en-us/store/p/duo-mobile/9nblggh08m1g" target="_blank">Download Duo Mobile from Microsoft Store</a></li>
           </ul>
           
           <h1>Get Help</h1>

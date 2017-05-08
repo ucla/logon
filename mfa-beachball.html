@@ -14,23 +14,26 @@
 <body>
 
   <header class="page-header" role="banner">
-    <section class="page-header-contents">
+    <div class="page-header-contents">
       <span class="logo"><a href="./"><img src="assets/img/logo.png" alt="UCLA MY Logon"></a></span>
-    </section>
+      <span class="logout"><a href="#">Logout</a></span>
+    </div>
   </header>
+  
+  <aside class="get-help">
+    <p><a href="#">Get Help / More Information »</a></p>
+  </aside>
 
-  <article class="message">
-    <h1>Your UCLA Logon ID is <strong>[vanganar]</strong>.</h1>
   
-    <p>If you forgot your password, you can <a href="reset.html">go reset it now</a>.</p>
+  <article class="message terse">
+  
+    <h1>Just a moment!</h1>
+  
+    <div id="loading-spinner"></div>
+    
+    <p>If things seem stuck, try again.</p>
+      
   </article>
-  
-  
-  <footer role="contentinfo" class="ucla-iam-footer">
-  	<div class="ucla-iam-footer-content">
-  		<p><a href="/ucla-logon-mocks/cms-policies.html">Privacy, Security & Legal</a></p>
-  	</div>
-  </footer>
   
   <script src="assets/js/app.js"></script>
   
