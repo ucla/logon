@@ -26,14 +26,12 @@ PATHS:
   # Paths to Sass libraries, which can then be loaded with @import
   sass:
     - "bower_components/foundation-sites/scss"
-    - "bower_components/motion-ui/src"
-#    - "bower_components/singularity/stylesheets"
-#    - "bower_components/breakpoint/stylesheets"
+    - "bower_components/motion-ui/srcs
     - "bower_components/sass-toolkit/stylesheets"
   # Paths to (JS) assets that need to be loaded separately
   bowerDirectLinked:
     # - "bower_components/webshim/js-webshim/minified/**/*"
-    #--logon - "bower_components/zxcvbn/dist/zxcvbn.js"
+    - "bower_components/zxcvbn/dist/zxcvbn.js"
   # Paths to JavaScript libraries, which are combined into one file
   javascript:
     # Libraries required by Foundation
@@ -69,4 +67,3 @@ PATHS:
     - "bower_components/spin.js/spin.js"
     - "src/assets/js/!(app).js"
     - "src/assets/js/app.js"
-    - "src/assets/js/mfa.js"
