@@ -19,6 +19,7 @@
     </section>
   </header>
 
+  
   <section class="page">
     <div>
       
@@ -33,23 +34,11 @@
         
           <p>By completing this procedure, you will activate your UCLA Logon. Before proceeding you must identify yourself to the system.</p>
         
-          <p>I am a (select all that apply):</p>
+          <p>I am a:</p>
         
           <form action="/activate.php" method="post" data-abide novalidate>
             <fieldset>
-              <label><input type="checkbox" id="newstudent" name="newstudent" value="uid">New UCLA Student (including admitted applicants)</label>
-          
-              <label><input type="checkbox" id="waitlist" name="waitlist" value="uid">UCLA Applicant on the waitlist</label>
-          
-              <label><input type="checkbox" id="student" name="student" value="uid">Current UCLA Student</label>
-          
-              <label><input type="checkbox" id="formerstudent" name="formerstudent" value="uid">Former UCLA Student (including alumni)</label>
-          
-              <label><input type="checkbox" id="summerstudent" name="summerstudent" value="uid">UCLA Summer Session Only Student (new, current, or former)</label>
-          
-              <label><input type="checkbox" id="stafforfaculty" name="stafforfaculty" value="uid">UCLA Faculty Member or Staff Member</label>
-          
-              <label><input type="checkbox" id="ucopormerced" name="ucopormerced" value="uid">UCOP or UC Merced Staff Member</label>
+              <label><input type="checkbox" id="uid" value="uid">New UCLA Student (including admitted applicants), UCLA Applicant on the waitlist, Current UCLA Student, Former UCLA Student (including alumni), UCLA Summer Session Only Student (new, current, or former), UCLA Faculty Member or Staff Member, UCOP or UC Merced Staff Member.</label>
           
               <label><input type="checkbox" id="nouid" name="nouid" value="nouid">I do not have a UCLA Identification Number and am <strong>NONE OF THE ABOVE</strong>.</label> 
               
