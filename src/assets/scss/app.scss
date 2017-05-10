@@ -10,7 +10,7 @@
 // Main library stuff
 @import 'settings';
 @import 'foundation';
-@import 'motion-ui';
+// @import 'motion-ui';
 
 // Some useful tools
 @import 'uc/uc-general-utilities';
@@ -66,8 +66,8 @@
 // @include foundation-flex-classes;
 
 // ZURB Motion UI
-@include motion-ui-transitions;
-@include motion-ui-animations;
+// @include motion-ui-transitions;
+// @include motion-ui-animations;
 
 /////////////////////////////////////////
 ///   ADDITIONAL UC SPECIFIC STYLING
