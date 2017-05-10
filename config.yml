@@ -26,7 +26,7 @@ PATHS:
   # Paths to Sass libraries, which can then be loaded with @import
   sass:
     - "bower_components/foundation-sites/scss"
-    - "bower_components/motion-ui/srcs
+    - "bower_components/motion-ui/srcs"
     - "bower_components/sass-toolkit/stylesheets"
   # Paths to (JS) assets that need to be loaded separately
   bowerDirectLinked:
