@@ -70,8 +70,39 @@ article h1 {
 }
 
 // need nested containers due to foundation's grid system
-.management > div, .page > div, .home > div, .message > div, .mfa > div {
+.page > div, .home > div, .message > div, .mfa > div {
   @extend %content-styling;
+}
+
+nav {
+  li li {
+    font-size: 20px;
+  }
+}
+
+.item-overview {
+  @include grid-row;
+  padding-top: $global-padding / 2;;
+  margin-bottom: $global-margin / 2;
+  background: $white;
+  dl {
+    @include grid-column(8);
+    dt {
+      font-weight: $global-weight-normal;
+      margin-bottom: 0;
+    }
+    dd {
+      font-weight: $global-weight-bold;
+    }
+  }
+  .action-item {
+    text-align: right;
+    @include grid-column(4);
+  }
+  .expanded-info {
+    @include grid-column(12);
+    display: none;
+  }
 }
 
 // need nested containers due to foundation's grid system
@@ -93,17 +124,6 @@ article h1 {
   h2 {
     font-size: rem-calc(map-deep-get($header-styles, large-type, h6, font-size));
   }
-}
-
-/////////////////////////////////////////
-///               MFA
-/////////////////////////////////////////
-
-.mfa-method {
-  display: block;
-  background: $white;
-  padding: $global-padding;
-  margin-bottom: $global-margin;
 }
 
 /////////////////////////////////////////

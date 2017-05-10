@@ -16,6 +16,13 @@ fieldgroup.inline {
   @include button-group-expand();
 } 
 
+.mfa-method {
+  display: block;
+  background: $white;
+  padding: $global-padding;
+  margin-bottom: $global-margin;
+}
+
 .get-help {
   display: block;
   @include breakpoint(multi-column) {

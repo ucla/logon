@@ -49,7 +49,23 @@ body {
 }
 
 // column layout for content
-.page, .home, .management, .mfa {
+nav {
+  @include grid-column(12);
+  @include breakpoint(multi-column) {
+    padding-top: $global-padding * 8;
+    @include grid-column(3);
+  }
+}
+
+.management {
+  @include grid-column(12);
+  @include breakpoint(multi-column) {
+    padding-top: $global-padding * 4;
+    @include grid-column(9);
+  }
+}
+  
+.page, .home, .mfa {
   .content {
     @include grid-column(12);
     @include breakpoint(multi-column) {
