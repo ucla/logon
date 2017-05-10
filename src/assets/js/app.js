@@ -49,7 +49,16 @@ var target = document.getElementById('loading-spinner')
 var spinner = new Spinner(opts).spin(target);
 
 /////////////////////////////////////////
-///       more info toggle
+///     accordian / expanded info
+/////////////////////////////////////////
+
+$('.action-item').click(function() {
+  $(this).next('.expanded-info').toggle();
+  // $(this).prev('dd').toggle();
+});
+
+/////////////////////////////////////////
+///    additional options toggle
 /////////////////////////////////////////
 
 $('#additional-options-toggle').click(function() {

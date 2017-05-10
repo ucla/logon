@@ -15,7 +15,29 @@ layout: manage
       
       <span class="action-item"><a href="#" class="button">Manage</a></span>
       
-      <p class="expanded-info">By default mail sent to foo.bear@ucla.edu delivery address / alias gets forwarded to your foo.bear@g.ucla.edu Google Apps at UCLA account.  You can choose for email sent to your @ucla email address to be forwarded to another account of your choosing, easily change it back to foo.bear@g.ucla.edu, or disable your @ucla.edu alias if you don’t want to use it.</p>
+      <div class="expanded-info">
+        <p>By default mail sent to foo.bear@ucla.edu delivery address / alias gets forwarded to your foo.bear@g.ucla.edu Google Apps at UCLA account.  You can choose for email sent to your @ucla email address to be forwarded to another account of your choosing, easily change it back to foo.bear@g.ucla.edu, or disable your @ucla.edu alias if you don’t want to use it.</p>
+        
+        <form action="/mailprefs.php" method="post" data-abide novalidate>
+          <label>Enter address to forward all @ucla.edu email to
+          <input class="focus" id="e1" name="e1" type="email" placeholder="foobruin@gmail.com" title="Enter email address" required>
+          <span class="form-error">This doesn't look like a valid email address.</span>
+          </label>
+          
+          <label>Confirm address to forward all @ucla.edu email to
+            <input class="focus" id="e2" name="e2" type="email" placeholder="foobruin@gmail.com" data-equalto="e1" title="Re-enter email address" required>
+            <span class="form-error">This doesn't look like a valid email address and/or doesn't match the one above.</span>
+          </label>
+          
+          <button id="verify-forwarding" class="primary-button" type="submit" name="action">Forward @ucla.edu emails to new address</button>
+          <p>Note: A verification link will be sent to the new email address.</p>
+          
+          <span class="line-thru">or</span>
+          
+          <button id="use-google-apps" class="button" type="submit" name="action">Set back to my Google Apps at UCLA</button>
+          <button id="disable" class="button" type="submit" name="action">Disable my @ucla.edu address</button>
+        </form>
+      </div>
     </div>
     
   </div>
