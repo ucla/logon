@@ -139,6 +139,9 @@ nav {
 	border-top: 1px solid $ucla-blue-light;
 	padding: $global-spacing / 2;
 	color: $white;
+	.listless {
+  	margin-bottom: 0;
+	}
 	.iam-footer-content {
   	margin: 0 auto;
   	font-size: $small-font-size;
