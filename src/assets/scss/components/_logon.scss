@@ -41,7 +41,7 @@ article h1 {
 .page-header-contents {
 	display: block;
   padding-top: $global-spacing;
-	background: linear-gradient(to right, #00a5e5, #215394);
+	background: linear-gradient(to right bottom, #00a5e5, #215394);
 }
 
 #skip a { 
@@ -135,7 +135,7 @@ nav {
 	position: fixed;
 	bottom: 0;
 	width: 100%;
-	background: #215C9D;
+	background: linear-gradient(to left top, #00a5e5, #215394);
 	border-top: 1px solid $ucla-blue-light;
 	padding: $global-spacing / 2;
 	color: $white;
