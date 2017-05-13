@@ -16,7 +16,7 @@ layout: manage
       <span class="action-item"><a href="#" class="button">Change forwarding</a></span>
       
       <div class="expanded-info">
-        <p>By default mail sent to foo.bear@ucla.edu delivery address / alias gets forwarded to your foo.bear@g.ucla.edu Google Apps at UCLA account.  You can choose for email sent to your @ucla email address to be forwarded to another account of your choosing, easily change it back to foo.bear@g.ucla.edu, or disable your @ucla.edu alias if you don’t want to use it.</p>
+        <p>By default mail sent to foo.bear@ucla.edu delivery address gets forwarded to your foo.bear@g.ucla.edu Google Apps at UCLA account.  You can choose for email sent to your @ucla email address to be forwarded to another account of your choosing, easily change it back to foo.bear@g.ucla.edu, or disable your @ucla.edu alias if you don’t want to use it.</p>
         
         <form action="/mailprefs.php" method="post" data-abide novalidate>
           <label>Enter address to forward all @ucla.edu email to
@@ -34,7 +34,7 @@ layout: manage
           
           <span class="line-thru">or</span>
           
-          <button id="use-google-apps" class="button" type="submit" name="action">Set to Google Apps at UCLA</button>
+          <button id="use-google-apps" class="button" type="submit" name="action">Deliver email to Google Apps at UCLA</button>
           <button id="disable" class="button" type="submit" name="action">Disable my @ucla.edu address</button>
         </form>
       </div>
