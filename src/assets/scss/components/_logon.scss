@@ -128,6 +128,37 @@ nav {
 }
 
 /////////////////////////////////////////
+///               FOOTER
+/////////////////////////////////////////
+
+.iam-footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background: #215C9D;
+	border-top: 1px solid $ucla-blue-light;
+	padding: $global-spacing / 2;
+	color: $white;
+	.iam-footer-content {
+  	margin: 0 auto;
+  	font-size: $small-font-size;
+  	@include grid-column(4);
+	}
+	a {
+		text-decoration: none;
+		color: $ucla-yellow;
+		&:visited {
+			color: $ucla-yellow;
+		}
+		&:hover, &:focus {
+			color: $ucla-yellow;
+			text-decoration: underline;
+		}
+	}
+}
+
+
+/////////////////////////////////////////
 ///      CREATE ACCOUNT PROGRESS
 /////////////////////////////////////////
 
