@@ -75,23 +75,31 @@ nav {
   .supporting-info {
     @include grid-column(12);
     @include breakpoint(multi-column) {
-      margin-top: $global-margin * 3.5;
       @include grid-column(4);
     }
   }
 }
 
 // home page specific styling
-.home {
-  .alert-info {
-    @include grid-column(12);
+.home-enter {
+  @include grid-column(12);
+  @include breakpoint(multi-column) {
+    @include grid-column(8);
   }
 }
 
-.card {
+.home-oops {
   @include grid-column(12);
   @include breakpoint(multi-column) {
     @include grid-column(4);
+  }
+}
+
+.home-welcome {
+  @include grid-column(12);
+  @include grid-row();
+  section {
+    @include grid-column(6);
   }
 }
 
@@ -106,18 +114,4 @@ nav {
     @include grid-column(8);
     @include grid-column-position(2);
   }
-}
-
-// footer height may need to change between applications, so keep outside framework
-.ucla-iam-footer {
-  height: $global-spacing * 4; // match bottom margin of .page, .home, .management
-	@include breakpoint(multi-column) {
-		height: $global-spacing * 2;
-	}
-}
-
-// align footer content somewhat
-.ucla-iam-footer-content {
-  padding-left: 1rem;
-  max-width: 1200px;
 }

@@ -28,13 +28,10 @@ fieldgroup.inline {
   @include breakpoint(multi-column) {
     display: none;
   }
-
   margin-top: $global-margin * 5;
-
   @include breakpoint($topbar-unstack-breakpoint) {
     margin-top: $global-margin;
   }
-
   background: $nav-background;
   p {
     margin-bottom: 0;
