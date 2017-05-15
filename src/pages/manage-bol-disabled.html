@@ -10,13 +10,13 @@ layout: manage
     <div class="item-overview">
       <dl>
         <dt>email sent to foo.bear@ucla.edu is delivered to:</dt>
-        <dd>Google Apps for UCLA</dd>
+        <dd>DISABLED: mails returned as undeliverable</dd>
       </dl>
       
       <span class="action-item"><a href="#" class="button">Change forwarding</a></span>
       
       <div class="expanded-info">
-        <p>By default mail sent to foo.bear@ucla.edu delivery address gets delivered to your Google Apps at UCLA account. You can choose for email sent to your @ucla email address to be forwarded to another account of your choosing or temporarily disable your @ucla.edu address if you don’t want to use it.</p>
+        <p>Your @ucla.edu email address is currently disabled and all emails sent to it will be returned as undeliverable. You can re-enable it and choose for email sent to your @ucla email address to be forwarded to a custom account, or choose 1 click deliver to Google Apps at UCLA.</p>
         
         <form action="/mailprefs.php" method="post" data-abide novalidate>
           <label>Enter address to forward all @ucla.edu email to
@@ -34,7 +34,7 @@ layout: manage
           
           <span class="line-thru">or</span>
           
-          <button id="disable" class="button" type="submit" name="action">Disable my @ucla.edu address</button>
+          <button id="use-google-apps" class="button" type="submit" name="action">Deliver email to Google Apps at UCLA</button>
         </form>
       </div>
     </div>
