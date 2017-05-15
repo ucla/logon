@@ -54,7 +54,6 @@ var spinner = new Spinner(opts).spin(target);
 
 $('.action-item').click(function() {
   $(this).next('.expanded-info').toggle();
-  // $(this).prev('dd').toggle();
 });
 
 /////////////////////////////////////////
@@ -63,5 +62,10 @@ $('.action-item').click(function() {
 
 $('#additional-options-toggle').click(function() {
   $('#additional-options').toggle('fast', function() {
+  });
+});
+
+$('.additional-options-toggle').click(function() {
+  $('.additional-options').toggle() {
   });
 });
