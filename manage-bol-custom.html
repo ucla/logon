@@ -45,13 +45,13 @@
       <div class="item-overview">
         <dl>
           <dt>email sent to foo.bear@ucla.edu is delivered to:</dt>
-          <dd>Google Apps for UCLA</dd>
+          <dd>carl@foo.bear.net</dd>
         </dl>
         
         <span class="action-item"><a href="#" class="button">Change forwarding</a></span>
         
         <div class="expanded-info">
-          <p>By default mail sent to foo.bear@ucla.edu delivery address gets delivered to your Google Apps at UCLA account. You can choose for email sent to your @ucla email address to be forwarded to another account of your choosing or temporarily disable your @ucla.edu address if you don’t want to use it.</p>
+          <p>By default mail sent to foo.bear@ucla.edu delivery address gets forwarded to your foo.bear@g.ucla.edu Google Apps at UCLA account.  You can choose for email sent to your @ucla email address to be forwarded to another account of your choosing, easily change it back to Google Apps at UCLA, or disable your @ucla.edu address if you don’t want to use it.</p>
           
           <form action="/mailprefs.php" method="post" data-abide novalidate>
             <label>Enter address to forward all @ucla.edu email to
@@ -69,6 +69,7 @@
             
             <span class="line-thru">or</span>
             
+            <button id="use-google-apps" class="button" type="submit" name="action">Deliver email to Google Apps at UCLA</button>
             <button id="disable" class="button" type="submit" name="action">Disable my @ucla.edu address</button>
           </form>
         </div>
