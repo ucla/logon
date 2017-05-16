@@ -66,6 +66,6 @@ $('#additional-options-toggle').click(function() {
 });
 
 $('.additional-options-toggle').click(function() {
-  $('.additional-options').toggle() {
+  $('.additional-options').toggle('fast', function() {
   });
 });
