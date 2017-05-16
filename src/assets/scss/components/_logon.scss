@@ -41,7 +41,7 @@ article h1 {
 .page-header-contents {
 	display: block;
   padding-top: $global-spacing;
-	background: linear-gradient(to right bottom, #00a5e5, #215394);
+	background: linear-gradient(to left bottom, #00a5e5, #215394);
 }
 
 #skip a { 
@@ -170,7 +170,6 @@ nav {
   padding: 0;
   display: block;
   position: relative;
-  max-width: 25rem;
   .form-step-todo {
     color: $medium-gray;
   }
@@ -187,8 +186,8 @@ nav {
   display: inline-block;
   text-align: center;
   padding: 0;
+  width: 19%;
   border-radius: 99rem;
-  width: 32%;
   line-height: $global-spacing * 2;
   font-size: $small-font-size;
   &:nth-child(1)::before {
@@ -207,6 +206,18 @@ nav {
     position: absolute;
     font-size: $global-font-size / 2;
     content: "Step 3";
+    top: -$global-margin;
+  }
+  &:nth-child(4)::before {
+    position: absolute;
+    font-size: $global-font-size / 2;
+    content: "Step 4";
+    top: -$global-margin;
+  }
+  &:nth-child(5)::before {
+    position: absolute;
+    font-size: $global-font-size / 2;
+    content: "Step 5";
     top: -$global-margin;
   }
 }
