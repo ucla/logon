@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y \
   git \
   curl
 
-RUN npm install yarn phantomjs bower --global
+RUN npm install yarn phantomjs bower --global && npm cache clean
 
 ENV TEMPLATES_COMPILE_DESTINATION /var/templates/dist
 
@@ -17,7 +17,10 @@ WORKDIR /var/templates/src
 
 ADD . /var/templates/src
 
-RUN npm install && bower --allow-root install && node_modules/.bin/gulp build --dest=/var/templates/dist --production --no_styleguide
+RUN npm install && npm prune && npm shrinkwrap --dev
+
+RUN bower --allow-root install && node_modules/.bin/gulp build --dest=/var/templates/dist --production --no_styleguide
+
 
 CMD ["node_modules/.bin/gulp", "--dest=/var/templates/dist", "--no_styleguide", "--no_uncss"]
 
