@@ -75,8 +75,14 @@ article h1 {
 }
 
 nav {
-  li li {
-    font-size: 20px;
+  li {
+    ul {
+      margin-left: 0;
+    }
+    li {
+      list-style: none;
+      font-size: 20px;
+    }
   }
 }
 
