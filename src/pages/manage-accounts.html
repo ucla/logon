@@ -1,0 +1,151 @@
+---
+layout: manage
+---
+
+<article class="management">
+  <div>
+  
+    <h1>Manage your Accounts</h1>
+    
+    <p>Your accounts at UCLA grant you access to various resources on campus. Future releases of My Logon will include some IT specific accounts as well as expanding upon the functionality of the ubiquitous UCLA Logon ID.</p>
+    
+    <h2>UCLA Logon ID</h2>
+      
+    <div class="item-overview">
+      <dl>
+        <dt>UCLA Logon ID:</dt>
+        <dd>joebruin</dd>
+      </dl>
+      
+      <span class="action-item"><a href="#" class="button">More Info</a></span>
+      
+      <p class="expanded-info">… is the username for your UCLA logon ID. You can manage aspects of this account below.</p>
+    </div>
+    
+    <div class="item-overview">
+      <dl>
+        <dt>UCLA Logon Password:</dt>
+        <dd>************************</dd>
+      </dl>
+      
+      <span class="action-item"><a href="#" class="button">Change Password</a></span>
+      
+      <div class="expanded-info">
+        <p>Your new password must be <strong>different from</strong> the old password, between <strong>8 and 128 characters</strong> long, is <strong>case-sensitive</strong>, and must use at least <strong>one character from two of the three sets</strong> of allowed characters:</p>
+    
+        <ul>
+          <li>letters: a-z or A-Z</li>
+          <li>numbers: 0-9</li>
+          <li>special characters: !@#$%^&*().,</li>
+        </ul>
+    
+        <form id="user-requested-password" role="form" action="/" method="post" data-abide novalidate>
+          
+          <label for="pass-current">Confirm Your Current Password
+            <input id="pass-current" name="pass-current" type="password" placeholder="NVAEAUv7k%eDkiGaidTuwi4dUupHf@" aria-required="true" pattern="[a-zA-Z0-9 !@#$%^&*().,]{8,128}" required>
+            <span class="form-error">Passwords must be at least 8 characters long and must contain one letter and either a number or one of the following symbols: !@#$%^&*()., other symbols are not allowed.</span>
+          </label>
+    
+          <label for="pass-requested">Enter Your New Password
+            <input id="pass-requested" name="pass-requested" type="password" placeholder="Your New Password" aria-required="true" pattern="[a-zA-Z0-9 !@#$%^&*().,]{8,128}" required>
+            <span class="form-error">Passwords must be at least 8 characters long and must contain one letter and either a number or one of the following symbols: !@#$%^&*()., other symbols are not allowed.</span>
+          </label>
+          
+          <label for="pass-requested-confirm">Confirm Your New Password</label>
+            <input id="pass-requested-confirm" name="pass-requested-confirm" type="password" placeholder="Confirm Your New Password" aria-required="true" pattern="[a-zA-Z0-9 !@#$%^&*().,]{8,128}" data-equalto="pass-requested" required>
+            <span class="form-error">Your passwords don't match and/or this doesn't follow the rules above!</span></label>
+          </label>
+    
+          <fieldset class="confirm-staff-submit">
+          	<button class="primary-button" type="submit" name="sso">Change your password</button>
+          </fieldset>
+    
+        </form>
+      </div>
+    </div>
+    
+    <div class="item-overview">
+      <dl>
+        <dt>Challenge Phrase:</dt>
+        <dd>Set</dd>
+      </dl>
+      
+      <span class="action-item"><a href="#" class="button">Change Phrase</a></span>
+      
+      <div class="expanded-info">      
+        <p>A Challenge Phrase allows you reset your password online. Both the challenge and response must be between <strong>8 and 128 characters</strong> long. They cannot be the same, and the response is <strong>case-sensitive</strong>.</p>
+    
+        <form action="/passoptions.php" method="post" data-abide novalidate>
+          
+          <label for="pass-current">Confirm Your Current Password
+            <input id="pass-current" name="pass-current" type="password" placeholder="NVAEAUv7k%eDkiGaidTuwi4dUupHf@" aria-required="true" pattern="[a-zA-Z0-9 !@#$%^&*().,]{8,128}" required>
+            <span class="form-error">Passwords must be at least 8 characters long and must contain one letter and either a number or one of the following symbols: !@#$%^&*()., other symbols are not allowed.</span>
+          </label>
+      
+          <script type="text/javascript">
+          var cbh;
+      
+          function updateChallenge(obj) {
+            var c = document.getElementById("challenge");
+      
+            if (obj == 'self') {
+              var s = document.getElementById("selectChallenge");
+      
+              s.style.display = 'none';
+              s.style.zIndex = '5';
+      
+              c.style.zIndex = '10';
+              c.style.display = 'inline';
+      
+              c.value = '';
+              c.focus();
+            } else {
+              c.value = obj;
+            }
+          }
+          </script>
+      
+          <label title="Your Challenge phrase is a question or phrase that only you know the response to." for="selectChallenge">Select your Challenge Question</label>
+      
+          <select id="selectChallenge" onchange="updateChallenge(this.value);" required>
+            <option value="What is the name of your first pet?">What is the name of your first pet?</option>
+            <option value="What was your maternal grandmother's maiden name?">What was your maternal grandmother's maiden name?</option>
+            <option value="Who is your favorite actor, musician, or artist?">Who is your favorite actor, musician, or artist?</option>
+            <option value="What is your favorite color?">What is your favorite color?</option>
+            <option value="What is the name of your elementary school?">What is the name of your elementary school?</option>
+            <option value="What was your favorite place to visit as a child?">What was your favorite place to visit as a child?</option>
+            <option value="What is your favorite movie?">What is your favorite movie?</option>
+            <option value="Which phone number do you remember most from your childhood?">Which phone number do you remember most from your childhood?</option>
+            <option value="What is the nickname you gave your favorite grandparent?">What is the nickname you gave your favorite grandparent?</option>
+            <option value="What city were you born in?">What city were you born in?</option>
+            <option value="What is the model of your first car?">What is the model of your first car?</option>
+            <option value="What was the first name of your date for your high school prom?">What was the first name of your date for your high school prom?</option>
+            <option value="self">Write your own question</option>
+          </select>
+          <input name="challenge" maxlength="128" id="challenge" style="display:none;z-index:5;top:0;position:relative;" required>
+      
+          <label for="response">Type your Response
+            <input type="text" name="response" maxlength="128" placeholder="Answer to the above question" id="response" required>
+            <span class="form-error">Challenge responses must be between 8 and 128 characters long.</span>
+          </label>
+      
+          <button class="primary-button" type="submit">Change Challenge Phrase</button>
+        </form>
+      </div>
+    </div>
+    
+    <div class="item-overview">
+      <dl>
+        <dt>Multifactor Authentication:</dt>
+        <dd>Active</dd>
+      </dl>
+      
+      <span class="action-item"><a href="mfa-device-select.html" class="button">Manage in MFA Tool</a></span>
+
+    </div>
+    
+    <p class="note-that">(<a href="manage-accounts.html">set</a>, <a href="manage-accounts-unset.html">unset</a>)</p>
+
+    
+  </div>
+</article>

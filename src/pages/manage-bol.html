@@ -1,0 +1,45 @@
+---
+layout: manage
+---
+
+<article class="management">
+  <div>
+  
+    <h1>Manage BruinOnline Settings</h1>
+      
+    <div class="item-overview">
+      <dl>
+        <dt>email sent to foo.bear@ucla.edu is delivered to:</dt>
+        <dd>Google Apps for UCLA</dd>
+      </dl>
+      
+      <span class="action-item"><a href="#" class="button">Change forwarding</a></span>
+      
+      <div class="expanded-info">
+        <p>By default mail sent to foo.bear@ucla.edu delivery address gets delivered to your Google Apps at UCLA account. You can choose for email sent to your @ucla email address to be forwarded to another account of your choosing or temporarily disable your @ucla.edu address if you don’t want to use it.</p>
+        
+        <form action="/mailprefs.php" method="post" data-abide novalidate>
+          <label>Enter address to forward all @ucla.edu email to
+          <input class="focus" id="e1" name="e1" type="email" placeholder="foobruin@gmail.com" title="Enter email address" required>
+          <span class="form-error">This doesn't look like a valid email address.</span>
+          </label>
+          
+          <label>Confirm address to forward all @ucla.edu email to
+            <input class="focus" id="e2" name="e2" type="email" placeholder="foobruin@gmail.com" data-equalto="e1" title="Re-enter email address" required>
+            <span class="form-error">This doesn't look like a valid email address and/or doesn't match the one above.</span>
+          </label>
+          
+          <button id="verify-forwarding" class="primary-button" type="submit" name="action">Forward @ucla.edu emails to new address</button>
+          <p>Note: A verification link will be sent to the new email address.</p>
+          
+          <span class="line-thru">or</span>
+          
+          <button id="disable" class="button" type="submit" name="action">Disable my @ucla.edu address</button>
+        </form>
+      </div>
+    </div>
+    
+    <p class="note-that">(<a href="manage-bol.html">default</a>, <a href="manage-bol-disabled.html">disabled</a>, <a href="manage-bol-custom.html">custom</a>, <a href="manage-bol-pending.html">pending</a>)</p>
+    
+  </div>
+</article>

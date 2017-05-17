@@ -22,7 +22,9 @@ const NO_UNCSS = !!(yargs.argv.no_uncss);
 const DESTINATION = yargs.argv.dest;
 
 // Load settings from settings.yml
-const { COMPATIBILITY, PORT, UNCSS_OPTIONS, PATHS } = loadConfig();
+const CONFIG = loadConfig();
+const { COMPATIBILITY, UNCSS_OPTIONS, PATHS } = CONFIG;
+const PORT = yargs.argv.port || CONFIG.PORT;
 
 PATHS.dist = DESTINATION || PATHS.dist;
 
