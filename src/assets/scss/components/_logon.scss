@@ -44,16 +44,20 @@ article h1 {
 	background: linear-gradient(to left bottom, #00a5e5, #215394);
 }
 
-#skip a { 
-  position: absolute; 
+#skip {
+  margin-left: 1rem;
+}
+
+#skip a {
+  position: absolute;
   left: -10000px; 
   top: auto; 
   width: 1px; 
   height: 1px; 
   overflow: hidden;
-  &:focus { 
-    position: static; 
-    width: auto; 
+  &:focus {
+    position: static;
+    width: auto;
     height: auto; 
   }
 } 
@@ -75,8 +79,14 @@ article h1 {
 }
 
 nav {
-  li li {
-    font-size: 20px;
+  li {
+    ul {
+      margin-left: 0;
+    }
+    li {
+      list-style: none;
+      font-size: 20px;
+    }
   }
 }
 
