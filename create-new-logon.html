@@ -38,13 +38,14 @@
             <li class="form-step-todo">Security Settings</li>
           </ol>
         
-          <p>By completing this procedure, you will activate your UCLA Logon. Before proceeding you must identify yourself to the system. Do you:</p>
+          <p>By completing this procedure, you will create your UCLA Logon ID.</p>
         
           <form action="/activate.php" method="post" data-abide novalidate>
             <fieldset>
-              <label><input type="checkbox" id="uid" value="uid">Have a 9 digit UCLA ID number (e.g. 123-456-789) and are affiliated with the University.</label>
+              <label><input type="checkbox" id="uid" value="uid">I Have a 9 digit UCLA ID number (e.g. 123-456-789) and are affiliated with the University.</label>
+  
+              <p class="help-text">Affiliates consist of: New <b>UCLA Student</b> (including admitted applicants), <b>UCLA Applicant</b> on the waitlist, Current UCLA Student, Former UCLA Student (including alumni), <b>UCLA Summer Session Only Student</b> (new, current, or former), <b>UCLA Faculty Member or Staff Member</b>, an <b>UCOP or UC Merced Staff Member</b>  etc.</p>
               
-              <p class="help-text">Affiliates consist of: New <b>UCLA Student</b> (including admitted applicants), <b>UCLA Applicant</b> on the waitlist, Current UCLA Student, Former UCLA Student (including alumni), <b>UCLA Summer Session Only Student</b> (new, current, or former), <b>UCLA Faculty Member or Staff Member</b>, or an <b>UCOP or UC Merced Staff Member</b>.</p>
           
               <label><input type="checkbox" id="nouid" name="nouid" value="nouid">Not have a 9 digit UCLA ID Number and are <strong>NONE OF THE ABOVE</strong>.</label> 
               
