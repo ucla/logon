@@ -52,18 +52,13 @@ var spinner = new Spinner(opts).spin(target);
 ///     accordian / expanded info
 /////////////////////////////////////////
 
-$('.action-item').click(function() {
+$('.expand-toggle').click(function() {
   $(this).next('.expanded-info').toggle();
 });
 
 /////////////////////////////////////////
 ///    additional options toggle
 /////////////////////////////////////////
-
-$('#additional-options-toggle').click(function() {
-  $('#additional-options').toggle('fast', function() {
-  });
-});
 
 $('.additional-options-toggle').click(function() {
   $('.additional-options').toggle('fast', function() {
