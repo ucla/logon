@@ -79,7 +79,7 @@ article h1 {
 }
 
 // need nested containers due to foundation's grid system
-.page > div, .home > div, .message > div, .mfa > div {
+.page > div, .home > div, .message > div {
   @extend %content-styling;
 }
 
