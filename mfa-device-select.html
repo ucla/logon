@@ -14,17 +14,26 @@
 <body>
 
   <header class="page-header" role="banner">
-    <section class="page-header-contents">
-      <span class="logo"><a href="./"><img src="assets/img/logo.png" alt="UCLA MY Logon"></a></span>
+    <section class="page-header-contents logged-in">
+      <span class="logo"><a href="index-in.html"><img src="assets/img/logo.png" alt="UCLA MY Logon"></a></span>
+      <div class="logged-in-info">
+        <p>You're logged in as: Jen Burin</p>
+        <p><a href="./">Logout</a></p>
+      </span>
     </section>
   </header>
 
+  
     <nav>
       <ul class="menu vertical">
         <li>Identity & Access:
           <ul>
             <li><a href="manage-profile.html">Profile</a></li>
-            <li><a href="manage-accounts.html">Accounts</a></li>
+            <li><a href="manage-accounts.html">Accounts</a>
+              <ul>
+                <li><a href="#">- MFA Tool</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
         <li>Services:

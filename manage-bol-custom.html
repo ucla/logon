@@ -14,8 +14,12 @@
 <body>
 
   <header class="page-header" role="banner">
-    <section class="page-header-contents">
-      <span class="logo"><a href="./"><img src="assets/img/logo.png" alt="UCLA MY Logon"></a></span>
+    <section class="page-header-contents logged-in">
+      <span class="logo"><a href="index-in.html"><img src="assets/img/logo.png" alt="UCLA MY Logon"></a></span>
+      <div class="logged-in-info">
+        <p>You're logged in as: Jen Burin</p>
+        <p><a href="./">Logout</a></p>
+      </span>
     </section>
   </header>
 
@@ -44,10 +48,10 @@
       <div class="item-overview">
         <dl>
           <dt>email sent to foo.bear@ucla.edu is delivered to:</dt>
-          <dd>carl@foo.bear.net</dd>
+          <dd>jburin@gmail.com</dd>
         </dl>
         
-        <span class="action-item"><a href="#" class="button">Change forwarding</a></span>
+        <span class="expand-toggle"><a href="#">Change forwarding <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><path d="M12.5 0C5.6 0 0 5.6 0 12.5S5.6 25 12.5 25 25 19.4 25 12.5 19.4 0 12.5 0zM15.9 16.9l0.7 0.7L12.5 22l-4.1-4.4 0.7-0.7L12 20V5L9.1 8.1 8.4 7.4 12.5 3l4.1 4.4L15.9 8.1 13 5v15L15.9 16.9z"/></svg></a></span>
         
         <div class="expanded-info">
           <p>Mail sent to your @ucla.edu email address is currently being forwarded to a custom email address set by you. You can choose a different custom email address to have mail delivered to, revert back to Google Apps for UCLA with a single click. You can also simply disable your @ucla.edu address - if you do so all email sent to it will be returned to sender.</p>

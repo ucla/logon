@@ -14,16 +14,36 @@
 <body>
 
   <header class="page-header" role="banner">
-    <div class="page-header-contents">
-      <span class="logo"><a href="./"><img src="assets/img/logo.png" alt="UCLA MY Logon"></a></span>
-      <span class="logout"><a href="#">Logout</a></span>
-    </div>
+    <section class="page-header-contents logged-in">
+      <span class="logo"><a href="index-in.html"><img src="assets/img/logo.png" alt="UCLA MY Logon"></a></span>
+      <div class="logged-in-info">
+        <p>You're logged in as: Jen Burin</p>
+        <p><a href="./">Logout</a></p>
+      </span>
+    </section>
   </header>
-  
-  <aside class="get-help">
-    <p><a href="#">Get Help / More Information »</a></p>
-  </aside>
 
+  
+    <nav>
+      <ul class="menu vertical">
+        <li>Identity & Access:
+          <ul>
+            <li><a href="manage-profile.html">Profile</a></li>
+            <li><a href="manage-accounts.html">Accounts</a>
+              <ul>
+                <li><a href="#">- MFA Tool</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>Services:
+          <ul>
+            <li><a href="manage-bol.html">BruinOnline</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  
   
   <section class="mfa">
     <div>
@@ -110,6 +130,35 @@
   
     </div>
   </section>
+  
+    <footer role="contentinfo" class="iam-footer">
+  
+    	 <div class="iam-footer-content">
+        <ul class="listless">
+          <li><a href="#" target="tutorial">Frequently Asked Questions</a></li>
+          <li><a href="#" target="tutorial">Managing my Identity</a></li>
+          <li><a href="#" target="tutorial">Show me how to set up MFA</a></li>
+        </ul>
+    	</div>
+    	
+      <div class="iam-footer-content">
+        <ul class="listless">
+          <li>For help contact the Bruin Online Help Desk
+            <ul>
+              <li><a href="mailto:consult@ucla.edu">consult@ucla.edu</a></li>
+              <li>310-267-HELP (4357)</li>
+            </ul>
+          </li>
+        </ul>
+    	</div>
+    	
+      <div class="iam-footer-content">
+        <ul class="listless">
+          <li><a href="/ucla-logon-mocks/cms-policies.html">Privacy, Security & Legal</a></li>
+        </ul>      
+      </div>
+  
+    </footer>
   
   <script src="assets/js/app.js"></script>
   
