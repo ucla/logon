@@ -113,7 +113,7 @@ nav {
       font-weight: $global-weight-bold;
     }
   }
-  .expand-toggle {
+  .expand-toggle, .go-deeper {
     text-align: right;
     @include grid-column(3);
     a {
