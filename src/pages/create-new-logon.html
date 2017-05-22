@@ -1,13 +1,13 @@
 <section class="page">
   <div>
     
+    <header>
+      <h1>Create a UCLA Logon ID: <small>Affiliation & ToS</small></h1>
+    </header>
+        
     <article class="content">
       <div>
-        
-        <header>
-          <h1>Create a UCLA Logon ID: <small>Affiliation & ToS</small></h1>
-        </header>
-            
+   
         <ol id="form-step-bar">
           <li class="form-step-doing">Affiliation & ToS</li>
           <li class="form-step-todo">Identity</li>
@@ -80,14 +80,3 @@ For both your personal benefit and the benefit of others, you must assume respon
 
   </div>
 </section>
-
-<script>
-  document.getElementsByName("tos")[0].addEventListener("scroll", checkScrollHeight, false);
-  
-  function checkScrollHeight(){
-      var agreementTextElement = document.getElementsByName("tos")[0] 
-      if ((agreementTextElement.scrollTop + agreementTextElement.offsetHeight) >= agreementTextElement.scrollHeight){
-          document.getElementsByName("agree-to-tos")[0].disabled = false;
-      }
-  }
-</script>
