@@ -29,10 +29,11 @@ body {
   @include grid-column(8);
 }
 
-.logout {
+.logged-in-info {
   @include grid-column(4);
   text-align: right;
-  margin-top: $global-margin * 2.2;
+  vertical-align: top;
+  color: $white;
 }
 
 // layout that applies to all pages

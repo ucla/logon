@@ -175,7 +175,9 @@ nav {
   	font-size: $small-font-size;
   	@include grid-column(4);
 	}
-	a {
+}
+
+.iam-footer	a, .logged-in-info a {
 		text-decoration: none;
 		color: $ucla-yellow;
 		&:visited {
@@ -186,7 +188,6 @@ nav {
 			text-decoration: underline;
 		}
 	}
-}
 
 
 /////////////////////////////////////////
