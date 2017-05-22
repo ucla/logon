@@ -118,7 +118,7 @@ $grid-row-width: $global-width;
 $grid-column-count: 12;
 $grid-column-gutter: (
   small: 1.25rem,
-  multi-column: 2rem,
+  multi-column: 3rem,
 );
 $grid-column-align-edge: true;
 $block-grid-max: 8;
@@ -144,8 +144,8 @@ $header-styles: (
   ),
   large-type: (
     'h1': ('font-size': 36),
-    'h2': ('font-size': 28),
-    'h3': ('font-size': 24),
+    'h2': ('font-size': 24),
+    'h3': ('font-size': 22),
     'h4': ('font-size': 20),
     'h5': ('font-size': 18),
     'h6': ('font-size': 16),
