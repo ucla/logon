@@ -41,7 +41,7 @@ body {
   padding: $global-padding;
   &> div {
     @include grid-column-row(0);
-    padding-bottom: $global-padding;
+    padding-bottom: $global-padding * 4;
   }
   header {
     padding: $global-padding 0;

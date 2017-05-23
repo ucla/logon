@@ -203,7 +203,7 @@ nav {
   display: block;
   position: relative;
   .form-step-todo {
-    color: $medium-gray;
+    color: darken($medium-gray, 20%);
   }
   .form-step-doing {
     color: $primary-color-safe; 
