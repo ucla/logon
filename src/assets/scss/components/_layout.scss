@@ -65,6 +65,10 @@ nav {
     @include grid-column(10);
   }
 }
+
+.manage-wrapper {
+  @include grid-row;
+}
   
 .page, .home, .mfa {
   .content {
