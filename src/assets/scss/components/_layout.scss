@@ -8,6 +8,20 @@ body {
 	height: 100% !important;
 }
 
+.page-wrap {
+  @include grid-row;
+  min-height: 100%;
+  margin-bottom: -5rem; // equal to footer height
+}
+
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.iam-footer, .page-wrap:after {
+  height: 5rem;
+}
+
 // page header with logo and log in/out links etc
 .page-header {
   width: 100%;
@@ -41,7 +55,7 @@ body {
   padding: $global-padding;
   &> div {
     @include grid-column-row(0);
-    padding-bottom: $global-padding * 4;
+    padding-bottom: $global-padding;
   }
   header {
     padding: $global-padding 0;
@@ -64,10 +78,6 @@ nav {
     padding-top: $global-padding * 4;
     @include grid-column(10);
   }
-}
-
-.manage-wrapper {
-  @include grid-row;
 }
   
 .page, .home, .mfa {
