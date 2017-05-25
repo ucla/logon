@@ -11,6 +11,9 @@ body {
 .page-wrap {
   @include grid-row;
   min-height: 100%;
+  @include breakpoint(multi-column) {
+    margin-bottom: -12rem;
+  }
   margin-bottom: -5rem; // equal to footer height
 }
 
@@ -19,7 +22,11 @@ body {
   display: block;
 }
 .iam-footer, .page-wrap:after {
-  height: 5rem;
+  height: 12rem;
+  @include breakpoint(multi-column) {
+    margin-bottom: 5rem;
+  }
+  
 }
 
 // page header with logo and log in/out links etc

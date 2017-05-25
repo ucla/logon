@@ -174,7 +174,12 @@ nav {
 	.iam-footer-content {
   	margin: 0 auto;
   	font-size: $small-font-size;
-  	@include grid-column(4);
+  	@include grid-column(12);
+  	margin-bottom: $global-margin;
+  	@include breakpoint(multi-column) {
+  	  @include grid-column(4);
+  	  margin-bottom: 0;
+  	 }
 	}
 }
 
