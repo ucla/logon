@@ -11,10 +11,10 @@ body {
 .page-wrap {
   @include grid-row;
   min-height: 100%;
+  margin-bottom: -12rem; // equal to footer height
   @include breakpoint(multi-column) {
-    margin-bottom: -12rem;
+    margin-bottom: -5rem;
   }
-  margin-bottom: -5rem; // equal to footer height
 }
 
 .page-wrap:after {
@@ -26,7 +26,6 @@ body {
   @include breakpoint(multi-column) {
     margin-bottom: 5rem;
   }
-  
 }
 
 // page header with logo and log in/out links etc
