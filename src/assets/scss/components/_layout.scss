@@ -24,7 +24,7 @@ body {
 .iam-footer, .page-wrap:after {
   height: 12rem;
   @include breakpoint(multi-column) {
-    margin-bottom: 5rem;
+    height: 5rem;
   }
 }
 
