@@ -17,7 +17,7 @@ WORKDIR /var/templates/src
 
 ADD . /var/templates/src
 
-RUN npm install && npm prune && npm shrinkwrap --dev
+RUN mv ./node_modules ./node_modules.tmp && mv ./node_modules.tmp ./node_modules && npm install && npm prune && npm shrinkwrap --dev
 
 RUN bower --allow-root install && node_modules/.bin/gulp build --dest=/var/templates/dist --production --no_styleguide
 
