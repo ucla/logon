@@ -1,4 +1,4 @@
-{{!-- This is the base layout for your project, and will be used on every page. --}}
+{{!-- This is the base layout for logged in pages where people manage their accounts. --}}
 
 <!doctype html>
 <html class="no-js" lang="en">
@@ -17,12 +17,17 @@
   <div class="page-wrap">
 
   <header class="page-header" role="banner">
-    <section class="page-header-contents">
-      <span class="logo"><a href="./"><img src="{{root}}assets/img/logo.png" alt="UCLA MY Logon"></a></span>
+    <section class="page-header-contents logged-in">
+      <span class="logo"><a href="index-in.html"><img src="{{root}}assets/img/logo.png" alt="UCLA MY Logon"></a></span>
+      <div class="logged-in-info">
+        <p class="note-that">You're logged in as: Jen Burin</p>
+        <p><a href="./">Logout</a></p>
+      </div>
+      </span>
     </section>
   </header>
 
-  {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+  {{> nav-menu}}
   
   {{> body}}
   

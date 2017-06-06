@@ -33,6 +33,10 @@ article h1 {
   padding-left: 0;
 }
 
+.hero-button {
+  font-size: 20px;
+}
+
 /////////////////////////////////////////
 ///             HEADER
 /////////////////////////////////////////
@@ -41,19 +45,8 @@ article h1 {
 .page-header-contents {
 	display: block;
   padding-top: $global-spacing;
-	background: rgba($black, .6) ;
-}
-
-#nav-menu {
-  width: 100%;
-  background: linear-gradient($nav-background, $nav-background-alt);
-  border-bottom: 3px solid $ucla-blue;
-  a {
-    color: $white;
-  }
-  a:hover {
-    color: $ucla-gold;
-  }
+	background: #215394;
+	border-bottom: 1px solid $ucla-blue-light;
 }
 
 #skip {
@@ -82,12 +75,66 @@ article h1 {
 %content-styling {
   margin-top: $global-spacing * 2;
   margin-bottom: $global-spacing * 4;
-  background: $lighter-gray;
+  background: $white;
 }
 
 // need nested containers due to foundation's grid system
-.management > div, .page > div, .home > div, .message > div, .mfa > div {
+.page > div, .home > div, .message > div {
   @extend %content-styling;
+}
+
+nav {
+  li {
+    font-size: $helptext-font-size;
+    ul {
+      margin-left: 0;
+      font-size: $global-font-size;
+    }
+    li {
+      list-style: none;
+      font-size: 20px;
+      ul li {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.item-overview {
+  @include grid-row;
+  padding-top: $global-padding / 2;;
+  margin-bottom: $global-margin / 2;
+  background: $white;
+  dl {
+    @include grid-column(9);
+    dt {
+      font-weight: $global-weight-normal;
+      margin-bottom: 0;
+    }
+    dd {
+      font-size: $global-font-size;
+      font-weight: $global-weight-bold;
+    }
+  }
+  .expand-toggle, .go-deeper {
+    text-align: right;
+    @include grid-column(3);
+    a {
+      vertical-align: top; 
+    }
+    svg {
+      height: 20px;
+      width: 20px;
+      fill: $anchor-color;
+    }
+    a:hover svg {
+        fill: $anchor-color-hover;
+    }
+  }
+  .expanded-info {
+    @include grid-column(12);
+    display: none;
+  }
 }
 
 // need nested containers due to foundation's grid system
@@ -112,15 +159,42 @@ article h1 {
 }
 
 /////////////////////////////////////////
-///               MFA
+///               FOOTER
 /////////////////////////////////////////
 
-.mfa-method {
-  display: block;
-  background: $white;
-  padding: $global-padding;
-  margin-bottom: $global-margin;
+.iam-footer {
+  @include grid-row;
+	background: #215394;
+	border-top: 1px solid $ucla-blue-light;
+	padding: $global-spacing / 2;
+	color: $white;
+	.listless {
+  	margin-bottom: 0;
+	}
+	.iam-footer-content {
+  	margin: 0 auto;
+  	font-size: $small-font-size;
+  	@include grid-column(12);
+  	margin-bottom: $global-margin;
+  	@include breakpoint(multi-column) {
+  	  @include grid-column(4);
+  	  margin-bottom: 0;
+  	 }
+	}
 }
+
+.iam-footer	a, .logged-in-info a {
+		text-decoration: none;
+		color: $ucla-yellow;
+		&:visited {
+			color: $ucla-yellow;
+		}
+		&:hover, &:focus {
+			color: $ucla-yellow;
+			text-decoration: underline;
+		}
+	}
+
 
 /////////////////////////////////////////
 ///      CREATE ACCOUNT PROGRESS
@@ -131,9 +205,8 @@ article h1 {
   padding: 0;
   display: block;
   position: relative;
-  max-width: 25rem;
   .form-step-todo {
-    color: $medium-gray;
+    color: darken($medium-gray, 20%);
   }
   .form-step-doing {
     color: $primary-color-safe; 
@@ -148,8 +221,8 @@ article h1 {
   display: inline-block;
   text-align: center;
   padding: 0;
+  width: 19%;
   border-radius: 99rem;
-  width: 32%;
   line-height: $global-spacing * 2;
   font-size: $small-font-size;
   &:nth-child(1)::before {
@@ -168,6 +241,18 @@ article h1 {
     position: absolute;
     font-size: $global-font-size / 2;
     content: "Step 3";
+    top: -$global-margin;
+  }
+  &:nth-child(4)::before {
+    position: absolute;
+    font-size: $global-font-size / 2;
+    content: "Step 4";
+    top: -$global-margin;
+  }
+  &:nth-child(5)::before {
+    position: absolute;
+    font-size: $global-font-size / 2;
+    content: "Step 5";
     top: -$global-margin;
   }
 }
@@ -220,81 +305,3 @@ meter[value="1"]::-moz-meter-bar { background: $alert-color; }
 meter[value="2"]::-moz-meter-bar { background: $warning-color; }
 meter[value="3"]::-moz-meter-bar { background: $success-color; }
 meter[value="4"]::-moz-meter-bar { background: $success-color; }
-
-/////////////////////////////////////////
-///        TIMER & COUNTDOWN
-/////////////////////////////////////////
-
-#timeout {
-  font-size: $small-font-size;
-  margin: $global-spacing 0;
-  width: 100%;
-}
-
-/* counter */
-#counter {
-  font-weight: $global-weight-bold;
-}
-
-/* countdown bar */
-#bar {
-  background: $light-gray;
-  border: solid 1px $medium-gray;
-  height: rem-calc(13);
-  width: 100%;
-  border-radius: $global-radius;
-}
-
-#barfill {
-  background: $ucla-blue;
-  border: solid 1px $ucla-blue;
-  border-radius: $global-radius;
-  height: rem-calc(13);
-  width: 0;
-}
-
-/////////////////////////////////////////
-///            CARDS
-/////////////////////////////////////////
-
-// basic card styling
-.card {
-  &> div {
-    background: $lighter-gray;
-    margin-bottom: $global-margin;
-    border-radius: $global-radius;
-  }
-}
-
-// list of links in card/buckets
-dl.info-list {
-  @include grid-row();
-  background: $white;
-  border-radius: $global-radius;
-  dt {
-    padding: ($global-padding * 1.25) 0;
-    margin-bottom: 0;
-    @include grid-column(12);
-    @include breakpoint(multi-column) {
-      @include grid-column(4);
-      font-size: $helptext-font-size;
-    }
-    &:nth-of-type(even) {
-      border-top: 1px solid $light-gray;
-      border-bottom: 1px solid $light-gray;
-      padding-bottom: $global-padding * 1.55;
-    }
-  }
-  dd {
-    padding: ($global-padding * 1.25) 0;
-    @include grid-column(12);
-    @include breakpoint(multi-column) {
-      @include grid-column(8);
-    }
-    &:nth-of-type(even) {
-      border-top: 1px solid $light-gray;
-      border-bottom: 1px solid $light-gray;
-    }
-  }
-}
-

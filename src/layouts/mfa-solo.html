@@ -13,20 +13,28 @@
 </head>
 
 <body>
+  
+  <div class="page-wrap">
 
   <header class="page-header" role="banner">
-    <div class="page-header-contents">
-      <span class="logo"><a href="./"><img src="{{root}}assets/img/logo.png" alt="UCLA MY Logon"></a></span>
-      <span class="logout"><a href="#">Logout</a></span>
-    </div>
+    <section class="page-header-contents logged-in">
+      <span class="logo"><a href="index-in.html"><img src="{{root}}assets/img/logo.png" alt="UCLA MY Logon"></a></span>
+      <div class="logged-in-info">
+        <p class="note-that">You're logged in as: Jen Burin</p>
+        <p><a href="./">Logout</a></p>
+      </span>
+    </section>
   </header>
-  
-  <aside class="get-help">
-    <p><a href="#">Get Help / More Information »</a></p>
-  </aside>
 
   {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+  
+  {{> nav-menu-mfa}}
+  
   {{> body}}
+  
+  </div>
+  
+  {{> footer}}
   
   <script src="{{root}}assets/js/app.js"></script>
   

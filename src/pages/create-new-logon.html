@@ -1,52 +1,45 @@
 <section class="page">
   <div>
     
+    <header>
+      <h1>Create a UCLA Logon ID: <small>Affiliation & ToS</small></h1>
+    </header>
+        
     <article class="content">
       <div>
-        
+   
         <ol id="form-step-bar">
-          <li class="form-step-doing">Set Affiliation Status</li>
-          <li class="form-step-todo">Verify Identity</li>
-          <li class="form-step-todo">Create Logon ID</li>
+          <li class="form-step-doing">Affiliation & ToS</li>
+          <li class="form-step-todo">Identity</li>
+          <li class="form-step-todo">Account Info</li>
+          <li class="form-step-todo">Challenge Phrase</li>
+          <li class="form-step-todo">Security Settings</li>
         </ol>
       
-        <p>By completing this procedure, you will activate your UCLA Logon. Before proceeding you must identify yourself to the system.</p>
-      
-        <p>I am a (select all that apply):</p>
+        <p>By completing this procedure, you will create your UCLA Logon ID.</p>
       
         <form action="/activate.php" method="post" data-abide novalidate>
           <fieldset>
-            <label><input type="checkbox" id="newstudent" name="newstudent" value="uid">New UCLA Student (including admitted applicants)</label>
+            <label><input type="checkbox" id="uid" value="uid">I Have a 9 digit UCLA ID number (e.g. 123-456-789) and are affiliated with the University.</label>
+
+            <p class="help-text">Affiliates consist of: New <b>UCLA Student</b> (including admitted applicants), <b>UCLA Applicant</b> on the waitlist, Current UCLA Student, Former UCLA Student (including alumni), <b>UCLA Summer Session Only Student</b> (new, current, or former), <b>UCLA Faculty Member or Staff Member</b>, an <b>UCOP or UC Merced Staff Member</b>  etc.</p>
+            
         
-            <label><input type="checkbox" id="waitlist" name="waitlist" value="uid">UCLA Applicant on the waitlist</label>
-        
-            <label><input type="checkbox" id="student" name="student" value="uid">Current UCLA Student</label>
-        
-            <label><input type="checkbox" id="formerstudent" name="formerstudent" value="uid">Former UCLA Student (including alumni)</label>
-        
-            <label><input type="checkbox" id="summerstudent" name="summerstudent" value="uid">UCLA Summer Session Only Student (new, current, or former)</label>
-        
-            <label><input type="checkbox" id="stafforfaculty" name="stafforfaculty" value="uid">UCLA Faculty Member or Staff Member</label>
-        
-            <label><input type="checkbox" id="ucopormerced" name="ucopormerced" value="uid">UCOP or UC Merced Staff Member</label>
-        
-            <label><input type="checkbox" id="nouid" name="nouid" value="nouid">I do not have a UCLA Identification Number and am <strong>NONE OF THE ABOVE</strong>.</label> 
+            <label><input type="checkbox" id="nouid" name="nouid" value="nouid">Not have a 9 digit UCLA ID Number and are <strong>NONE OF THE ABOVE</strong>.</label> 
             
             <p class="help-text">Accounts created without a UCLA ID number can be used to authenticate to many UCLA applications, but are not generally eligible to receive campus services.</p>
           </fieldset>
       
           <hr>
           
-          <textarea rows="8" name="tos">
+          <textarea rows="16" name="tos">
+In support of the University's mission of teaching, research, and public service, Information Technology Services provides computing, networking, and information resources to UCLA's students, faculty, and staff.
 
-Terms of Service
-
-For both your personal benefit and the benefit of others, you must assume responsibility for making the best possible use of your privileges and for not abusing them. All existing laws (federal and state) and University regulations and policies apply, including not only those laws and regulations that are specific to computers and networks, but also those that may apply generally to personal conduct.
+IT Services provides the UCLA community with access to local, national, and international sources of information in an atmosphere that encourages sharing of information, access to a rich collection of services, and open and free discussion for academic purposes and other University-related uses.
 
 Your Responsibilities
 
 Computers and networks can provide access to resources on and off campus, as well as the ability to communicate with other users worldwide. Such open access is a privilege, and requires that individuals act responsibly. Users must respect the rights of other users, respect the integrity of the systems and related physical resources, and observe all relevant laws, regulations, and contractual obligations.
-        
         
 You are responsible for ensuring the integrity of your account. IT Services grants permission to members of the UCLA community to use computing resources by issuing individual computing accounts including UCLA Logon IDs. As a condition of receiving an account, you must observe the following guidelines:
         
@@ -63,6 +56,10 @@ Misuse of computing, networking, or information resources may result in the loss
 Users may be held accountable for their conduct under any applicable University or campus policies, procedures, or collective bargaining agreements. Any actions which deter other users from doing their work or which would otherwise be deemed malicious by the University will result in the loss of access to the system and possible University disciplinary action or civil or criminal action.  Unauthorized use of computing resources and use for personal gain constitute theft under California law and will be prosecuted by the University.
         
 Complaints alleging misuse of resources will be directed to those responsible for taking appropriate disciplinary action.
+
+Acceptance of Terms
+
+For both your personal benefit and the benefit of others, you must assume responsibility for making the best possible use of your privileges and for not abusing them. All existing laws (federal and state) and University regulations and policies apply, including not only those laws and regulations that are specific to computers and networks, but also those that may apply generally to personal conduct.
           </textarea>
           
           <label>
@@ -72,7 +69,7 @@ Complaints alleging misuse of resources will be directed to those responsible fo
           
           <p class="help-text">You may not create an account if you do not accept the terms. Continuing with the account creation process constitutes agreement. You may not agree to the terms and may not proceed with account creation if you are barred from accepting the terms under the laws of the United States or the country from which you are creating this account.</p>
               
-          <button type="submit" class="primary-button">Next</button> <button type="submit" class="cancel-button">Cancel</button>
+          <button type="submit" class="primary-button">Continue</button> <button type="submit" class="button">Cancel</button>
           
           <p><span class="message-success"><a href="create-new-logon2-hasuid.html">(has UID)</a></span> <span class="message-success"><a href="create-new-logon2-nouid.html">(no UID)</a></span></p>
           
@@ -84,21 +81,8 @@ Complaints alleging misuse of resources will be directed to those responsible fo
     <aside class="supporting-info">
       <div>
   
-        {{> create-logon-info }}
-      
       </div>
     </aside>
 
   </div>
 </section>
-
-<script>
-  document.getElementsByName("tos")[0].addEventListener("scroll", checkScrollHeight, false);
-  
-  function checkScrollHeight(){
-      var agreementTextElement = document.getElementsByName("tos")[0] 
-      if ((agreementTextElement.scrollTop + agreementTextElement.offsetHeight) >= agreementTextElement.scrollHeight){
-          document.getElementsByName("agree-to-tos")[0].disabled = false;
-      }
-  }
-</script>

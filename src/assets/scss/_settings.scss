@@ -74,7 +74,7 @@ $dark-gray: #333;
 $black: $ucla-black;
 $white: $ucla-white;
 $off-white: #f0f8ff;
-$body-background: url('../img/skyline.jpg') no-repeat fixed;
+$body-background: $lighter-gray;
 $body-font-color: #555;
 $body-font-family: $ucla-font-stack;
 $body-antialiased: true;
@@ -118,7 +118,7 @@ $grid-row-width: $global-width;
 $grid-column-count: 12;
 $grid-column-gutter: (
   small: 1.25rem,
-  multi-column: 2rem,
+  multi-column: 3rem,
 );
 $grid-column-align-edge: true;
 $block-grid-max: 8;
@@ -144,8 +144,8 @@ $header-styles: (
   ),
   large-type: (
     'h1': ('font-size': 36),
-    'h2': ('font-size': 28),
-    'h3': ('font-size': 24),
+    'h2': ('font-size': 24),
+    'h3': ('font-size': 22),
     'h4': ('font-size': 20),
     'h5': ('font-size': 18),
     'h6': ('font-size': 16),
@@ -163,10 +163,10 @@ $code-font-weight: $global-weight-normal;
 $code-background: $light-gray;
 $code-border: 1px solid $medium-gray;
 $code-padding: rem-calc(2 5 1);
-$anchor-color: $ucla-its-link-color;
+$anchor-color: #2F7FB5;
 $anchor-color-hover: #193747;
 $anchor-text-decoration: none;
-$anchor-text-decoration-hover: underline;
+$anchor-text-decoration-hover: none;
 $hr-width: $global-width;
 $hr-border: 1px solid $body-font-color;
 $hr-margin: rem-calc(8) auto;

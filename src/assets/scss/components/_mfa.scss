@@ -16,14 +16,36 @@ fieldgroup.inline {
   @include button-group-expand();
 } 
 
+.mfa-method {
+  display: block;
+  background: $white;
+  padding: $global-padding;
+  margin-bottom: $global-margin;
+}
+
 .get-help {
   display: block;
   @include breakpoint(multi-column) {
     display: none;
   }
+<<<<<<< HEAD
 
   margin-top: $global-margin;
 
+||||||| merged common ancestors
+
+  margin-top: $global-margin * 5;
+
+  @include breakpoint($topbar-unstack-breakpoint) {
+    margin-top: $global-margin;
+  }
+
+=======
+  margin-top: $global-margin * 5;
+  @include breakpoint($topbar-unstack-breakpoint) {
+    margin-top: $global-margin;
+  }
+>>>>>>> 7e806aa290f08e685d2551fb160138fb7979c4df
   background: $nav-background;
   p {
     margin-bottom: 0;
@@ -96,15 +118,6 @@ fieldgroup.inline {
 
 #additional-options {
   display: none;
-}
-
-#additional-options-toggle {
-  color: $anchor-color;
-  &:hover {
-    color: $anchor-color-hover;
-    text-decoration: underline;
-    cursor: pointer;
-  }
 }
 
 @mixin notification-banner($background: $ucla-blue, $color: $white) {

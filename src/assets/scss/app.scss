@@ -10,11 +10,10 @@
 // Main library stuff
 @import 'settings';
 @import 'foundation';
-@import 'motion-ui';
+// @import 'motion-ui';
 
 // Some useful tools
 @import 'uc/uc-general-utilities';
-@import 'font-awesome/font-awesome';
 @import 'toolkit'; // https://github.com/at-import/toolkit
 
 /////////////////////////////////////////
@@ -38,13 +37,13 @@
 // @include foundation-close-button;
 // @include foundation-drilldown-menu;
 // @include foundation-dropdown;
-@include foundation-dropdown-menu;
+// @include foundation-dropdown-menu;
 // @include foundation-responsive-embed;
 // @include foundation-flex-video;
 // @include foundation-label;
 // @include foundation-media-object;
 @include foundation-menu;
-@include foundation-menu-icon;
+// @include foundation-menu-icon;
 // @include foundation-off-canvas;
 // @include foundation-orbit;
 // @include foundation-pagination;
@@ -58,16 +57,16 @@
 // @include foundation-table;
 // @include foundation-tabs;
 // @include foundation-thumbnail;
-@include foundation-title-bar;
+// @include foundation-title-bar;
 // @include foundation-tooltip;
-@include foundation-top-bar;
+// @include foundation-top-bar;
 // @include foundation-visibility-classes;
 // @include foundation-float-classes;
 // @include foundation-flex-classes;
 
 // ZURB Motion UI
-@include motion-ui-transitions;
-@include motion-ui-animations;
+// @include motion-ui-transitions;
+// @include motion-ui-animations;
 
 /////////////////////////////////////////
 ///   ADDITIONAL UC SPECIFIC STYLING
@@ -77,7 +76,7 @@
 @import 'ucla/ucla-badges';
 @import 'ucla/ucla-decorative';
 @import 'ucla/ucla-messages';
-@import 'ucla/iam-footer';
+// @import 'ucla/iam-footer';
 @import 'ucla/errors';
 @import 'ucla/prototyping-controls';
 @import 'ucla/form-tweaks';
