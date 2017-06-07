@@ -101,6 +101,10 @@ nav {
   }
 }
 
+#main-content {
+  overflow: hidden;
+}
+
 // home page specific styling
 .home-enter {
   @include grid-column(12);
