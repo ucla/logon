@@ -28,11 +28,6 @@ fieldgroup.inline {
   @include breakpoint(multi-column) {
     display: none;
   }
-<<<<<<< HEAD
-
-  margin-top: $global-margin;
-
-||||||| merged common ancestors
 
   margin-top: $global-margin * 5;
 
@@ -40,12 +35,6 @@ fieldgroup.inline {
     margin-top: $global-margin;
   }
 
-=======
-  margin-top: $global-margin * 5;
-  @include breakpoint($topbar-unstack-breakpoint) {
-    margin-top: $global-margin;
-  }
->>>>>>> 7e806aa290f08e685d2551fb160138fb7979c4df
   background: $nav-background;
   p {
     margin-bottom: 0;
