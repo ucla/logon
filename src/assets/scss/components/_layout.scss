@@ -12,6 +12,7 @@ body {
   @include grid-row;
   min-height: 100%;
   margin-bottom: -12rem; // equal to footer height
+  padding-top: 6rem; // equal to header height
   @include breakpoint(multi-column) {
     margin-bottom: -5rem;
   }
@@ -34,7 +35,6 @@ body {
 }
 
 .page-header-contents {
-  margin: 0 auto;
   @include grid-row();
   a {
     color: $white;

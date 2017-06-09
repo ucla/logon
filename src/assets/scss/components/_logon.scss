@@ -46,10 +46,18 @@ article h1 {
 /////////////////////////////////////////
 
 // logo, top bar, login/out
+
+.page-header {
+  background: linear-gradient(to bottom, #003d6e 0%, #1d6092 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6rem;
+}
+
 .page-header-contents {
-	display: block;
+  display: block;
   padding-top: $global-spacing;
-	background: linear-gradient(to bottom, #003d6e 0%, #1d6092 100%);
 }
 
 #skip {
@@ -178,7 +186,6 @@ nav {
 /////////////////////////////////////////
 
 .iam-footer {
-  @include grid-row;
 	background: #215394;
 	border-top: 1px solid $ucla-blue-light;
 	padding: $global-spacing / 2;
@@ -196,6 +203,10 @@ nav {
   	  margin-bottom: 0;
   	 }
 	}
+}
+
+.footer-wrapper {
+  @include grid-row;
 }
 
 .iam-footer	a, .logged-in-info a {
