@@ -2,6 +2,10 @@
 ///          BITS & PIECES
 /////////////////////////////////////////
 
+h1, h3, h5 {
+  text-transform: uppercase;
+}
+
 .line-thru {
   @include line-thru();
   margin: -($global-spacing / 2) 0 0;

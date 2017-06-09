@@ -47,6 +47,9 @@ body {
 
 .logo {
   @include grid-column(8);
+  img {
+    height: 56px;
+  }
 }
 
 .logged-in-info {

@@ -48,7 +48,7 @@
 // 1. Global
 // ---------
 
-$global-font-size: 100%;
+$global-font-size: 93.75%; // 15px
 $global-width: rem-calc(1200);
 $global-lineheight: 1.6;
 $foundation-palette: (
@@ -92,7 +92,7 @@ $print-transparent-backgrounds: true;
 // 1.5 Application Specific
 // ---------
 
-$global-letter-spacing: 0.5px;
+$global-letter-spacing: 0.01px;
 $nav-background: rgba($black, .65);
 $nav-background-alt: rgba($black, .8);
 
@@ -128,29 +128,29 @@ $header-font-family: $body-font-family;
 $header-font-weight: $global-weight-bold;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
-$header-color: inherit;
+$header-color: $ucla-its-primary;
 $header-lineheight: 1.4;
 $header-margin-bottom: 0.5rem;
 $header-styles: (
   small: (
-    'h1': ('font-size': 24),
-    'h2': ('font-size': 20),
-    'h3': ('font-size': 19),
-    'h4': ('font-size': 18),
-    'h5': ('font-size': 17),
-    'h6': ('font-size': 16),
+    'h1': ('font-size': 23),
+    'h2': ('font-size': 18),
+    'h3': ('font-size': 13.5),
+    'h4': ('font-size': 15),
+    'h5': ('font-size': 12),
+    'h6': ('font-size': 12),
   ),
   large-type: (
-    'h1': ('font-size': 36),
-    'h2': ('font-size': 24),
-    'h3': ('font-size': 22),
-    'h4': ('font-size': 20),
-    'h5': ('font-size': 18),
-    'h6': ('font-size': 16),
+    'h1': ('font-size': 23),
+    'h2': ('font-size': 18),
+    'h3': ('font-size': 13.5),
+    'h4': ('font-size': 15),
+    'h5': ('font-size': 12),
+    'h6': ('font-size': 12),
   ),
 );
 $header-text-rendering: optimizeLegibility;
-$small-font-size: 81.25%; // 13px for base 16px
+$small-font-size: 85%;
 $header-small-font-color: $medium-gray;
 $paragraph-lineheight: 1.6;
 $paragraph-margin-bottom: 1rem;
@@ -161,8 +161,8 @@ $code-font-weight: $global-weight-normal;
 $code-background: $light-gray;
 $code-border: 1px solid $medium-gray;
 $code-padding: rem-calc(2 5 1);
-$anchor-color: #2F7FB5;
-$anchor-color-hover: #193747;
+$anchor-color: $ucla-its-link-color;
+$anchor-color-hover: $ucla-its-link-color;
 $anchor-text-decoration: none;
 $anchor-text-decoration-hover: none;
 $hr-width: $global-width;
