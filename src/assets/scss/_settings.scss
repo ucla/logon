@@ -52,30 +52,28 @@ $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.6;
 $foundation-palette: (
-  primary: $ucla-blue,
-  secondary: $ucla-gold,
-  success: $ucla-green,
-  warning: $ucla-orange,
-  alert: $ucla-pink,
+  primary: $ucla-its-primary,
+  secondary: $ucla-its-primary-alt,
+  success: $ucla-its-success,
+  warning: $ucla-its-warning,
+  alert: $ucla-its-danger,
 );
-$primary-color: $ucla-blue;
+$primary-color: $ucla-its-primary;
 $primary-color-safe: $ucla-blue-safe;
-$primary-color-alternate: $ucla-blue-dark;
-$secondary-color: $ucla-gold;
-$success-color: $ucla-green;
-$warning-color: $ucla-orange;
-$alert-color: $ucla-pink;
-$alert-color-dark: darken($ucla-pink, 42%);
-$alert-color-dark-alternate: darken($ucla-pink, 46%);
-$lighter-gray: #f9f9f9;
-$light-gray: #eee;
-$medium-gray: $ucla-neutral;
-$dark-gray: #333;
-$black: $ucla-black;
+$primary-color-alternate: $ucla-its-primary-alt;
+$secondary-color: $ucla-its-primary-alt;
+$success-color: $ucla-its-success;
+$warning-color: $ucla-its-warning;
+$alert-color: $ucla-its-danger;
 $white: $ucla-white;
-$off-white: #f0f8ff;
+$off-white: $ucla-its-gray-lightest;
+$lighter-gray: $ucla-its-gray-lighter;
+$light-gray: $ucla-its-gray-light;
+$medium-gray: $ucla-its-gray;
+$dark-gray: $ucla-its-gray-dark;
+$black: $ucla-black;
 $body-background: $lighter-gray;
-$body-font-color: #555;
+$body-font-color: $ucla-its-gray-dark;
 $body-font-family: $ucla-font-stack;
 $body-antialiased: true;
 $global-spacing: 1rem;

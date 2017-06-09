@@ -45,8 +45,7 @@ article h1 {
 .page-header-contents {
 	display: block;
   padding-top: $global-spacing;
-	background: #215394;
-	border-bottom: 1px solid $ucla-blue-light;
+	background: linear-gradient(to bottom, #003d6e 0%, #1d6092 100%);
 }
 
 #skip {
