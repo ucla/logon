@@ -10,6 +10,7 @@ body {
 
 .page-wrap {
   @include grid-row;
+  max-width: $global-width;
   min-height: 100%;
   margin-bottom: -12rem; // equal to footer height
   padding-top: 6rem; // equal to header height
