@@ -163,7 +163,7 @@ $code-border: 1px solid $medium-gray;
 $code-padding: rem-calc(2 5 1);
 $anchor-color: $ucla-its-link-color;
 $anchor-color-hover: $ucla-its-link-color;
-$anchor-text-decoration: none;
+$anchor-text-decoration: underline;
 $anchor-text-decoration-hover: none;
 $hr-width: $global-width;
 $hr-border: 1px solid $body-font-color;
@@ -268,7 +268,7 @@ $button-background: transparent;
 $button-background-hover: $ucla-its-primary-button-color;
 $button-color: $anchor-color;
 $button-color-alt: $anchor-color;
-$button-radius: $global-radius;
+$button-radius: none;
 $button-sizes: (
   small: 0.875rem,
   multi-column: 1rem,
@@ -390,15 +390,15 @@ $form-label-line-height: 1.8;
 $select-background: $white;
 $select-triangle-color: $dark-gray;
 $select-radius: $global-radius;
-$input-color: $black;
-$input-placeholder-color: $medium-gray;
+$input-color: $dark-gray;
+$input-placeholder-color: $light-gray;
 $input-font-family: inherit;
-$input-font-size: rem-calc(16);
+$input-font-size: rem-calc(15);
 $input-font-weight: $global-weight-normal;
 $input-background: $white;
 $input-background-focus: $white;
 $input-background-disabled: $light-gray;
-$input-border: 1px solid $medium-gray;
+$input-border: 1px solid $light-gray;
 $input-border-focus: 1px solid $primary-color;
 $input-shadow: inset 0 1px 2px rgba($black, 0.1);
 $input-shadow-focus: 0 0 5px lighten($primary-color, 20%);
@@ -406,7 +406,7 @@ $input-cursor-disabled: default;
 $input-transition: box-shadow 0.1s, border-color 0.3s ease-in-out;
 $input-number-spinners: true;
 $input-radius: $global-radius;
-$form-button-radius: $global-radius;
+$form-button-radius: none;
 
 // 20. Label
 // ---------
