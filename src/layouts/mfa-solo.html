@@ -16,21 +16,23 @@
   
   <div class="page-wrap">
 
-  <header class="page-header" role="banner">
-    <section class="page-header-contents logged-in">
-      <span class="logo"><a href="index-in.html"><img src="{{root}}assets/img/logo.png" alt="UCLA MY Logon"></a></span>
-      <div class="logged-in-info">
-        <p class="note-that">You're logged in as: Jen Burin</p>
-        <p><a href="./">Logout</a></p>
-      </span>
-    </section>
-  </header>
+    <header class="page-header" role="banner">
+      <section class="page-header-contents logged-in">
+        <span class="logo"><a href="index-in.html"><img src="{{root}}assets/img/logo.png" alt="UCLA MY Logon"></a></span>
+        <div class="logged-in-info">
+          <p class="note-that">You're logged in as: Jen Burin</p>
+          <p><a href="./">Logout</a></p>
+        </span>
+      </section>
+    </header>
 
-  {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+    <div class="page-content">
+      
+      {{> nav-menu}}
   
-  {{> nav-menu-mfa}}
-  
-  {{> body}}
+      {{> body}}
+    
+    </div>
   
   </div>
   
