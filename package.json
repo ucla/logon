@@ -7,7 +7,8 @@
     "start": "gulp",
     "build": "gulp build --production",
     "deploy-build": "gulp build --production --no_styleguide --no_uncss",
-    "update-git-ref": "sed -i '' \"s/foundation-sites#[a-z0-9]*/foundation-sites#$(cd bower_components/foundation-sites; git rev-parse HEAD)/\" bower.json"
+    "update-git-ref": "sed -i '' \"s/foundation-sites#[a-z0-9]*/foundation-sites#$(cd bower_components/foundation-sites; git rev-parse HEAD)/\" bower.json",
+    "postinstall": "bower install"
   },
   "author": "ZURB <foundation@zurb.com>",
   "license": "MIT",
