@@ -28,6 +28,7 @@ PATHS:
     - "bower_components/foundation-sites/scss"
     - "bower_components/motion-ui/srcs"
     - "bower_components/sass-toolkit/stylesheets"
+    - "bower_components/font-awesome/scss"
   # Paths to (JS) assets that need to be loaded separately
   bowerDirectLinked:
     # - "bower_components/webshim/js-webshim/minified/**/*"

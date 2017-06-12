@@ -39,7 +39,7 @@ function loadConfig() {
 
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
- gulp.series(clean, gulp.parallel(pages, sass, javascript, images, copy), styleGuide));
+ gulp.series(clean, gulp.parallel(pages, fa, sass, javascript, images, copy), styleGuide));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
@@ -79,7 +79,6 @@ function resetPages(done) {
 
 // Generate a style guide from the Markdown content and HTML template in styleguide/
 function styleGuide(done) {
-
   if (NO_STYLEGUIDE) {
     gutil.log(gutil.colors.yellow('--no_styleguide. Skipping...'));
     done();
@@ -89,7 +88,12 @@ function styleGuide(done) {
       template: 'src/styleguide/template.html'
     }, done);
   }
+}
 
+// Move font-awesome fonts folder to compiled folder
+function fa() {
+  return gulp.src( './bower_components/font-awesome/fonts/**.*')
+    .pipe(gulp.dest(PATHS.dist + '/assets/fonts'));
 }
 
 // Compile Sass into CSS
