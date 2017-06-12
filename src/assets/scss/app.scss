@@ -64,6 +64,7 @@
 // @include foundation-float-classes;
 // @include foundation-flex-classes;
 
+
 // ZURB Motion UI
 // @include motion-ui-transitions;
 // @include motion-ui-animations;
@@ -91,3 +92,6 @@
 @import 'components/layout';
 @import 'components/logon';
 @import 'components/mfa';
+
+// adapted hills 
+@import 'components/side-nav';

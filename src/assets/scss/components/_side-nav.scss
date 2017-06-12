@@ -1,0 +1,87 @@
+.nav-secondary {
+  text-transform: uppercase;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin-bottom: 0;
+      padding-left: 0;
+      &::after {
+        display: none;
+      }
+
+      &.active {
+        a {
+          color: $ucla-its-secondary;
+        }
+      }
+
+      &.expanded {
+        > a {
+          color: $ucla-its-secondary;
+
+          &:before {
+            content: "\f078";
+            right: 11px;
+          }
+        }
+      }
+
+      a {
+        background-color: $ucla-its-primary-alt;
+        color: $white;
+        display: block;
+        font-weight: $global-weight-bold;
+        font-size: .9rem;
+        padding: 7px 32px 7px 15px;
+        position: relative;
+        text-decoration: none;
+
+        &:hover {
+          color: $ucla-its-secondary;
+        }
+      }
+
+    }
+  }
+
+  > ul {
+
+    > li {
+      border-bottom: 1px solid $white;
+      text-transform: uppercase;
+
+      > a {
+
+        &:before {
+          color: $white;
+          content: "\f054";
+          font-family: FontAwesome;
+          font-size: 9px;
+          font-weight: normal;
+          position: absolute;
+          right: 10px;
+          top: 12px;
+          width: 10px;
+        }
+      }
+
+      > ul {
+
+        a {
+          padding-left: 15px;
+          padding-right: 30px;
+          text-transform: none;
+          font-size: .94em;
+        }
+      }
+    }
+  }
+}
+
+.block {
+  margin-bottom: 30px;
+}

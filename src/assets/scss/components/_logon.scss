@@ -38,7 +38,24 @@ article h1 {
 }
 
 .hero-button {
-  font-size: 20px;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+p.lead {
+  color: $ucla-its-primary;
+  font-weight: 100;
+  font-size: 1.1em;
+  margin-bottom: 1.5em;
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+  p.lead {
+    font-size: 1.3em;
+  }
+
 }
 
 /////////////////////////////////////////
@@ -94,31 +111,21 @@ article h1 {
   @extend %content-styling;
 }
 
-nav {
-  li {
-    font-size: $helptext-font-size;
-    ul {
-      margin-left: 0;
-      font-size: $global-font-size;
-    }
-    li {
-      list-style: none;
-      font-size: 20px;
-      ul li {
-        font-size: 16px;
-      }
-    }
-  }
+.page-content {
+  background: $white;
+  @include grid-row; 
+  width: 95%;
+  @extend %ucla-box-shadow;
 }
 
 .item-overview {
   @include grid-row;
-  padding-top: $global-padding / 2;;
-  margin-bottom: $global-margin / 2;
+  padding-top: $global-padding / 2;
+  border-top: 1px solid $ucla-its-primary-light;
   background: $white;
   .expand-context, .go-deeper {
     text-align: right;
-    color: $anchor-color;
+    color: $light-gray;
 //     display: none;
     @include grid-column(3);
     a {
@@ -217,7 +224,6 @@ nav {
 		}
 		&:hover, &:focus {
 			color: $ucla-yellow;
-			text-decoration: underline;
 		}
 	}
 
