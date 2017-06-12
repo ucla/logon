@@ -104,21 +104,6 @@ nav {
   }
 }
 
-// home page specific styling
-.home-enter {
-  @include grid-column(12);
-  @include breakpoint(multi-column) {
-    @include grid-column(8);
-  }
-}
-
-.home-oops {
-  @include grid-column(12);
-  @include breakpoint(multi-column) {
-    @include grid-column(4);
-  }
-}
-
 .home-welcome {
   @include grid-column(12);
   @include grid-row();
