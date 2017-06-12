@@ -22,7 +22,7 @@ p.lead {
 
 .btn-text {
   background: url(../images/callout-link-arrow.png) no-repeat left 4px;
-  color: $ucla-purple; !important;
+  color: $ucla-purple !important;
   display: block;
   font-size: 1em;
   font-weight: 300;
@@ -39,13 +39,5 @@ p.lead {
   &:focus {
     background-position: 3px 4px;
     text-decoration: underline;
-  }
-}
-
-.btn-text-alt {
-  color: $white;
-
-  &:hover {
-    color: $gallery;
   }
 }
