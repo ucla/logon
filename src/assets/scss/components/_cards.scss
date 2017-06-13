@@ -3,17 +3,6 @@
   padding: 20px 40px 20px 20px;
   margin-bottom: 30px;
   border: 1px solid $ucla-its-primary-light;
-  transition: all .2s ease-in-out;
-  &:hover {
-    cursor: pointer;
-    transform: scale(1.05);
-    .device-image-linked svg, .device-image svg {
-      fill: $anchor-color;
-    }
-    .device-info p {
-      color: $anchor-color-hover;
-    }
-  }
   h2 {
     margin-bottom: .5em;
     a {
