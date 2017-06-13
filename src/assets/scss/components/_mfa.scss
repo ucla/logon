@@ -18,7 +18,7 @@ fieldgroup.inline {
 
 .mfa-method {
   display: block;
-  background: $light-gray;
+  border: 1px solid $ucla-its-primary-light;
   padding: $global-padding;
   margin-bottom: $global-margin;
 }
@@ -49,7 +49,7 @@ fieldgroup.inline {
 }
 
 .device {
-  background: $off-white;
+  border: 1px solid $ucla-its-primary-light;
   padding: $global-padding;
   margin-bottom: $global-margin;
   @include grid-row();
