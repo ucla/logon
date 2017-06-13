@@ -168,6 +168,10 @@ article h1 {
   }
 }
 
+.item-overview + h2 {
+  margin-top: $global-margin;
+}
+
 // need nested containers due to foundation's grid system
 .supporting-info > div {
   background: $white;
