@@ -102,11 +102,14 @@ article h1 {
 
 .page-content {
   background: $white;
+  padding: $global-padding 0;
+  margin-bottom: $global-margin * 2;
   @include grid-row; 
   width: 95%;
   @extend %ucla-box-shadow;
 }
 
+// accordion items on manage pages
 .item-overview {
   @include grid-row;
   border-top: 1px solid $ucla-its-primary-light;

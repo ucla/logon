@@ -62,10 +62,8 @@ body {
 
 // layout that applies to all pages
 .page, .home, .management, .mfa {
-  padding: $global-padding;
   &> div, &> section {
-    @include grid-column-row(0);
-    padding: $global-padding 0;
+    @include grid-column-row();
   }
   header {
     @include grid-column(12);
@@ -76,7 +74,7 @@ body {
 nav {
   @include grid-column(12);
   @include breakpoint(multi-column) {
-    padding-top: $global-padding * 4;
+    padding-top: $global-padding;
     @include grid-column(4);
     @include grid-col-pos(-8);
   }
@@ -89,7 +87,6 @@ nav {
 .management {
   @include grid-column(12);
   @include breakpoint(multi-column) {
-    padding-top: $global-padding * 2;
     @include grid-column(8);
     @include grid-col-pos(4);
   }
