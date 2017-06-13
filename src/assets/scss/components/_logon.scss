@@ -117,9 +117,8 @@ article h1 {
     text-align: right;
     color: $light-gray;
     @include grid-column(4);
-    a {
-      vertical-align: top; 
-    }
+    vertical-align: top;
+    padding-top: $global-padding / 2;
   }
   .expandable-area {
     cursor: pointer;
@@ -136,25 +135,27 @@ article h1 {
   dl {
     @include grid-column(8);
     margin-bottom: 0;
-    padding: ($global-padding / 2) 0;
+    padding: $global-padding / 2;
     &::before {
-      content: "\f056";
+      content: "\f055";
       font-family: FontAwesome;
       position: absolute;
-      left: 15px;
-      top: 50%;
+      left: 0;
+      top: 20px;
       font-size: 20px;
       margin-top: -16px;
-      color: #2d79ab;
+      color: $ucla-its-primary-alt;
     }
     dt {
       font-weight: $global-weight-bold;
       color: $ucla-its-primary-alt;
       margin-bottom: 0;
+      padding-left: $global-padding / 2;
     }
     dd {
       font-size: $global-font-size;
       font-weight: $global-weight-bold;
+      padding-left: $global-padding / 2;
     }
   }
   .expanded-info {
