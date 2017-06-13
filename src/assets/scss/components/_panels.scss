@@ -1,11 +1,17 @@
 .card {
-  @include grid-col(6)
   position: relative;
   padding: 20px 40px 20px 20px;
   margin-bottom: 30px;
-  border: 1px solid $ucla-its-primary-light;
-  h3 {
+  border: 1px solid #DDE6ED;
+  h2 {
     margin-bottom: .5em;
+    a {
+      color: $ucla-its-primary-alt;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
 
@@ -28,6 +34,7 @@ card-content > *:last-child {
 
 .card-content .meta {
   font-size: .85rem;
+  color: $ucla-its-gray-light;
 }
 
 .icon-circle {
