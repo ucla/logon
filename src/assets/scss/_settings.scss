@@ -406,7 +406,7 @@ $input-cursor-disabled: default;
 $input-transition: box-shadow 0.1s, border-color 0.3s ease-in-out;
 $input-number-spinners: true;
 $input-radius: $global-radius;
-$form-button-radius: none;
+$form-button-radius: 0;
 
 // 20. Label
 // ---------
