@@ -6,6 +6,10 @@ h1, h3, h5 {
   text-transform: uppercase;
 }
 
+.management h2 {
+  margin-top: $global-margin;
+}
+
 .line-thru {
   @include line-thru();
   margin: -($global-spacing / 2) 0 0;
@@ -106,11 +110,11 @@ article h1 {
   @include grid-row;
   border-top: 1px solid $ucla-its-primary-light;
   background: $white;
-  .expand-context, .go-deeper {
+  .expand-context {
     text-align: right;
     color: $light-gray;
 //     display: none;
-    @include grid-column(3);
+    @include grid-column(4);
     a {
       vertical-align: top; 
     }
@@ -131,10 +135,10 @@ article h1 {
   svg {
     height: 20px;
     width: 20px;
-    fill: $anchor-color;
+    fill: $ucla-its-primary-alt;
   }
   dl {
-    @include grid-column(9);
+    @include grid-column(8);
     margin-bottom: 0;
     padding: ($global-padding / 2) 0;
     dt {
@@ -179,6 +183,7 @@ article h1 {
 /////////////////////////////////////////
 
 .iam-footer {
+  @include grid-row();
 	background: #215394;
 	border-top: 1px solid $ucla-blue-light;
 	padding: $global-spacing / 2;
@@ -196,10 +201,6 @@ article h1 {
   	  margin-bottom: 0;
   	 }
 	}
-}
-
-.footer-wrapper {
-  @include grid-row;
 }
 
 .iam-footer	a, .logged-in-info a {
