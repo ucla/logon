@@ -114,6 +114,7 @@ article h1 {
   .expand-context {
     text-align: right;
     color: $light-gray;
+    background: $white;
     @include grid-column(4);
     a {
       vertical-align: top; 
@@ -171,7 +172,7 @@ article h1 {
 /////////////////////////////////////////
 
 .iam-footer {
-	background: #2c4886;
+	background: #1f4b87;
 	padding: $global-spacing / 2;
 	color: $white;
 	.listless {
@@ -212,7 +213,7 @@ article h1 {
   display: block;
   position: relative;
   .form-step-todo {
-    color: darken($medium-gray, 20%);
+    color: $medium-gray;
   }
   .form-step-doing {
     color: $primary-color-safe; 

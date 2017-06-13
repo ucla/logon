@@ -29,15 +29,21 @@
   padding-left: 65px;
 }
 
+.card-content {
+  h3 {
+    font-size: rem-calc(map-deep-get($header-styles, large-type, h6, font-size));
+    color: $ucla-its-primary-alt;
+  }
+  .meta {
+    font-size: .85rem;
+    color: $ucla-its-gray-light;
+  }
+}
+
 .card-content > *:first-child {
   margin-top: 0;
 }
 
 card-content > *:last-child {
   margin-bottom: 0;
-}
-
-.card-content .meta {
-  font-size: .85rem;
-  color: $ucla-its-gray-light;
 }
