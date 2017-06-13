@@ -66,6 +66,13 @@ p.lead {
   display: none;
 }
 
+.cta-content a {
+  color: $white;
+  &:hover {
+    color: $ucla-yellow;
+  }
+}
+
 .cta-button {
   width: 80%;
   color: $white;
