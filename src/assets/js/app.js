@@ -52,7 +52,7 @@ var spinner = new Spinner(opts).spin(target);
 ///     accordian / expanded info
 /////////////////////////////////////////
 
-$('.expand-toggle').click(function() {
+$('.expandable-area').click(function() {
   $(this).next('.expanded-info').toggle();
 });
 

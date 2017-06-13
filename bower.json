@@ -15,13 +15,14 @@
     "tests"
   ],
   "dependencies": {
-    "foundation-sites": "ucla/foundation-sites#a65acdef61e60913ae885f0dbb2e532d9d0e11e2",
+    "foundation-sites": "ucla/foundation-sites#dd2c64418cfc6ce18fde367f26c2b4aabe8692b7",
     "countdown": "^2.1.0",
     "motion-ui": "~1.2.2",
     "sass-toolkit": "~2.10.2",
     "what-input": "^1.2.5",
     "zxcvbn": "~4.2.0",
-    "spin.js": "^2.3.2"
+    "spin.js": "^2.3.2",
+    "font-awesome": "fontawesome#^4.7.0"
   },
   "resolutions": {
     "jquery": "1.12.4",

@@ -48,41 +48,39 @@
 // 1. Global
 // ---------
 
-$global-font-size: 100%;
-$global-width: rem-calc(1200);
+$global-font-size: 93.75%; // 15px
+$global-width: rem-calc(1336);
 $global-lineheight: 1.6;
 $foundation-palette: (
-  primary: $ucla-blue,
-  secondary: $ucla-gold,
-  success: $ucla-green,
-  warning: $ucla-orange,
-  alert: $ucla-pink,
+  primary: $ucla-its-primary,
+  secondary: $ucla-its-primary-alt,
+  success: $ucla-its-success,
+  warning: $ucla-its-warning,
+  alert: $ucla-its-danger,
 );
-$primary-color: $ucla-blue;
+$primary-color: $ucla-its-primary;
 $primary-color-safe: $ucla-blue-safe;
-$primary-color-alternate: $ucla-blue-dark;
-$secondary-color: $ucla-gold;
-$success-color: $ucla-green;
-$warning-color: $ucla-orange;
-$alert-color: $ucla-pink;
-$alert-color-dark: darken($ucla-pink, 42%);
-$alert-color-dark-alternate: darken($ucla-pink, 46%);
-$lighter-gray: #f9f9f9;
-$light-gray: #eee;
-$medium-gray: $ucla-neutral;
-$dark-gray: #333;
-$black: $ucla-black;
+$primary-color-alternate: $ucla-its-primary-alt;
+$secondary-color: $ucla-its-primary-alt;
+$success-color: $ucla-its-success;
+$warning-color: $ucla-its-warning;
+$alert-color: $ucla-its-danger;
 $white: $ucla-white;
-$off-white: #f0f8ff;
+$off-white: $ucla-its-gray-lightest;
+$lighter-gray: $ucla-its-gray-lighter;
+$light-gray: $ucla-its-gray-light;
+$medium-gray: $ucla-its-gray;
+$dark-gray: $ucla-its-gray-dark;
+$black: $ucla-black;
 $body-background: $lighter-gray;
-$body-font-color: #555;
+$body-font-color: $ucla-its-gray-dark;
 $body-font-family: $ucla-font-stack;
 $body-antialiased: true;
 $global-spacing: 1rem;
 $global-margin: $global-spacing;
 $global-padding: $global-spacing;
-$global-weight-light: 300;
-$global-weight-normal: 400;
+$global-weight-light: 100;
+$global-weight-normal: 300;
 $global-weight-bold: 600;
 $global-radius: 5px;
 $global-text-direction: ltr;
@@ -94,7 +92,7 @@ $print-transparent-backgrounds: true;
 // 1.5 Application Specific
 // ---------
 
-$global-letter-spacing: 0.5px;
+$global-letter-spacing: 0.01px;
 $nav-background: rgba($black, .65);
 $nav-background-alt: rgba($black, .8);
 
@@ -106,7 +104,7 @@ $breakpoints: (
   large-type: 34rem, // bump up typography size
   multi-column: 54rem,
   medium: 54rem, // has to be here, dislike it semantically ;)
-  wide: 120rem,
+  wide: 75rem,
 );
 $print-breakpoint: large-type;
 $breakpoint-classes: ();
@@ -130,29 +128,29 @@ $header-font-family: $body-font-family;
 $header-font-weight: $global-weight-bold;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
-$header-color: inherit;
+$header-color: $ucla-its-primary;
 $header-lineheight: 1.4;
 $header-margin-bottom: 0.5rem;
 $header-styles: (
   small: (
-    'h1': ('font-size': 24),
-    'h2': ('font-size': 20),
-    'h3': ('font-size': 19),
-    'h4': ('font-size': 18),
-    'h5': ('font-size': 17),
-    'h6': ('font-size': 16),
+    'h1': ('font-size': 23),
+    'h2': ('font-size': 18),
+    'h3': ('font-size': 13.5),
+    'h4': ('font-size': 15),
+    'h5': ('font-size': 12),
+    'h6': ('font-size': 12),
   ),
   large-type: (
-    'h1': ('font-size': 36),
-    'h2': ('font-size': 24),
-    'h3': ('font-size': 22),
-    'h4': ('font-size': 20),
-    'h5': ('font-size': 18),
-    'h6': ('font-size': 16),
+    'h1': ('font-size': 23),
+    'h2': ('font-size': 18),
+    'h3': ('font-size': 13.5),
+    'h4': ('font-size': 15),
+    'h5': ('font-size': 12),
+    'h6': ('font-size': 12),
   ),
 );
 $header-text-rendering: optimizeLegibility;
-$small-font-size: 81.25%; // 13px for base 16px
+$small-font-size: 85%;
 $header-small-font-color: $medium-gray;
 $paragraph-lineheight: 1.6;
 $paragraph-margin-bottom: 1rem;
@@ -163,9 +161,9 @@ $code-font-weight: $global-weight-normal;
 $code-background: $light-gray;
 $code-border: 1px solid $medium-gray;
 $code-padding: rem-calc(2 5 1);
-$anchor-color: #2F7FB5;
-$anchor-color-hover: #193747;
-$anchor-text-decoration: none;
+$anchor-color: $ucla-its-link-color;
+$anchor-color-hover: $ucla-its-link-color;
+$anchor-text-decoration: underline;
 $anchor-text-decoration-hover: none;
 $hr-width: $global-width;
 $hr-border: 1px solid $body-font-color;
@@ -212,7 +210,7 @@ $abide-labels: true;
 $input-background-invalid: get-color(alert);
 $form-label-color-invalid: get-color(alert);
 $input-error-color: get-color(alert);
-$input-error-font-size: rem-calc(12);
+$input-error-font-size: rem-calc(13);
 $input-error-font-weight: $global-weight-bold;
 $form-valid-color: lighten($success-color, 48%);
 
@@ -270,7 +268,7 @@ $button-background: transparent;
 $button-background-hover: $ucla-its-primary-button-color;
 $button-color: $anchor-color;
 $button-color-alt: $anchor-color;
-$button-radius: $global-radius;
+$button-radius: none;
 $button-sizes: (
   small: 0.875rem,
   multi-column: 1rem,
@@ -383,24 +381,24 @@ $helptext-font-size: rem-calc(13);
 $helptext-font-style: italic;
 $input-prefix-color: $black;
 $input-prefix-background: $light-gray;
-$input-prefix-border: 1px solid $medium-gray;
+$input-prefix-border: 1px solid $light-gray;
 $input-prefix-padding: 1rem;
 $form-label-color: $body-font-color;
-$form-label-font-size: rem-calc(13);
+$form-label-font-size: rem-calc(15);
 $form-label-font-weight: $global-weight-bold;
 $form-label-line-height: 1.8;
 $select-background: $white;
 $select-triangle-color: $dark-gray;
 $select-radius: $global-radius;
-$input-color: $black;
-$input-placeholder-color: $medium-gray;
+$input-color: $dark-gray;
+$input-placeholder-color: $light-gray;
 $input-font-family: inherit;
-$input-font-size: rem-calc(16);
+$input-font-size: rem-calc(15);
 $input-font-weight: $global-weight-normal;
 $input-background: $white;
 $input-background-focus: $white;
 $input-background-disabled: $light-gray;
-$input-border: 1px solid $medium-gray;
+$input-border: 1px solid $light-gray;
 $input-border-focus: 1px solid $primary-color;
 $input-shadow: inset 0 1px 2px rgba($black, 0.1);
 $input-shadow-focus: 0 0 5px lighten($primary-color, 20%);
@@ -408,7 +406,7 @@ $input-cursor-disabled: default;
 $input-transition: box-shadow 0.1s, border-color 0.3s ease-in-out;
 $input-number-spinners: true;
 $input-radius: $global-radius;
-$form-button-radius: $global-radius;
+$form-button-radius: none;
 
 // 20. Label
 // ---------

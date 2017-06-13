@@ -1,0 +1,123 @@
+p.lead {
+  color: $ucla-its-primary;
+  font-weight: 100;
+  font-size: 1.1em;
+  margin-bottom: 1.5em;
+}
+
+@media (min-width: 1200px) {
+  p.lead {
+    font-size: 1.3em;
+  }
+}
+
+.title-bar {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: .9rem;
+  padding: 10px 15px;
+  background: #e8f2f9;
+  color: $ucla-its-primary;
+}
+
+.btn-text {
+  background: url(../img/callout-link-arrow.png) no-repeat left 4px;
+  color: $ucla-purple !important;
+  display: block;
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 15px 0;
+  padding-left: 35px;
+  text-decoration: none;
+  -webkit-transition:background-position .1s ease-in;
+  -moz-transition:background-position .1s ease-in;
+  -o-transition:background-position .1s ease-in;
+  transition:background-position .1s ease-in;
+
+  &:hover,
+  &:focus {
+    background-position: 3px 4px;
+    text-decoration: underline;
+  }
+}
+
+/* Begin - Footer Call to Actions */
+/* 3 boxes on the bottom of every page */
+
+.footer-cta {
+  text-align: center;
+  padding: 1em 2%;
+}
+
+.footer-cta h4 {
+  color: #acc1e5;
+  margin-top: 0;
+  margin-bottom: 1em;
+  background-color: transparent;
+  padding: 0;
+}
+
+.footer-cta .cta-content p {
+  font-size: .9em;
+}
+
+.footer-cta .cta-content {
+  display: none;
+}
+
+.cta-content a {
+  color: $white;
+  &:hover {
+    color: $ucla-yellow;
+  }
+}
+
+.cta-button {
+  width: 80%;
+  color: $white;
+  border: 1px $ucla-yellow solid;
+  margin: auto;
+  a {
+    text-decoration: none;
+    color: $white;
+    display: block;
+    width: 100%;
+  }
+  &:hover {
+    border: 1px $white solid; 
+  }
+  padding: 6px 12px;
+}
+
+/* End - Footer Call to Actions */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+  .footer-cta {
+    padding: 30px 0 20px 0;
+  }
+
+  .footer-cta .cta {
+    margin-bottom: 1em;
+  }
+
+  .footer-cta .cta-content {
+    display: block;
+  }
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+  .footer-cta .cta {
+    margin-bottom: 0;
+  }
+
+  .footer-cta > .container .cta:first-child {
+    border-left: none;
+  }
+
+}
