@@ -183,7 +183,6 @@ article h1 {
 /////////////////////////////////////////
 
 .iam-footer {
-  @include grid-row();
 	background: #215394;
 	border-top: 1px solid $ucla-blue-light;
 	padding: $global-spacing / 2;
@@ -193,9 +192,7 @@ article h1 {
 	}
 	.iam-footer-content {
   	margin: 0 auto;
-  	font-size: $small-font-size;
   	@include grid-column(12);
-  	margin-bottom: $global-margin;
   	@include breakpoint(multi-column) {
   	  @include grid-column(4);
   	  margin-bottom: 0;
@@ -203,17 +200,20 @@ article h1 {
 	}
 }
 
-.iam-footer	a, .logged-in-info a {
-		text-decoration: none;
-		color: $ucla-yellow;
-		&:visited {
-			color: $ucla-yellow;
-		}
-		&:hover, &:focus {
-			color: $ucla-yellow;
-		}
-	}
+.footer-wrapper {
+  @include grid-row();
+}
 
+.logged-in-info a {
+	text-decoration: none;
+	color: $ucla-yellow;
+	&:visited {
+		color: $ucla-yellow;
+	}
+	&:hover, &:focus {
+		color: $ucla-yellow;
+	}
+}
 
 /////////////////////////////////////////
 ///      CREATE ACCOUNT PROGRESS

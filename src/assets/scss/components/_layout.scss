@@ -12,10 +12,10 @@ body {
   @include grid-row;
   max-width: $global-width;
   min-height: 100%;
-  margin-bottom: -12rem; // equal to footer height
+  margin-bottom: -15rem; // equal to footer height
   padding-top: 6rem; // equal to header height
   @include breakpoint(multi-column) {
-    margin-bottom: -5rem;
+    margin-bottom: -13rem;
   }
 }
 
@@ -24,9 +24,9 @@ body {
   display: block;
 }
 .iam-footer, .page-wrap:after {
-  height: 12rem;
+  height: 15rem;
   @include breakpoint(multi-column) {
-    height: 5rem;
+    height: 13rem;
   }
 }
 
