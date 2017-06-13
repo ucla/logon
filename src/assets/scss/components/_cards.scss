@@ -17,11 +17,16 @@
 
 .card-icon {
   float: left;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  svg {
+    fill: $ucla-its-primary-alt;
+  }
 }
 
 .card-icon + .card-content {
   padding-left: 65px;
-  padding-top: 10px;
 }
 
 .card-content > *:first-child {
@@ -35,11 +40,4 @@ card-content > *:last-child {
 .card-content .meta {
   font-size: .85rem;
   color: $ucla-its-gray-light;
-}
-
-.icon-circle {
-  width: 45px;
-  height: 45px;
-  line-height: 45px;
-  font-size: 20px;
 }
