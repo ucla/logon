@@ -86,7 +86,8 @@ nav {
   }
 }
 
-.management {
+.management,
+.mfa {
   @include grid-column(12);
   @include breakpoint(multi-column) {
     padding-top: $global-padding * 2;
