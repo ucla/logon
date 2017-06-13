@@ -6,9 +6,11 @@ h1, h3, h5 {
   text-transform: uppercase;
 }
 
+/*
 .management h2 {
   margin-top: $global-margin;
 }
+*/
 
 .line-thru {
   @include line-thru();
@@ -135,6 +137,16 @@ article h1 {
     @include grid-column(8);
     margin-bottom: 0;
     padding: ($global-padding / 2) 0;
+    &::before {
+      content: "\f056";
+      font-family: FontAwesome;
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      font-size: 20px;
+      margin-top: -16px;
+      color: #2d79ab;
+    }
     dt {
       font-weight: $global-weight-bold;
       color: $ucla-its-primary-alt;
@@ -219,14 +231,14 @@ article h1 {
   display: block;
   position: relative;
   .form-step-todo {
-    color: $medium-gray;
+    color: $light-gray;
   }
   .form-step-doing {
     color: $primary-color-safe; 
     background: $lighter-gray;
   }
   .form-step-done {
-    color: $dark-gray;
+    color: $black;
   }
 }
 

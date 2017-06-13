@@ -77,6 +77,10 @@ nav {
   @include grid-column(12);
   @include breakpoint(multi-column) {
     padding-top: $global-padding * 4;
+    @include grid-column(4);
+    @include grid-col-pos(-8);
+  }
+  @include breakpoint(wide) {
     @include grid-column(3);
     @include grid-col-pos(-9);
   }
@@ -86,6 +90,10 @@ nav {
   @include grid-column(12);
   @include breakpoint(multi-column) {
     padding-top: $global-padding * 2;
+    @include grid-column(8);
+    @include grid-col-pos(4);
+  }
+  @include breakpoint(wide) {
     @include grid-column(9);
     @include grid-col-pos(3);
   }
