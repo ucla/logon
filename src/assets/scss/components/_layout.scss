@@ -63,7 +63,7 @@ body {
 // layout that applies to all pages
 .page, .home, .management, .mfa {
   padding: $global-padding;
-  &> div {
+  &> div, &> section {
     @include grid-column-row(0);
     padding: $global-padding 0;
   }

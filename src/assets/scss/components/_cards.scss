@@ -37,6 +37,7 @@
   .meta {
     font-size: .85rem;
     color: $ucla-its-gray-light;
+    font-weight: $global-weight-bold;
   }
 }
 
@@ -46,4 +47,8 @@
 
 card-content > *:last-child {
   margin-bottom: 0;
+}
+
+.mfa-card {
+  
 }
