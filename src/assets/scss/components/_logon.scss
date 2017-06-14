@@ -10,6 +10,15 @@ h2 {
   font-weight: 300;
 }
 
+.intro-cols {
+  .button {
+    width: 100%;
+  }
+  .second-cta {
+    margin-top: -$global-margin;
+  }
+}
+
 /*
 .management h2 {
   margin-top: $global-margin;

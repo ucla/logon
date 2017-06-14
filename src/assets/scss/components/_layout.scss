@@ -108,9 +108,6 @@ nav {
 }
 
 .intro-cols {
-  .button {
-    width: 100%;
-  }
   @include grid-column(12);
   @include breakpoint(multi-column) {
     @include grid-column(4);
