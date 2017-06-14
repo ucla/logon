@@ -97,9 +97,9 @@ fieldgroup.inline {
 
 .mfa-inactive {
   @extend .device;
-  background: $light-gray;
+  background: $off-white;
   border-radius: $global-radius;
-  box-shadow: inset 0px 0px 10px 0px $medium-gray;
+  box-shadow: inset 0px 0px 10px 0px $light-gray;
 }
 
 #additional-options {
