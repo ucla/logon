@@ -122,11 +122,37 @@ article h1 {
   @extend %ucla-box-shadow;
 }
 
+.custom-manage-container {
+  border: 1px solid $ucla-its-primary-light;
+  padding: $global-padding ($global-padding * 2);
+  .wrapper {
+    @include grid-row();
+    width: 100%;
+  }
+}
+
+.mfa-preview {
+  @include grid-col(4, 0);
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  div {
+    background: $off-white;
+    padding: $global-padding / 2;
+  }
+  p, h4 {
+    margin-bottom: 0;
+  }
+}
+
+.clearfix {
+  @include clearfix;
+}
+
 // accordion items on manage pages
 .item-overview {
   @include grid-row;
   border-top: 1px solid $ucla-its-primary-light;
-  &:last-of-type {
+  &:last-child {
    border-bottom: 1px solid $ucla-its-primary-light;
   }
   .expand-context {
