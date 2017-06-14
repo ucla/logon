@@ -82,7 +82,8 @@ nav {
   }
 }
 
-.management {
+.management,
+.mfa {
   @include grid-column(12);
   @include breakpoint(multi-column) {
     @include grid-column(8);
