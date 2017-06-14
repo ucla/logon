@@ -1,8 +1,11 @@
 .card {
-  position: relative;
-  padding: 20px 40px 20px 20px;
-  margin-bottom: 30px;
-  border: 1px solid $ucla-its-primary-light;
+    @include grid-col(6);
+  .card-liner {
+    padding: 20px 40px 20px 20px;
+    margin-bottom: 30px;
+    border: 1px solid $ucla-its-primary-light;
+    min-height: 180px;
+  }
   h2 {
     margin-bottom: .5em;
     a {
