@@ -1,10 +1,35 @@
 .card {
     @include grid-col(6);
   .card-liner {
+    overflow: hidden;
     padding: 20px 40px 20px 20px;
     margin-bottom: 30px;
     border: 1px solid $ucla-its-primary-light;
-    min-height: 180px;
+    min-height: 220px;
+  }
+  dl, dt {
+    padding-left: 0;
+  }
+  dt, dd {
+    display: inline;
+    float: left;
+    font-size: 13px;
+  }
+  dt {
+    color: $ucla-its-primary;
+    clear: both;
+  }
+  ul {
+    margin-left: 0;
+  }
+  li {
+    color: $ucla-its-primary;
+    list-style: none;
+    font-weight: 600;
+    font-size: 13px;
+  }
+  .meta a {
+    color: $light-gray;
   }
   h2 {
     margin-bottom: .5em;

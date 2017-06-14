@@ -166,6 +166,21 @@ article h1 {
   &:last-child {
    border-bottom: 1px solid $ucla-its-primary-light;
   }
+  dl {
+    margin-bottom: 0;
+    padding: $global-padding / 2;
+    @include grid-column(8);
+    &::before {
+      content: "\f055";
+      font-family: FontAwesome;
+      position: absolute;
+      left: 0;
+      top: 20px;
+      font-size: 20px;
+      margin-top: -16px;
+      color: $ucla-its-primary-alt;
+    }
+  }
   .expand-context {
     text-align: right;
     color: $light-gray;
@@ -185,38 +200,26 @@ article h1 {
     }
 */
   }
-  dl {
-    @include grid-column(8);
-    margin-bottom: 0;
-    padding: $global-padding / 2;
-    &::before {
-      content: "\f055";
-      font-family: FontAwesome;
-      position: absolute;
-      left: 0;
-      top: 20px;
-      font-size: 20px;
-      margin-top: -16px;
-      color: $ucla-its-primary-alt;
-    }
-    dt {
-      font-weight: $global-weight-bold;
-      color: $ucla-its-primary-alt;
-      margin-bottom: 0;
-      padding-left: $global-padding / 2;
-    }
-    dd {
-      font-size: $global-font-size;
-      font-weight: $global-weight-bold;
-      padding-left: $global-padding / 2;
-    }
-  }
   .expanded-info {
     @include grid-column(12);
     display: none;
     background: $white;
   }
 }
+
+
+dt {
+  font-weight: $global-weight-bold;
+  color: $ucla-its-primary-alt;
+  margin-bottom: 0;
+  padding-left: $global-padding / 2;
+}
+dd {
+  font-size: $global-font-size;
+  font-weight: $global-weight-bold;
+  padding-left: $global-padding / 2;
+}
+
 
 .item-overview + h2 {
   margin-top: $global-margin;
