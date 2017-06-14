@@ -144,6 +144,17 @@ article h1 {
   }
 }
 
+%modal {
+  background: $white;
+  width: 50%;
+  margin: 25% auto;
+  padding: $global-padding;
+}
+
+#mfa-confirm {
+  @extend %modal;
+}
+
 .clearfix {
   @include clearfix;
 }

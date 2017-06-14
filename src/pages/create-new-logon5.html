@@ -1,5 +1,5 @@
 ---
-layout: create-password
+layout: default
 ---
 
 <section class="page">
@@ -24,9 +24,13 @@ layout: create-password
           
           <p><a href="https://www.it.ucla.edu/services/it-security/multi-factor-authentication-mfa" target="_new">Multi-factor Authentication</a> (MFA) adds a second step to your sign-in process to protect your data and accounts in case your password is compromised. It is strongly recommended to that you set up MFA.</p>
           
-          <input id="opt-out-mfa" type="checkbox"><label for="opt-out-mfa">I choose to not enroll a device in MFA at this time.</label>
+          <label for="opt-out-mfa" data-open="mfa-confirm"><input id="opt-out-mfa" type="checkbox">I choose to not enroll a device in MFA at this time.</label>
+          
+          <div id="mfa-confirm" data-reveal></div>
     
-          <button class="primary-button" type="submit">Create UCLA Logon ID</button> <button type="submit" class="button">Cancel</button>
+          <fieldgroup>
+            <button class="primary-button" type="submit">Create UCLA Logon ID</button> <button type="submit" class="button">Cancel</button>
+          </fieldgroup>
           
         </form>
         

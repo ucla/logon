@@ -20,6 +20,17 @@ $('#email-toggler').click(function() {
 });
 
 /////////////////////////////////////////
+///     load modal on mfa opt-out
+/////////////////////////////////////////
+
+var $modal = $('#mfa-confirm');
+
+$.ajax('/mfa-confirm-modal.html')
+  .done(function(resp){
+    $modal.html(resp).foundation('open');
+});
+
+/////////////////////////////////////////
 ///       initiate spinner
 /////////////////////////////////////////
 
