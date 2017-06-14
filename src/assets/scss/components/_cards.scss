@@ -14,6 +14,7 @@
     display: inline;
     float: left;
     font-size: 13px;
+    font-weight: $global-weight-normal;
   }
   dt {
     color: $ucla-its-primary;
@@ -25,7 +26,6 @@
   li {
     color: $ucla-its-primary;
     list-style: none;
-    font-weight: 600;
     font-size: 13px;
   }
   .meta a {
