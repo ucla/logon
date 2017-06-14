@@ -21,7 +21,7 @@
   height: 45px;
   line-height: 45px;
   svg {
-    fill: $ucla-its-primary-alt;
+    fill: $ucla-its-primary;
   }
 }
 
@@ -32,7 +32,7 @@
 .card-content {
   h3 {
     font-size: rem-calc(map-deep-get($header-styles, large-type, h6, font-size));
-    color: $ucla-its-primary-alt;
+    color: $ucla-its-primary;
   }
   .meta {
     font-size: .85rem;
