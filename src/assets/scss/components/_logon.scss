@@ -169,14 +169,14 @@ article h1 {
   dl {
     margin-bottom: 0;
     padding: $global-padding / 2;
-    margin-left: 4px;
-    margin-right: -4px;
+    margin-left: 5px;
+    margin-right: -5px;
     @include grid-column(8);
     &::before {
       content: "\f055";
       font-family: FontAwesome;
       position: absolute;
-      left: 0;
+      left: 1px;
       top: 20px;
       font-size: 20px;
       margin-top: -16px;
