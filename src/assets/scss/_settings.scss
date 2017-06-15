@@ -116,7 +116,7 @@ $grid-row-width: $global-width;
 $grid-column-count: 12;
 $grid-column-gutter: (
   small: 1.25rem,
-  medium: 2rem,
+  medium: 2.5rem,
 );
 $grid-column-align-edge: false;
 $block-grid-max: 8;
@@ -622,11 +622,11 @@ $titlebar-icon-spacing: 0.25rem;
 // -----------
 
 $has-tip-font-weight: $global-weight-bold;
-$has-tip-border-bottom: dotted 1px $dark-gray;
-$tooltip-background-color: $black;
+$has-tip-border-bottom: none;
+$tooltip-background-color: $ucla-its-primary-alt;
 $tooltip-color: $white;
 $tooltip-padding: 0.75rem;
-$tooltip-font-size: $small-font-size;
+$tooltip-font-size: 13px;
 $tooltip-pip-width: 0.75rem;
 $tooltip-pip-height: $tooltip-pip-width * 0.866;
 $tooltip-radius: $global-radius;

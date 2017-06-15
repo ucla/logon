@@ -98,6 +98,38 @@ article h1 {
   }
 } 
 
+.tooltip {
+  border: 1px solid $white;
+  a {
+    color: $ucla-yellow;
+    &:hover {
+      color: $ucla-yellow;
+      text-decoration: underline;
+    }
+  }
+}
+
+.standalone-help {
+  position: fixed;
+  text-align: right;
+  &:hover svg {
+    fill: $ucla-its-primary-button-color-hover;
+  }
+  svg {
+    margin-top: -4px;
+    margin-right: -4px;
+    fill: $ucla-its-primary-button-color;
+    height: 28px;
+  }
+}
+
+.page-help {
+  @include grid-col(1);
+  @extend .standalone-help;
+}
+
+
+
 /////////////////////////////////////////
 ///         OVERALL CONTENT 
 /////////////////////////////////////////
@@ -163,9 +195,6 @@ article h1 {
 .item-overview {
   @include grid-row;
   border-top: 1px solid $ucla-its-primary-light;
-  &:last-child {
-    border-bottom: 1px solid $ucla-its-primary-light;
-  }
   dl {
     margin-bottom: 0;
     padding: $global-padding / 2;

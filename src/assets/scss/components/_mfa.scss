@@ -49,7 +49,7 @@ fieldgroup.inline {
 }
 
 .device {
-  background: $lighter-gray;
+  background: $off-white;
   padding: $global-padding;
   margin-bottom: $global-margin;
   @include grid-row();
@@ -95,7 +95,7 @@ fieldgroup.inline {
 
 .mfa-inactive {
   @extend .device;
-  background: $off-white;
+  background: $ucla-its-pre-text-bg;
   border-radius: $global-radius;
   box-shadow: inset 0px 0px 10px 0px $light-gray;
 }

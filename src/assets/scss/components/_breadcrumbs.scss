@@ -2,11 +2,12 @@
 
 .page-navigation {
   margin: $global-margin 0;
-  @include grid-col(12);
+  @include grid-row();
 }
 
 /* line 1, bower_components/bootstrap/scss/_breadcrumb.scss */
 .breadcrumb {
+  @include grid-col(11);
   padding: 0.75rem 1rem;
   margin-bottom: 1rem;
   list-style: none;
@@ -46,8 +47,9 @@
 .breadcrumb {
   background-color: transparent;
   border-radius: 0;
+  padding-top: 0;
+  padding-bottom: 0;
   margin: 0;
-  padding: 0;
   font-size: 13px;
   font-weight: 300;
 }
