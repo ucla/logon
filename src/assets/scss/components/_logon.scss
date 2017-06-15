@@ -99,14 +99,7 @@ article h1 {
 } 
 
 .tooltip {
-  border: 1px solid $white;
-  a {
-    color: $ucla-yellow;
-    &:hover {
-      color: $ucla-yellow;
-      text-decoration: underline;
-    }
-  }
+  border: 1px solid $ucla-its-primary-alt;
 }
 
 .standalone-help {
