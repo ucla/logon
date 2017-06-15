@@ -95,22 +95,22 @@ p.lead {
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
 
-  .footer-cta {
-    padding: 30px 0 20px 0;
-  }
-
   .footer-cta .cta {
     margin-bottom: 1em;
-  }
-
-  .footer-cta .cta-content {
-    display: block;
   }
 
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  
+  .footer-cta {
+    padding: 30px 0 20px 0;
+  }
+
+  .footer-cta .cta-content {
+    display: block;
+  }
 
   .footer-cta .cta {
     margin-bottom: 0;
