@@ -98,8 +98,24 @@ article h1 {
   }
 } 
 
+
+/////////////////////////////////////////
+///       TOOLTIP RELATED
+/////////////////////////////////////////
+
 .tooltip {
   border: 1px solid $ucla-its-primary-alt;
+  max-width: 20rem;
+}
+
+.has-help {
+  h1 {
+    display: inline-block;
+  }
+  .standalone-help {
+    display: inline-block;
+    margin-left: $global-padding / 2;
+  }
 }
 
 .standalone-help {
@@ -120,8 +136,6 @@ article h1 {
   @include grid-col(1);
   @extend .standalone-help;
 }
-
-
 
 /////////////////////////////////////////
 ///         OVERALL CONTENT 
