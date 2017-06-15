@@ -297,15 +297,18 @@ dd {
   @include grid-row();
 }
 
-.logged-in-info a {
+.logged-in-info  {
 	text-decoration: none;
-	color: $ucla-yellow;
-	&:visited {
-		color: $ucla-yellow;
-	}
-	&:hover, &:focus {
-		color: $ucla-yellow;
-	}
+	color: $white;
+	font-weight: $global-weight-bold;
+	a {
+  	&:visited {
+  		color: $white;
+  	}
+  	&:hover, &:focus {
+  		color: $ucla-yellow;
+  	}
+  }
 }
 
 /////////////////////////////////////////
