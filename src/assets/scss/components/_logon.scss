@@ -10,6 +10,11 @@ h2 {
   font-weight: 300;
 }
 
+kbd, code {
+  font-weight: $global-weight-bold;
+  letter-spacing: 1px;
+}
+
 .intro-cols {
   .button {
     width: 100%;
@@ -109,7 +114,7 @@ article h1 {
 }
 
 .has-help {
-  h1 {
+  h1, h2, h3, p {
     display: inline-block;
   }
   .standalone-help {
@@ -161,27 +166,34 @@ article h1 {
   @extend %ucla-box-shadow;
 }
 
-.custom-manage-container {
-  border: 1px solid $ucla-its-primary-light;
-  padding: $global-padding ($global-padding * 2);
-  .wrapper {
-    @include grid-row();
-    width: 100%;
+.clearfix {
+  @include clearfix;
+}
+
+// need nested containers due to foundation's grid system
+.supporting-info > div {
+  background: $white;
+  padding: $global-spacing;
+  border-radius: $global-radius;
+  p, li {
+    font-size: $small-font-size;
+  }
+  h1 {
+    background: $ucla-gold;
+    color: $ucla-blue-dark;
+    padding: $global-padding / 2;
+    display: inline-block;
+    margin-left: -$global-margin * 1.8;
+    font-size: rem-calc(map-deep-get($header-styles, large-type, h5, font-size));
+  }
+  h2 {
+    font-size: rem-calc(map-deep-get($header-styles, large-type, h6, font-size));
   }
 }
 
-.mfa-preview {
-  @include grid-col(4, 0);
-  margin-right: 1rem;
-  margin-bottom: 1rem;
-  div {
-    background: $off-white;
-    padding: $global-padding / 2;
-  }
-  p, h4 {
-    margin-bottom: 0;
-  }
-}
+/////////////////////////////////////////
+///          MODAL OVERLAY
+/////////////////////////////////////////
 
 %modal {
   background: $white;
@@ -194,9 +206,9 @@ article h1 {
   @extend %modal;
 }
 
-.clearfix {
-  @include clearfix;
-}
+/////////////////////////////////////////
+///       ACCORDION RELATED
+/////////////////////////////////////////
 
 // accordion items on manage pages
 .item-overview {
@@ -265,24 +277,16 @@ dd {
   margin-top: $global-margin;
 }
 
-// need nested containers due to foundation's grid system
-.supporting-info > div {
-  background: $white;
-  padding: $global-spacing;
-  border-radius: $global-radius;
-  p, li {
-    font-size: $small-font-size;
-  }
-  h1 {
-    background: $ucla-gold;
-    color: $ucla-blue-dark;
+.mfa-preview {
+  @include grid-col(4, 0);
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  div {
+    background: $off-white;
     padding: $global-padding / 2;
-    display: inline-block;
-    margin-left: -$global-margin * 1.8;
-    font-size: rem-calc(map-deep-get($header-styles, large-type, h5, font-size));
   }
-  h2 {
-    font-size: rem-calc(map-deep-get($header-styles, large-type, h6, font-size));
+  p, h4 {
+    margin-bottom: 0;
   }
 }
 
@@ -353,7 +357,6 @@ dd {
   width: 19%;
   border-radius: 99rem;
   line-height: $global-spacing * 2;
-  font-size: $small-font-size;
   &:nth-child(1)::before {
     position: absolute;
     font-size: $global-font-size / 2;
@@ -425,7 +428,7 @@ meter::-webkit-meter-bar {
 
 /* Webkit based browsers */
 meter[value="1"]::-webkit-meter-optimum-value { background: $alert-color; }
-meter[value="2"]::-webkit-meter-optimum-value { background: $warning-color; }
+meter[value="2"]::-webkit-meter-optimum-value { background: $ucla-orange; }
 meter[value="3"]::-webkit-meter-optimum-value { background: $success-color; }
 meter[value="4"]::-webkit-meter-optimum-value { background: $success-color; }
 

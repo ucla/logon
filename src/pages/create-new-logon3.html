@@ -13,16 +13,16 @@ layout: create-password
       <div>
               
         <ol id="form-step-bar">
-          <li class="form-step-done">Affiliation & ToS</li>
+          <li class="form-step-done">Affiliation</li>
           <li class="form-step-done">Identity</li>
           <li class="form-step-doing">Account Info</li>
           <li class="form-step-todo">Challenge Phrase</li>
-          <li class="form-step-todo">Security Settings</li>
+          <li class="form-step-todo">MFA Enrollment</li>
         </ol>
         
-        <p>Your UCLA Logon will be your main campus identifier. You will use it to log in to most campus-wide applications. Once selected, a UCLA Logon <strong>CANNOT be changed</strong>! This is your lifetime identifier. Choose carefully.</p>
+        <h2>Choose your Logon ID</h2>
         
-        <h2>Choose your Username & Password</h2>
+        <p>Your UCLA Logon ID must be between 3 and 15 characters in length and begin with a letter, following characters can be any combination of letters and numbers. A UCLA Logon ID is not case sensitive. Your UCLA Logon ID will be your main campus identifier and you'll use it to log in to most campus-wide applications. Choose carefully.</p>
     
         <form action="/activate.php" method="post" data-abide novalidate>
     
@@ -33,7 +33,10 @@ layout: create-password
             <input name="user2" type="text" maxlength="15" placeholder="joebruin42" id="user2" value="" alt="Your username will be assigned for life and CAN NOT BE CHANGED. Select carefully." pattern="[a-z0-9]{3,15}" required data-equalto="user1">
             <span class="form-error">Your usernames don't match and/or this doesn't follow the rules above!</span></label>
           </fieldset>
-  
+          
+          <h2>Choose your Password</h2>
+          
+          <p>Your password must be between 8 and 128 characters and contain at least two of the following three types of characters: letters, numbers, and the following special characters: <kbd>!@#$%^&*().,</kbd>. Passwords are case sensitive.</p>
           
           <fieldset>
             <label for="pass1">Password
@@ -54,14 +57,6 @@ layout: create-password
         
       </div>
     </article>
-    
-    <aside class="supporting-info">
-      <div>
-  
-        {{> create-logon-user-pass }}
-   
-      </div>
-    </aside>
 
   </div>
 </section>

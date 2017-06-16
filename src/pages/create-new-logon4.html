@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: create
 ---
 
 <section class="page">
@@ -13,14 +13,16 @@ layout: default
       <div>
               
         <ol id="form-step-bar">
-          <li class="form-step-done">Affiliation & ToS</li>
+          <li class="form-step-done">Affiliation</li>
           <li class="form-step-done">Identity</li>
           <li class="form-step-done">Account Info</li>
           <li class="form-step-doing">Challenge Phrase</li>
-          <li class="form-step-todo">Security Settings</li>
+          <li class="form-step-todo">MFA Enrollment</li>
         </ol>
     
-          <h2>Create a Challenge Phrase</h2>
+          <h2>Create a Challenge Phrase for Account Recovery</h2>
+          
+          <p>Select a challenge and response phrase so that should you forget your password in the future, you may reset it online. The challenge question must be at least 8 characters long and may not exceed 128 characters. The response phrase is case sensitive. It cannot be the same as your Challenge phrase. It must be at least 8 characters long and may not exceed 128 characters.</p>
     
           <script type="text/javascript">
             var cbh;
@@ -83,14 +85,6 @@ layout: default
         
       </div>
     </article>
-    
-    <aside class="supporting-info">
-      <div>
-  
-        {{> create-logon-phrase }}
-   
-      </div>
-    </aside>
 
   </div>
 </section>
