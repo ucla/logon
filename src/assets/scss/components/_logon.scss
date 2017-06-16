@@ -170,6 +170,12 @@ article h1 {
   @include clearfix;
 }
 
+.intro-cols {
+  img {
+    margin: ($global-spacing * 2) 0 $global-spacing;
+  }
+}
+
 // need nested containers due to foundation's grid system
 .supporting-info > div {
   background: $white;
