@@ -52,7 +52,7 @@ fieldgroup.inline {
 }
 
 .device {
-  border: 1px solid $ucla-its-primary-light;
+  background: $off-white;
   padding: $global-padding;
   margin-bottom: $global-margin;
   @include grid-row();
@@ -86,9 +86,7 @@ fieldgroup.inline {
   .device-info p {
     color: $body-font-color;
   }
-  transition: all .2s ease-in-out;
   &:hover {
-    transform: scale(1.05);
     .device-image-linked svg, .device-image svg {
       fill: $anchor-color;
     }
@@ -100,9 +98,9 @@ fieldgroup.inline {
 
 .mfa-inactive {
   @extend .device;
-  background: $light-gray;
+  background: $ucla-its-pre-text-bg;
   border-radius: $global-radius;
-  box-shadow: inset 0px 0px 10px 0px $medium-gray;
+  box-shadow: inset 0px 0px 10px 0px $light-gray;
 }
 
 #additional-options {

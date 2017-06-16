@@ -53,13 +53,13 @@
 // @include foundation-meter-element;
 // @include foundation-slider;
 @include foundation-sticky;
-// @include foundation-reveal;
+@include foundation-reveal;
 // @include foundation-switch;
 // @include foundation-table;
 // @include foundation-tabs;
 // @include foundation-thumbnail;
 // @include foundation-title-bar;
-// @include foundation-tooltip;
+@include foundation-tooltip;
 // @include foundation-top-bar;
 // @include foundation-visibility-classes;
 // @include foundation-float-classes;
@@ -96,5 +96,6 @@
 
 // adapted hills 
 @import 'components/side-nav';
+@import 'components/breadcrumbs';
 @import 'components/cards';
 @import 'components/misc-hills';

@@ -33,6 +33,7 @@ PATHS:
   bowerDirectLinked:
     # - "bower_components/webshim/js-webshim/minified/**/*"
     - "bower_components/zxcvbn/dist/zxcvbn.js"
+    - "bower_components/zxcvbn/dist/zxcvbn.js.map"
   # Paths to JavaScript libraries, which are combined into one file
   javascript:
     # Libraries required by Foundation
@@ -43,8 +44,8 @@ PATHS:
     - "bower_components/foundation-sites/js/foundation.util.*.js"
     # Individual Foundation components
     # If you aren't using a component, just remove it from the list
-    #--logon - "bower_components/foundation-sites/js/foundation.abide.js"
-    - "bower_components/foundation-sites/js/foundation.accordion.js"
+    # - "bower_components/foundation-sites/js/foundation.abide.js"
+    # - "bower_components/foundation-sites/js/foundation.accordion.js"
     # - "bower_components/foundation-sites/js/foundation.accordionMenu.js"
     # - "bower_components/foundation-sites/js/foundation.drilldown.js"
     # - "bower_components/foundation-sites/js/foundation.dropdown.js"
@@ -56,11 +57,11 @@ PATHS:
     # - "bower_components/foundation-sites/js/foundation.orbit.js"
     - "bower_components/foundation-sites/js/foundation.responsiveMenu.js"
     - "bower_components/foundation-sites/js/foundation.responsiveToggle.js"
-    # - "bower_components/foundation-sites/js/foundation.reveal.js"
+    - "bower_components/foundation-sites/js/foundation.reveal.js"
     # - "bower_components/foundation-sites/js/foundation.slider.js"
     - "bower_components/foundation-sites/js/foundation.sticky.js"
     # - "bower_components/foundation-sites/js/foundation.tabs.js"
-    - "bower_components/foundation-sites/js/foundation.toggler.js"
+    # - "bower_components/foundation-sites/js/foundation.toggler.js"
     - "bower_components/foundation-sites/js/foundation.tooltip.js"
     # - "bower_components/foundation-sites/js/foundation.zf.responsiveAccordionTabs.js"
     # Paths to your own project code are here

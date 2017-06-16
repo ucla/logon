@@ -1,18 +1,39 @@
 .card {
-  position: relative;
-  padding: 20px 40px 20px 20px;
-  margin-bottom: 30px;
-  border: 1px solid $ucla-its-primary-light;
-  transition: all .2s ease-in-out;
-  &:hover {
-    cursor: pointer;
-    transform: scale(1.05);
-    .device-image-linked svg, .device-image svg {
-      fill: $anchor-color;
-    }
-    .device-info p {
-      color: $anchor-color-hover;
-    }
+  @include grid-column(12);
+  @include breakpoint(multi-column) {
+    @include grid-column(6);
+  }
+  .card-liner {
+    overflow: hidden;
+    padding: 20px 40px 20px 20px;
+    margin-bottom: 30px;
+    border: 1px solid $ucla-its-primary-light;
+    min-height: 220px;
+  }
+  dl, dt {
+    padding-left: 0;
+  }
+  dt, dd {
+    display: inline;
+    float: left;
+    font-size: 14px;
+    margin-bottom: 0;
+    font-weight: $global-weight-normal;
+  }
+  dt {
+    color: $ucla-its-primary;
+    clear: both;
+  }
+  ul {
+    margin-left: 0;
+  }
+  li {
+    color: $ucla-its-primary;
+    list-style: none;
+    font-size: 14px;
+  }
+  .meta a {
+    color: $light-gray;
   }
   h2 {
     margin-bottom: .5em;
@@ -32,7 +53,7 @@
   height: 45px;
   line-height: 45px;
   svg {
-    fill: $ucla-its-primary-alt;
+    fill: $ucla-its-primary;
   }
 }
 
@@ -43,12 +64,11 @@
 .card-content {
   h3 {
     font-size: rem-calc(map-deep-get($header-styles, large-type, h6, font-size));
-    color: $ucla-its-primary-alt;
+    color: $ucla-its-primary;
   }
   .meta {
     font-size: .85rem;
     color: $ucla-its-gray-light;
-    font-weight: $global-weight-bold;
   }
 }
 
