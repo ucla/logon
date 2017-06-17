@@ -1,0 +1,187 @@
+.alert {
+  background-image: none;
+  background-repeat: no-repeat;
+  border: 0;
+  border-left-style: solid;
+  border-left-width: 5px;
+  border-radius: 0;
+  box-shadow: none;
+  color: $white;
+  font-size: .7em;
+  margin-bottom: 20px;
+  padding: 15px;
+  position: relative;
+  text-shadow: none;
+
+  .container {
+    position: relative;
+  }
+
+  a {
+    color: $white;
+    text-decoration: underline;
+  }
+
+  .close {
+    color: $white;
+    filter: alpha(opacity = 20);
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    opacity: 1;
+    text-shadow: none;
+
+    &:hover {
+      color: $black;
+      opacity: .5;
+    }
+  }
+}
+
+.alert>p,
+.alert>ul {
+  margin-bottom: 0;
+}
+
+.alert::before {
+  background-color: $white;
+  border-radius: 50%;
+  color: $white;
+  font-family: FontAwesome;
+  font-size: 10px;
+  height: 20px;
+  left: 15px;
+  line-height: 20px;
+  position: absolute;
+  text-align: center;
+  top: 13px;
+  width: 20px;
+}
+
+.alert a:hover,
+.alert a:focus {
+  color: $white;
+  text-decoration: none;
+}
+
+.alert-info,
+.alert-warning,
+.alert-danger,
+.alert-success {
+  padding-left: 45px;
+}
+
+// Alert - Info
+
+.alert-info {
+  background-color: $ucla-its-footer-top-bar;
+  border-left-color: $ucla-its-alert-border;
+  color: $white;
+}
+
+.alert-info::before,
+.header-alert.alert-info .container::before {
+  background-color: $white;
+  color: $ucla-its-alert-border;
+  content: '\f129';
+}
+
+// Alert - Success
+
+.alert-success {
+  background-color: $ucla-its-success;
+  border-left-color: $ucla-its-success-dark;
+}
+
+.alert-success::before,
+.header-alert.alert-success .container::before {
+  color: $ucla-its-success;
+  content: '\f00c';
+}
+
+// Alert - Warning
+
+.alert-warning {
+  background-color: $ucla-its-warning;
+  border-left-color: $ucla-its-warning-light;
+}
+
+.alert-warning::before,
+.header-alert.alert-warning .container::before {
+  color: $ucla-its-warning-light;
+  content: '\f071';
+}
+
+// Alert - Info
+
+.alert-danger {
+  background-color: $ucla-its-danger;
+  border-left-color: $ucla-its-danger-dark;
+}
+
+.alert-danger::before,
+.header-alert.alert-danger .container::before {
+  color: $ucla-its-danger;
+  content: '\f12a';
+}
+
+.header-alert {
+  margin-bottom: 0;
+  padding-left: 15px;
+
+  &::before {
+    display: none;
+  }
+
+  .container {
+    padding-left: 60px;
+    position: relative;
+
+    &::before {
+      background-color: $white;
+      border-radius: 50%;
+      color: $white;
+      font-family: FontAwesome;
+      height: 30px;
+      left: 15px;
+      line-height: 30px;
+      position: absolute;
+      text-align: center;
+      top: -5px;
+      width: 30px;
+    }
+  }
+}
+
+.header-alert.alert-info,
+.header-alert.alert-warning,
+.header-alert.alert-danger,
+.header-alert.alert-success {
+  border: 0;
+  padding-left: 15px;
+}
+
+// Medium devices (desktops, 992px and up)
+@media (min-width: 992px) {
+
+  .alert {
+    font-size: .9em;
+  }
+
+  .alert::before {
+    font-size: 15px;
+    height: 30px;
+    left: 15px;
+    line-height: 30px;
+    top: 10px;
+    width: 30px;
+  }
+
+  .alert-info,
+  .alert-warning,
+  .alert-danger,
+  .alert-success {
+    padding-left: 60px;
+  }
+}
