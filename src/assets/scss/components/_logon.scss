@@ -136,7 +136,11 @@ article h1 {
 }
 
 .page-help {
-  @include grid-col(1);
+  display: none;
+  @include breakpoint(multi-column) {
+    display: block;
+    @include grid-col(1);
+  }
   @extend .standalone-help;
   font-size: 13px;
   color: $ucla-its-primary-alt;
