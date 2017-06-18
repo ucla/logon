@@ -228,12 +228,19 @@ article h1 {
     padding: $global-padding / 2;
     margin-left: 5px;
     margin-right: -5px;
-    @include grid-column(8);
+    @include grid-column(12);
+    @include breakpoint(multi-column) {
+      @include grid-column(8);
+    }
   }
   .expand-context {
+    display: none;
     text-align: right;
     color: $light-gray;
-    @include grid-column(4);
+    @include breakpoint(multi-column) {
+      @include grid-column(4);
+      display: block;
+    }
     vertical-align: top;
     padding-top: $global-padding / 2;
   }
