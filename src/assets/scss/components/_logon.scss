@@ -124,7 +124,6 @@ article h1 {
 }
 
 .standalone-help {
-  text-align: right;
   &:hover svg {
     fill: $ucla-its-primary-button-color-hover;
   }
@@ -139,7 +138,9 @@ article h1 {
 .page-help {
   @include grid-col(1);
   @extend .standalone-help;
-  position: fixed;
+  svg {
+    position: fixed;
+  }
 }
 
 /////////////////////////////////////////
