@@ -3,6 +3,10 @@
 .page-navigation {
   margin: $global-margin 0;
   @include grid-row();
+  display: none;
+  @include breakpoint(multi-column) {
+    display: block;
+  }
   max-width: $global-width;
 }
 
@@ -56,16 +60,12 @@
   text-decoration: underline;
 }
 
-.breadcrumb > li {
-  display: none;
+.breadcrumb li {
+  display: inline-block;
 }
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-
-  .breadcrumb li {
-    display: inline-block;
-  }
 
   .breadcrumb li.last {
     padding-left: 0;

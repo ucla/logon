@@ -103,6 +103,20 @@ article h1 {
   }
 } 
 
+.title-bar-help {
+  float: right;
+  span {
+    font-weight: $global-weight-bold;
+  }
+  .standalone-help svg {
+    fill: $white;
+  }
+}
+
+.menu-icon {
+  margin: 0;
+}
+
 
 /////////////////////////////////////////
 ///       TOOLTIP RELATED
@@ -136,11 +150,7 @@ article h1 {
 }
 
 .page-help {
-  display: none;
-  @include breakpoint(multi-column) {
-    display: block;
-    @include grid-col(1);
-  }
+  @include grid-col(1);
   @extend .standalone-help;
   font-size: 13px;
   color: $ucla-its-primary-alt;
@@ -166,7 +176,10 @@ article h1 {
 
 .page-content {
   background: $white;
-  padding: $global-padding 0;
+  padding: 0;
+  @include breakpoint(multi-column) {
+    padding: $global-padding 0;
+  }
   margin-bottom: $global-margin * 2;
   @include grid-row; 
   width: 95%;
