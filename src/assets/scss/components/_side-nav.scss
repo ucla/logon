@@ -1,87 +1,64 @@
-.nav-secondary {
-  text-transform: uppercase;
-
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-    li {
-      margin-bottom: 0;
-      padding-left: 0;
-      &::after {
-        display: none;
-      }
-
-      &.active {
-        a {
-          color: $ucla-its-secondary;
-        }
-      }
-
-      &.expanded {
-        > a {
-          color: $ucla-its-secondary;
-
-          &:before {
-            content: "\f078";
-            right: 11px;
-          }
-        }
-      }
-
-      a {
-        background-color: $ucla-its-primary-alt;
-        color: $white;
-        display: block;
-        font-weight: $global-weight-bold;
-        font-size: .9rem;
-        padding: 7px 32px 7px 15px;
-        position: relative;
-        text-decoration: none;
-
-        &:hover {
-          color: $ucla-its-secondary;
-        }
-      }
-
+.menu {
+  list-style: none;
+  margin-left: 0;
+  font-weight: $global-weight-normal;
+  > li {
+    border-bottom: 1px solid $white;
+    text-transform: uppercase;
+  }
+  a {
+    background-color: $ucla-its-primary-alt;
+    color: $white;
+    display: block;
+    font-weight: $global-weight-bold;
+    font-size: .9rem;
+    padding: 7px 32px 7px 15px;
+    position: relative;
+    text-decoration: none;
+    &:hover {
+      color: $ucla-its-secondary;
+    }
+    &:before {
+      color: $white;
+      content: "\f054";
+      font-family: FontAwesome;
+      font-size: 9px;
+      font-weight: normal;
+      position: absolute;
+      right: 10px;
+      top: 12px;
+      width: 10px;
     }
   }
-
+  .active a {
+    color: $ucla-its-secondary;
+  }
+  .expanded > a {
+    color: $ucla-its-secondary;
+    &:before {
+      content: "\f078";
+      right: 11px;
+    }
+  }
   ul {
-
-    > li {
-      border-bottom: 1px solid $white;
-      text-transform: uppercase;
-
-      > a {
-
-        &:before {
-          color: $white;
-          content: "\f054";
-          font-family: FontAwesome;
-          font-size: 9px;
-          font-weight: normal;
-          position: absolute;
-          right: 10px;
-          top: 12px;
-          width: 10px;
-        }
-      }
-
-      > ul {
-
-        a {
-          padding-left: 15px;
-          padding-right: 30px;
-          text-transform: none;
-          font-size: .94em;
-        }
+    margin-top: 1px;
+    margin-left: 0;
+    @include menu-direction(vertical);
+    a {
+      padding-left: 15px;
+      padding-right: 30px;
+      text-transform: none;
+      font-size: .94em;
+      &:before {
+        content: "";
       }
     }
   }
 }
 
-.block {
-  margin-bottom: 30px;
+.mobile-only {
+  display: block;
+  @include breakpoint(multi-column) {
+    display: none;
+  }
 }
