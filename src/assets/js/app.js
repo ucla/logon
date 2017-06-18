@@ -54,6 +54,7 @@ var spinner = new Spinner(opts).spin(target);
 
 $('.expandable-area').click(function() {
   $(this).next('.expanded-info').toggle();
+  $(this).toggleClass('toggled-open');
 });
 
 /////////////////////////////////////////

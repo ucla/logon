@@ -226,16 +226,6 @@ article h1 {
     margin-left: 5px;
     margin-right: -5px;
     @include grid-column(8);
-    &::before {
-      content: "\f055";
-      font-family: FontAwesome;
-      position: absolute;
-      left: 1px;
-      top: 20px;
-      font-size: 20px;
-      margin-top: -16px;
-      color: $ucla-its-primary-alt;
-    }
   }
   .expand-context {
     text-align: right;
@@ -251,12 +241,32 @@ article h1 {
     height: 100%;
     position: relative;
     overflow: hidden;
+    &::before {
+      content: "\f055";
+      font-family: FontAwesome;
+      position: absolute;
+      left: 1px;
+      top: 20px;
+      font-size: 20px;
+      margin-top: -16px;
+      color: $ucla-its-primary-alt;
+    }
     &:hover {
       dl {
         margin-left: 8px;
         margin-right: -8px;
       }
     }
+  }
+  .toggled-open:before {
+    content: "\f056";
+    font-family: FontAwesome;
+    position: absolute;
+    left: 1px;
+    top: 20px;
+    font-size: 20px;
+    margin-top: -16px;
+    color: $ucla-its-primary-alt;
   }
   .expanded-info {
     @include grid-column(12);
@@ -358,11 +368,12 @@ dd {
 
 #form-step-bar li {
   display: inline-block;
-  text-align: center;
+  text-align: left;
   padding: 0;
   width: 19%;
   border-radius: 99rem;
   line-height: $global-spacing * 2;
+  padding-left: $global-padding / 2;
   &:nth-child(1)::before {
     position: absolute;
     font-size: $global-font-size / 2;
