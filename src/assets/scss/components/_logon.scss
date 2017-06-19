@@ -249,6 +249,19 @@ article h1 {
     @include breakpoint(multi-column) {
       @include grid-column(8);
     }
+    &:before {
+      content: "\f054";
+      font-family: FontAwesome;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      font-size: 30px;
+      margin-top: -16px;
+      color: $lighter-gray;
+      @include breakpoint(multi-column) {
+        content: "";
+      }
+    }
   }
   .expand-context {
     display: none;
@@ -260,6 +273,7 @@ article h1 {
     }
     vertical-align: top;
     padding-top: $global-padding / 2;
+
   }
   .expandable-area {
     cursor: pointer;
