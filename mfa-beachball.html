@@ -15,69 +15,99 @@
   
   <div class="page-wrap">
 
-  <header class="page-header" role="banner">
-    <section class="page-header-contents logged-in">
-      <span class="logo"><a href="index-in.html"><img src="assets/img/logo.png" alt="UCLA MY Logon"></a></span>
-      <div class="logged-in-info">
-        <p class="note-that">You're logged in as: Jen Burin</p>
-        <p><a href="./">Logout</a></p>
-      </span>
-    </section>
-  </header>
+    <header class="page-header" role="banner">
+      <section class="page-header-contents logged-in">
+        <span class="logo"><a href="index-in.html"><img src="assets/img/logo.png" alt="UCLA MY Logon"></a></span>
+          <div class="logged-in-info">
+            <p class="note-that">You're logged in as: Jen Burin</p>
+            <p><a href="./">Logout</a></p>
+          </div>
+        </span>
+      </section>
+    </header>
 
-  
-    <nav>
-      <ul class="menu vertical">
-        <li><a href="manage-profile.html">Profile</a></li>
-        <li><a href="manage-accounts.html">UCLA Logon ID</a></li>
-          <ul>
-            <li><a href="#">- MFA Tool</a></li>
-          </ul>
-        </li>
-        <li><a href="manage-bol.html">BruinOnline Mail</a></li>
-      </ul>
-    </nav>
-  
-  
-  <article class="message terse">
-  
-    <h1>Just a moment!</h1>
-  
-    <div id="loading-spinner"></div>
-    
-    <p>If things seem stuck, try again.</p>
+    <div class="page-content">
       
-  </article>
+      <div class="page-navigation">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/index-in.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="manage-accounts.html">Manage Your UCLA Logon ID</a></li>
+          <li class="breadcrumb-item"><a href="mfa-device-select-new.html">Multifactor Authentication</a></li>    
+        </ol>
+        
+        <div class="page-help has-tip" data-tooltip aria-haspopup="true" data-disable-hover="true" data-allow-html="true" tabindex="1" alt="click for help" title="  
+            <ul class=&quot;listless&quot;>
+              <li>Contact the Bruin OnLine Help Desk
+                <ul>
+                  <li><a href=&quot;mailto:consult@ucla.edu&quot;>consult@ucla.edu</a></li>
+                  <li>310-267-HELP (4357)</li>
+                </ul>
+              </li>
+            </ul>
+            
+            <p>Check <a href=&quot;#&quot; target='tutorial'>Frequently Asked Questions</a>.</p>
+          "> get help 
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M88.1 23.9l-34.6-20c-2.2-1.3-5-1.3-7.2 0l-34.6 20C9.4 25.2 8 27.6 8 30.1v40c0 2.6 1.4 5 3.6 6.2l34.6 20c1.1 0.6 2.3 1 3.6 1s2.5-0.3 3.6-1l34.6-20c2.2-1.3 3.6-3.7 3.6-6.2v-40C91.7 27.6 90.3 25.2 88.1 23.9zM53 67.5h-6.4V62H53V67.5zM53.1 54.8V58h-6.4v-9.1h3.2c2.7 0 4.8-2.2 4.8-4.8s-2.2-4.8-4.8-4.8S45 41.4 45 44h-6.4c0-6.2 5.1-11.3 11.3-11.3S61.1 37.8 61.1 44C61.1 49.1 57.7 53.4 53.1 54.8z"/></svg>
+          
+        </div>
+        
+      </div>
+
+        <nav>
+          <ul class="menu">
+            <li><a href="manage-profile.html">Profile</a></li>
+            <li class="expanded"><a href="manage-accounts.html">UCLA Logon ID</a>
+              <ul>
+                <li class="active"><a href="#">Multifactor Authentication Management</a></li>
+              </ul>
+            </li>
+            <li><a href="manage-bol.html">Bruin OnLine Mail</a></li>
+            <li class="mobile-only"><a href="#">Logout</a></li>
+            <li class="mobile-only"><a href="#">Get Help</a></li>
+          </ul>
+        </nav>
+      
+      
+      <article class="message terse">
+      
+        <h1>Just a moment!</h1>
+      
+        <div id="loading-spinner"></div>
+        
+        <p>If things seem stuck, try again.</p>
+          
+      </article>
+          
+    </div>
   
   </div>
   
     <footer role="contentinfo" class="iam-footer">
       <div class="footer-wrapper">
   
-      	 <div class="iam-footer-content">
-          <ul class="listless">
-            <li><a href="#" target="tutorial">Frequently Asked Questions</a></li>
-            <li><a href="#" target="tutorial">Managing my Identity</a></li>
-            <li><a href="#" target="tutorial">Show me how to set up MFA</a></li>
-          </ul>
+        <div class="iam-footer-content footer-cta">
+          <div class="cta-content">
+            <h4>Read the FAQ</h4>
+            <p>If you have a question, take a look to see if it's been answered in the FAQ.</p>
+          </div>
+          <p class="cta-button"><a href="https://help.bol.ucla.edu" target="_blank">Frequently Asked Questions</a></p>
       	</div>
       	
-        <div class="iam-footer-content">
-          <ul class="listless">
-            <li>For help contact the Bruin Online Help Desk
-              <ul>
-                <li><a href="mailto:consult@ucla.edu">consult@ucla.edu</a></li>
-                <li>310-267-HELP (4357)</li>
-              </ul>
-            </li>
-          </ul>
+        <div class="iam-footer-content footer-cta">
+          <div class="cta-content">
+            <h4>Get Some Help</h4>
+            <p>You can file a ticket to Bruin OnLine below, email them at <a href="mailto:consult@ucla.edu">consult@ucla.edu</a>, or give them a call at 310-267-<strong>HELP</strong>.</p>
+          </div>
+          <p class="cta-button"><a href="https://www.it.ucla.edu/bol/contact-bruin-online" target="_blank">Bruin OnLine Help</a></p>
       	</div>
       	
-        <div class="iam-footer-content">
-          <ul class="listless">
-            <li><a href="/ucla-logon-mocks/cms-policies.html">Privacy, Security & Legal</a></li>
-          </ul>      
-        </div>
+        <div class="iam-footer-content footer-cta">
+          <div class="cta-content">
+            <h4>Know the Rules</h4>
+            <p>Want to find out about the policies and protections relating to your digital identity at UCLA?</p>
+          </div>
+          <p class="cta-button"><a href="/ucla-logon-mocks/cms-policies.html" target="_blank">Privacy, Security & Legal</a></p>
+      	</div>
         
       </div>
     </footer>

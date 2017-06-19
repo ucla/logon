@@ -16,25 +16,17 @@
   <div class="page-wrap">
 
     <header class="page-header" role="banner">
-      <section class="page-header-contents logged-in">
-        <span class="logo"><a href="index-in.html"><img src="assets/img/logo.png" alt="UCLA MY Logon"></a></span>
-          <div class="logged-in-info">
-            <p class="note-that">You're logged in as: Jen Burin</p>
-            <p><a href="./">Logout</a></p>
-          </div>
-        </span>
+      <section class="page-header-contents">
+        <span class="logo"><a href="./"><img src="assets/img/logo.png" alt="UCLA"></a></span>
       </section>
     </header>
-
+  
     <div class="page-content">
       
       <div class="page-navigation">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="/index-in.html">Home</a></li>
-          <li class="breadcrumb-item"><a href="manage-accounts.html">Manage Your UCLA Logon ID</a></li>
-          <li class="breadcrumb-item"><a href="mfa-device-select-new.html">Multifactor Authentication</a></li>    
+          <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
         </ol>
-        
         <div class="page-help has-tip" data-tooltip aria-haspopup="true" data-disable-hover="true" data-allow-html="true" tabindex="1" alt="click for help" title="  
             <ul class=&quot;listless&quot;>
               <li>Contact the Bruin OnLine Help Desk
@@ -52,32 +44,58 @@
         </div>
         
       </div>
-
-        <nav>
-          <ul class="menu">
-            <li><a href="manage-profile.html">Profile</a></li>
-            <li class="expanded"><a href="manage-accounts.html">UCLA Logon ID</a>
-              <ul>
-                <li class="active"><a href="#">Multifactor Authentication Management</a></li>
-              </ul>
-            </li>
-            <li><a href="manage-bol.html">Bruin OnLine Mail</a></li>
-            <li class="mobile-only"><a href="#">Logout</a></li>
-            <li class="mobile-only"><a href="#">Get Help</a></li>
-          </ul>
-        </nav>
       
       
-      <article class="message">
+      <section class="page">
+        <div>
+          
+          <header>
+            <h1>Create a UCLA Logon ID: <small>University Affiliation</small></h1>
+          </header>
+              
+          <article class="content">
+            <div>
+         
+              <ol id="form-step-bar">
+                <li class="form-step-doing">Affiliation</li>
+                <li class="form-step-todo">Identity</li>
+                <li class="form-step-todo">ID & Password</li>
+                <li class="form-step-todo">Challenge Phrase</li>
+                <li class="form-step-todo">MFA Enrollment</li>
+              </ol>
       
-        <h1 class="error-title">Something went wrong.</h1>
+              <h2>Select if you have a UID number and are "affiliated" with UCLA or not</h2>
+            
+              <form action="/activate.php" method="post" data-abide novalidate>
+                <fieldset>
+                  <label><input type="radio" name="affiliation" id="uid" value="uid">I have a 9-digit UCLA ID number (e.g. 123456789) and am/was officially affiliated with the university.</label>
       
-        <p>It's been logged, please waiting a moment or two and then <a href="#">trying again</a>.</p> 
+                  <p class="help-text">You have a UCLA ID if you are a new <b>UCLA Student</b> (including admitted applicants), <b>UCLA Applicant</b> on the waitlist, current UCLA Student, former UCLA Student (including alumni), <b>UCLA Summer Session Only Student</b> (new, current, or former), <b>UCLA Faculty Member or Staff Member</b>, <b>UCOP or UC Merced Staff Member</b>, <b>Contractor</b>, etc.</p>
+                  
+              
+                  <label><input type="radio" name="affiliation" id="nouid" name="nouid" value="nouid">I do not have a 9-digit UCLA ID Number, and are <strong>NONE OF THE ABOVE</strong>.</label> 
+                  
+                  <p class="help-text">Accounts created without a UCLA ID number can be used to authenticate to many UCLA applications, but are not generally eligible to receive campus services.</p>
+                </fieldset>
+                    
+                <button type="submit" class="primary-button">Continue</button> <button type="submit" class="button">Cancel</button>
+                
+                <p><span class="message-success"><a href="create-new-logon2-hasuid.html">(has UID)</a></span> <span class="message-success"><a href="create-new-logon2-nouid.html">(no UID)</a></span></p>
+                
+              </form>
+            
+            </div>
+          </article>
+          
+          <aside class="supporting-info">
+            <div>
         
-        <p>If you still get this message feel free to <a href="#">contact the help desk</a> or come back later.</p>
-          
-      </article>
-          
+            </div>
+          </aside>
+      
+        </div>
+      </section>
+    
     </div>
   
   </div>
