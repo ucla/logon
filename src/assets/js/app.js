@@ -25,11 +25,6 @@ $('#email-toggler').click(function() {
 
 var $modal = $('#mfa-confirm');
 
-$.ajax('/mfa-confirm-modal.html')
-  .done(function(resp){
-    $modal.html(resp).foundation('open');
-});
-
 /////////////////////////////////////////
 ///       initiate spinner
 /////////////////////////////////////////
