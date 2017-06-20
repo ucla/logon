@@ -1,16 +1,62 @@
-<article class="message">
+---
+layout: reset
+---
+
+<div class="page">
+  <div>
+
+    <header class="has-help">
+      <h1>Password Reset: <small>Validate Identity</small></h1> 
+      <div class="standalone-help right" data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="true" data-allow-html="true" tabindex="1" alt="click for help" title=" 
+<p>If you cannot complete the password reset form, please bring University-issued photo identification to the Bruin OnLine Help Desk located in Suite 124, Kerckhoff Hall. If you are not able to visit the Help Desk, please fax in a completed copy of the <a href=&quot;/files/service_request.pdf&quot;>UCLA Logon Service Request Form</a>, with all required supporting documentation.</p>
+      ">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M88.1 23.9l-34.6-20c-2.2-1.3-5-1.3-7.2 0l-34.6 20C9.4 25.2 8 27.6 8 30.1v40c0 2.6 1.4 5 3.6 6.2l34.6 20c1.1 0.6 2.3 1 3.6 1s2.5-0.3 3.6-1l34.6-20c2.2-1.3 3.6-3.7 3.6-6.2v-40C91.7 27.6 90.3 25.2 88.1 23.9zM53 67.5h-6.4V62H53V67.5zM53.1 54.8V58h-6.4v-9.1h3.2c2.7 0 4.8-2.2 4.8-4.8s-2.2-4.8-4.8-4.8S45 41.4 45 44h-6.4c0-6.2 5.1-11.3 11.3-11.3S61.1 37.8 61.1 44C61.1 49.1 57.7 53.4 53.1 54.8z"/></svg>
+      </div>
+    </header>
+
+    <article class="content">
+      <div>
+        <h2 class="error-title">Your identity could not be validated.</h2>
+
+        <p class="error-title note-that">If you have a UCLA Logon ID, validate your identity again, or <a href="https://www.it.ucla.edu/bol/contact-bruin-online">contact the BruinOnline Help Desk</a> for help. If you do not have a UCLA Logon ID, you can <a href="create.html">create</a> one.</p>
+    
+        <p>To reset your password, enter your UCLA Logon ID below then answer your challenge question.</p>
   
-  <h1 class="error-title">You have not set a password reset challenge question.</h1>
+        <form action="/passreset.php" method="post" data-abide novalidate>
+  
+          <fieldset>
+            <label class="help" for="uid">UCLA Logon ID
+            <input name="uid" type="text" pattern="[0-9]{9}" id="uid" placeholder="janebruin42" autofocus required>
+            <span class="form-error">Your UCLA ID number is exactly 9 numbers long.</span></label>
+            
+          <label title="Enter the date you were born in year-month-day format." for="dob">Date of Birth
+          <input name="dob" type="date" placeholder="YYYY-MM-DD" id="dob" required>
+          <span class="form-error">You must use a valid date (YYYY-MM-DD) format.</span></label>
+    
+          <label title="Your UCLA ID Number is nine (9) digits long and is printed on your UCLA ID Card." for="uclaid">9-Digit UCLA ID Number
+          <input name="uclaid" pattern="[0-9]{9}" type="password" placeholder="123-456-789" value="" id="uclaid">
+          <span class="form-error">Your UCLA ID number is exactly 9 numbers long.</span></label>
+    
+          <label><input type="checkbox" id="email-toggler">Don't have a 9-digit UCLA ID number?</label>
+    
+          <div id="email-toggle" hidden>
+            <label title="A valid contact email address is required to continue" for="email">Please enter an email address on file instead!
+            <input name="email" type="email" placeholder="joe.bruin@gmail.com" id="email">
+            <span class="form-error">This doesn't look like a valid email address.</span></label>
+          </div>
+  
+            <button class="primary-button" type="submit">Check for security challenge</button> <button type="submit" class="button">Cancel</button>
+          </fieldset>
+  
+          <p><span class="message-fail"><a href="reset-fail.html">(fail)</a></span> <span class="logon-success message-success"><a href="reset-2.html">(success)</a></span></p>
+  
+          <div id="ajax-container"></div>
+  
+        </form>
+  
+        <p>tip: If you can't remember your UCLA Logon ID, go <a href="lookup.html">look it up</a>!</p>
+      </div>
+    </article>
 
-  <p>Please bring University-issued photo identification to the Bruin OnLine Help Desk located in Suite 124, Kerckhoff Hall. If you are not able to visit the Help Desk, please fax in a completed copy of the UCLA Logon Service Request Form, with all required supporting documentation.</p>
-
-  <ul class="listless">
-    <li>Contact the Bruin OnLine Help Desk
-      <ul>
-        <li><a href="mailto:consult@ucla.edu">consult@ucla.edu</a></li>
-        <li>310-267-HELP (4357)</li>
-      </ul>
-    </li>
-  </ul>
-
-</article>
+  </div>
+</div>

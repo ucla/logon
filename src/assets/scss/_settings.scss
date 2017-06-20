@@ -391,7 +391,7 @@ $select-background: $white;
 $select-triangle-color: $dark-gray;
 $select-radius: $global-radius;
 $input-color: $dark-gray;
-$input-placeholder-color: $light-gray;
+$input-placeholder-color: #999;
 $input-font-family: inherit;
 $input-font-size: rem-calc(15);
 $input-font-weight: $global-weight-normal;
@@ -610,18 +610,18 @@ $thumbnail-radius: $global-radius;
 // 35. Title Bar
 // -------------
 
-$titlebar-background: $nav-background-alt;
+$titlebar-background: $ucla-its-nav-title-opened;
 $titlebar-color: $white;
 $titlebar-padding: 0.5rem;
 $titlebar-text-font-weight: bold;
 $titlebar-icon-color: $white;
-$titlebar-icon-color-hover: $medium-gray;
+$titlebar-icon-color-hover: $white;
 $titlebar-icon-spacing: 0.25rem;
 
 // 36. Tooltip
 // -----------
 
-$has-tip-font-weight: $global-weight-bold;
+$has-tip-font-weight: $global-weight-normal;
 $has-tip-border-bottom: none;
 $tooltip-background-color: $off-white;
 $tooltip-color: $body-font-color;

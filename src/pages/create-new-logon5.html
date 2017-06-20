@@ -15,7 +15,7 @@ layout: create
         <ol id="form-step-bar">
           <li class="form-step-done">Affiliation</li>
           <li class="form-step-done">Identity</li>
-          <li class="form-step-done">Account Info</li>
+          <li class="form-step-done">ID & Password</li>
           <li class="form-step-done">Challenge Phrase</li>
           <li class="form-step-doing">MFA Enrollment</li>
         </ol>
@@ -26,7 +26,17 @@ layout: create
           
           <label for="opt-out-mfa" data-open="mfa-confirm"><input id="opt-out-mfa" type="checkbox">I choose to not enroll a device in MFA at this time.</label>
           
-          <div id="mfa-confirm" data-reveal></div>
+          <div id="mfa-confirm" data-reveal data-close-on-click="false" data-close-on-esc="false">
+            <h1>Are you Sure?</h1>
+
+            <p>Without MFA your accounts only defense against intruders is your password. If someone steals your password they will have access to your account. By enrolling in MFA, your account will have an extra layer of protection.</p>
+            
+            <form>
+              <label><input type="radio" name="mfa-confirm-final" value="opt-out" required>Opt out: No, I do not wish to enroll in MFA at this time.</label>
+              <label><input type="radio" name="mfa-confirm-final" value="enrollt" required>Enroll: I would like to enroll in MFA.</label>
+              <button class="button primary-button">Confirm</button>
+            </form>
+          </div>
     
           <fieldgroup>
             <button class="primary-button" type="submit">Create UCLA Logon ID</button> <button type="submit" class="button">Cancel</button>
@@ -36,13 +46,6 @@ layout: create
         
       </div>
     </article>
-    
-    <aside class="supporting-info">
-      <div>
-  
-   
-      </div>
-    </aside>
 
   </div>
 </section>

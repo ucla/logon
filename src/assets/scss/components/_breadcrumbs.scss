@@ -3,44 +3,38 @@
 .page-navigation {
   margin: $global-margin 0;
   @include grid-row();
+  display: none;
+  @include breakpoint(multi-column) {
+    display: block;
+  }
+  max-width: $global-width;
 }
 
-/* line 1, bower_components/bootstrap/scss/_breadcrumb.scss */
 .breadcrumb {
   @include grid-col(11);
-  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  padding-left: 2.5rem;
   margin-bottom: 1rem;
   list-style: none;
-  background-color: #eceeef;
-  border-radius: 0.25rem; }
+}
 
-/* line 2, bower_components/bootstrap/scss/mixins/_clearfix.scss */
 .breadcrumb::after {
   display: block;
   content: "";
-  clear: both; }
+  clear: both; 
+}
 
-/* line 10, bower_components/bootstrap/scss/_breadcrumb.scss */
 .breadcrumb-item {
-  float: left; }
+  float: left; 
+}
 
-/* line 14, bower_components/bootstrap/scss/_breadcrumb.scss */
 .breadcrumb-item + .breadcrumb-item::before {
   display: inline-block;
   padding-right: 0.5rem;
   padding-left: 0.5rem;
   color: #ccc;
-  content: "/"; }
+  content: "/";
+}
 
-/* line 28, bower_components/bootstrap/scss/_breadcrumb.scss */
-.breadcrumb-item + .breadcrumb-item:hover::before {
-  text-decoration: underline; }
-
-/* line 31, bower_components/bootstrap/scss/_breadcrumb.scss */
-.breadcrumb-item + .breadcrumb-item:hover::before {
-  text-decoration: none; }
-
-/* line 35, bower_components/bootstrap/scss/_breadcrumb.scss */
 .breadcrumb-item.active {
   color: #636c72; }
 
@@ -66,41 +60,12 @@
   text-decoration: underline;
 }
 
-.breadcrumb > li {
-  display: none;
-}
-
-.breadcrumb li.active a {
-  font-weight: 700;
-}
-
-.breadcrumb li.last {
+.breadcrumb li {
   display: inline-block;
-  padding-left: 30px;
-  position: relative;
-}
-
-.breadcrumb li.last:before {
-  content: "\f053";
-  font-family: FontAwesome;
-  position: absolute;
-  left: 0;
-}
-
-.featured .breadcrumb a {
-  color: #fff;
-}
-
-.featured .breadcrumb li.active {
-  color: #eee;
 }
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-
-  .breadcrumb li {
-    display: inline-block;
-  }
 
   .breadcrumb li.last {
     padding-left: 0;
