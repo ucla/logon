@@ -11,7 +11,7 @@
 }
 
 .breadcrumb {
-  @include grid-col(11);
+  @include grid-col(10);
   padding-left: 2.5rem;
   margin-bottom: 1rem;
   list-style: none;

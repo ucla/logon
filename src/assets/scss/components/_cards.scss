@@ -18,17 +18,18 @@
     float: left;
     font-size: 14px;
     margin-bottom: 0;
-    font-weight: $global-weight-normal;
   }
   dt {
-    color: $ucla-its-primary;
     clear: both;
+    color: $body-font-color;
+  }
+  dd {
+    font-weight: $global-weight-normal;
   }
   ul {
     margin-left: 0;
   }
   li {
-    color: $ucla-its-primary;
     list-style: none;
     font-size: 14px;
   }
