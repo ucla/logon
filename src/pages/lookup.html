@@ -26,15 +26,6 @@ layout: lookup
           <input name="uclaid" pattern="[0-9]{9}" type="password" placeholder="123-456-789" value="" id="uclaid">
           <span class="form-error">Your UCLA ID number is exactly 9 numbers long.</span></label>
     
-          <label><input type="checkbox" id="email-toggler">Don't have a 9-digit UCLA ID number?</label>
-    
-          <div id="email-toggle" hidden>
-            <label title="A valid contact email address is required to continue" for="email">Please enter an email address on file instead!
-            <input name="email" type="email" placeholder="joe.bruin@gmail.com" id="email">
-            <span class="form-error">This doesn't look like a valid email address.</span></label>
-  
-          </div>
-    
           <button type="submit" class="primary-button">Lookup your Logon ID</button> <button type="submit" class="button">Cancel</button>
           
           <p><span class="message-fail"><a href="lookup-fail.html">(fail)</a></span> <span class="message-success"><a href="lookup-success.html">(success)</a></span></p>

@@ -149,12 +149,12 @@ $header-styles: (
     'h6': ('font-size': 12),
   ),
 );
-$header-text-rendering: optimizeLegibility;
+$header-text-rendering: auto;
 $small-font-size: 60%;
 $header-small-font-color: $medium-gray;
 $paragraph-lineheight: 1.6;
 $paragraph-margin-bottom: 1rem;
-$paragraph-text-rendering: optimizeLegibility;
+$paragraph-text-rendering: auto;
 $code-color: $white;
 $code-font-family: $font-family-monospace;
 $code-font-weight: $global-weight-normal;

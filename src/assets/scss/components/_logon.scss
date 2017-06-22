@@ -24,12 +24,6 @@ kbd, code {
   }
 }
 
-/*
-.management h2 {
-  margin-top: $global-margin;
-}
-*/
-
 .line-thru {
   @include line-thru();
   margin: -($global-spacing / 2) 0 0;
@@ -131,11 +125,10 @@ article h1 {
   &:hover svg {
     fill: $ucla-its-primary-button-color-hover;
   }
-  svg {
-    margin-top: -2px;
-    margin-right: -4px;
-    fill: $ucla-its-primary-button-color;
-    height: 22px;
+  .icon-circle {
+    width: 18px;
+    height: 18px;
+    font-size: $global-font-size;
   }
 }
 
@@ -150,13 +143,11 @@ article h1 {
 }
 
 .page-help {
-  @include grid-col(1);
+  @include grid-col(2);
   @extend .standalone-help;
+  text-align: right;
   font-size: 13px;
   color: $ucla-its-primary-alt;
-  svg {
-    position: fixed;
-  }
 }
 
 /////////////////////////////////////////
@@ -194,6 +185,13 @@ article h1 {
   img {
     margin: ($global-spacing * 2) 0 $global-spacing;
   }
+}
+
+.affiliation-choice {
+  @extend %half-cols;
+  @include grid-column-collapse();
+  margin-top: $global-margin;
+  padding-right: $global-padding * 3;
 }
 
 // need nested containers due to foundation's grid system
@@ -316,7 +314,6 @@ article h1 {
   }
 }
 
-
 dt {
   font-weight: $global-weight-bold;
   color: $ucla-its-primary-alt;
@@ -408,17 +405,18 @@ dd {
   }
   .form-step-done {
     color: $black;
+    background: $off-white;
   }
 }
 
 #form-step-bar li {
   display: inline-block;
-  text-align: left;
+  text-align: center;
   padding: 0;
-  width: 19%;
+  width: 23%;
+  margin-right: 1%;
   border-radius: 99rem;
   line-height: $global-spacing * 2;
-  padding-left: $global-padding / 2;
   &:nth-child(1)::before {
     position: absolute;
     font-size: $global-font-size / 2;
