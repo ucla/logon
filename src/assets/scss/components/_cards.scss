@@ -48,15 +48,24 @@
   }
 }
 
+.icon-circle {
+  font-size: 20px;
+  border-radius: 50%;
+  background-color: #2b72a5;
+  border: 1px solid #fff;
+  display: inline-block;
+  text-align: center;
+  color: #fff;
+}
+
 .card-icon {
   float: left;
   width: 45px;
   height: 45px;
   line-height: 45px;
-  svg {
-    fill: $ucla-its-primary;
-  }
+  @extend .icon-circle;
 }
+
 
 .card-icon + .card-content {
   padding-left: 65px;
