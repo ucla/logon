@@ -125,11 +125,10 @@ article h1 {
   &:hover svg {
     fill: $ucla-its-primary-button-color-hover;
   }
-  svg {
-    margin-top: -2px;
-    margin-right: -4px;
-    fill: $ucla-its-primary-button-color;
-    height: 22px;
+  .icon-circle {
+    width: 18px;
+    height: 18px;
+    font-size: $global-font-size;
   }
 }
 
