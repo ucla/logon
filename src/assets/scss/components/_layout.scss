@@ -85,10 +85,10 @@ nav {
   position: absolute;
   z-index: 100;
   left:0;
+  width: 100%;
   @include breakpoint(multi-column) {
     position: relative;
   }
-  @include grid-column(12);
   @include breakpoint(multi-column) {
     padding-top: $global-padding;
     @include grid-column(4);
