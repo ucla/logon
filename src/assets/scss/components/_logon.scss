@@ -68,10 +68,6 @@ article h1 {
 
 .page-header {
   background: linear-gradient(to bottom, #003d6e 0%, #1d6092 100%);
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 6rem;
 }
 
 .page-header-contents {
@@ -97,14 +93,10 @@ article h1 {
   }
 } 
 
-.title-bar-help {
-  float: right;
-  span {
-    font-weight: $global-weight-bold;
-  }
-  .standalone-help svg {
-    fill: $white;
-  }
+.title-bar {
+  position: absolute;
+  top: 8px;
+  right: 0;
 }
 
 .menu-icon {

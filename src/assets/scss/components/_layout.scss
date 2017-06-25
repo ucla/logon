@@ -33,6 +33,13 @@ body {
 // page header with logo and log in/out links etc
 .page-header {
   width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 60px;
+  @include breakpoint(multi-column) {
+    height: 6rem;
+  }
 }
 
 .page-header-contents {
@@ -49,7 +56,10 @@ body {
 .logo {
   @include grid-column(8);
   img {
-    height: 56px;
+    height: 24px;
+    @include breakpoint(multi-column) {
+      height: 56px;
+    }
   }
 }
 
@@ -72,6 +82,12 @@ body {
 
 // column layout for content
 nav {
+  position: absolute;
+  z-index: 100;
+  left:0;
+  @include breakpoint(multi-column) {
+    position: relative;
+  }
   @include grid-column(12);
   @include breakpoint(multi-column) {
     padding-top: $global-padding;

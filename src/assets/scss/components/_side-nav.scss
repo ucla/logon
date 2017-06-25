@@ -4,6 +4,10 @@
   list-style: none;
   margin-left: 0;
   font-weight: $global-weight-normal;
+  margin-top: -2rem;
+  @include breakpoint(multi-column) {
+    margin-top: 0;
+  }
   > li {
     border-bottom: 1px solid $white;
     text-transform: uppercase;
