@@ -281,7 +281,7 @@ article h1 {
     position: relative;
     overflow: hidden;
     &::before {
-      content: "\f055";
+      content: "\f0ab";
       font-family: FontAwesome;
       position: absolute;
       left: 1px;
@@ -298,7 +298,7 @@ article h1 {
     }
   }
   .toggled-open:before {
-    content: "\f056";
+    content: "\f0aa";
     font-family: FontAwesome;
     position: absolute;
     left: 1px;
