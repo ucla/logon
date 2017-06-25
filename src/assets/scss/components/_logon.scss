@@ -103,7 +103,6 @@ article h1 {
   margin: 0;
 }
 
-
 /////////////////////////////////////////
 ///       TOOLTIP RELATED
 /////////////////////////////////////////
@@ -233,9 +232,11 @@ article h1 {
   border-top: 1px solid $ucla-its-primary-light;
   dl {
     margin-bottom: 0;
-    padding: $global-padding / 2;
-    margin-left: 5px;
-    margin-right: -5px;
+    padding: ($global-padding / 2) 0;
+    @include breakpoint(multi-column) {
+      margin-left: 5px;
+      margin-right: -5px;
+    }
     @include grid-column(12);
     @include breakpoint(multi-column) {
       @include grid-column(8);
@@ -246,8 +247,8 @@ article h1 {
       position: absolute;
       right: 20px;
       top: 20px;
-      font-size: 30px;
-      margin-top: -16px;
+      font-size: 28px;
+      margin-top: -10px;
       color: $lighter-gray;
       @include breakpoint(multi-column) {
         content: "";
@@ -274,7 +275,10 @@ article h1 {
     position: relative;
     overflow: hidden;
     &::before {
-      content: "\f0ab";
+      content: "";
+      @include breakpoint(multi-column) {
+        content: "\f0ab";
+      }
       font-family: FontAwesome;
       position: absolute;
       left: 1px;
@@ -291,7 +295,10 @@ article h1 {
     }
   }
   .toggled-open:before {
-    content: "\f0aa";
+    content: "";
+    @include breakpoint(multi-column) {
+      content: "\f0aa";
+    }
     font-family: FontAwesome;
     position: absolute;
     left: 1px;
@@ -311,14 +318,17 @@ dt {
   font-weight: $global-weight-bold;
   color: $ucla-its-primary-alt;
   margin-bottom: 0;
-  padding-left: $global-padding / 2;
+  @include breakpoint(multi-column) {
+    padding-left: $global-padding / 2;
+  }
 }
 dd {
   font-size: $global-font-size;
   font-weight: $global-weight-bold;
-  padding-left: $global-padding / 2;
+  @include breakpoint(multi-column) {
+    padding-left: $global-padding / 2;
+  }
 }
-
 
 .item-overview + h2 {
   margin-top: $global-margin;
