@@ -113,8 +113,9 @@ article h1 {
 }
 
 .standalone-help {
-  &:hover svg {
-    fill: $ucla-its-primary-button-color-hover;
+  font-size: 13px;
+  &:hover .icon-circle {
+    background: $ucla-its-primary-button-color-hover;
   }
   .icon-circle {
     width: 18px;
@@ -138,7 +139,6 @@ article h1 {
   @include grid-col(2);
   @extend .standalone-help;
   text-align: right;
-  font-size: 13px;
   color: $ucla-its-primary-alt;
 }
 
