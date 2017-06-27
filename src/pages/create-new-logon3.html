@@ -105,7 +105,19 @@ layout: create-password
           <input name="response" type="text" maxlength="128" placeholder="Answer to the above question" id="response" alt="Your Response is the answer to your Challenge question." pattern="[a-zA-Z0-9 !@#$%^&*().,]{8,128}" required>
           <span class="form-error">Challenge responses must be between 8 and 128 characters long.</span></label>
           
-          <button type="submit" class="primary-button">Create UCLA Logon ID</button> <button type="submit" class="button">Cancel</button>
+          <button type="submit" class="primary-button" data-open="id-confirm">Create UCLA Logon ID</button> <button type="submit" class="button">Cancel</button>
+          
+          <div id="id-confirm" data-reveal data-close-on-click="false" data-close-on-esc="false">
+            <h1>Are you Sure?</h1>
+            
+            <p>You will be creating <strong>studyingislame</strong> as your UCLA Logon ID.</p>
+
+            <p>Your UCLA Logon ID will be your main campus identifier and you'll use it to log in to most campus-wide applications. Choose carefully.</p>
+            
+            <form>
+              <button class="button primary-button">Confirm</button>
+            </form>
+          </div>
     
           <p><span class="message-success"><a href="create-new-logon5.html">(next)</a></span> <span class="message-fail"><a href="create-new-logon3-taken.html">(taken)</a></span></p>
           
