@@ -18,7 +18,7 @@ layout: create-password
     
     <h2>Choose your Logon ID</h2>
     
-    <p>Your UCLA Logon ID must be between 3 and 15 characters in length and begin with a letter, following characters can be any combination of letters and numbers. A UCLA Logon ID is not case sensitive. Your UCLA Logon ID will be your main campus identifier and you'll use it to log in to most campus-wide applications. Choose carefully.</p>
+    <p>Your UCLA Logon ID must be between 3 and 15 characters in length and begin with a letter, following characters can be any combination of letters and numbers. A UCLA Logon ID is not case sensitive. Your UCLA Logon ID will be your main campus identifier and you'll use it to log in to most campus-wide applications. Choose carefully - once created the account can not be changed or deleted.</p>
 
     <form action="/activate.php" method="post" data-abide novalidate>
 
@@ -109,10 +109,21 @@ layout: create-password
         
         <p>You will be creating <strong>studyingislame</strong> as your UCLA Logon ID.</p>
 
-        <p>Your UCLA Logon ID will be your main campus identifier and you'll use it to log in to most campus-wide applications. Choose carefully.</p>
+        <p>This account will be permanent and will be associated with your
+        identity for the lifetime of your affiliation with the University. Once
+        created, the account can not be changed or deleted. Only one account is
+        allotted per person.</p>
         
+        <p><b>Please remember that your UCLA Logon will be your main campus
+        identifier. You will use it to log in to most campus-wide applications.
+        If you are eligible, a Bruin OnLine email account of
+        <?php echo htmlspecialchars($username); ?>@ucla.edu may be created.
+        <a href="https://www.bol.ucla.edu/shortcut/kb/kb0012717">Find out more
+        about Bruin OnLine email.</a> This is your lifetime identifier. Please
+        choose carefully.</b></p>
+                
         <form>
-          <button class="button primary-button">Confirm</button>
+          <button class="button primary-button">Confirm</button> <button type="submit" class="button">Cancel</button>
         </form>
       </div>
 
