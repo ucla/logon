@@ -2,7 +2,7 @@
 layout: reset
 ---
 
-<div class="page">
+<article class="page">
   <div>
 
     <header class="has-help">
@@ -14,37 +14,33 @@ layout: reset
       </div>
     </header>
 
-    <article class="content">
-      <div>
-        <p>To reset your password, enter your UCLA Logon ID below then answer your challenge question.</p>
-  
-        <form action="/passreset.php" method="post" data-abide novalidate>
-  
-          <fieldset>
-            <label class="help" for="uid">UCLA Logon ID
-            <input name="uid" type="text" pattern="[0-9]{9}" id="uid" placeholder="janebruin42" autofocus required>
-            <span class="form-error">Your UCLA ID number is exactly 9 numbers long.</span></label>
-            
-            <label title="Enter the date you were born in year-month-day format." for="dob">Date of Birth
-            <input name="dob" type="date" placeholder="YYYY-MM-DD" id="dob" required>
-            <span class="form-error">You must use a valid date (YYYY-MM-DD) format.</span></label>
-      
-            <label title="Your UCLA ID Number is nine (9) digits long and is printed on your UCLA ID Card." for="uclaid">9-Digit UCLA ID Number
-            <input name="uclaid" pattern="[0-9]{9}" type="password" placeholder="123-456-789" value="" id="uclaid">
-            <span class="form-error">Your UCLA ID number is exactly 9 numbers long.</span></label>
+    <p>To reset your password, enter your UCLA Logon ID below then answer your challenge question.</p>
 
-            <button class="primary-button" type="submit">Continue to challenge phrase</button> <button type="submit" class="button">Cancel</button>
-          </fieldset>
-  
-          <p><span class="logon-success message-success"><a href="reset-2.html">(success)</a></span> <span class="message-fail"><a href="reset-fail.html">(fail)</a></span>  <span class="message-fail"><a href="reset-fail-no-phrase.html">(oops, no challenge phrase)</a></span> </p>
-  
-          <div id="ajax-container"></div>
-  
-        </form>
-  
-        <p>tip: If you can't remember your UCLA Logon ID, go <a href="lookup.html">look it up</a>!</p>
-      </div>
-    </article>
+    <form action="/passreset.php" method="post" data-abide novalidate>
 
+      <fieldset>
+        <label class="help" for="uid">UCLA Logon ID
+        <input name="uid" type="text" pattern="[0-9]{9}" id="uid" placeholder="janebruin42" autofocus required>
+        <span class="form-error">Your UCLA ID number is exactly 9 numbers long.</span></label>
+        
+        <label title="Enter the date you were born in year-month-day format." for="dob">Date of Birth
+        <input name="dob" type="date" placeholder="YYYY-MM-DD" id="dob" required>
+        <span class="form-error">You must use a valid date (YYYY-MM-DD) format.</span></label>
+  
+        <label title="Your UCLA ID Number is nine (9) digits long and is printed on your UCLA ID Card." for="uclaid">9-Digit UCLA ID Number
+        <input name="uclaid" pattern="[0-9]{9}" type="password" placeholder="123-456-789" value="" id="uclaid">
+        <span class="form-error">Your UCLA ID number is exactly 9 numbers long.</span></label>
+
+        <button class="primary-button" type="submit">Continue to challenge phrase</button> <button type="submit" class="button">Cancel</button>
+      </fieldset>
+
+      <p><span class="logon-success message-success"><a href="reset-2.html">(success)</a></span> <span class="message-fail"><a href="reset-fail.html">(fail)</a></span>  <span class="message-fail"><a href="reset-fail-no-phrase.html">(oops, no challenge phrase)</a></span> </p>
+
+      <div id="ajax-container"></div>
+
+    </form>
+
+    <p>tip: If you can't remember your UCLA Logon ID, go <a href="lookup.html">look it up</a>!</p>
+        
   </div>
-</div>
+</article>

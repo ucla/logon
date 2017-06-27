@@ -2,129 +2,121 @@
 layout: create-password
 ---
 
-<section class="page">
+<article class="page">
   <div>
     
-    <header>
-      <h1>Create a UCLA Logon ID: <small>Username & Password</small></h1>
-    </header>
-  
-    <article class="content">
-      <div>
+    <h1>Create a UCLA Logon ID: <small>Username & Password</small></h1>
               
-        <ol id="form-step-bar">
-          <li class="form-step-done">Affiliation</li>
-          <li class="form-step-done">Identity</li>
-          <li class="form-step-doing">Account Creation</li>
-          <li class="form-step-todo">Enroll in MFA</li>
-        </ol>
-        
-        <h2>Choose your Logon ID</h2>
-        
-        <p>Your UCLA Logon ID must be between 3 and 15 characters in length and begin with a letter, following characters can be any combination of letters and numbers. A UCLA Logon ID is not case sensitive. Your UCLA Logon ID will be your main campus identifier and you'll use it to log in to most campus-wide applications. Choose carefully.</p>
+    <ol id="form-step-bar">
+      <li class="form-step-done">Affiliation</li>
+      <li class="form-step-done">Identity</li>
+      <li class="form-step-doing">Account Creation</li>
+      <li class="form-step-todo">Enroll in MFA</li>
+    </ol>
     
-        <form action="/activate.php" method="post" data-abide novalidate>
+    <h2>Choose your Logon ID</h2>
     
-          <fieldset>
-            <label for="user1">Desired UCLA Logon ID
-            <input name="user1" type="text" maxlength="15" placeholder="joebruin42" id="user1" value="" alt="Your username will be assigned for life and CAN NOT BE CHANGED. Select carefully." pattern="[a-z0-9]{3,15}" autofocus required><span class="form-error">Usernames must be between 3-15 characters long, and must start with a letter.</span></label>
-            <label for="user2">Confirm desired UCLA Logon ID
-            <input name="user2" type="text" maxlength="15" placeholder="joebruin42" id="user2" value="" alt="Your username will be assigned for life and CAN NOT BE CHANGED. Select carefully." pattern="[a-z0-9]{3,15}" required data-equalto="user1">
-            <span class="form-error">Your usernames don't match and/or this doesn't follow the rules above!</span></label>
-          </fieldset>
-          
-          <h2>Choose your Password</h2>
-          
-          <p>Your password must be between 8 and 128 characters and contain at least two of the following three types of characters: letters, numbers, and the following special characters: <kbd>!@#$%^&*().,</kbd>. Passwords are case sensitive.</p>
-          
-          <fieldset>
-            <label for="pass1">Password
-            <input name="pass1" type="password" maxlength="128" id="pass1" value="" placeholder="Your desired password" pattern="[a-zA-Z0-9 !@#$%^&*().,]{8,128}" required>
-            <span class="form-error">Passwords must be at least 8 characters long and must contain one letter and either a number or one of the following symbols: !@#$%^&*()., other symbols are not allowed.</span></label>
-            <meter max="4" id="password-strength-meter"></meter>
-            <span id="password-strength-text"></span>
-            <label for="pass2">Confirm Password
-            <input name="pass2" type="password" maxlength="128" id="pass2" value="" placeholder="Your desired password (again)" pattern="[a-zA-Z0-9 !@#$%^&*().,]{8,128}" required data-equalto="pass1">
-            <span class="form-error">Your passwords don't match and/or this doesn't follow the rules above!</span></label>
-          </fieldset>
-          
-          <h2>Create a Challenge Phrase for Account Recovery</h2>
-          
-          <p>Select a challenge and response phrase so that should you forget your password in the future, you may reset it online. The challenge question must be at least 8 characters long and may not exceed 128 characters. The response phrase is case sensitive. It cannot be the same as your Challenge phrase. It must be at least 8 characters long and may not exceed 128 characters.</p>
-    
-          <script type="text/javascript">
-            var cbh;
-    
-            function updateChallenge(obj) {
-              var c = document.getElementById("challenge");
-    
-              if (obj == 'self') {
-                var s = document.getElementById("selectChallenge");
-    
-                s.style.display = 'none';
-                s.style.zIndex = '5';
-    
-                c.style.zIndex = '10';
-                c.style.display = 'inline';
-    
-                c.value = '';
-                c.focus();
-              } else {
-                c.value = obj;
-              }
-            }
-          </script>
-    
-          <label for="selectChallenge">Select your Challenge Question</label>
-          <select id="selectChallenge" onchange="updateChallenge(this.value);">
-            <option value="What city were you born in?">What city were you born in?</option>
-            <option value="What is the nickname you gave your favorite grandparent?">What is the nickname you gave your favorite grandparent?</option>
-            <option value="What is the name of your first pet?">What is the name of your first pet?</option>
-            <option value="Which phone number do you remember most from your childhood?">Which phone number do you remember most from your childhood?</option>
-            <option value="What is the name of your elementary school?">What is the name of your elementary school?</option>
-            <option value="What is the model of your first car?">What is the model of your first car?</option>
-            <option value="What was your maternal grandmother's maiden name?">What was your maternal grandmother's maiden name?</option>
-            <option value="What is your favorite movie?">What is your favorite movie?</option>
-            <option value="Who is your favorite actor, musician, or artist?">Who is your favorite actor, musician, or artist?</option>
-            <option value="What was your favorite place to visit as a child?">What was your favorite place to visit as a child?</option>
-            <option value="What is your favorite color?">What is your favorite color?</option>
-            <option value="What was the first name of your date for your high school prom?">What was the first name of your date for your high school prom?</option>
-            <option value="self">
-            Write your own question
-            </option>
-          </select>
-    
-          <input name="challenge" maxlength="128" id="challenge" type="text" style="display:none;" required>
-    
-          <script type="text/javascript">
-            var element = document.getElementById("selectChallenge");
-            updateChallenge(element[element.selectedIndex].text);
-          </script>
-    
-          <label for="selectChallenge">Type your Response
-          <input name="response" type="text" maxlength="128" placeholder="Answer to the above question" id="response" alt="Your Response is the answer to your Challenge question." pattern="[a-zA-Z0-9 !@#$%^&*().,]{8,128}" required>
-          <span class="form-error">Challenge responses must be between 8 and 128 characters long.</span></label>
-          
-          <button type="submit" class="primary-button" data-open="id-confirm">Create UCLA Logon ID</button> <button type="submit" class="button">Cancel</button>
-          
-          <div id="id-confirm" data-reveal data-close-on-click="false" data-close-on-esc="false">
-            <h1>Are you Sure?</h1>
-            
-            <p>You will be creating <strong>studyingislame</strong> as your UCLA Logon ID.</p>
+    <p>Your UCLA Logon ID must be between 3 and 15 characters in length and begin with a letter, following characters can be any combination of letters and numbers. A UCLA Logon ID is not case sensitive. Your UCLA Logon ID will be your main campus identifier and you'll use it to log in to most campus-wide applications. Choose carefully.</p>
 
-            <p>Your UCLA Logon ID will be your main campus identifier and you'll use it to log in to most campus-wide applications. Choose carefully.</p>
-            
-            <form>
-              <button class="button primary-button">Confirm</button>
-            </form>
-          </div>
-    
-          <p><span class="message-success"><a href="create-new-logon5.html">(next)</a></span> <span class="message-fail"><a href="create-new-logon3-taken.html">(taken)</a></span></p>
-          
+    <form action="/activate.php" method="post" data-abide novalidate>
+
+      <fieldset>
+        <label for="user1">Desired UCLA Logon ID
+        <input name="user1" type="text" maxlength="15" placeholder="joebruin42" id="user1" value="" alt="Your username will be assigned for life and CAN NOT BE CHANGED. Select carefully." pattern="[a-z0-9]{3,15}" autofocus required><span class="form-error">Usernames must be between 3-15 characters long, and must start with a letter.</span></label>
+        <label for="user2">Confirm desired UCLA Logon ID
+        <input name="user2" type="text" maxlength="15" placeholder="joebruin42" id="user2" value="" alt="Your username will be assigned for life and CAN NOT BE CHANGED. Select carefully." pattern="[a-z0-9]{3,15}" required data-equalto="user1">
+        <span class="form-error">Your usernames don't match and/or this doesn't follow the rules above!</span></label>
+      </fieldset>
+      
+      <h2>Choose your Password</h2>
+      
+      <p>Your password must be between 8 and 128 characters and contain at least two of the following three types of characters: letters, numbers, and the following special characters: <kbd>!@#$%^&*().,</kbd>. Passwords are case sensitive.</p>
+      
+      <fieldset>
+        <label for="pass1">Password
+        <input name="pass1" type="password" maxlength="128" id="pass1" value="" placeholder="Your desired password" pattern="[a-zA-Z0-9 !@#$%^&*().,]{8,128}" required>
+        <span class="form-error">Passwords must be at least 8 characters long and must contain one letter and either a number or one of the following symbols: !@#$%^&*()., other symbols are not allowed.</span></label>
+        <meter max="4" id="password-strength-meter"></meter>
+        <span id="password-strength-text"></span>
+        <label for="pass2">Confirm Password
+        <input name="pass2" type="password" maxlength="128" id="pass2" value="" placeholder="Your desired password (again)" pattern="[a-zA-Z0-9 !@#$%^&*().,]{8,128}" required data-equalto="pass1">
+        <span class="form-error">Your passwords don't match and/or this doesn't follow the rules above!</span></label>
+      </fieldset>
+      
+      <h2>Create a Challenge Phrase for Account Recovery</h2>
+      
+      <p>Select a challenge and response phrase so that should you forget your password in the future, you may reset it online. The challenge question must be at least 8 characters long and may not exceed 128 characters. The response phrase is case sensitive. It cannot be the same as your Challenge phrase. It must be at least 8 characters long and may not exceed 128 characters.</p>
+
+      <script type="text/javascript">
+        var cbh;
+
+        function updateChallenge(obj) {
+          var c = document.getElementById("challenge");
+
+          if (obj == 'self') {
+            var s = document.getElementById("selectChallenge");
+
+            s.style.display = 'none';
+            s.style.zIndex = '5';
+
+            c.style.zIndex = '10';
+            c.style.display = 'inline';
+
+            c.value = '';
+            c.focus();
+          } else {
+            c.value = obj;
+          }
+        }
+      </script>
+
+      <label for="selectChallenge">Select your Challenge Question</label>
+      <select id="selectChallenge" onchange="updateChallenge(this.value);">
+        <option value="What city were you born in?">What city were you born in?</option>
+        <option value="What is the nickname you gave your favorite grandparent?">What is the nickname you gave your favorite grandparent?</option>
+        <option value="What is the name of your first pet?">What is the name of your first pet?</option>
+        <option value="Which phone number do you remember most from your childhood?">Which phone number do you remember most from your childhood?</option>
+        <option value="What is the name of your elementary school?">What is the name of your elementary school?</option>
+        <option value="What is the model of your first car?">What is the model of your first car?</option>
+        <option value="What was your maternal grandmother's maiden name?">What was your maternal grandmother's maiden name?</option>
+        <option value="What is your favorite movie?">What is your favorite movie?</option>
+        <option value="Who is your favorite actor, musician, or artist?">Who is your favorite actor, musician, or artist?</option>
+        <option value="What was your favorite place to visit as a child?">What was your favorite place to visit as a child?</option>
+        <option value="What is your favorite color?">What is your favorite color?</option>
+        <option value="What was the first name of your date for your high school prom?">What was the first name of your date for your high school prom?</option>
+        <option value="self">
+        Write your own question
+        </option>
+      </select>
+
+      <input name="challenge" maxlength="128" id="challenge" type="text" style="display:none;" required>
+
+      <script type="text/javascript">
+        var element = document.getElementById("selectChallenge");
+        updateChallenge(element[element.selectedIndex].text);
+      </script>
+
+      <label for="selectChallenge">Type your Response
+      <input name="response" type="text" maxlength="128" placeholder="Answer to the above question" id="response" alt="Your Response is the answer to your Challenge question." pattern="[a-zA-Z0-9 !@#$%^&*().,]{8,128}" required>
+      <span class="form-error">Challenge responses must be between 8 and 128 characters long.</span></label>
+      
+      <button type="submit" class="primary-button" data-open="id-confirm">Create UCLA Logon ID</button> <button type="submit" class="button">Cancel</button>
+      
+      <div id="id-confirm" data-reveal data-close-on-click="false" data-close-on-esc="false">
+        <h1>Are you Sure?</h1>
+        
+        <p>You will be creating <strong>studyingislame</strong> as your UCLA Logon ID.</p>
+
+        <p>Your UCLA Logon ID will be your main campus identifier and you'll use it to log in to most campus-wide applications. Choose carefully.</p>
+        
+        <form>
+          <button class="button primary-button">Confirm</button>
         </form>
-        
       </div>
-    </article>
 
+      <p><span class="message-success"><a href="create-new-logon5.html">(next)</a></span> <span class="message-fail"><a href="create-new-logon3-taken.html">(taken)</a></span></p>
+      
+    </form>
+        
   </div>
-</section>
+</article>

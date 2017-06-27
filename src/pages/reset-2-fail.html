@@ -2,7 +2,7 @@
 layout: reset
 ---
 
-<div class="page">
+<article class="page">
   <div>
   
     <header class="has-help">
@@ -12,38 +12,28 @@ layout: reset
       ">
         <span class="icon-circle"><i class="fa fa-info" aria-hidden="true"></i></span>
       </div>
-
     </header>
-    
-    <article class="content">
-      <div>
         
-      <p class="alert alert-danger">Your challenge response did not match what we have on file, please try again.</p> 
+    <p class="alert alert-danger">Your challenge response did not match what we have on file, please try again.</p> 
+    
+    <p class="error-title">If you can't remember your challenge response, <a href="https://www.it.ucla.edu/bol/contact-bruin-online">contact the BruinOnline Help Desk</a>.</p>
+  
+    <p>To reset your password, please complete the following phrase:</p>
       
-      <p class="error-title">If you can't remember your challenge response, <a href="https://www.it.ucla.edu/bol/contact-bruin-online">contact the BruinOnline Help Desk</a>.</p>
-
-      <p>To reset your password, please complete the following phrase:</p>
-          
-        <p><strong>Challenge Question: </strong>Youth and better times, lost to fire.</p>
-        
-        <form action="/passreset.php" method="post" data-abide novalidate>
-          
-          <fieldset>
-            <label for="response">Challenge Response:
-              <input type="text" name="response" size="40" value="" id="response" placeholder="Super Mario Bros" required class="is-invalid-input">
-              <span class="form-error">Challenge responses must be between 8 and 128 characters long.</span>
-            </label>
-            
-            <button class="primary-button" type="submit">Reset your password</button> <button type="submit" class="button">Cancel</button>
-                      
-            <p><span class="message-fail"><a href="reset-2-fail.html">(fail)</a></span> <span class="logon-success message-success"><a href="reset-2.html">(success)</a></span></p>
+    <p><strong>Challenge Question: </strong>Youth and better times, lost to fire.</p>
     
-          </fieldset>
-        
-        </form>
+    <form action="/passreset.php" method="post" data-abide novalidate>
+      
+      <label for="response">Challenge Response:
+        <input type="text" name="response" size="40" value="" id="response" placeholder="Super Mario Bros" required class="is-invalid-input">
+        <span class="form-error">Challenge responses must be between 8 and 128 characters long.</span>
+      </label>
+      
+      <button class="primary-button" type="submit">Reset your password</button> <button type="submit" class="button">Cancel</button>
+      
+      <p><span class="message-fail"><a href="reset-2-fail.html">(fail)</a></span> <span class="logon-success message-success"><a href="reset-2.html">(success)</a></span></p>
     
-      </div>
-    </article>
+    </form>
 
   </div>
-</div>
+</article>

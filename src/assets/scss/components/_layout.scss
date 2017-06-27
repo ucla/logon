@@ -70,8 +70,8 @@ body {
   color: $white;
 }
 
-// layout that applies to all pages
-.page, .home, .management, .mfa {
+// layout that applies to all logged in pages
+.home, .management, .mfa {
   &> div, &> section {
     @include grid-column-row();
   }
@@ -98,7 +98,8 @@ nav {
   }
 }
 
-.management {
+// layout for logged in pages
+.management, .mfa {
   @include grid-column(12);
   @include breakpoint(multi-column) {
     @include grid-column(8);
@@ -107,31 +108,17 @@ nav {
     @include grid-column(9);
   }
 }
-  
-.home, .mfa {
-  .content {
-    @include grid-column(12);
-    @include breakpoint(multi-column) {
-      @include grid-column(8);
-    }
-  }
-  .supporting-info {
-    @include grid-column(12);
-    @include breakpoint(multi-column) {
-      @include grid-column(4);
-    }
+
+// logged out or single-col pages
+.page, .message {
+  @include grid-column(12);
+  @include breakpoint(multi-column) {
+    @include grid-column(8);
+    @include grid-column-position(2);
   }
 }
 
-.page {
-    .content {
-    @include grid-column(12);
-    @include breakpoint(multi-column) {
-      @include grid-column(9);
-    }
-  }
-}
-
+// columns for logged out index page
 .intro-cols {
   @include grid-column(12);
   @include breakpoint(multi-column) {
@@ -139,23 +126,10 @@ nav {
   }
 }
 
+// columns used for affiliation choice
 %half-cols {
   @include grid-column(12);
   @include breakpoint(multi-column) {
     @include grid-column(6);
-  }
-}
-
-
-//single column pages
-.message {
-  background: $white;
-  border-radius: $global-radius;
-  padding: $global-padding 0;
-  @extend %content-styling;
-  @include grid-column(12);
-  @include breakpoint(multi-column) {
-    @include grid-column(8);
-    @include grid-column-position(2);
   }
 }
