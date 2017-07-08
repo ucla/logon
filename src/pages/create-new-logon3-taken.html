@@ -57,17 +57,14 @@ layout: create-password
 
           if (obj == 'self') {
             var s = document.getElementById("selectChallenge");
-
-            s.style.display = 'none';
-            s.style.zIndex = '5';
-
-            c.style.zIndex = '10';
-            c.style.display = 'inline';
+            
+            c.style.display = 'block';
 
             c.value = '';
             c.focus();
           } else {
             c.value = obj;
+            c.style.display = 'none';
           }
         }
       </script>

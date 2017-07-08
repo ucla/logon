@@ -138,26 +138,23 @@ layout: manage-account
           </label>
       
           <script type="text/javascript">
-          var cbh;
-      
-          function updateChallenge(obj) {
-            var c = document.getElementById("challenge");
-      
-            if (obj == 'self') {
-              var s = document.getElementById("selectChallenge");
-      
-              s.style.display = 'none';
-              s.style.zIndex = '5';
-      
-              c.style.zIndex = '10';
-              c.style.display = 'inline';
-      
-              c.value = '';
-              c.focus();
-            } else {
-              c.value = obj;
+            var cbh;
+    
+            function updateChallenge(obj) {
+              var c = document.getElementById("challenge");
+    
+              if (obj == 'self') {
+                var s = document.getElementById("selectChallenge");
+                
+                c.style.display = 'inline';
+    
+                c.value = '';
+                c.focus();
+              } else {
+                c.value = obj;
+                c.style.display = 'none';
+              }
             }
-          }
           </script>
       
           <label title="Your Challenge phrase is a question or phrase that only you know the response to." for="selectChallenge">Select your Challenge Question</label>
