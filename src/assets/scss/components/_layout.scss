@@ -72,7 +72,7 @@ body {
 
 // layout that applies to all logged in pages
 .home, .management, .mfa {
-  &> div, &> section {
+  &> div {
     @include grid-column-row();
   }
   header {

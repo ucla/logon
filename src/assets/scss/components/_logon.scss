@@ -136,7 +136,7 @@ article h1 {
 }
 
 .page-help {
-  @include grid-col(2);
+  @include grid-col(3);
   @extend .standalone-help;
   text-align: right;
   color: $ucla-its-primary-alt;
@@ -259,6 +259,7 @@ article h1 {
     display: none;
     text-align: right;
     color: $light-gray;
+    font-size: $helptext-font-size;
     @include breakpoint(multi-column) {
       @include grid-column(4);
       display: block;
