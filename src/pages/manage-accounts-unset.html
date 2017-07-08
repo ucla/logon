@@ -110,12 +110,12 @@ layout: manage-account
             var cbh;
     
             function updateChallenge(obj) {
-              var c = document.getElementById("challenge");
+              var c = document.getElementById("custom-challenge");
     
               if (obj == 'self') {
                 var s = document.getElementById("selectChallenge");
                 
-                c.style.display = 'inline';
+                c.style.display = 'block';
     
                 c.value = '';
                 c.focus();
@@ -141,14 +141,22 @@ layout: manage-account
             <option value="What city were you born in?">What city were you born in?</option>
             <option value="What is the model of your first car?">What is the model of your first car?</option>
             <option value="What was the first name of your date for your high school prom?">What was the first name of your date for your high school prom?</option>
-            <option value="self">Write your own question</option>
+            <option value="self">Write your own challenge question.</option>
           </select>
-          <input name="challenge" maxlength="128" id="challenge" style="display:none;z-index:5;top:0;position:relative;" required>
+          
+          <label id="custom-challenge" hidden>Write your own challenge question.
+            <input name="challenge" type="text" maxlength="128" id="challenge" placeholder="Something only I know" required>
+          </label>
       
           <label for="response">Type your Response
             <input type="text" name="response" maxlength="128" placeholder="Answer to the above question" id="response" required>
             <span class="form-error">Challenge responses must be between 8 and 128 characters long.</span>
           </label>
+          
+          <script type="text/javascript">
+            var element = document.getElementById("selectChallenge");
+            updateChallenge(element[element.selectedIndex].text);
+          </script>
       
           <button class="primary-button" type="submit">Change Challenge Phrase</button>  <button class="button" type="submit">Cancel</button>
         </form>
