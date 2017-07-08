@@ -473,6 +473,10 @@ dd {
 
 #form-step-bar li {
   display: inline-block;
+  font-size: $helptext-font-size;
+  @include breakpoint(multi-column) {
+    font-size: inherit;
+  }
   text-align: center;
   padding: 0;
   width: 23%;
