@@ -4,7 +4,7 @@
   padding: $global-margin 0;
   @include grid-row();
   display: none;
-  @include breakpoint(non-mobile-portrait) {
+  @include breakpoint(compact-footer) {
     display: block;
   }
   max-width: $global-width;
@@ -64,7 +64,7 @@
   display: inline-block;
 }
 
-@include breakpoint(non-mobile-portrait) {
+@include breakpoint(compact-footer) {
   .breadcrumb li.last {
     padding-left: 0;
   }

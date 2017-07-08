@@ -101,8 +101,8 @@ $nav-background-alt: rgba($black, .8);
 
 $breakpoints: (
   small: 0, // single-column
-  non-mobile-portrait: 26rem, // 416px at normal text size
   large-type: 34rem, // bump up typography size
+  compact-footer: 36rem, // varies based on p length in footer cta
   multi-column: 54rem,
   medium: 54rem, // has to be here, dislike it semantically ;)
   wide: 75rem,

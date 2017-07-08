@@ -49,6 +49,13 @@ ul.listless {
 
 article h1 {
   margin-top: $global-margin;
+  @include breakpoint(multi-column) {
+    margin-top: 0;
+  }
+}
+
+.home h1 {
+  padding-top: $global-margin;
 }
 
 .home .menu a {
@@ -101,6 +108,24 @@ article h1 {
 
 .menu-icon {
   margin: 0;
+}
+
+.logged-in-info  {
+  display: none;
+	@include breakpoint(multi-column) {
+    display: block;
+  }
+	text-decoration: none;
+	color: $white;
+	font-weight: $global-weight-bold;
+	a {
+  	&:visited {
+  		color: $white;
+  	}
+  	&:hover, &:focus {
+  		color: $ucla-yellow;
+  	}
+  }
 }
 
 /////////////////////////////////////////
@@ -356,6 +381,9 @@ dd {
 	background: #1f4b87;
 	padding: $global-spacing / 2;
 	color: $white;
+	h4 {
+  	text-transform: uppercase;
+	}
 	.listless {
   	margin-bottom: 0;
 	}
@@ -373,22 +401,52 @@ dd {
   @include grid-row();
 }
 
-.logged-in-info  {
+.footer-cta {
+  text-align: center;
+  padding: 1em 2%;
+}
+
+.footer-cta h4 {
+  color: #acc1e5;
+  margin-top: 0;
+  margin-bottom: 1em;
+  background-color: transparent;
+  padding: 0;
+}
+
+.footer-cta .cta-content p {
+  font-size: .9em;
+}
+
+.footer-cta .cta-content {
   display: none;
-	@include breakpoint(multi-column) {
+  @include breakpoint(compact-footer) {
     display: block;
   }
-	text-decoration: none;
-	color: $white;
-	font-weight: $global-weight-bold;
-	a {
-  	&:visited {
-  		color: $white;
-  	}
-  	&:hover, &:focus {
-  		color: $ucla-yellow;
-  	}
+}
+
+.cta-content a {
+  color: $white;
+  &:hover {
+    color: $ucla-yellow;
   }
+}
+
+.cta-button {
+  width: 80%;
+  color: $white;
+  border: 1px $ucla-yellow solid;
+  margin: auto;
+  a {
+    text-decoration: none;
+    color: $white;
+    display: block;
+    width: 100%;
+  }
+  &:hover {
+    border: 1px $white solid; 
+  }
+  padding: 6px 12px;
 }
 
 /////////////////////////////////////////

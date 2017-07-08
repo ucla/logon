@@ -12,10 +12,13 @@ body {
   @include grid-row;
   max-width: $global-width;
   min-height: 100%;
-  margin-bottom: -15rem; // equal to footer height
   padding-top: 6rem; // equal to header height
+  margin-bottom: -15rem; // equal to footer height
+  @include breakpoint(compact-footer) {
+    margin-bottom: -29rem; // equal to footer height
+  }
   @include breakpoint(multi-column) {
-    margin-bottom: -13rem;
+    margin-bottom: -13.6rem; // equal to footer height
   }
 }
 
@@ -25,8 +28,11 @@ body {
 }
 .iam-footer, .page-wrap:after {
   height: 15rem;
+  @include breakpoint(compact-footer) {
+    height: 29rem; // equal to footer height
+  }
   @include breakpoint(multi-column) {
-    height: 13rem;
+    height: 13.6rem; // equal to footer height
   }
 }
 
