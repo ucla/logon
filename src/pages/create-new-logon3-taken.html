@@ -18,14 +18,14 @@ layout: create-password
     
     <h2>Choose your Logon ID</h2>
     
-    <p>Your UCLA Logon ID must be between 3 and 15 characters in length and begin with a letter, following characters can be any combination of letters and numbers. A UCLA Logon ID is not case sensitive. Your UCLA Logon ID will be your main campus identifier and you'll use it to log in to most campus-wide applications. Choose carefully - once created the account can not be changed or deleted.</p>
+    <p>Your UCLA Logon ID must be between 2 and 15 characters in length and begin with a letter; following characters can be any combination of letters and numbers. A UCLA Logon ID is not case sensitive. Your UCLA Logon ID will be your main campus identifier and you'll use it to log in to most campus-wide applications. Choose carefully - once created the account can not be changed or deleted.</p>
 
     <form action="/activate.php" method="post" data-abide novalidate>
 
       <fieldset>
-        <label for="user1">Desired UCLA Logon ID
+        <label for="user1">UCLA Logon ID
         <input name="user1" type="text" maxlength="15" placeholder="joebruin42" id="user1" value="" alt="Your username will be assigned for life and CAN NOT BE CHANGED. Select carefully." pattern="[a-z0-9]{3,15}" autofocus required><span class="form-error">Usernames must be between 3-15 characters long, and must start with a letter.</span></label>
-        <label for="user2">Confirm desired UCLA Logon ID
+        <label for="user2">Confirm UCLA Logon ID
         <input name="user2" type="text" maxlength="15" placeholder="joebruin42" id="user2" value="" alt="Your username will be assigned for life and CAN NOT BE CHANGED. Select carefully." pattern="[a-z0-9]{3,15}" required data-equalto="user1">
         <span class="form-error">Your usernames don't match and/or this doesn't follow the rules above!</span></label>
       </fieldset>
