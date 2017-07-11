@@ -59,8 +59,8 @@
       <nav class="top-bar" id="nav">
         <ul class="menu">
           <li><a href="manage-profile.html">My Personal Information</a></li>
-          <li><a href="manage-accounts.html">My Accounts</a></li>
-          <li><a href="manage-bol.html">My Services</a></li>
+          <li><a href="manage-accounts.html">My UCLA Logon ID</a></li>
+          <li><a href="manage-bol.html">My BOL Services</a></li>
           <li class="mobile-only"><a href="#">Logout</a></li>
           <li class="mobile-only"><a href="#">Get Help</a></li>
         </ul>
@@ -92,10 +92,10 @@
             <span class="expandable-area">
               <dl>
                 <dt>UCLA Logon Password:</dt>
-                <dd>(Not telling, but it's good to periodically change passwords).</dd>
+                <dd>Your password protects your account. It is recommended you change your password periodically.</dd>
               </dl>
             
-              <span class="expand-context">Change Password</span>
+              <span class="expand-context">Change Your Password</span>
             </span>
             
             <div class="expanded-info">
@@ -141,7 +141,7 @@
                 <dd>Multifactor Authentication is enabled.</dd>
               </dl>
             
-              <span class="expand-context">More Info</span>
+              <span class="expand-context">Manage Multi-Factor Authentication</span>
             </span>
             
             <div class="expanded-info">
@@ -194,7 +194,7 @@
             </span>
             
             <div class="expanded-info">
-              <p>A Challenge Phrase allows you reset your password online. Both the challenge and response must be between <strong>8 and 128 characters</strong> long. They cannot be the same, and the response is <strong>case-sensitive</strong>.</p>
+              <p>A Challenge Phrase allows you reset your password online. Both the challenge question and response must be between <strong>8 and 128 characters</strong> long. They cannot be the same, and the response is <strong>case-sensitive</strong>.</p>
           
               <form action="/passoptions.php" method="post" data-abide novalidate>
                 
@@ -204,26 +204,23 @@
                 </label>
             
                 <script type="text/javascript">
-                var cbh;
-            
-                function updateChallenge(obj) {
-                  var c = document.getElementById("challenge");
-            
-                  if (obj == 'self') {
-                    var s = document.getElementById("selectChallenge");
-            
-                    s.style.display = 'none';
-                    s.style.zIndex = '5';
-            
-                    c.style.zIndex = '10';
-                    c.style.display = 'inline';
-            
-                    c.value = '';
-                    c.focus();
-                  } else {
-                    c.value = obj;
+                  var cbh;
+          
+                  function updateChallenge(obj) {
+                    var c = document.getElementById("custom-challenge");
+          
+                    if (obj == 'self') {
+                      var s = document.getElementById("selectChallenge");
+                      
+                      c.style.display = 'block';
+          
+                      c.value = '';
+                      c.focus();
+                    } else {
+                      c.value = obj;
+                      c.style.display = 'none';
+                    }
                   }
-                }
                 </script>
             
                 <label title="Your Challenge phrase is a question or phrase that only you know the response to." for="selectChallenge">Select your Challenge Question</label>
@@ -241,14 +238,22 @@
                   <option value="What city were you born in?">What city were you born in?</option>
                   <option value="What is the model of your first car?">What is the model of your first car?</option>
                   <option value="What was the first name of your date for your high school prom?">What was the first name of your date for your high school prom?</option>
-                  <option value="self">Write your own question</option>
+                  <option value="self">Write your own challenge question.</option>
                 </select>
-                <input name="challenge" maxlength="128" id="challenge" style="display:none;z-index:5;top:0;position:relative;" required>
+                
+                <label id="custom-challenge" hidden>Write your own challenge question.
+                  <input name="challenge" type="text" maxlength="128" id="challenge" placeholder="Something only I know" required>
+                </label>
             
                 <label for="response">Type your Response
                   <input type="text" name="response" maxlength="128" placeholder="Answer to the above question" id="response" required>
                   <span class="form-error">Challenge responses must be between 8 and 128 characters long.</span>
                 </label>
+                
+                <script type="text/javascript">
+                  var element = document.getElementById("selectChallenge");
+                  updateChallenge(element[element.selectedIndex].text);
+                </script>
             
                 <button class="primary-button" type="submit">Change Challenge Phrase</button> <button class="button" type="submit">Cancel</button>
               </form>
@@ -269,16 +274,16 @@
   
         <div class="iam-footer-content footer-cta">
           <div class="cta-content">
-            <h4>Read the FAQ</h4>
-            <p>If you have a question, take a look to see if it's been answered in the FAQ.</p>
+            <h4>Get Answers</h4>
+            <p>If you have a question, take a look to see if it's been answered in the knowledge base.</p>
           </div>
-          <p class="cta-button"><a href="https://help.bol.ucla.edu" target="_blank">Frequently Asked Questions</a></p>
+          <p class="cta-button"><a href="https://help.bol.ucla.edu/" target="_blank">Knowledge Base</a></p>
       	</div>
       	
         <div class="iam-footer-content footer-cta">
           <div class="cta-content">
-            <h4>Get Some Help</h4>
-            <p>Find out all your options for <a href="https://www.it.ucla.edu/bol/contact-bruin-online" target="_blank">contacting Bruin OnLine</a>, email us at <a href="mailto:consult@ucla.edu">consult@ucla.edu</a>, or give us a call at 310-267-<strong>HELP</strong>.</p>
+            <h4>Get Help</h4>
+            <p>Contact Bruin OnLine, email us at <a href="mailto:consult@ucla.edu">consult@ucla.edu</a>, or give us a call at 310-267-<strong>HELP</strong>.</p>
           </div>
           <p class="cta-button"><a href="https://www.it.ucla.edu/bol/contact-bruin-online" target="_blank">Bruin OnLine Help</a></p>
       	</div>
@@ -286,7 +291,7 @@
         <div class="iam-footer-content footer-cta">
           <div class="cta-content">
             <h4>Know the Rules</h4>
-            <p>Want to find out about the policies and protections relating to your digital identity at UCLA?</p>
+            <p>Learn more about the policies and regulations at UCLA.</p>
           </div>
           <p class="cta-button"><a href="/ucla-logon-mocks/cms-policies.html" target="_blank">Privacy, Security & Legal</a></p>
       	</div>

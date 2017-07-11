@@ -46,54 +46,46 @@
       </div>
       
       
-      <section class="page">
+      <article class="page">
         <div>
+          
+          <ol id="form-step-bar">
+            <li class="form-step-done">Affiliation</li>
+            <li class="form-step-doing">Identity</li>
+            <li class="form-step-todo">Account Creation</li>
+            <li class="form-step-todo">Enroll in MFA</li>
+          </ol>
       
-          <header>
-            <h1>Create a UCLA Logon ID: <small>Set Your Identity</small></h1>
-          </header>
-        
-          <article class="content">
-            <div>
-        
-              <ol id="form-step-bar">
-                <li class="form-step-done">Affiliation</li>
-                <li class="form-step-doing">Identity</li>
-                <li class="form-step-todo">Account Creation</li>
-                <li class="form-step-todo">Enroll in MFA</li>
-              </ol>
-              
-              <p>You are creating an account without a UCLA Identification Number (UID). Although usable with some UCLA applications, an account created without an UID is not generally eligible to receive campus services (email, network access). If you are a <strong>student, alumnus, faculty, staff, or contractor, please <a href="/create-new-logon2-hasuid.html">create</a> a UCLA Logon with your UID to ensure access to university resources.</p>
-              
-              <h2>Tell us a bit about yourself</h2>
-        
-              <form action="/activate.php" method="post" data-abide novalidate>
-                <label for="gn">First Name
-                <input name="gn" type="text" placeholder="Joe" value="" id="gn" required>
-                <span class="form-error">You must enter your first name to continue.</span></label>
-        
-                <label for="sn">Last Name
-                <input name="sn" type="text" placeholder="Bruin" value="" id="sn" required>
-                <span class="form-error">You must enter your last name to continue.</span></label>
-        
-                <label for="sn">Date of Birth (YYYY-MM-DD)
-                <input name="dob" type="date" placeholder="(YYYY-MM-DD)" maxlength="10" value="" id="dob" required>
-                <span class="form-error">You must use a valid date (YYYY-MM-DD) format.</span></label>
-        
-                <label for="email">Email Address
-                <input name="email" type="email" placeholder="joe.bruin@gmail.com" value="" id="email" required>
-                <span class="form-error">This doesn't look like a valid email address.</span></label>
-        
-                <button type="submit" class="primary-button">Continue</button> <button type="submit" class="button">Cancel</button>
-        
-                <p><span class="message-success"><a href="create-new-logon3.html">(next)</a></span></p>
-              </form>
-        
-            </div>
-          </article>
+          <h1>Create a UCLA Logon ID: <small>Set Your Identity</small></h1>
+          
+          <p>You are creating an account without a UCLA University ID (UID). Although usable with some UCLA applications, an account created without an UID is not generally eligible to receive campus services (email, network access). If you are a <strong>student, alumnus, faculty, staff, or contractor, please <a href="/create-new-logon2-hasuid.html">create</a> a UCLA Logon with your UID to ensure access to university resources.</p>
+          
+          <h2>Tell us a bit about yourself</h2>
+      
+          <form action="/activate.php" method="post" data-abide novalidate>
+            <label for="gn">First Name
+            <input name="gn" type="text" placeholder="Joe" value="" id="gn" required>
+            <span class="form-error">You must enter your first name to continue.</span></label>
+      
+            <label for="sn">Last Name
+            <input name="sn" type="text" placeholder="Bruin" value="" id="sn" required>
+            <span class="form-error">You must enter your last name to continue.</span></label>
+      
+            <label for="sn">Date of Birth (MM-DD-YYYY)
+            <input name="dob" type="date" placeholder="(mm-dd-yyyy)" maxlength="10" value="" id="dob" required>
+            <span class="form-error">You must use a valid date (YYYY-MM-DD) format.</span></label>
+      
+            <label for="email">Email Address
+            <input name="email" type="email" placeholder="joe.bruin@gmail.com" value="" id="email" required>
+            <span class="form-error">This doesn't look like a valid email address.</span></label>
+      
+            <button type="submit" class="primary-button">Continue</button> <button type="submit" class="button">Cancel</button>
+      
+            <p><span class="message-success"><a href="create-new-logon3.html">(next)</a></span></p>
+          </form>
       
         </div>
-      </section>
+      </article>
       
     
     </div>
@@ -105,16 +97,16 @@
   
         <div class="iam-footer-content footer-cta">
           <div class="cta-content">
-            <h4>Read the FAQ</h4>
-            <p>If you have a question, take a look to see if it's been answered in the FAQ.</p>
+            <h4>Get Answers</h4>
+            <p>If you have a question, take a look to see if it's been answered in the knowledge base.</p>
           </div>
-          <p class="cta-button"><a href="https://help.bol.ucla.edu" target="_blank">Frequently Asked Questions</a></p>
+          <p class="cta-button"><a href="https://help.bol.ucla.edu/" target="_blank">Knowledge Base</a></p>
       	</div>
       	
         <div class="iam-footer-content footer-cta">
           <div class="cta-content">
-            <h4>Get Some Help</h4>
-            <p>Find out all your options for <a href="https://www.it.ucla.edu/bol/contact-bruin-online" target="_blank">contacting Bruin OnLine</a>, email us at <a href="mailto:consult@ucla.edu">consult@ucla.edu</a>, or give us a call at 310-267-<strong>HELP</strong>.</p>
+            <h4>Get Help</h4>
+            <p>Contact Bruin OnLine, email us at <a href="mailto:consult@ucla.edu">consult@ucla.edu</a>, or give us a call at 310-267-<strong>HELP</strong>.</p>
           </div>
           <p class="cta-button"><a href="https://www.it.ucla.edu/bol/contact-bruin-online" target="_blank">Bruin OnLine Help</a></p>
       	</div>
@@ -122,7 +114,7 @@
         <div class="iam-footer-content footer-cta">
           <div class="cta-content">
             <h4>Know the Rules</h4>
-            <p>Want to find out about the policies and protections relating to your digital identity at UCLA?</p>
+            <p>Learn more about the policies and regulations at UCLA.</p>
           </div>
           <p class="cta-button"><a href="/ucla-logon-mocks/cms-policies.html" target="_blank">Privacy, Security & Legal</a></p>
       	</div>

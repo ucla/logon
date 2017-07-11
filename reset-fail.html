@@ -60,54 +60,50 @@
             </div>
           </header>
       
-          <article class="content">
-            <div>
-              <h2 class="alert alert-danger">Your identity could not be validated.</h2>
+          <h2 class="alert alert-danger">Your identity could not be validated.</h2>
       
-              <p class="error-title">If you have a UCLA Logon ID, validate your identity again, or <a href="https://www.it.ucla.edu/bol/contact-bruin-online">contact the BruinOnline Help Desk</a> for help.</p>
+          <p class="error-title">If you have a UCLA Logon ID, validate your identity again, or <a href="https://www.it.ucla.edu/bol/contact-bruin-online">contact the BruinOnline Help Desk</a> for help.</p>
+          
+          <p class="error-title">If you do not have a UCLA Logon ID, you can <a href="create.html">create</a> one.</p>
+      
+          <p>To reset your password, enter your UCLA Logon ID below then answer your challenge question.</p>
+      
+          <form action="/passreset.php" method="post" data-abide novalidate>
+      
+            <fieldset>
+              <label class="help" for="uid">UCLA Logon ID
+              <input name="uid" type="text" pattern="[0-9]{9}" id="uid" placeholder="janebruin42" autofocus required>
+              <span class="form-error">Your UCLA ID number is exactly 9 numbers long.</span></label>
               
-              <p class="error-title">If you do not have a UCLA Logon ID, you can <a href="create.html">create</a> one.</p>
-          
-              <p>To reset your password, enter your UCLA Logon ID below then answer your challenge question.</p>
+              <label title="Enter the date you were born in year-month-day format." for="dob">Date of Birth
+              <input name="dob" type="date" placeholder="YYYY-MM-DD" id="dob" required>
+              <span class="form-error">You must use a valid date (YYYY-MM-DD) format.</span></label>
         
-              <form action="/passreset.php" method="post" data-abide novalidate>
+              <label title="Your UCLA ID Number is nine (9) digits long and is printed on your UCLA ID Card." for="uclaid">9-Digit UCLA ID Number
+              <input name="uclaid" pattern="[0-9]{9}" type="password" placeholder="123-456-789" value="" id="uclaid">
+              <span class="form-error">Your UCLA ID number is exactly 9 numbers long.</span></label>
         
-                <fieldset>
-                  <label class="help" for="uid">UCLA Logon ID
-                  <input name="uid" type="text" pattern="[0-9]{9}" id="uid" placeholder="janebruin42" autofocus required>
-                  <span class="form-error">Your UCLA ID number is exactly 9 numbers long.</span></label>
-                  
-                <label title="Enter the date you were born in year-month-day format." for="dob">Date of Birth
-                <input name="dob" type="date" placeholder="YYYY-MM-DD" id="dob" required>
-                <span class="form-error">You must use a valid date (YYYY-MM-DD) format.</span></label>
-          
-                <label title="Your UCLA ID Number is nine (9) digits long and is printed on your UCLA ID Card." for="uclaid">9-Digit UCLA ID Number
-                <input name="uclaid" pattern="[0-9]{9}" type="password" placeholder="123-456-789" value="" id="uclaid">
-                <span class="form-error">Your UCLA ID number is exactly 9 numbers long.</span></label>
-          
-                <label><input type="checkbox" id="email-toggler">Don't have a 9-digit UCLA ID number?</label>
-          
-                <div id="email-toggle" hidden>
-                  <label title="A valid contact email address is required to continue" for="email">Please enter an email address on file instead!
-                  <input name="email" type="email" placeholder="joe.bruin@gmail.com" id="email">
-                  <span class="form-error">This doesn't look like a valid email address.</span></label>
-                </div>
+              <label><input type="checkbox" id="email-toggler">Don't have a 9-digit UCLA ID number?</label>
         
-                  <button class="primary-button" type="submit">Check for security challenge</button> <button type="submit" class="button">Cancel</button>
-                </fieldset>
-        
-                <p><span class="message-fail"><a href="reset-fail.html">(fail)</a></span> <span class="logon-success message-success"><a href="reset-2.html">(success)</a></span></p>
-        
-                <div id="ajax-container"></div>
-        
-              </form>
-        
-              <p>tip: If you can't remember your UCLA Logon ID, go <a href="lookup.html">look it up</a>!</p>
-            </div>
-          </article>
+              <div id="email-toggle" hidden>
+                <label title="A valid contact email address is required to continue" for="email">Please enter an email address on file instead!
+                <input name="email" type="email" placeholder="joe.bruin@gmail.com" id="email">
+                <span class="form-error">This doesn't look like a valid email address.</span></label>
+              </div>
+      
+              <button class="primary-button" type="submit">Check for security challenge</button> <button type="submit" class="button">Cancel</button>
+            </fieldset>
+      
+            <p><span class="message-fail"><a href="reset-fail.html">(fail)</a></span> <span class="logon-success message-success"><a href="reset-2.html">(success)</a></span></p>
+      
+            <div id="ajax-container"></div>
+      
+          </form>
+      
+          <p>tip: If you can't remember your UCLA Logon ID, go <a href="lookup.html">look it up</a>!</p>
       
         </div>
-      </div>
+      </article>
       
     
     </div>
@@ -119,16 +115,16 @@
   
         <div class="iam-footer-content footer-cta">
           <div class="cta-content">
-            <h4>Read the FAQ</h4>
-            <p>If you have a question, take a look to see if it's been answered in the FAQ.</p>
+            <h4>Get Answers</h4>
+            <p>If you have a question, take a look to see if it's been answered in the knowledge base.</p>
           </div>
-          <p class="cta-button"><a href="https://help.bol.ucla.edu" target="_blank">Frequently Asked Questions</a></p>
+          <p class="cta-button"><a href="https://help.bol.ucla.edu/" target="_blank">Knowledge Base</a></p>
       	</div>
       	
         <div class="iam-footer-content footer-cta">
           <div class="cta-content">
-            <h4>Get Some Help</h4>
-            <p>Find out all your options for <a href="https://www.it.ucla.edu/bol/contact-bruin-online" target="_blank">contacting Bruin OnLine</a>, email us at <a href="mailto:consult@ucla.edu">consult@ucla.edu</a>, or give us a call at 310-267-<strong>HELP</strong>.</p>
+            <h4>Get Help</h4>
+            <p>Contact Bruin OnLine, email us at <a href="mailto:consult@ucla.edu">consult@ucla.edu</a>, or give us a call at 310-267-<strong>HELP</strong>.</p>
           </div>
           <p class="cta-button"><a href="https://www.it.ucla.edu/bol/contact-bruin-online" target="_blank">Bruin OnLine Help</a></p>
       	</div>
@@ -136,7 +132,7 @@
         <div class="iam-footer-content footer-cta">
           <div class="cta-content">
             <h4>Know the Rules</h4>
-            <p>Want to find out about the policies and protections relating to your digital identity at UCLA?</p>
+            <p>Learn more about the policies and regulations at UCLA.</p>
           </div>
           <p class="cta-button"><a href="/ucla-logon-mocks/cms-policies.html" target="_blank">Privacy, Security & Legal</a></p>
       	</div>
