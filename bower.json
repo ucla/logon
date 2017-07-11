@@ -15,7 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "foundation-sites": "ucla/foundation-sites#c9738dbbd6cd7f12dba0351ad64e80e3a2a5deff",
+    "foundation-sites": "ucla/foundation-sites#6ca763d4e1c6f36be89fcd9f5501527f7108932d",
     "motion-ui": "~1.2.2",
     "sass-toolkit": "~2.10.2",
     "what-input": "^1.2.5",

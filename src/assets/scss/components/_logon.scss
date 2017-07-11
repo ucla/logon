@@ -43,6 +43,10 @@ ul.listless {
   }
 }
 
+h3 .button {
+  font-weight: $global-weight-normal;
+}
+
 article h1 {
   margin-top: $global-margin;
   @include breakpoint(multi-column) {
@@ -60,6 +64,8 @@ article h1 {
 
 .hero-button {
   font-size: 18px;
+  height: 4.9rem;
+  line-height: 3.5rem;
   text-decoration: none;
 }
 
