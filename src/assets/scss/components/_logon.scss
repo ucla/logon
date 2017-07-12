@@ -76,7 +76,8 @@ article h1 {
 // logo, top bar, login/out
 
 .page-header {
-  background: linear-gradient(to bottom, #003d6e 0%, #1d6092 100%);
+  background-color: #1d6092;
+  background-image: linear-gradient(to bottom, #003d6e 0%, #1d6092 100%);
 }
 
 .page-header-contents {
