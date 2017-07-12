@@ -6,8 +6,8 @@ h1, h3, h5 {
   text-transform: uppercase;
 }
 
-h2 {
-  font-weight: 300;
+h2, h3 {
+  font-weight: $global-weight-normal;
 }
 
 kbd, code {
@@ -43,10 +43,6 @@ ul.listless {
   }
 }
 
-h3 .button {
-  font-weight: $global-weight-normal;
-}
-
 article h1 {
   margin-top: $global-margin;
   @include breakpoint(multi-column) {
@@ -64,9 +60,10 @@ article h1 {
 
 .hero-button {
   font-size: 18px;
-  height: 4.9rem;
-  line-height: 3.5rem;
-  text-decoration: none;
+  @include breakpoint(multi-column) {
+    height: 5.5rem;
+    line-height: 4rem;
+  }
 }
 
 /////////////////////////////////////////
@@ -384,8 +381,9 @@ dd {
 	background: #1f4b87;
 	padding: $global-spacing / 2;
 	color: $white;
-	h4 {
+	header {
   	text-transform: uppercase;
+  	font-weight: $global-weight-bold;
 	}
 	.listless {
   	margin-bottom: 0;
@@ -409,7 +407,7 @@ dd {
   padding: 1em 2%;
 }
 
-.footer-cta h4 {
+.footer-cta header {
   color: #acc1e5;
   margin-top: 0;
   margin-bottom: 1em;
