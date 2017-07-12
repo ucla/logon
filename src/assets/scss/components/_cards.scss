@@ -43,9 +43,9 @@
     margin-bottom: .5em;
     a {
       color: $ucla-its-primary-alt;
-      text-decoration: none;
+      text-decoration: underline;
       &:hover {
-        text-decoration: underline;
+        text-decoration: none;
       }
     }
   }
