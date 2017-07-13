@@ -1,0 +1,43 @@
+p.lead {
+  color: $ucla-its-primary;
+  font-weight: 100;
+  font-size: 1.1em;
+  margin-bottom: 1.5em;
+}
+
+@media (min-width: 1200px) {
+  p.lead {
+    font-size: 1.3em;
+  }
+}
+
+.secondary-title-bar {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: .9rem;
+  padding: 10px 15px;
+  background: #e8f2f9;
+  color: $ucla-its-primary;
+}
+
+.btn-text {
+  background: url(../img/callout-link-arrow.png) no-repeat left 4px;
+  color: $ucla-purple !important;
+  display: block;
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 15px 0;
+  padding-left: 35px;
+  text-decoration: none;
+  -webkit-transition:background-position .1s ease-in;
+  -moz-transition:background-position .1s ease-in;
+  -o-transition:background-position .1s ease-in;
+  transition:background-position .1s ease-in;
+
+  &:hover,
+  &:focus {
+    background-position: 3px 4px;
+    text-decoration: underline;
+  }
+}

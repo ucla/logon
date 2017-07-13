@@ -1,55 +1,35 @@
-<section class="page">
+---
+layout: lookup
+---
+
+<article class="page">
   <div>
-    
-    <header>
-      <h1>Lookup your UCLA Logon ID</h1>
-    </header>
-  
-    <article class="content">
-      <div>
-        <h2 class="error-title">Your UCLA Logon ID wasn't found.</h2>
-    
-        <p class="error-title">Try <a href="lookup.html">validating your identity again</a> if you're pretty sure you have one, or go <a href="create.html">create a UCLA Logon ID</a> if you don't.</p>
-    
-        <form action="/userlookup.php" method="post" data-abide novalidate>
-    
-          <label title="Enter your last name as it is on file with UCLA. Do not include any suffix." for="sn">Last Name
-          <input name="sn" type="text" maxlength="40" value="" placeholder="Bruin" id="sn" required>
-          <span class="form-error">You must enter your last name to continue.</span></label>
-    
-          <label title="Enter the date you were born in year-month-day format." for="dob">Date of Birth
-          <input name="dob" type="date" placeholder="YYYY-MM-DD" id="dob" required>
-          <span class="form-error">You must use a valid date (YYYY-MM-DD) format.</span></label>
-    
-          <label title="Your UCLA ID Number is nine (9) digits long and is printed on your UCLA ID Card." for="uclaid">9 Digit UCLA ID Number
-          <input name="uclaid" pattern="[0-9]{9}" type="password" placeholder="123-456-789" value="" id="uclaid">
-          <span class="form-error">Your UCLA ID number is exactly 9 numbers long.</span></label>
-    
-          <label><input type="checkbox" id="email-toggler">Don't have a 9 digit UCLA ID number?</label>
-    
-          <div id="email-toggle" hidden>
-            <label title="A valid contact email address is required to continue" for="email">Please enter an email address on file instead!
-            <input name="email" type="email" placeholder="joe.bruin@gmail.com" id="email">
-            <span class="form-error">This doesn't look like a valid email address.</span></label>
-  
-          </div>
-    
-          <button type="submit" class="primary-button">Lookup your Logon ID</button> <button type="submit" class="cancel-button">Cancel</button>
-          
-          <p><span class="message-fail"><a href="lookup-fail.html">(fail)</a></span> <span class="message-success"><a href="lookup-success.html">(success)</a></span></p>
-    
-        </form>
-        
-      </div>
-    </article>
-  
-    <aside class="supporting-info">
-      <div>
-        
-        {{> lookup-info }}
-        
-      </div>
-    </aside>
+
+    <h1>Lookup your UCLA Logon ID</h1>
+
+    <h2 class="alert alert-danger">Your UCLA Logon ID wasn't found.</h2>
+
+    <p class="error-title">Try validating your identity again. If you continue having issues <a href="https://www.it.ucla.edu/bol/contact-bruin-online" target="_blank">contact Bruin OnLine</a>. If you don't have a UCLA Logon ID you can <a href="create.html">create a UCLA Logon ID</a></p>
+
+    <form action="/userlookup.php" method="post" data-abide novalidate>
+
+      <label title="Enter your last name as it is on file with UCLA. Do not include any suffix." for="sn">Last Name
+      <input name="sn" type="text" maxlength="40" value="" placeholder="Bruin" id="sn" required>
+      <span class="form-error">You must enter your last name to continue.</span></label>
+
+      <label title="Enter the date you were born in year-month-day format." for="dob">Date of Birth
+      <input name="dob" type="date" placeholder="YYYY-MM-DD" id="dob" required>
+      <span class="form-error">You must use a valid date (YYYY-MM-DD) format.</span></label>
+
+      <label title="Your UCLA ID Number is nine (9) digits long and is printed on your UCLA ID Card." for="uclaid">9 Digit UCLA ID Number
+      <input name="uclaid" pattern="[0-9]{9}" type="password" placeholder="123-456-789" value="" id="uclaid">
+      <span class="form-error">Your UCLA ID number is exactly 9 numbers long.</span></label>
+
+      <button type="submit" class="primary-button">Lookup your Logon ID</button> <button type="submit" class="button">Cancel</button>
+      
+      <p><span class="message-fail"><a href="lookup-fail.html">(fail)</a></span> <span class="message-success"><a href="lookup-success.html">(success)</a></span></p>
+
+    </form>
 
   </div>
-</section>
+</article>

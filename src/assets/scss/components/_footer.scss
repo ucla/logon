@@ -1,0 +1,77 @@
+
+/////////////////////////////////////////
+///               FOOTER
+/////////////////////////////////////////
+
+.iam-footer {
+	background: #1f4b87;
+	padding: $global-spacing / 2;
+	color: $white;
+	header {
+  	text-transform: uppercase;
+  	font-weight: $global-weight-bold;
+	}
+	.listless {
+  	margin-bottom: 0;
+	}
+	.iam-footer-content {
+  	margin: 0 auto;
+  	@include grid-column(12);
+  	@include breakpoint(multi-column) {
+  	  @include grid-column(4);
+  	  margin-bottom: 0;
+  	 }
+	}
+}
+
+.footer-wrapper {
+  @include grid-row();
+}
+
+.footer-cta {
+  text-align: center;
+  padding: 1em 2%;
+}
+
+.footer-cta header {
+  color: #acc1e5;
+  margin-top: 0;
+  margin-bottom: 1em;
+  background-color: transparent;
+  padding: 0;
+}
+
+.footer-cta .cta-content p {
+  font-size: .9em;
+}
+
+.footer-cta .cta-content {
+  display: none;
+  @include breakpoint(compact-footer) {
+    display: block;
+  }
+}
+
+.cta-content a {
+  color: $white;
+  &:hover {
+    color: $ucla-yellow;
+  }
+}
+
+.cta-button {
+  width: 80%;
+  color: $white;
+  border: 1px $ucla-yellow solid;
+  margin: auto;
+  a {
+    text-decoration: none;
+    color: $white;
+    display: block;
+    width: 100%;
+  }
+  &:hover {
+    border: 1px $white solid; 
+  }
+  padding: 6px 12px;
+}

@@ -1,0 +1,46 @@
+---
+layout: reset
+---
+
+<div class="page">
+  <div>
+
+    <header class="has-help">
+      <h1>Reset Your Password: <small>Validate Identity</small></h1> 
+      <div class="standalone-help right" data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="true" data-allow-html="true" tabindex="1" alt="click for help" title=" 
+<p>If you cannot complete the password reset form, please bring University-issued photo identification to the Bruin OnLine Help Desk located in Suite 124, Kerckhoff Hall. If you are not able to visit the Help Desk, please fax in a completed copy of the <a href=&quot;/files/service_request.pdf&quot;>UCLA Logon Service Request Form</a>, with all required supporting documentation.</p>
+      ">
+        <span class="icon-circle"><i class="fa fa-info" aria-hidden="true"></i></span>
+      </div>
+    </header>
+
+    <p>To reset your password, enter your UCLA Logon ID below then answer your challenge question. If you can't remember your UCLA Logon ID, you can <a href="lookup.html">look it up</a>!</p>
+
+    <form action="/passreset.php" method="post" data-abide novalidate>
+
+      <fieldset>
+        <label class="help" for="uid">UCLA Logon ID
+        <input name="uid" type="text" pattern="[0-9]{9}" id="uid" placeholder="janebruin42" autofocus required>
+        <span class="form-error">Your UCLA ID number is exactly 9 numbers long.</span></label>
+        
+        <label title="Enter the date you were born in year-month-day format." for="dob">Date of Birth
+        <input name="dob" type="date" placeholder="YYYY-MM-DD" id="dob" required>
+        <span class="form-error">You must use a valid date (YYYY-MM-DD) format.</span></label>
+  
+        <label title="A valid contact email address is required to continue" for="email">UCLA Official Email Address
+        <input name="email" type="email" placeholder="joe.bruin@gmail.com" id="email">
+        <span class="form-error">This doesn't look like a valid email address.</span></label>
+
+        <button class="primary-button" type="submit">Continue to challenge phrase</button> <button type="submit" class="button">Cancel</button>
+      </fieldset>
+
+      <p><span class="logon-success message-success"><a href="reset-2.html">(success)</a></span> <span class="message-fail"><a href="reset-fail.html">(fail)</a></span>  <span class="message-fail"><a href="reset-fail-no-phrase.html">(oops, no challenge phrase)</a></span> </p>
+
+      <div id="ajax-container"></div>
+
+    </form>
+
+    
+
+  </div>
+</article>

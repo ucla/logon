@@ -1,0 +1,76 @@
+/* Begin - Beradcrumbs */
+
+.page-navigation {
+  padding: $global-margin 0;
+  @include grid-row();
+  display: none;
+  @include breakpoint(compact-footer) {
+    display: block;
+  }
+  max-width: $global-width;
+}
+
+.breadcrumb {
+  @include grid-col(9);
+  padding-left: 2.5rem;
+  margin-bottom: 1rem;
+  list-style: none;
+}
+
+.breadcrumb::after {
+  display: block;
+  content: "";
+  clear: both; 
+}
+
+.breadcrumb-item {
+  float: left; 
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  display: inline-block;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  color: #ccc;
+  content: "/";
+}
+
+.breadcrumb-item.active {
+  color: #636c72; }
+
+.breadcrumb {
+  background-color: transparent;
+  border-radius: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.breadcrumb a {
+  color: #666;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover,
+.breadcrumb a:focus {
+  color: #666;
+  text-decoration: underline;
+}
+
+.breadcrumb li {
+  display: inline-block;
+}
+
+@include breakpoint(compact-footer) {
+  .breadcrumb li.last {
+    padding-left: 0;
+  }
+
+  .breadcrumb li.last:before {
+    position: static;
+    content: '/';
+  }
+}

@@ -16,12 +16,22 @@ fieldgroup.inline {
   @include button-group-expand();
 } 
 
+.mfa-method {
+  display: block;
+  border: 1px solid $ucla-its-primary-light;
+  padding: $global-padding;
+  margin-bottom: $global-margin;
+}
+
 .get-help {
   display: block;
   @include breakpoint(multi-column) {
     display: none;
   }
-  margin-top: $global-margin;
+  margin-top: $global-margin * 5;
+  @include breakpoint($topbar-unstack-breakpoint) {
+    margin-top: $global-margin;
+  }
   background: $nav-background;
   p {
     margin-bottom: 0;
@@ -39,7 +49,7 @@ fieldgroup.inline {
 }
 
 .device {
-  background: $white;
+  background: $off-white;
   padding: $global-padding;
   margin-bottom: $global-margin;
   @include grid-row();
@@ -55,6 +65,9 @@ fieldgroup.inline {
       @include grid-column(10);
     }
   }
+  .note-that {
+    margin-bottom: 0;
+  }
 }
 
 .device-image svg {
@@ -65,10 +78,30 @@ fieldgroup.inline {
   fill: $black;
 }
 
-.device-image-linked a svg, .device-image a svg {
-  &:hover {
-    fill: $anchor-color;
+.device-editable {
+  @extend .device;
+  .device-info p {
+    color: $body-font-color;
   }
+  &:hover {
+    .device-image-linked svg, .device-image svg {
+      fill: $anchor-color;
+    }
+    .device-info p {
+      color: $anchor-color-hover;
+    }
+  }
+}
+
+.mfa-inactive {
+  @extend .device;
+  background: $ucla-its-pre-text-bg;
+  border-radius: $global-radius;
+  box-shadow: inset 0px 0px 10px 0px $light-gray;
+}
+
+#additional-options {
+  display: none;
 }
 
 @mixin notification-banner($background: $ucla-blue, $color: $white) {
@@ -82,26 +115,49 @@ fieldgroup.inline {
   background: $background;
   color: $color;
   padding: $global-padding;
+  font-weight: $global-weight-bold;
   p {
     @include grid-column(11);
     font-size: $helptext-font-size;
     @include breakpoint(large-type) {
       font-size: $global-font-size;
     }
-    font-weight: $global-weight-bold;
+  }
+  a {
+    color: $white;
   }
   aside {
     @include grid-column(1);
-    a {
-      color: $white;
-    }
+    text-align: right;
+    cursor: pointer;
   }
 }
 
 .banner-success {
-  @include notification-banner(#0ccf70)
+  @include notification-banner(#0ccf70);
 }
 
 .banner-alert {
-  @include notification-banner($alert-color)
+  @include notification-banner($alert-color);
+}
+
+.get-more-info svg {
+  fill: $ucla-gold;
+}
+
+.app-source {
+  max-width: 135px;
+}
+
+// spinner for the redirect
+#loading-spinner {
+  height: $global-spacing * 6;
+}
+
+.terse {
+  text-align: center;
+}
+
+.is-invalid-input:not(:focus) {
+    background-color: #f9f3f6
 }

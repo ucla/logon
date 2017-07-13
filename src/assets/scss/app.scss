@@ -10,12 +10,12 @@
 // Main library stuff
 @import 'settings';
 @import 'foundation';
-@import 'motion-ui';
+// @import 'motion-ui';
 
 // Some useful tools
 @import 'uc/uc-general-utilities';
-@import 'font-awesome/font-awesome';
 @import 'toolkit'; // https://github.com/at-import/toolkit
+@import 'font-awesome';
 
 /////////////////////////////////////////
 ///  CSS CLASSES OUTPUT BY FOUNDATION
@@ -34,14 +34,16 @@
 // @include foundation-breadcrumbs;
 // @include foundation-button-group;
 // @include foundation-callout;
+// @include foundation-card;
 // @include foundation-close-button;
 // @include foundation-drilldown-menu;
 // @include foundation-dropdown;
-@include foundation-dropdown-menu;
+// @include foundation-dropdown-menu;
+// @include foundation-responsive-embed;
 // @include foundation-flex-video;
 // @include foundation-label;
 // @include foundation-media-object;
-@include foundation-menu;
+// @include foundation-menu;
 @include foundation-menu-icon;
 // @include foundation-off-canvas;
 // @include foundation-orbit;
@@ -51,21 +53,22 @@
 // @include foundation-meter-element;
 // @include foundation-slider;
 @include foundation-sticky;
-// @include foundation-reveal;
+@include foundation-reveal;
 // @include foundation-switch;
 // @include foundation-table;
 // @include foundation-tabs;
 // @include foundation-thumbnail;
 @include foundation-title-bar;
-// @include foundation-tooltip;
-@include foundation-top-bar;
+@include foundation-tooltip;
+// @include foundation-top-bar;
 // @include foundation-visibility-classes;
 // @include foundation-float-classes;
 // @include foundation-flex-classes;
 
+
 // ZURB Motion UI
-@include motion-ui-transitions;
-@include motion-ui-animations;
+// @include motion-ui-transitions;
+// @include motion-ui-animations;
 
 /////////////////////////////////////////
 ///   ADDITIONAL UC SPECIFIC STYLING
@@ -75,13 +78,10 @@
 @import 'ucla/ucla-badges';
 @import 'ucla/ucla-decorative';
 @import 'ucla/ucla-messages';
-@import 'ucla/iam-footer';
+// @import 'ucla/iam-footer';
 @import 'ucla/errors';
 @import 'ucla/prototyping-controls';
 @import 'ucla/form-tweaks';
-
-// Polyfill Overrides
-@import 'ucla/webshim-styling';
 
 /////////////////////////////////////////
 ///      APPLICATION COMPONENTS
@@ -89,4 +89,16 @@
 
 @import 'components/layout';
 @import 'components/logon';
+@import 'components/accordionish';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/tooltip-help';
+@import 'components/custom-form-stuff';
 @import 'components/mfa';
+
+// adapted hills 
+@import 'components/side-nav';
+@import 'components/breadcrumbs';
+@import 'components/cards';
+@import 'components/misc-hills';
+@import 'components/alerts';

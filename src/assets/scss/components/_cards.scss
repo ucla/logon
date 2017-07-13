@@ -1,0 +1,93 @@
+.card {
+  @include grid-column(12);
+  @include breakpoint(multi-column) {
+    @include grid-column(6);
+  }
+  .card-liner {
+    overflow: hidden;
+    padding: 20px 40px 20px 20px;
+    margin-bottom: 30px;
+    border: 1px solid $ucla-its-primary-light;
+      @include breakpoint(multi-column) {
+    min-height: 242px;
+    }
+  }
+  dl, dt {
+    padding-left: 0;
+  }
+  dt, dd {
+    display: inline;
+    float: left;
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  dt {
+    clear: both;
+    color: $body-font-color;
+  }
+  dd {
+    font-weight: $global-weight-normal;
+    padding-left: $global-padding / 2;
+  }
+  ul {
+    margin-left: 0;
+  }
+  li {
+    list-style: none;
+    font-size: 14px;
+  }
+  .meta a {
+    color: $light-gray;
+  }
+  h2 {
+    margin-bottom: .5em;
+    a {
+      color: $ucla-its-primary-alt;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.icon-circle {
+  font-size: 20px;
+  border-radius: 50%;
+  background-color: #2b72a5;
+  border: 1px solid #fff;
+  display: inline-block;
+  text-align: center;
+  color: #fff;
+}
+
+.card-icon {
+  float: left;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  @extend .icon-circle;
+}
+
+.card-icon + .card-content {
+  padding-left: 65px;
+}
+
+.card-content {
+  h3 {
+    font-size: rem-calc(map-deep-get($header-styles, large-type, h6, font-size));
+    color: $ucla-its-primary;
+  }
+  .meta {
+    font-size: .85rem;
+    color: $ucla-its-gray-light;
+  }
+}
+
+.card-content > *:first-child {
+  margin-top: 0;
+}
+
+card-content > *:last-child {
+  margin-bottom: 0;
+}

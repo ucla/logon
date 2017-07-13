@@ -4,15 +4,11 @@ layout: mfa-solo
 
 <section class="mfa">
   <div>
-  
-    <header>
-      <h1>MFA Active</h1>
-    </header>
 
     <article class="content">
       <div>
         
-        <h2>What kind of phone do you have?</h2>
+        <h2>Manage this Device:</h2>
         
         <div class="device">
           <span class="device-image-linked">
@@ -31,28 +27,25 @@ layout: mfa-solo
                   <input type="tel" placeholder="Sad Cubicle" required>
                   <span class="form-error">You must enter a label for this device.</span>
                 </label>
-              </fieldset>
                 
-              <fieldgroup class="inline">
-                <button class="primary-button" type="submit">Save</button>
-                <button type="submit">Back</button>
-                <button class="cancel-button" type="submit">Cancel</button>
-              </fieldgroup>
+                <button class="primary-button" type="submit">Save Changes</button>
+                <button type="submit">Discard Changes</button>
+              </fieldset>
             </form>
           </div>
+            
+            <hr>
+            
+            <form method="post" data-abide novalidate>
+              <button class="cancel-button" type="submit">Unlink This Smartphone from account</button>
+              <button type="submit">Reactivate the Duo Mobile App</button>
+            </form>
+          
 
         </div>
 
       </div>
     </article>
-
-    <aside class="supporting-info">
-      <div>
-        {{> timer}}
-        
-        {{> mfa-info}}
-      </div>
-    </aside>
-
+    
   </div>
 </section>

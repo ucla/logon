@@ -10,6 +10,11 @@
       <p>A Challenge Phrase allows you reset your password online. Both the challenge and response must be between <strong>8 and 128 characters</strong> long. They cannot be the same, and the response is <strong>case-sensitive</strong>.</p>
     
       <form action="/passoptions.php" method="post" data-abide novalidate>
+        
+        <label for="pass-current">Confirm Your Current Password
+          <input id="pass-current" name="pass-current" type="password" placeholder="NVAEAUv7k%eDkiGaidTuwi4dUupHf@" aria-required="true" pattern="[a-zA-Z0-9 !@#$%^&*().,]{8,128}" required>
+          <span class="form-error">Passwords must be at least 8 characters long and must contain one letter and either a number or one of the following symbols: !@#$%^&*()., other symbols are not allowed.</span>
+        </label>
     
         <script type="text/javascript">
         var cbh;
@@ -65,8 +70,7 @@
     
     <aside class="supporting-info">
       <div>
-        {{> timer}}
-        
+
         {{> manage-info}}
       </div>
     </aside>

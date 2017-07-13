@@ -1,0 +1,61 @@
+/////////////////////////////////////////
+///             HEADER
+/////////////////////////////////////////
+
+// logo, top bar, login/out
+
+.page-header {
+  background-color: #1d6092;
+  background-image: linear-gradient(to bottom, #003d6e 0%, #1d6092 100%);
+}
+
+.page-header-contents {
+  display: block;
+  padding-top: $global-spacing;
+}
+
+#skip {
+  margin-left: 1rem;
+}
+
+#skip a {
+  position: absolute;
+  left: -10000px; 
+  top: auto; 
+  width: 1px; 
+  height: 1px; 
+  overflow: hidden;
+  &:focus {
+    position: static;
+    width: auto;
+    height: auto; 
+  }
+} 
+
+.title-bar {
+  position: absolute;
+  top: 8px;
+  right: 0;
+}
+
+.menu-icon {
+  margin: 0;
+}
+
+.logged-in-info  {
+  display: none;
+	@include breakpoint(multi-column) {
+    display: block;
+  }
+	text-decoration: none;
+	color: $white;
+	font-weight: $global-weight-bold;
+	a {
+  	&:visited {
+  		color: $white;
+  	}
+  	&:hover, &:focus {
+  		color: $ucla-yellow;
+  	}
+  }
+}

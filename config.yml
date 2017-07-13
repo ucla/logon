@@ -17,6 +17,8 @@ UNCSS_OPTIONS:
 
 # Gulp will reference these paths when it copies files
 PATHS:
+  # Path to dist folder
+  dist: "dist"
   # Paths to static assets that aren't images, CSS, or JavaScript
   assets:
     - "src/assets/**/*"
@@ -24,17 +26,16 @@ PATHS:
   # Paths to Sass libraries, which can then be loaded with @import
   sass:
     - "bower_components/foundation-sites/scss"
-    - "bower_components/motion-ui/src"
+    - "bower_components/motion-ui/srcs"
     - "bower_components/sass-toolkit/stylesheets"
+    - "bower_components/font-awesome/scss"
   # Paths to (JS) assets that need to be loaded separately
   bowerDirectLinked:
-    # - "bower_components/duo_php/js/Duo-Web-v2.min.js"
-    # - "bower_components/webshim/js-webshim/minified/**/*"
-    # - "bower_components/iframe-resizer/js/iframeResizer.min.js"
     - "bower_components/zxcvbn/dist/zxcvbn.js"
-  # Paths to JavaScript libraries, which are compined into one file
+    - "bower_components/zxcvbn/dist/zxcvbn.js.map"
+  # Paths to JavaScript libraries, which are combined into one file
   javascript:
-    # Libraries requried by Foundation
+    # Libraries required by Foundation
     - "bower_components/jquery/dist/jquery.js"
     - "bower_components/what-input/what-input.js"
     # Core Foundation files
@@ -42,12 +43,12 @@ PATHS:
     - "bower_components/foundation-sites/js/foundation.util.*.js"
     # Individual Foundation components
     # If you aren't using a component, just remove it from the list
-    - "bower_components/foundation-sites/js/foundation.abide.js"
+    # - "bower_components/foundation-sites/js/foundation.abide.js"
     # - "bower_components/foundation-sites/js/foundation.accordion.js"
     # - "bower_components/foundation-sites/js/foundation.accordionMenu.js"
     # - "bower_components/foundation-sites/js/foundation.drilldown.js"
-    - "bower_components/foundation-sites/js/foundation.dropdown.js"
-    - "bower_components/foundation-sites/js/foundation.dropdownMenu.js"
+    # - "bower_components/foundation-sites/js/foundation.dropdown.js"
+    # - "bower_components/foundation-sites/js/foundation.dropdownMenu.js"
     # - "bower_components/foundation-sites/js/foundation.equalizer.js"
     # - "bower_components/foundation-sites/js/foundation.interchange.js"
     # - "bower_components/foundation-sites/js/foundation.magellan.js"
@@ -55,13 +56,15 @@ PATHS:
     # - "bower_components/foundation-sites/js/foundation.orbit.js"
     - "bower_components/foundation-sites/js/foundation.responsiveMenu.js"
     - "bower_components/foundation-sites/js/foundation.responsiveToggle.js"
-    # - "bower_components/foundation-sites/js/foundation.reveal.js"
+    - "bower_components/foundation-sites/js/foundation.reveal.js"
     # - "bower_components/foundation-sites/js/foundation.slider.js"
     - "bower_components/foundation-sites/js/foundation.sticky.js"
     # - "bower_components/foundation-sites/js/foundation.tabs.js"
-    - "bower_components/foundation-sites/js/foundation.toggler.js"
-    # - "bower_components/foundation-sites/js/foundation.tooltip.js"
+    # - "bower_components/foundation-sites/js/foundation.toggler.js"
+    - "bower_components/foundation-sites/js/foundation.tooltip.js"
+    # - "bower_components/foundation-sites/js/foundation.zf.responsiveAccordionTabs.js"
     # Paths to your own project code are here
     # - "bower_components/countdown/dest/jquery.countdown.js"
+    - "bower_components/spin.js/spin.js"
     - "src/assets/js/!(app).js"
     - "src/assets/js/app.js"
