@@ -2,49 +2,49 @@
 layout: create
 ---
 
-<section class="page">
+<article class="page">
   <div>
     
-    <header>
-      <h1>Create a UCLA Logon ID: <small>Security Settings</small></h1>
-    </header>
-  
-    <article class="content">
-      <div>
-              
-        <ol id="form-step-bar">
-          <li class="form-step-done">Affiliation</li>
-          <li class="form-step-done">Identity</li>
-          <li class="form-step-done">Account Creation</li>
-          <li class="form-step-doing">Enroll in MFA</li>
-        </ol>
-          
-          <h2>Multifactor Authentication Enrollment</h2>
-          
-          <p><a href="https://www.it.ucla.edu/services/it-security/multi-factor-authentication-mfa" target="_new">Multi-factor Authentication</a> (MFA) adds a second step to your sign-in process to protect your data and accounts in case your password is compromised. It is strongly recommended to that you set up MFA.</p>
-          
-          <label for="opt-out-mfa" data-open="mfa-confirm"><input id="opt-out-mfa" type="checkbox">I choose to not enroll a device in MFA at this time.</label>
-          
-          <div id="mfa-confirm" data-reveal data-close-on-click="false" data-close-on-esc="false">
-            <h1>Are you Sure?</h1>
-
-            <p>Without MFA your accounts only defense against intruders is your password. If someone steals your password they will have access to your account. By enrolling in MFA, your account will have an extra layer of protection.</p>
-            
-            <form>
-              <label><input type="radio" name="mfa-confirm-final" value="opt-out" required>Opt out: No, I do not wish to enroll in MFA at this time.</label>
-              <label><input type="radio" name="mfa-confirm-final" value="enrollt" required>Enroll: I would like to enroll in MFA.</label>
-              <button class="button primary-button">Confirm</button>
-            </form>
-          </div>
+    <ol id="form-step-bar">
+      <li class="form-step-done">Affiliation</li>
+      <li class="form-step-done">Identity</li>
+      <li class="form-step-done">ID & Password</li>
+      <li class="form-step-doing">Challenge Phrase</li>
+      <li class="form-step-todo">Enroll in MFA</li>
+    </ol>
     
-          <fieldgroup>
-            <button class="primary-button" type="submit">Continue</button>
-          </fieldgroup>
-          
-        </form>
+    <h1>Create a UCLA Logon ID: <small>Security Settings</small></h1>
+              
+    <ol id="form-step-bar">
+      <li class="form-step-done">Affiliation</li>
+      <li class="form-step-done">Identity</li>
+      <li class="form-step-done">Account Creation</li>
+      <li class="form-step-doing">Enroll in MFA</li>
+    </ol>
+      
+      <h2>Multi-factor Authentication Enrollment</h2>
+      
+      <p><a href="https://www.it.ucla.edu/services/it-security/multi-factor-authentication-mfa" target="_new">Multi-factor Authentication</a> (MFA) adds a second step to your sign-in process to protect your data and accounts in case your password is compromised. It is strongly recommended to that you set up MFA.</p>
+      
+      <label for="opt-out-mfa" data-open="mfa-confirm"><input id="opt-out-mfa" type="checkbox">I choose to not enroll a device in MFA at this time.</label>
+      
+      <div id="mfa-confirm" data-reveal data-close-on-click="false" data-close-on-esc="false">
+        <h1>Are you Sure?</h1>
+
+        <p>Without MFA your accounts only defense against intruders is your password. If someone steals your password they will have access to your account. By enrolling in MFA, your account will have an extra layer of protection.</p>
         
+        <form>
+          <label><input type="radio" name="mfa-confirm-final" value="opt-out" required>Opt out: No, I do not wish to enroll in MFA at this time.</label>
+          <label><input type="radio" name="mfa-confirm-final" value="enrollt" required>Enroll: I would like to enroll in MFA.</label>
+          <button class="button primary-button">Confirm</button>
+        </form>
       </div>
-    </article>
+
+      <fieldgroup>
+        <button class="primary-button" type="submit">Continue</button>
+      </fieldgroup>
+      
+    </form>
 
   </div>
-</section>
+</article>

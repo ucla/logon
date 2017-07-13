@@ -1,0 +1,38 @@
+/////////////////////////////////////////
+///       TOOLTIP RELATED
+/////////////////////////////////////////
+
+.tooltip {
+  border: 1px solid $ucla-its-primary-alt;
+  max-width: 24rem;
+}
+
+.standalone-help {
+  font-size: 13px;
+  &:hover .icon-circle {
+    background: $ucla-its-primary-button-color-hover;
+  }
+  .icon-circle {
+    width: 18px;
+    height: 18px;
+    font-size: $global-font-size;
+    background-color: $ucla-its-primary-alt;
+  }
+}
+
+.has-help {
+  h1, h2, h3, p {
+    display: inline-block;
+  }
+  .standalone-help {
+    display: inline-block;
+    margin-left: $global-padding / 2;
+  }
+}
+
+.page-help {
+  @include grid-col(3);
+  @extend .standalone-help;
+  text-align: right;
+  color: $ucla-its-primary-alt;
+}

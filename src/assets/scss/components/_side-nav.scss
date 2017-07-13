@@ -1,9 +1,11 @@
-
-
 .menu {
   list-style: none;
   margin-left: 0;
   font-weight: $global-weight-normal;
+  margin-top: -5.5rem;
+  @include breakpoint(multi-column) {
+    margin-top: 0;
+  }
   > li {
     border-bottom: 1px solid $white;
     text-transform: uppercase;
@@ -12,7 +14,6 @@
     background-color: $ucla-its-primary-alt;
     color: $white;
     display: block;
-    font-weight: $global-weight-bold;
     font-size: .9rem;
     padding: 7px 32px 7px 15px;
     position: relative;
@@ -25,7 +26,7 @@
       content: "\f054";
       font-family: FontAwesome;
       font-size: 9px;
-      font-weight: normal;
+      font-weight: $global-weight-normal;
       position: absolute;
       right: 10px;
       top: 12px;

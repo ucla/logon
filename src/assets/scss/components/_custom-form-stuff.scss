@@ -1,0 +1,129 @@
+/////////////////////////////////////////
+///          MODAL OVERLAY
+/////////////////////////////////////////
+
+%modal {
+  background: $white;
+  width: 50%;
+  margin: 25% auto;
+  padding: $global-padding;
+}
+
+#mfa-confirm {
+  @extend %modal;
+}
+
+/////////////////////////////////////////
+///      CREATE ACCOUNT PROGRESS
+/////////////////////////////////////////
+
+#form-step-bar {
+  margin: $global-margin 0;
+  padding: 0;
+  display: block;
+  position: relative;
+  .form-step-todo {
+    color: $light-gray;
+  }
+  .form-step-doing {
+    color: $medium-gray; 
+    background: $lighter-gray;
+  }
+  .form-step-done {
+    color: $black;
+    background: $off-white;
+  }
+}
+
+#form-step-bar li {
+  display: inline-block;
+  font-size: $helptext-font-size;
+  @include breakpoint(multi-column) {
+    font-size: inherit;
+  }
+  text-align: center;
+  padding: 0;
+  width: 23%;
+  margin-right: 1%;
+  border-radius: 99rem;
+  line-height: $global-spacing * 2;
+  &:nth-child(1)::before {
+    position: absolute;
+    font-size: $global-font-size / 2;
+    content: "Step 1";
+    top: -$global-margin;
+  }
+  &:nth-child(2)::before {
+    position: absolute;
+    font-size: $global-font-size / 2;
+    content: "Step 2";
+    top: -$global-margin;
+  }
+  &:nth-child(3)::before {
+    position: absolute;
+    font-size: $global-font-size / 2;
+    content: "Step 3";
+    top: -$global-margin;
+  }
+  &:nth-child(4)::before {
+    position: absolute;
+    font-size: $global-font-size / 2;
+    content: "Step 4";
+    top: -$global-margin;
+  }
+  &:nth-child(5)::before {
+    position: absolute;
+    font-size: $global-font-size / 2;
+    content: "Step 5";
+    top: -$global-margin;
+  }
+}
+
+/////////////////////////////////////////
+///           ZXCVBN Meter
+/////////////////////////////////////////
+
+#pass1 {
+  margin-bottom: 0.5rem;
+
+}
+
+meter {
+  appearance: none;
+  padding: 0;
+  width: 98.5%;
+  display: block;
+  margin: 0 0 $global-margin;
+  height: $global-margin / 6;
+  vertical-align: $global-margin;
+  border-bottom-left-radius: $global-radius;
+  border-bottom-right-radius: $global-radius;
+  /* Applicable only to Firefox */
+  background: none;
+  background-color: transparent;
+  @include breakpoint(multi-column) {
+    max-width: 28rem;
+  }
+}
+
+#password-strength-text .help-text {
+  display: inline-block;
+  padding: ($global-margin / 2) 0 $global-margin;
+}
+
+meter::-webkit-meter-bar {
+  background: none;
+  background-color: transparent;
+}
+
+/* Webkit based browsers */
+meter[value="1"]::-webkit-meter-optimum-value { background: $alert-color; }
+meter[value="2"]::-webkit-meter-optimum-value { background: $ucla-orange; }
+meter[value="3"]::-webkit-meter-optimum-value { background: $success-color; }
+meter[value="4"]::-webkit-meter-optimum-value { background: $success-color; }
+
+/* Gecko based browsers */
+meter[value="1"]::-moz-meter-bar { background: $alert-color; }
+meter[value="2"]::-moz-meter-bar { background: $warning-color; }
+meter[value="3"]::-moz-meter-bar { background: $success-color; }
+meter[value="4"]::-moz-meter-bar { background: $success-color; }

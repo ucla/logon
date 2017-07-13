@@ -102,6 +102,7 @@ $nav-background-alt: rgba($black, .8);
 $breakpoints: (
   small: 0, // single-column
   large-type: 34rem, // bump up typography size
+  compact-footer: 36rem, // varies based on p length in footer cta
   multi-column: 54rem,
   medium: 54rem, // has to be here, dislike it semantically ;)
   wide: 75rem,
@@ -125,7 +126,7 @@ $block-grid-max: 8;
 // ------------------
 
 $header-font-family: $body-font-family;
-$header-font-weight: $global-weight-bold;
+$header-font-weight: 500;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-color: $ucla-its-primary;
@@ -391,7 +392,7 @@ $select-background: $white;
 $select-triangle-color: $dark-gray;
 $select-radius: $global-radius;
 $input-color: $dark-gray;
-$input-placeholder-color: #999;
+$input-placeholder-color: #767676;
 $input-font-family: inherit;
 $input-font-size: rem-calc(15);
 $input-font-weight: $global-weight-normal;
@@ -610,7 +611,7 @@ $thumbnail-radius: $global-radius;
 // 35. Title Bar
 // -------------
 
-$titlebar-background: $ucla-its-nav-title-opened;
+$titlebar-background: none;
 $titlebar-color: $white;
 $titlebar-padding: 0.5rem;
 $titlebar-text-font-weight: bold;

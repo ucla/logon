@@ -8,7 +8,9 @@
     padding: 20px 40px 20px 20px;
     margin-bottom: 30px;
     border: 1px solid $ucla-its-primary-light;
-    min-height: 220px;
+      @include breakpoint(multi-column) {
+    min-height: 242px;
+    }
   }
   dl, dt {
     padding-left: 0;
@@ -25,6 +27,7 @@
   }
   dd {
     font-weight: $global-weight-normal;
+    padding-left: $global-padding / 2;
   }
   ul {
     margin-left: 0;
@@ -40,9 +43,9 @@
     margin-bottom: .5em;
     a {
       color: $ucla-its-primary-alt;
-      text-decoration: none;
+      text-decoration: underline;
       &:hover {
-        text-decoration: underline;
+        text-decoration: none;
       }
     }
   }
@@ -66,7 +69,6 @@
   @extend .icon-circle;
 }
 
-
 .card-icon + .card-content {
   padding-left: 65px;
 }
@@ -88,8 +90,4 @@
 
 card-content > *:last-child {
   margin-bottom: 0;
-}
-
-.mfa-card {
-  
 }

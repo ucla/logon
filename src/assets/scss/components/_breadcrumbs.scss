@@ -1,17 +1,17 @@
 /* Begin - Beradcrumbs */
 
 .page-navigation {
-  margin: $global-margin 0;
+  padding: $global-margin 0;
   @include grid-row();
   display: none;
-  @include breakpoint(multi-column) {
+  @include breakpoint(compact-footer) {
     display: block;
   }
   max-width: $global-width;
 }
 
 .breadcrumb {
-  @include grid-col(10);
+  @include grid-col(9);
   padding-left: 2.5rem;
   margin-bottom: 1rem;
   list-style: none;
@@ -64,9 +64,7 @@
   display: inline-block;
 }
 
-/* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-
+@include breakpoint(compact-footer) {
   .breadcrumb li.last {
     padding-left: 0;
   }

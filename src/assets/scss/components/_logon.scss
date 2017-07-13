@@ -6,8 +6,8 @@ h1, h3, h5 {
   text-transform: uppercase;
 }
 
-h2 {
-  font-weight: 300;
+h2, h3 {
+  font-weight: $global-weight-normal;
 }
 
 kbd, code {
@@ -29,10 +29,6 @@ kbd, code {
   margin: -($global-spacing / 2) 0 0;
 }
 
-.menu a {
-  font-weight: $global-weight-bold;
-}
-
 .management .alert-info i {
   left: 1.25rem;
 }
@@ -49,6 +45,13 @@ ul.listless {
 
 article h1 {
   margin-top: $global-margin;
+  @include breakpoint(multi-column) {
+    margin-top: 0;
+  }
+}
+
+.home h1 {
+  padding-top: $global-margin;
 }
 
 .home .menu a {
@@ -57,97 +60,10 @@ article h1 {
 
 .hero-button {
   font-size: 18px;
-  text-decoration: none;
-}
-
-/////////////////////////////////////////
-///             HEADER
-/////////////////////////////////////////
-
-// logo, top bar, login/out
-
-.page-header {
-  background: linear-gradient(to bottom, #003d6e 0%, #1d6092 100%);
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 6rem;
-}
-
-.page-header-contents {
-  display: block;
-  padding-top: $global-spacing;
-}
-
-#skip {
-  margin-left: 1rem;
-}
-
-#skip a {
-  position: absolute;
-  left: -10000px; 
-  top: auto; 
-  width: 1px; 
-  height: 1px; 
-  overflow: hidden;
-  &:focus {
-    position: static;
-    width: auto;
-    height: auto; 
+  @include breakpoint(multi-column) {
+    height: 5.5rem;
+    line-height: 4rem;
   }
-} 
-
-.title-bar-help {
-  float: right;
-  span {
-    font-weight: $global-weight-bold;
-  }
-  .standalone-help svg {
-    fill: $white;
-  }
-}
-
-.menu-icon {
-  margin: 0;
-}
-
-
-/////////////////////////////////////////
-///       TOOLTIP RELATED
-/////////////////////////////////////////
-
-.tooltip {
-  border: 1px solid $ucla-its-primary-alt;
-  max-width: 24rem;
-}
-
-.standalone-help {
-  &:hover svg {
-    fill: $ucla-its-primary-button-color-hover;
-  }
-  .icon-circle {
-    width: 18px;
-    height: 18px;
-    font-size: $global-font-size;
-  }
-}
-
-.has-help {
-  h1, h2, h3, p {
-    display: inline-block;
-  }
-  .standalone-help {
-    display: inline-block;
-    margin-left: $global-padding / 2;
-  }
-}
-
-.page-help {
-  @include grid-col(2);
-  @extend .standalone-help;
-  text-align: right;
-  font-size: 13px;
-  color: $ucla-its-primary-alt;
 }
 
 /////////////////////////////////////////
@@ -214,286 +130,3 @@ article h1 {
     font-size: rem-calc(map-deep-get($header-styles, large-type, h6, font-size));
   }
 }
-
-/////////////////////////////////////////
-///          MODAL OVERLAY
-/////////////////////////////////////////
-
-%modal {
-  background: $white;
-  width: 50%;
-  margin: 25% auto;
-  padding: $global-padding;
-}
-
-#mfa-confirm {
-  @extend %modal;
-}
-
-/////////////////////////////////////////
-///       ACCORDION RELATED
-/////////////////////////////////////////
-
-// accordion items on manage pages
-.item-overview {
-  @include grid-row;
-  border-top: 1px solid $ucla-its-primary-light;
-  dl {
-    margin-bottom: 0;
-    padding: $global-padding / 2;
-    margin-left: 5px;
-    margin-right: -5px;
-    @include grid-column(12);
-    @include breakpoint(multi-column) {
-      @include grid-column(8);
-    }
-    &:before {
-      content: "\f054";
-      font-family: FontAwesome;
-      position: absolute;
-      right: 20px;
-      top: 20px;
-      font-size: 30px;
-      margin-top: -16px;
-      color: $lighter-gray;
-      @include breakpoint(multi-column) {
-        content: "";
-      }
-    }
-  }
-  .expand-context {
-    display: none;
-    text-align: right;
-    color: $light-gray;
-    @include breakpoint(multi-column) {
-      @include grid-column(4);
-      display: block;
-    }
-    vertical-align: top;
-    padding-top: $global-padding / 2;
-
-  }
-  .expandable-area {
-    cursor: pointer;
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-    &::before {
-      content: "\f055";
-      font-family: FontAwesome;
-      position: absolute;
-      left: 1px;
-      top: 20px;
-      font-size: 20px;
-      margin-top: -16px;
-      color: $ucla-its-primary-alt;
-    }
-    &:hover {
-      dl {
-        margin-left: 8px;
-        margin-right: -8px;
-      }
-    }
-  }
-  .toggled-open:before {
-    content: "\f056";
-    font-family: FontAwesome;
-    position: absolute;
-    left: 1px;
-    top: 20px;
-    font-size: 20px;
-    margin-top: -16px;
-    color: $ucla-its-primary-alt;
-  }
-  .expanded-info {
-    @include grid-column(12);
-    display: none;
-    background: $white;
-  }
-}
-
-dt {
-  font-weight: $global-weight-bold;
-  color: $ucla-its-primary-alt;
-  margin-bottom: 0;
-  padding-left: $global-padding / 2;
-}
-dd {
-  font-size: $global-font-size;
-  font-weight: $global-weight-bold;
-  padding-left: $global-padding / 2;
-}
-
-
-.item-overview + h2 {
-  margin-top: $global-margin;
-}
-
-.mfa-preview {
-  @include grid-col(4, 0);
-  margin-right: 1rem;
-  margin-bottom: 1rem;
-  div {
-    background: $off-white;
-    padding: $global-padding / 2;
-  }
-  p, h4 {
-    margin-bottom: 0;
-  }
-}
-
-/////////////////////////////////////////
-///               FOOTER
-/////////////////////////////////////////
-
-.iam-footer {
-	background: #1f4b87;
-	padding: $global-spacing / 2;
-	color: $white;
-	.listless {
-  	margin-bottom: 0;
-	}
-	.iam-footer-content {
-  	margin: 0 auto;
-  	@include grid-column(12);
-  	@include breakpoint(multi-column) {
-  	  @include grid-column(4);
-  	  margin-bottom: 0;
-  	 }
-	}
-}
-
-.footer-wrapper {
-  @include grid-row();
-}
-
-.logged-in-info  {
-  display: none;
-	@include breakpoint(multi-column) {
-    display: block;
-  }
-	text-decoration: none;
-	color: $white;
-	font-weight: $global-weight-bold;
-	a {
-  	&:visited {
-  		color: $white;
-  	}
-  	&:hover, &:focus {
-  		color: $ucla-yellow;
-  	}
-  }
-}
-
-/////////////////////////////////////////
-///      CREATE ACCOUNT PROGRESS
-/////////////////////////////////////////
-
-#form-step-bar {
-  margin: $global-margin 0;
-  padding: 0;
-  display: block;
-  position: relative;
-  .form-step-todo {
-    color: $light-gray;
-  }
-  .form-step-doing {
-    color: $primary-color-safe; 
-    background: $lighter-gray;
-  }
-  .form-step-done {
-    color: $black;
-    background: $off-white;
-  }
-}
-
-#form-step-bar li {
-  display: inline-block;
-  text-align: center;
-  padding: 0;
-  width: 23%;
-  margin-right: 1%;
-  border-radius: 99rem;
-  line-height: $global-spacing * 2;
-  &:nth-child(1)::before {
-    position: absolute;
-    font-size: $global-font-size / 2;
-    content: "Step 1";
-    top: -$global-margin;
-  }
-  &:nth-child(2)::before {
-    position: absolute;
-    font-size: $global-font-size / 2;
-    content: "Step 2";
-    top: -$global-margin;
-  }
-  &:nth-child(3)::before {
-    position: absolute;
-    font-size: $global-font-size / 2;
-    content: "Step 3";
-    top: -$global-margin;
-  }
-  &:nth-child(4)::before {
-    position: absolute;
-    font-size: $global-font-size / 2;
-    content: "Step 4";
-    top: -$global-margin;
-  }
-  &:nth-child(5)::before {
-    position: absolute;
-    font-size: $global-font-size / 2;
-    content: "Step 5";
-    top: -$global-margin;
-  }
-}
-
-/////////////////////////////////////////
-///           ZXCVBN Meter
-/////////////////////////////////////////
-
-#pass1 {
-  margin-bottom: 0.5rem;
-
-}
-
-meter {
-  appearance: none;
-  padding: 0;
-  width: 98.5%;
-  display: block;
-  margin: 0 0 $global-margin;
-  height: $global-margin / 6;
-  vertical-align: $global-margin;
-  border-bottom-left-radius: $global-radius;
-  border-bottom-right-radius: $global-radius;
-  /* Applicable only to Firefox */
-  background: none;
-  background-color: transparent;
-  @include breakpoint(multi-column) {
-    max-width: 28rem;
-  }
-}
-
-#password-strength-text .help-text {
-  display: inline-block;
-  padding: ($global-margin / 2) 0 $global-margin;
-}
-
-meter::-webkit-meter-bar {
-  background: none;
-  background-color: transparent;
-}
-
-/* Webkit based browsers */
-meter[value="1"]::-webkit-meter-optimum-value { background: $alert-color; }
-meter[value="2"]::-webkit-meter-optimum-value { background: $ucla-orange; }
-meter[value="3"]::-webkit-meter-optimum-value { background: $success-color; }
-meter[value="4"]::-webkit-meter-optimum-value { background: $success-color; }
-
-/* Gecko based browsers */
-meter[value="1"]::-moz-meter-bar { background: $alert-color; }
-meter[value="2"]::-moz-meter-bar { background: $warning-color; }
-meter[value="3"]::-moz-meter-bar { background: $success-color; }
-meter[value="4"]::-moz-meter-bar { background: $success-color; }
