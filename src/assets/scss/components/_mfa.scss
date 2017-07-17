@@ -155,6 +155,7 @@ fieldgroup.inline {
 // spinner for the redirect
 #loading-spinner {
   height: $global-spacing * 6;
+  position: relative;
 }
 
 .terse {
