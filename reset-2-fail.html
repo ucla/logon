@@ -29,20 +29,21 @@
           <li class="breadcrumb-item"><a href="reset.html">Reset Your Password</a></li>
         </ol>
         
-        <div class="page-help has-tip" data-tooltip aria-haspopup="true" data-disable-hover="true" data-allow-html="true" tabindex="1" alt="click for help" title="  
-            <ul class=&quot;listless&quot;>
-              <li>Contact the Bruin OnLine Help Desk
-                <ul>
-                  <li><a href=&quot;mailto:consult@ucla.edu&quot;>consult@ucla.edu</a></li>
-                  <li>310-267-HELP (4357)</li>
-                </ul>
-              </li>
-            </ul>
-            
-            <p>Check <a href=&quot;#&quot; target='tutorial'>Frequently Asked Questions</a>.</p>
-          "> get help 
-          <span class="icon-circle"><i class="fa fa-info" aria-hidden="true"></i></span>
+        <div class="page-help dropdown" data-toggle="default-page-help">
+          <span>get help <span class="icon-circle"><i class="fa fa-info"></i></span></span>
+        </div>
+        
+        <div class="dropdown-pane" id="default-page-help" data-dropdown data-hover="true" data-hover-pane="true" data-auto-focus="true">
+          <ul class="listless">
+            <li>Contact the Bruin OnLine Help Desk
+              <ul>
+                <li><a href="mailto:consult@ucla.edu">consult@ucla.edu</a></li>
+                <li>310-267-HELP (4357)</li>
+              </ul>
+            </li>
+          </ul>
           
+          <p>Check <a href="#"; target='tutorial'>Frequently Asked Questions</a>.</p>
         </div>
         
       </div>
@@ -53,11 +54,13 @@
         
           <header class="has-help">
             <h1>Reset Your Password: <small>Challenge Phrase</small></h1> 
-            <div class="standalone-help right" data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="true" data-allow-html="true" tabindex="1" alt="click for help" title=" 
-      <p>If you cannot complete the password reset form, please bring University-issued photo identification to the Bruin OnLine Help Desk located in Suite 124, Kerckhoff Hall. If you are not able to visit the Help Desk, please fax in a completed copy of the <a href=&quot;/files/service_request.pdf&quot;>UCLA Logon Service Request Form</a>, with all required supporting documentation.</p>
-            ">
-              <span class="icon-circle"><i class="fa fa-info" aria-hidden="true"></i></span>
-            </div>
+                  <div class="dropdown standalone-help" data-toggle="reset-page-help">
+                    <span class="icon-circle"><i class="fa fa-info"></i></span>
+                  </div>
+                  
+                  <div class="dropdown-pane" id="reset-page-help" data-dropdown data-hover="true" data-hover-pane="true" data-auto-focus="true">
+                    <p>If you cannot complete the password reset form, please bring University-issued photo identification to the Bruin OnLine Help Desk located in Suite 124, Kerckhoff Hall. If you are not able to visit the Help Desk, please fax in a completed copy of the <a href="/files/service_request.pdf">UCLA Logon Service Request Form</a>, with all required supporting documentation.</p>
+                  </div>
           </header>
               
           <p class="alert alert-danger">Your challenge response did not match what we have on file, please try again.</p> 
