@@ -1,0 +1,94 @@
+/////////////////////////////////////////
+///               HOME
+/////////////////////////////////////////
+
+.home div[role="main"] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1 0 auto;
+  max-width: 41rem;
+  margin: auto;
+}
+
+.hero-form .ws-errorbox {
+  margin-top: $half-spacing;
+  margin-bottom: 0;
+}
+
+.hero-form-input {
+  font-size: $h1-font-size;
+  width: 41rem;
+  margin-bottom: 0;
+}
+
+.check-queue {
+  margin-top: $octo-spacing;
+  align-self: center;
+}
+
+/////////////////////////////////////////
+///          APP LAYOUT
+/////////////////////////////////////////
+
+related-results-and-actions, .main-wide div[role="main"] {
+  display: block;
+  width: 98%;
+  margin: 0 auto;
+  flex: 1 0 auto;
+}
+
+.main-narrow div[role="main"] {
+  display: block;
+  width: 42em;
+  margin: 0 auto;
+  flex: 1 0 auto;
+}
+
+labeled-results:first-child h2 {
+  margin-top: 0;
+}
+
+.query-results {
+  width: 42rem;
+  @include breakpoint($collapse-account-actions) {
+    float: left;
+  }
+}
+
+.account-actions {
+  max-width: 60rem;
+  @include breakpoint($collapse-account-actions) {
+    margin-left: 44rem;
+    position: sticky;
+    top: 10px;
+  }
+}
+
+iron-pages {
+  div {
+    margin-top: 1rem;
+  }
+  section {
+    width: 48%;
+    float: left;
+  }
+}
+
+/////////////////////////////////////////
+///              MISC
+/////////////////////////////////////////
+
+.line-thru {
+  @include line-thru();
+}
+
+.full {
+  width: 100%;
+}
+
+.back {
+  text-decoration: none;
+  font-size: 3.5rem;
+}

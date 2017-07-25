@@ -1,0 +1,68 @@
+---
+layout: admin-logged-in
+---
+
+<div class="home" role="main">
+
+  <h1>Password Request Queue Management</h1>
+
+  <form method="get" id="queue-management"></form>
+
+  <table>
+
+    <thead>
+      <tr>
+        <th>Ignore</th>
+        <th>Change</th>
+        <th>Reject</th>
+        <th>For Account</th>
+        <th>Entered By</th>
+        <th>Requested At</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td><label class="for-checkbox"><input type="radio" value="ignore" name="action1" form="queue-management">Ignore</label></td>
+        <td><label class="for-checkbox"><input type="radio" value="change" name="action1" form="queue-management">Change</label></td>
+        <td><label class="for-checkbox"><input type="radio" value="reject" name="action1" form="queue-management">Reject</label></td>
+        <td>jbruin</td>
+        <td>someone</td>
+        <td>2014-12-05 20:57:26 </td>
+      </tr>
+
+      <tr>
+        <td><label class="for-checkbox"><input type="radio" value="ignore" name="action2" form="queue-management">Ignore</label></td>
+        <td><label class="for-checkbox"><input type="radio" value="change" name="action2" form="queue-management">Change</label></td>
+        <td><label class="for-checkbox"><input type="radio" value="reject" name="action2" form="queue-management">Reject</label></td>
+        <td>barbruin</td>
+        <td>someone else</td>
+        <td>2014-12-05 20:57:26 </td>
+      </tr>
+
+      <tr>
+        <td><label class="for-checkbox"><input type="radio" value="ignore" name="action3" form="queue-management">Ignore</label></td>
+        <td><label class="for-checkbox"><input type="radio" value="change" name="action3" form="queue-management">Change</label></td>
+        <td><label class="for-checkbox"><input type="radio" value="reject" name="action3" form="queue-management">Reject</label></td>
+        <td>foobruin</td>
+        <td>someone special</td>
+        <td>2014-12-05 20:57:26 </td>
+      </tr>
+
+      <tr>
+        <td><label class="for-checkbox"><input type="radio" value="ignore" name="action4" form="queue-management">Ignore</label></td>
+        <td><label class="for-checkbox"><input type="radio" value="change" name="action4" form="queue-management">Change</label></td>
+        <td><label class="for-checkbox"><input type="radio" value="reject" name="action4" form="queue-management">Reject</label></td>
+        <td>bbqbruin</td>
+        <td>someone fancy</td>
+        <td>2014-12-05 20:57:26 </td>
+      </tr>
+    </tbody>
+
+  </table>
+
+  <button class="primary-button" type="submit" form="queue-management">Submit actions</button>
+
+  <p><a href="queue-results.html">(results)</a></p>
+
+</div>

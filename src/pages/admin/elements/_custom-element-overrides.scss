@@ -1,0 +1,10 @@
+paper-tabs {
+  background-color: $ucla-blue;
+  color: $white;
+}
+
+div.iron-selected {
+  position: relative;
+  padding: $half-spacing;
+  margin-top: $half-spacing;
+}

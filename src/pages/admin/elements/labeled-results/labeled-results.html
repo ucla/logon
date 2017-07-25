@@ -1,0 +1,20 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="labeled-results">
+
+  <link rel="import" type="css" href="labeled-results.css">
+
+  <template>
+    <core-selector excludedLocalNames="h2" valueattr="data-related">
+      <content></content>
+    </core-selector>
+    <core-selection id="selection" on-core-select="selectAction"></core-selection>
+  </template>
+
+</dom-module>
+
+<script>
+  Polymer({
+    is: 'labeled-results',
+  });
+</script>

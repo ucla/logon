@@ -1,0 +1,56 @@
+@import 'breakpoint';
+@import 'toolkit';
+@import 'config/global-vars';
+
+:host {
+  display: block;
+  float: right;
+  width: 48%;
+  background: $background-light-grey;
+  position: relative;
+  border-radius: $half-spacing;
+  padding: 0 $default-spacing;
+}
+
+:host:before {
+   content:"";
+   position: absolute;
+   right: 100%;
+   top: $double-spacing;
+   width: 0;
+   height: 0;
+   border-top: $default-spacing solid transparent;
+   border-right: $default-spacing solid $background-light-grey;
+   border-bottom: $default-spacing solid transparent;
+}
+
+:host > ::content dl {
+  font-size: $meta-font-size;
+}
+
+:host > ::content dd {
+  font-weight: bold;
+}
+
+:host > ::content p {
+  font-size: $meta-font-size;
+}
+
+:host > ::content h3 {
+  display: inline-block;
+  margin-top: 0;
+}
+
+::content .fail {
+  background: $ucla-pink;
+  color: $black;
+  border-radius: $global-border-radius;
+  padding: $half-spacing;
+}
+
+::content .success {
+  background: $ucla-green;
+  color: $black;
+  border-radius: $global-border-radius;
+  padding: $half-spacing;
+}

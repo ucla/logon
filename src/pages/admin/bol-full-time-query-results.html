@@ -1,0 +1,215 @@
+---
+layout: admin-logged-in
+---
+
+  <div role="main" class="main-wide" >
+
+    <header>
+      <h1><a href="/" class="back" title="Search for someone else">&laquo;</a> Manage Joe Bruin's Identity</h1>
+    </header>
+
+    {{> sample-full-time-results }}
+
+    <password-confirm id="password-confirm" modal role="alertdialog"></password-confirm>
+
+    <template is="dom-bind" id="tabbed-results-nav">
+      <aside class="account-actions">
+
+        <paper-tabs selected="{{selected}}" noink>
+          <paper-tab>Map UID</paper-tab>
+          <paper-tab>Change Password</paper-tab>
+          <paper-tab>Email Related</paper-tab>
+          <paper-tab>BOL Services</paper-tab>
+          <paper-tab>Affiliation</paper-tab>
+          <paper-tab>Manage Holds</paper-tab>
+          <paper-tab>Audit History</paper-tab>
+        </paper-tabs>
+
+        <iron-pages selected="{{selected}}">
+
+          <div>
+            <section>
+              <form id="map-an-id" role="form" action="/" method="post" class="ws-validate">
+                <legend>Map UID to Joe Bruin's Account</legend>
+
+                <fieldset>
+                  <label for="map-an-id--uid" hidden>UID to be mapped</label>
+                  <input id="map-an-id--uid" name="map-an-id--uid" type="text" placeholder="Nine Digit UID to be Mapped" aria-required="true" pattern=".{9}" required data-errormessage="UIDs must be 9 characters long" >
+                </fieldset>
+
+                <label class="for-checkbox"><input type="checkbox" id="map-an-id--include-email" name="map-an-id--include-email" checked>Copy alternate email address if empty on UID</label>
+
+                <button data-dialog="password-confirm" type="button" class="primary-button">Try to map it!</button>
+
+                <p><a href="bol-full-time-query-results-pass.html">(pass results)</a> <a href="bol-full-time-query-results-fail.html">(fail results)</a></p>
+              </form>
+            </section>
+          </div>
+
+          <div>
+            <section>
+              <form id="user-requested-password" role="form" action="/" method="post" class="ws-validate">
+                <legend>Change Joe Bruin's Password</legend>
+
+                <p>FYI: 8-128 characters. Allowed characters below:</p>
+
+                <ul>
+                  <li>letters: a-z or A-Z</li>
+                  <li>numbers: 0-9</li>
+                  <li>special characters: !@#$%^&*().,</li>
+                </ul>
+
+                <fieldset>
+                  <label for="pass-requested" hidden>New Password</label>
+                  <input id="pass-requested" name="pass-requested" type="password" placeholder="Joe Bruin's New Password" aria-required="true" pattern=".{8,128}" required data-errormessage="Passwords must be at least 8 characters long">
+                </fieldset>
+
+                <fieldset>
+                  <label for="pass-requested-confirm" hidden>Confirm New Password</label>
+                  <input id="pass-requested" name="pass-requested" type="password" placeholder="Confirm Joe Bruin's New Password" aria-required="true" pattern=".{8,128}" required data-errormessage="Passwords must be at least 8 characters long">
+                </fieldset>
+
+                <button data-dialog="password-confirm" type="button" class="primary-button">Change Password</button>
+              </form>
+             </section>
+          </div>
+
+          <div>
+            <section>
+              <form id="alt-email-address" role="form" action="/" method="post" class="ws-validate">
+                <legend>Set an alternate email address</legend>
+                <fieldset>
+                  <label for="alt-email-address-input" hidden>Alternate Email Address</label>
+                  <input id="alt-email-address-input" name="alt-email-address-input" type="email" placeholder="Alternate Email Address" aria-required="true" required>
+                </fieldset>
+
+                <button data-dialog="password-confirm" type="button" class="primary-button">Set Alternate Email Address</button>
+              </form>
+
+              <strong class="line-thru">or</strong>
+
+              <form id="routing-address" role="form" action="/" method="post" class="ws-validate">
+                <legend>Set routing address</legend>
+                <fieldset>
+                  <label for="routing-address-input" hidden>Routing Address</label>
+                  <input id="routing-address-input" name="routing-address-input" type="email" placeholder="Routing Address" aria-required="true" required>
+                </fieldset>
+
+                <button data-dialog="password-confirm" type="button" class="primary-button">Set Routing Address</button>
+              </form>
+
+              <strong class="line-thru">or</strong>
+
+              <form id="bol-mail-storage" role="form" action="/" method="post" class="ws-validate">
+                <legend>Create BOL Mail Storage</legend>
+                <button data-dialog="password-confirm" type="button" class="primary-button">Create BOL Mail Storage</button>
+              </form>
+            </section>
+          </div>
+
+          <div>
+            <section>
+              <form id="bol-services" role="form" action="/" method="post" class="ws-validate">
+                <legend>Manage Active BOL Services</legend>
+                  <label class="for-checkbox"><input type="checkbox" value="bol-email">bol-email</label>
+                  <label class="for-checkbox"><input type="checkbox" value="bolsoftware">bolsoftware</label>
+                  <label class="for-checkbox"><input type="checkbox" value="ftp">ftp</label>
+                  <label class="for-checkbox"><input type="checkbox" value="proxy">proxy</label>
+                  <label class="for-checkbox"><input type="checkbox" value="radius">radius</label>
+                  <label class="for-checkbox"><input type="checkbox" value="migrate">migrate</label>
+                  <label class="for-checkbox"><input type="checkbox" value="googleapps">googleapps</label>
+                  <label class="for-checkbox"><input type="checkbox" value="xmpp">xmpp</label>
+
+                  <h3>Manage eligibility for Google Apps</h3>
+
+                  <label class="for-checkbox"><input type="checkbox" value="googleapps-eligible">Google Apps eligible</label>
+
+                  <button data-dialog="password-confirm" type="button" class="primary-button">Update Access to BOL Services</button>
+              </form>
+            </section>
+          </div>
+
+          <div>
+            <section>
+              <form id="affiliation" role="form" action="/" method="post" class="ws-validate">
+                <legend>Manage Affiliation</legend>
+
+                <label for="affselect">Affiliation(s):</label>
+                  <select id="affselect">
+                    <option value="None">None</option>
+                    <option value="Visiting Scholar">Visiting Scholar</option>
+                    <option value="Visiting Graduate Researcher">Visiting Graduate Researcher</option>
+                    <option value="Departmental email account">Departmental email account</option>
+                    <option value="Affiliate email account" selected="yes">Affiliate email account</option>
+                    <option value="Affiliate email account (+web hosting)">Affiliate email account (+web hosting)</option>
+                    <option value="Independent Contractor">Independent Contractor</option>
+                    <option value="Spouse of deceased faculty member">Spouse of deceased faculty member</option>
+                    <option value="ASUCLA">ASUCLA</option>
+                    <option value="Library retiree">Library retiree</option>
+                    <option value="UCLA/UCR School of Medicine student">UCLA/UCR School of Medicine student</option>
+                    <option value="Howard Hughes Medical Institute employee">Howard Hughes Medical Institute employee</option>
+                    <option value="Data Preservation">Data Preservation</option>
+                  </select>
+
+                <label for="expirationfield">Affiliate Expiration:</label>
+                <input type="date" id="expirationfield" placeholder="Affiliation Expires On">
+
+                <h3>Departmental Approver:</h3>
+
+                <fieldset>
+                  <label for="approver-name-1">Approver's Name:</label>
+                  <input type="text" name="approver-name-1" id="approver-name-1" placeholder="Approver's Name" value="Barr Foo">
+                  <label for="approver-email-1">Approver's Email:</label>
+                  <input type="email" name="approver-email-1" id="approver-email-1" placeholder="Approver's Email" value="foo@ucla.edu">
+                  <label for="approver-phone-1">Approver's Phone:</label>
+                  <input type="tel" name="approver-phone-1" id="approver-phone-1" placeholder="Approver's Phone" value="54321">
+                </fieldset>
+
+                <button data-dialog="password-confirm" type="button" class="primary-button">Save Affiliation</button>
+                <button class="cancel-button" type="reset" name="affiliation-clear">Clear Affiliation Info</button>
+              </form>
+            </section>
+          </div>
+
+          <div>
+            <section>
+              <form id="service-holds" role="form" action="/" method="post" class="ws-validate">
+                <legend>Manage Service Holds</legend>
+
+                <label for"dhendfield">Hold Ends On:</label>
+                <input type="date" id="dhendfield" value="">
+
+                <h3>Services on Hold:</h3>
+
+                <label class="for-checkbox"><input type="checkbox" value="email">Email</label>
+                <label class="for-checkbox"><input type="checkbox" value="googleapps">Web hosting</label>
+                <label class="for-checkbox"><input type="checkbox" value="proxyvpn">Proxy/VPN</label>
+
+                <h3>Purpose of the Hold(s):</h3>
+
+                <label for="dhtypeselect">Type of Hold:</label>
+                <select id="dhtypeselect">
+                  <option value="Spouse access">Spouse access</option>
+                  <option value="Other (see reason)" selected="selected">Other (see reason)</option>
+                </select>
+
+                <label for="dhreasonfield">Reason:</label>
+                <textarea id="dhreasonfield" rows="3" cols="40"></textarea>
+
+                <button data-dialog="password-confirm" type="button" class="primary-button">Save Holds</button>
+
+                <button class="cancel-button" type="reset" name="service-holds-clear">Clear All Holds</button>
+              </form>
+            </section>
+          </div>
+
+          <div>
+            <p>TBA</p>
+          </div>
+
+        </iron-pages>
+
+      </aside>
+    </template>
+
+  </div>
