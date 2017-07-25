@@ -1,0 +1,27 @@
+<form id="service-holds" role="form">
+  <legend>Manage Service Holds</legend>
+
+  <label for"dhendfield">Hold Ends On:</label>
+  <input type="date" id="dhendfield" value="">
+
+  <h3>Services on Hold:</h3>
+
+  <label class="for-checkbox"><input type="checkbox" value="email">Email</label>
+  <label class="for-checkbox"><input type="checkbox" value="googleapps">Web hosting</label>
+  <label class="for-checkbox"><input type="checkbox" value="proxyvpn">Proxy/VPN</label>
+
+  <h3>Purpose of the Hold(s):</h3>
+
+  <label for="dhtypeselect">Type of Hold:</label>
+  <select id="dhtypeselect">
+    <option value="Spouse access">Spouse access</option>
+    <option value="Other (see reason)" selected="selected">Other (see reason)</option>
+  </select>
+
+  <label for="dhreasonfield">Reason:</label>
+  <textarea id="dhreasonfield" rows="3" cols="40"></textarea>
+
+  <button data-dialog="password-confirm" type="button" class="primary-button">Save Holds</button>
+
+  <button class="cancel-button" type="reset" name="service-holds-clear">Clear All Holds</button>
+</form>

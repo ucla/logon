@@ -1,0 +1,14 @@
+<form id="map-an-id" role="form">
+  <legend>Map UID to Joe Bruin's Account</legend>
+
+  <fieldset>
+    <label for="map-an-id--uid" hidden>UID to be mapped</label>
+    <input id="map-an-id--uid" name="map-an-id--uid" type="text" placeholder="Nine Digit UID to be Mapped" aria-required="true" pattern=".{9}" required data-errormessage="UIDs must be 9 characters long" >
+  </fieldset>
+
+  <label class="for-checkbox"><input type="checkbox" id="map-an-id--include-email" name="map-an-id--include-email" checked>Copy alternate email address if empty on UID</label>
+
+  <button data-dialog="password-confirm" type="button" class="primary-button">Try to map it!</button>
+
+  <p><a href="#">(pass results)</a> <a href="#">(fail results)</a></p>
+</form>

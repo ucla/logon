@@ -1,0 +1,37 @@
+<form id="affiliation" role="form">
+  <legend>Manage Affiliation</legend>
+
+  <label for="affselect">Affiliation(s):</label>
+    <select id="affselect">
+      <option value="None">None</option>
+      <option value="Visiting Scholar">Visiting Scholar</option>
+      <option value="Visiting Graduate Researcher">Visiting Graduate Researcher</option>
+      <option value="Departmental email account">Departmental email account</option>
+      <option value="Affiliate email account" selected="yes">Affiliate email account</option>
+      <option value="Affiliate email account (+web hosting)">Affiliate email account (+web hosting)</option>
+      <option value="Independent Contractor">Independent Contractor</option>
+      <option value="Spouse of deceased faculty member">Spouse of deceased faculty member</option>
+      <option value="ASUCLA">ASUCLA</option>
+      <option value="Library retiree">Library retiree</option>
+      <option value="UCLA/UCR School of Medicine student">UCLA/UCR School of Medicine student</option>
+      <option value="Howard Hughes Medical Institute employee">Howard Hughes Medical Institute employee</option>
+      <option value="Data Preservation">Data Preservation</option>
+    </select>
+
+  <label for="expirationfield">Affiliate Expiration:</label>
+  <input type="date" id="expirationfield" placeholder="Affiliation Expires On">
+
+  <h3>Departmental Approver:</h3>
+
+  <fieldset>
+    <label for="approver-name-1">Approver's Name:</label>
+    <input type="text" name="approver-name-1" id="approver-name-1" placeholder="Approver's Name" value="Barr Foo">
+    <label for="approver-email-1">Approver's Email:</label>
+    <input type="email" name="approver-email-1" id="approver-email-1" placeholder="Approver's Email" value="foo@ucla.edu">
+    <label for="approver-phone-1">Approver's Phone:</label>
+    <input type="tel" name="approver-phone-1" id="approver-phone-1" placeholder="Approver's Phone" value="54321">
+  </fieldset>
+
+  <button data-dialog="password-confirm" type="button" class="primary-button">Save Affiliation</button>
+  <button class="cancel-button" type="reset" name="affiliation-clear">Clear Affiliation Info</button>
+</form>
