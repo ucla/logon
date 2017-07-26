@@ -6,12 +6,8 @@ layout: reset
   <div>
 
     <header class="has-help">
-      <h1>Reset Your Password: <small>Confirm University Affiliation</small></h1> 
-      <div class="standalone-help right" data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="true" data-allow-html="true" tabindex="1" alt="click for help" title=" 
-<p>If you cannot complete the password reset form, please bring University-issued photo identification to the Bruin OnLine Help Desk located in Suite 124, Kerckhoff Hall. If you are not able to visit the Help Desk, please fax in a completed copy of the <a href=&quot;/files/service_request.pdf&quot;>UCLA Logon Service Request Form</a>, with all required supporting documentation.</p>
-      ">
-        <span class="icon-circle"><i class="fa fa-info" aria-hidden="true"></i></span>
-      </div>
+      <h1>Reset Your Password: <small>Confirm University Affiliation</small></h1>
+      {{> help-reset }}
     </header>
 
     <h2>Are you affiliated with UCLA?</h2>
@@ -29,15 +25,14 @@ layout: reset
         <li>UCOP or UC Merced Staff Members</li>
         <li>Contractors</li>
       </ul>
-       
-
+      
       <p><a href="reset.html" class="button primary-button">I am affiliated with UCLA</a></p>
     </div>
     
     <div class="affiliation-choice">
       <h3>You're not affiliated with UCLA if you do not have a 9-digit UCLA ID Number.</h3>
       
-      <p class="note-that">Accounts created without a UCLA ID number can be used to authenticate to many UCLA applications but may not have access. Unaffiliated accounts generally aren't eligible to receive campus services.</p>
+      <p>Accounts created without a UCLA ID number can be used to authenticate to many UCLA applications but may not have access. Unaffiliated accounts generally aren't eligible to receive campus services.</p>
 
       <p><a href="reset-not.html" class="button primary-button">I am not affiliated with UCLA</a></p>
     </div>
