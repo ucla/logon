@@ -13,18 +13,18 @@
 }
 
 .hero-form .ws-errorbox {
-  margin-top: $half-spacing;
+  margin-top: $global-margin / 2;
   margin-bottom: 0;
 }
 
 .hero-form-input {
-  font-size: $h1-font-size;
+  font-size: rem-calc(map-deep-get($header-styles, large-type, h1, font-size));
   width: 41rem;
   margin-bottom: 0;
 }
 
 .check-queue {
-  margin-top: $octo-spacing;
+  margin-top: $global-margin * 8;
   align-self: center;
 }
 
@@ -100,13 +100,13 @@ labeled-results:first-child h2 {
 }
 
 ::content h2 {
-  color: $body-text-color;
-  padding: 0 $half-spacing;
+  color: $ucla-body-font-color;
+  padding: 0 ($global-margin / 2);
   margin-bottom: 0;
 }
 
 :host > ::content dl {
-  font-size: $meta-font-size;
+  font-size: $helptext-font-size;
   margin-top: 0;
   color: $black;
   overflow: hidden;
@@ -116,10 +116,10 @@ labeled-results:first-child h2 {
 :host > ::content dt, :host > ::content dd {
   overflow: hidden;
   padding: .3rem 0 .1rem;
-  background: lighten($neutral, 15%);
-  border-bottom: 1px solid $background-light-grey;
+  background: lighten($ucla-neutral, 15%);
+  border-bottom: 1px solid $light-gray;
   &:nth-of-type(even) {
-    background: lighten($neutral, 18%);
+    background: lighten($ucla-neutral, 18%);
   }
 }
 
@@ -127,7 +127,7 @@ labeled-results:first-child h2 {
   float: left;
   width: 23%;
   text-align: right;
-  padding-right: $default-spacing;
+  padding-right: $global-padding;
   font-weight: bold;
   @include clearfix();
 }
@@ -187,26 +187,26 @@ labeled-results:first-child h2 {
   display: block;
   float: right;
   width: 48%;
-  background: $background-light-grey;
+  background: $light-gray;
   position: relative;
-  border-radius: $half-spacing;
-  padding: 0 $default-spacing;
+  border-radius: $global-radius;
+  padding: 0 $global-padding;
 }
 
 :host:before {
    content:"";
    position: absolute;
    right: 100%;
-   top: $double-spacing;
+   top: $global-spacing * 2;
    width: 0;
    height: 0;
-   border-top: $default-spacing solid transparent;
-   border-right: $default-spacing solid $background-light-grey;
-   border-bottom: $default-spacing solid transparent;
+   border-top: $global-spacing solid transparent;
+   border-right: $global-spacing solid $light-gray;
+   border-bottom: $global-spacing solid transparent;
 }
 
 :host > ::content dl {
-  font-size: $meta-font-size;
+  font-size: $helptext-font-size;
 }
 
 :host > ::content dd {
@@ -214,7 +214,7 @@ labeled-results:first-child h2 {
 }
 
 :host > ::content p {
-  font-size: $meta-font-size;
+  font-size: $helptext-font-size;
 }
 
 :host > ::content h3 {
@@ -225,13 +225,13 @@ labeled-results:first-child h2 {
 ::content .fail {
   background: $ucla-pink;
   color: $black;
-  border-radius: $global-border-radius;
-  padding: $half-spacing;
+  border-radius: $global-radius;
+  padding: $global-padding / 2;
 }
 
 ::content .success {
   background: $ucla-green;
   color: $black;
-  border-radius: $global-border-radius;
-  padding: $half-spacing;
+  border-radius: $global-radius;
+  padding: $global-padding / 2;
 }
