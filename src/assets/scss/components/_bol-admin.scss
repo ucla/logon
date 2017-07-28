@@ -24,29 +24,6 @@
 }
 
 /////////////////////////////////////////
-///          APP LAYOUT
-/////////////////////////////////////////
-
-related-results-and-actions, .main-wide div[role="main"] {
-  display: block;
-  width: 98%;
-  margin: 0 auto;
-  flex: 1 0 auto;
-}
-
-.main-narrow div[role="main"] {
-  display: block;
-  width: 42em;
-  margin: 0 auto;
-  flex: 1 0 auto;
-}
-
-labeled-results:first-child h2 {
-  margin-top: 0;
-}
-
-
-/////////////////////////////////////////
 ///              MISC
 /////////////////////////////////////////
 
@@ -67,32 +44,14 @@ labeled-results:first-child h2 {
 ///         GROUPED RESULTS
 /////////////////////////////////////////
 
-.grouped-results {
-  display: block;
-}
-
-.grouped-results > .selected {
-  font-weight: bold;
-  font-style: italic;
-}
-
-.grouped-results h2 {
-  color: $ucla-body-font-color;
-  padding: 0 ($global-margin / 2);
-  margin-bottom: 0;
-}
-
 .grouped-results dl {
-  font-size: $helptext-font-size;
   margin-top: 0;
-  color: $black;
-  overflow: hidden;
-  box-sizing: border-box;
+  @include grid-row();
 }
 
 .grouped-results dt, .grouped-results dd {
-  overflow: hidden;
   padding: .3rem 0 .1rem;
+  color: $ucla-body-font-color;
   background: lighten($ucla-neutral, 15%);
   border-bottom: 1px solid $light-gray;
   &:nth-of-type(even) {
@@ -101,19 +60,13 @@ labeled-results:first-child h2 {
 }
 
 .grouped-results dt {
-  float: left;
-  width: 23%;
+  @include grid-col(3);
   text-align: right;
-  padding-right: $global-padding;
-  font-weight: bold;
-  @include clearfix();
 }
 
 .grouped-results dd {
-  float: right;
+  @include grid-col(9);
   word-wrap: break-word;
-  width: 77%;
-  margin-left: 0;
 }
 
 .grouped-results .pink {
