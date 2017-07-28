@@ -4,7 +4,7 @@
   @include breakpoint(multi-column) {
     padding-top: 34px;
   }
-  background: #0288d1;
+  background: #007cbf;
   margin-top: -1rem;
   @include grid-row();
   &> div {
@@ -32,6 +32,7 @@
   font-size: 18px;
   width: 100%;
   text-align: center;
+  
   @include breakpoint(multi-column) {
     max-width: 5.5rem;
   }
@@ -41,7 +42,7 @@
     background: white;
   }
   a {
-    color: $primary-color;
+    color: $primary-color-alternate;
   }
   
 }
