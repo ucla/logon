@@ -1,0 +1,48 @@
+// Defaults
+
+.hero {
+  @include breakpoint(multi-column) {
+    padding-top: 34px;
+  }
+  background: #007cbf;
+  margin-top: -1rem;
+  @include grid-row();
+  &> div {
+    @include grid-col(12);
+    @include breakpoint(multi-column) {
+      @include grid-col(6);
+    }
+  }
+}
+
+.hero-content {
+  * {
+    color: $white;
+  }
+  padding: 20px 18.75px 40px;
+}
+
+.hero-content h1 {
+  @include breakpoint(multi-column) {
+    font-size: 2rem;
+  }
+}
+
+.hero .cta-button {
+  font-size: 18px;
+  width: 100%;
+  text-align: center;
+  
+  @include breakpoint(multi-column) {
+    max-width: 5.5rem;
+  }
+  margin: 0;
+  background: $ucla-yellow;
+  &:hover {
+    background: white;
+  }
+  a {
+    color: $primary-color-alternate;
+  }
+  
+}
