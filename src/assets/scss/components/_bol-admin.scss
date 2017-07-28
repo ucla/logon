@@ -25,12 +25,16 @@
   }
 }
 
+.bol-account-actions {
+  @include grid-col(6);
+}
+
 /////////////////////////////////////////
 ///         GROUPED RESULTS
 /////////////////////////////////////////
 
 .grouped-results {
-  @include grid-col(7);
+  @include grid-col(6);
 }
 
 .grouped-results dl {
@@ -51,14 +55,14 @@
 .grouped-results dt {
   @include grid-col(3);
   margin-bottom: 0.1rem;
-  padding: .3rem 0;
+  padding: .3rem 0 !important;;
   text-align: right;
 }
 
 .grouped-results dd {
   @include grid-col(9);
   margin-bottom: 0.1rem;
-  padding: .3rem 0 !important;
+  padding: .3rem 0;
   word-wrap: break-word;
   font-weight: $global-weight-normal;
 }
