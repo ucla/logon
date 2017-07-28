@@ -12,11 +12,6 @@
   margin: auto;
 }
 
-.hero-form .ws-errorbox {
-  margin-top: $global-margin / 2;
-  margin-bottom: 0;
-}
-
 .hero-form-input {
   font-size: rem-calc(map-deep-get($header-styles, large-type, h1, font-size));
   width: 41rem;
@@ -87,25 +82,25 @@ labeled-results:first-child h2 {
 }
 
 /////////////////////////////////////////
-///          LABELED RESULTS
+///         GROUPED RESULTS
 /////////////////////////////////////////
 
-:host {
+.grouped-results {
   display: block;
 }
 
-::content > .selected {
+.grouped-results > .selected {
   font-weight: bold;
   font-style: italic;
 }
 
-::content h2 {
+.grouped-results h2 {
   color: $ucla-body-font-color;
   padding: 0 ($global-margin / 2);
   margin-bottom: 0;
 }
 
-:host > ::content dl {
+.grouped-results dl {
   font-size: $helptext-font-size;
   margin-top: 0;
   color: $black;
@@ -113,7 +108,7 @@ labeled-results:first-child h2 {
   box-sizing: border-box;
 }
 
-:host > ::content dt, :host > ::content dd {
+.grouped-results dt, .grouped-results dd {
   overflow: hidden;
   padding: .3rem 0 .1rem;
   background: lighten($ucla-neutral, 15%);
@@ -123,7 +118,7 @@ labeled-results:first-child h2 {
   }
 }
 
-:host > ::content dt {
+.grouped-results dt {
   float: left;
   width: 23%;
   text-align: right;
@@ -132,14 +127,14 @@ labeled-results:first-child h2 {
   @include clearfix();
 }
 
-:host > ::content dd {
+.grouped-results dd {
   float: right;
   word-wrap: break-word;
   width: 77%;
   margin-left: 0;
 }
 
-::content .pink {
+.grouped-results .pink {
   dt, dd {
     background: mix($ucla-pink, $white, 38%);
     border-bottom: 1px solid mix($ucla-pink, $white, 45%);
@@ -149,7 +144,7 @@ labeled-results:first-child h2 {
   }
 }
 
-::content .yellow {
+.grouped-results .yellow {
   dt, dd {
     background: lighten($ucla-gold, 23%);
     border-bottom: 1px solid $ucla-gold;
@@ -159,7 +154,7 @@ labeled-results:first-child h2 {
   }
 }
 
-::content .blue {
+.grouped-results .blue {
   dt, dd {
     background: mix($ucla-cyan, $white, 50%);
     border-bottom: 1px solid mix($ucla-cyan, $white, 55%);
@@ -169,7 +164,7 @@ labeled-results:first-child h2 {
   }
 }
 
-::content .orange {
+.grouped-results .orange {
   dt,dd {
     background: lighten($ucla-orange, 15%);
     border-bottom: 1px solid $ucla-orange;
@@ -183,7 +178,7 @@ labeled-results:first-child h2 {
 ///         QUERY FEEDBACK
 /////////////////////////////////////////
 
-:host {
+.query-feedback {
   display: block;
   float: right;
   width: 48%;
@@ -193,7 +188,7 @@ labeled-results:first-child h2 {
   padding: 0 $global-padding;
 }
 
-:host:before {
+.query-feedback:before {
    content:"";
    position: absolute;
    right: 100%;
@@ -205,31 +200,31 @@ labeled-results:first-child h2 {
    border-bottom: $global-spacing solid transparent;
 }
 
-:host > ::content dl {
+.query-feedback dl {
   font-size: $helptext-font-size;
 }
 
-:host > ::content dd {
+.query-feedback dd {
   font-weight: bold;
 }
 
-:host > ::content p {
+.query-feedback p {
   font-size: $helptext-font-size;
 }
 
-:host > ::content h3 {
+.query-feedback h3 {
   display: inline-block;
   margin-top: 0;
 }
 
-::content .fail {
+.query-feedback .fail {
   background: $ucla-pink;
   color: $black;
   border-radius: $global-radius;
   padding: $global-padding / 2;
 }
 
-::content .success {
+.query-feedback .success {
   background: $ucla-green;
   color: $black;
   border-radius: $global-radius;
