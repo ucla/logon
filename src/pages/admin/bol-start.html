@@ -2,19 +2,21 @@
 layout: admin-logged-in
 ---
 
-<div role="main" class="centered-query">
+<div role="main" class="home">
+  <div>
 
-  <form id="lookup" role="form" method="get" class="hero-form">
-    <fieldset>
-      <label for="lookup-id-uid" hidden>Account ID</label>
-      <input id="lookup-id-uid" name="lookup-id-uid" class="hero-form-input" type="text" placeholder="Search by UCLA Logon ID or UID" aria-required="true" pattern=".{3,15}" required autofocus data-errormessage="Logon IDs must be between 3 and 15 characters long">
-    </fieldset>
-
-    <button type="submit" name="lookup" hidden></button>
-
-    <p><strong>Recent Queries: </strong><a href="#"> jbruin</a>, <a href="#">gjbruin</a>, <a href="#">imbanks</a>, <a href="#">ibanks</a>, <a href="#">serikson</a>, <a href="#">twilliams</a>, <a href="#">pwatts</a>, <a href="#">vanganar</a>, <a href="bol-part-time-query-results.html">(part time bol results)</a>, <a href="bol-full-time-query-results.html">(full time bol results)</a>.</p>
-  </form>
-
-  <a href="bol-queue.html" class="notification-badged check-queue"><button class="notification-badge" data-count="4" >Check the Queue of Password Change Requests</button></a>
-
+    <form id="lookup" role="form" method="get" class="hero-form">
+      <fieldset>
+        <label for="lookup-id-uid" hidden>Account ID</label>
+        <input id="lookup-id-uid" name="lookup-id-uid" class="hero-form-input" type="text" placeholder="Search by UCLA Logon ID or UID" aria-required="true" pattern=".{3,15}" required autofocus data-errormessage="Logon IDs must be between 3 and 15 characters long">
+      </fieldset>
+  
+      <button type="submit" name="lookup" hidden></button>
+  
+      <p><strong>Recent Queries: </strong><a href="#"> jbruin</a>, <a href="#">gjbruin</a>, <a href="#">imbanks</a>, <a href="#">ibanks</a>, <a href="#">serikson</a>, <a href="#">twilliams</a>, <a href="#">pwatts</a>, <a href="#">vanganar</a>, <a href="bol-part-time-query-results.html">(part time bol results)</a>, <a href="bol-full-time-query-results.html">(full time bol results)</a>.</p>
+    </form>
+  
+    <a href="bol-queue.html" class="notification-badged check-queue"><button class="notification-badge" data-count="4" >Check the Queue of Password Change Requests</button></a>
+    
+  </div>
 </div>
