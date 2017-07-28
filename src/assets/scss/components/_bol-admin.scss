@@ -2,16 +2,6 @@
 ///               HOME
 /////////////////////////////////////////
 
-.home div[role="main"] {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  flex: 1 0 auto;
-  max-width: 41rem;
-  margin: auto;
-}
-
 .hero-form-input {
   font-size: rem-calc(map-deep-get($header-styles, large-type, h1, font-size));
   width: 41rem;
@@ -27,33 +17,32 @@
 ///              MISC
 /////////////////////////////////////////
 
-.line-thru {
-  @include line-thru();
-}
-
-.full {
-  width: 100%;
-}
-
 .back {
   text-decoration: none;
-  font-size: 3.5rem;
+  font-size: 2rem;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 /////////////////////////////////////////
 ///         GROUPED RESULTS
 /////////////////////////////////////////
 
+.grouped-results {
+  @include grid-col(7);
+}
+
 .grouped-results dl {
-  margin-top: 0;
   @include grid-row();
+  font-size: $helptext-font-size;
 }
 
 .grouped-results dt, .grouped-results dd {
-  padding: .3rem 0 .1rem;
+  height: 2rem;
   color: $ucla-body-font-color;
   background: lighten($ucla-neutral, 15%);
-  border-bottom: 1px solid $light-gray;
+  border-bottom: 1px solid lighten($ucla-neutral, 8%);
   &:nth-of-type(even) {
     background: lighten($ucla-neutral, 18%);
   }
@@ -61,12 +50,17 @@
 
 .grouped-results dt {
   @include grid-col(3);
+  margin-bottom: 0.1rem;
+  padding: .3rem 0;
   text-align: right;
 }
 
 .grouped-results dd {
   @include grid-col(9);
+  margin-bottom: 0.1rem;
+  padding: .3rem 0 !important;
   word-wrap: break-word;
+  font-weight: $global-weight-normal;
 }
 
 .grouped-results .pink {
