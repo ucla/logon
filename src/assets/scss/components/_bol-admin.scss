@@ -4,13 +4,11 @@
 
 .hero-form-input {
   font-size: rem-calc(map-deep-get($header-styles, large-type, h1, font-size));
-  width: 41rem;
-  margin-bottom: 0;
+  height: 3rem;
 }
 
 .check-queue {
-  margin-top: $global-margin * 8;
-  align-self: center;
+  display: inline-block;
 }
 
 /////////////////////////////////////////
@@ -63,7 +61,7 @@
   @include grid-col(9);
   margin-bottom: 0.1rem;
   padding: .3rem 0;
-  word-wrap: break-word;
+  overflow: visible;
   font-weight: $global-weight-normal;
 }
 
