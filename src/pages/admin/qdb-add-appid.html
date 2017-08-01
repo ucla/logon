@@ -4,169 +4,93 @@ layout: admin-logged-in-qdb
 
 <div class="home">
   <div>
-
-    <header>
-      <h1>Welcome to Identity and Accounts Administration</h1>
+    
+    <div class="page">
+      <h1>Create a QDB Application ID Account</h1>
       
-      <p>Lorem Ipsum.</p>
-    </header>
+      <p>Required fields have an *</p> 
+      
+     <form>
+				
+				<fieldgroup>
+				  <legend>Core Information</legend>
+				  
+  				<label>Application Name *
+  				  <input name="QDB.app_name" id="app_name" type="text" size="32">
+  				</label>
+  
+          <label>Application ID *
+    			  <input name="QDB.app_login_id" id="app_login_id" type="text" size="8" maxlength="8">
+          </label>
+  				<p class="note-that">(must begin with prefix "mgr")</p>
+  
+  				<label>Dept Code *
+  				  <input name="QDB.dept_code" id="dept_code" type="text" size="4" maxlength="4">
+          </label>
+          
+          <label>Web URL
+  				  <input name="QDB.web_url" type="text" size="50" maxlength="255">
+  				</label>
+  				
+				</fieldgroup>
+				
+        <fieldgroup>
+          <legend>Password Management</legend>
+          
+  				<label>Password *
+  				  <input name="QDB.password" id="password" type="text" size="16" maxlength="16">
+  				</label>
+  			
+  				<label>Password Expiration Date *
+  				  <input name="QDB.pwd_expir_date" id="pwd_expir_date" type="date" size="10" maxlength="10">
+  				</label>
+  				
+        </fieldgroup>
+			
+        <fieldgroup>
+          <legend>Contact Information</legend>
+          
+  				<label>Contact Name *
+  				  <input name="QDB.contact_name" id="contact_name" type="text" size="32" maxlength="32">
+  				</label>
+  			
+  				<label>Contact Email Address *
+  				  <input name="QDB.contact_email_addr" id="contact_email_addr" type="email" size="32" maxlength="32">
+  				</label>
+  			
+  				<label>Contact Phone Number
+  				  <input name="QDB.contact_phone" id="contact_phone" type="tel" size="32" maxlength="32">
+  				</label>
+  				
+        </fieldgroup>
+
+        <fieldgroup>
+          <legend>Backup Contact Information</legend>
+          
+  				<label>Backup Contact Name
+  				  <input name="QDB.backup_contact_name" type="text" size="32" maxlength="32">
+  				</label>
+  				
+  				<label>Backup Contact Email Address
+  				  <input name="QDB.backup_email_addr" id="backup_email_addr" type="email" size="32" maxlength="32">	
+  				</label>
+  			
+  				<label>Backup Contact Phone Number
+  				  <input name="QDB.backup_phone" id="backup_phone" type="tel" size="32" maxlength="32">
+  				</label>
+  				
+        </fieldgroup>
+        
+        <h2>Comments</h2>
+			
+				<label>Comments
+				  <textarea name="QDB.comments" cols="55" rows="5"></textarea>
+				</label>
+			
+        <button type="submit" class="primary-button">Add this AppID</button> <button type="submit" class="button">Cancel</button>
+      
+      </form>
+    </div>
 
   </div>
 </div>
-
-<table class="addAppID" width="90%" border="0" cellspacing="0" cellpadding="0" align="center">
-			<caption>
-				Enter information for the new AppID.
-			</caption>
-
-			<tbody><tr>
-				 <td width="5%">&nbsp;</td>
-				 <td width="26%">&nbsp;</td>
-				 <td width="69%">&nbsp;</td>
-			</tr>
-			<tr>
-				 <td al="" align="center" colspan="3">
-				 	<div style="font-size:13px;  text-align:center;">
-						Required fields are displayed in <span style="color:BLUE; font-weight:bolder">BLUE</span>.
-					</div>
-				 </td>
-			</tr>
-			<tr>
-				 <td width="5%">&nbsp;</td>
-				 <td width="26%">&nbsp;</td>
-				 <td width="69%">&nbsp;</td>
-			</tr>
-			<tr>
-				 <td>&nbsp;</td>
-				 <td><span style="font-weight:bold; color:#0000FF"><strong>Application Name </strong></span></td>
-				 <td><input name="QDB.app_name" id="app_name" type="text" size="32"></td>
-			</tr>
-			<tr>
-				 <td>&nbsp;</td>
-				 <td><span style="font-weight:bold; color:#0000FF"><strong>Application ID</strong></span></td>
-				 <td><input name="QDB.app_login_id" id="app_login_id" type="text" size="8" maxlength="8">
-						<span style="font-size:10px">(must begin with prefix	<span style="color: BLUE">"mgr"</span>	)
-						</span>
-				 </td>
-			</tr>
-			<tr>
-				 <td>&nbsp;</td>
-				 <td><span style="font-weight:bold; color:#0000FF"><strong>Dept Code</strong></span></td>
-				 <td><input name="QDB.dept_code" id="dept_code" type="text" size="4" maxlength="4"></td>
-			</tr>
-			<tr>
-				 <td width="5%">&nbsp;</td>
-				 <td width="26%">&nbsp;</td>
-				 <td width="69%">&nbsp;</td>
-			</tr>
-			<tr>
-				 <td>&nbsp;</td>
-				 <td><span style="font-weight:bold; color:#0000FF"><strong>Contact Name</strong></span></td>
-				 <td><input name="QDB.contact_name" id="contact_name" type="text" size="32" maxlength="32"></td>
-			</tr>
-			<tr>
-				 <td>&nbsp;</td>
-				 <td><span style="font-weight:bold; color:#0000FF"><strong>Contact Email Address</strong></span></td>
-				 <td><input name="QDB.contact_email_addr" id="contact_email_addr" type="text" size="32" maxlength="32"></td>
-			</tr>
-			<tr>
-				 <td>&nbsp;</td>
-				 <td><strong>Contact Phone #</strong></td>
-				 <td><input name="QDB.contact_phone" id="contact_phone" type="text" size="32" maxlength="32"></td>
-			</tr>
-			<tr>
-				 <td width="5%">&nbsp;</td>
-				 <td width="26%">&nbsp;</td>
-				 <td width="69%">&nbsp;</td>
-			</tr>
-			<tr>
-				 <td>&nbsp;</td>
-				 <td><strong>Web URL</strong></td>
-				 <td><input name="QDB.web_url" type="text" size="50" maxlength="255"></td>
-			</tr>
-			<tr>
-				 <td>&nbsp;</td>
-				 <td><span style="font-weight:bold; color:#0000FF"><strong>Password</strong></span></td>
-				 <td><input name="QDB.password" id="password" type="text" size="16" maxlength="16"></td>
-			</tr>
-			<tr valign="top">
-				 <td>&nbsp;</td>
-				 <td><span style="font-weight:bold; color:#0000FF"><strong>Password Expiration Date</strong></span></td>
-				 <td><input name="QDB.pwd_expir_date" id="pwd_expir_date" type="text" size="10" maxlength="10"></td>
-			</tr>
-			<tr>
-				 <td width="5%">&nbsp;</td>
-				 <td width="26%">&nbsp;</td>
-				 <td width="69%">&nbsp;</td>
-			</tr>
-			<tr>
-				 <td>&nbsp;</td>
-				 <td><strong>Backup Contact Name</strong></td>
-				 <td><input name="QDB.backup_contact_name" type="text" size="32" maxlength="32"></td>
-			</tr>
-			<tr>
-				 <td>&nbsp;</td>
-				 <td><strong>Back-up Email Address</strong></td>
-				 <td><input name="QDB.backup_email_addr" id="backup_email_addr" type="text" size="32" maxlength="32">	</td>
-			</tr>
-			<tr>
-				 <td>&nbsp;</td>
-				 <td><strong>Back-up Phone #</strong></td>
-				 <td><input name="QDB.backup_phone" id="backup_phone" type="text" size="32" maxlength="32"></td>
-			</tr>
-			<tr>
-				 <td width="5%">&nbsp;</td>
-				 <td width="26%">&nbsp;</td>
-				 <td width="69%">&nbsp;</td>
-			</tr>
-			<tr valign="top">
-				 <td>&nbsp;</td>
-				 <td><strong>Comments</strong></td>
-				 <td><textarea name="QDB.comments" cols="55" rows="5"></textarea></td>
-			</tr>
-			<tr>
-				 <td width="5%">&nbsp;</td>
-				 <td width="26%">&nbsp;</td>
-				 <td width="69%">&nbsp;</td>
-			</tr>
-			<tr>
-				 <td width="5%">&nbsp;</td>
-				 <td width="26%">&nbsp;</td>
-				 <td width="69%">&nbsp;</td>
-			</tr>
-
-		</tbody></table>
-
-		<br>
-		<table class="addAppID" width="90%" border="0" cellspacing="0" cellpadding="0" align="center">
-			 <caption>
-				Add this AppID?
-			 </caption>
-
-			<tbody><tr>
-				<td>&nbsp;
-				</td>
-			</tr>
-
-		  <tr align="center">
-			 <td colspan="2">
-
-					<table width="20%" border="0" cellspacing="0" cellpadding="0" align="center">
-						<tbody><tr align="center">
-							<td>
-								<input name="submit" type="submit" value="YES" onclick="return areInputFieldsValid();">
-							</td>
-							<td>
-								 <input name="submit" type="submit" value="NO">
-							</td>
-						</tr>
-					</tbody></table>
-			 </td>
-		  </tr>
-
-		  	<tr>
-				<td>&nbsp;
-				</td>
-			</tr>
-
-		</tbody></table>
