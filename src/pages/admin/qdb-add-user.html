@@ -17,13 +17,25 @@ layout: admin-logged-in-qdb
   		
       <button type="submit" class="primary-button">Lookup this UID</button>
       
-      <h2>UID Found!</h2>
+      <h2>UID Found - Displaying Information</h2>
       
       <ul class="listless">
         <li>Jane Montaro Burin</li>
         <li>Administrative Information Systems</li>
         <li>4100</li>
       </ul>
+      
+      <form>
+        
+      <h3>Set Roles:</h3>
+      
+      <label>
+        <input name="QDB.pp_global" type="checkbox" value="pp_global"> pp_global
+      </label>
+
+      <label>
+				<input name="QDB.rnet_role" type="checkbox" value="rnet_role"> rnet_role
+      </label>
       
       <button type="submit" class="primary-button">Add Jane Burin to QDB</button> <button type="submit" class="button">Cancel</button>
 			
