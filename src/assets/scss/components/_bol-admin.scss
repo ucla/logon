@@ -105,6 +105,14 @@
   }
 }
 
+.editable-item i {
+  float: right;
+  background: $white;
+  border-radius: 50%;
+  padding: .3rem;
+  color: $ucla-its-link-color;
+}
+
 /////////////////////////////////////////
 ///         QUERY FEEDBACK
 /////////////////////////////////////////
