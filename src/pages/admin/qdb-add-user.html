@@ -6,22 +6,26 @@ layout: admin-logged-in-qdb
   <div>
 
     <header>
-      <h1>Create a QDB User Account</h1>
     </header>
     
-    <div>
+    <div class="page">
       
-  		<p>To add an existing UCLA employee to the QDB, perform the following:</p>
+      <h1>Create a QDB User Account</h1>
+      
+  		<label for="lookup-id-uid">Enter User's UCLA UID</label>
+      <input id="lookup-id-uid" name="lookup-id-uid" class="hero-form-input" type="text" placeholder="123456789" aria-required="true" pattern=".{3,15}" required autofocus data-errormessage="Logon IDs must be between 3 and 15 characters long">
   		
-			<ol>
-				<li>Enter the 9-digit UCLA employee ID into the <b>"Add Employee ID"</b> form field. Click the Submit button.</li>
-				<li>If the UCLA employee ID is valid, then the employee's loginID (and other details) will be displayed.
-				  <ul>
-				    <li>If the employee <i>ISN'T already a QDB user</i> , then click the loginID link to add him/her to theQDB.</li>
-						<li> Otherwise if the employee <i>IS already a QDB user</i> a message indicating QDB membership will be displayed instead.</li>
-				  </ul>	
-				</li>	
-			</ol>
+      <button type="submit" class="primary-button">Lookup this UID</button>
+      
+      <h2>UID Found!</h2>
+      
+      <ul class="listless">
+        <li>Jane Montaro Burin</li>
+        <li>Administrative Information Systems</li>
+        <li>4100</li>
+      </ul>
+      
+      <button type="submit" class="primary-button">Add Jane Burin to QDB</button> <button type="submit" class="button">Cancel</button>
 			
     </div>
 
