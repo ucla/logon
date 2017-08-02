@@ -2,44 +2,37 @@
 layout: admin-logged-in-qdb
 ---
 
-<div class="home">
+<div class="page">
   <div>
-
-    <header>
-    </header>
+      
+    <h1>Create a QDB User Account</h1>
     
-    <div class="page">
+		<label for="lookup-id-uid">Enter User's UCLA UID</label>
+    <input id="lookup-id-uid" name="lookup-id-uid" class="hero-form-input" type="text" placeholder="123456789" aria-required="true" pattern=".{3,15}" required autofocus data-errormessage="Logon IDs must be between 3 and 15 characters long">
+		
+    <button type="submit" class="primary-button">Lookup this UID</button>
+    
+    <h2>UID Found - Displaying Information</h2>
+    
+    <ul class="listless">
+      <li>Jane Montaro Burin</li>
+      <li>Administrative Information Systems</li>
+      <li>4100</li>
+    </ul>
+    
+    <form>
       
-      <h1>Create a QDB User Account</h1>
-      
-  		<label for="lookup-id-uid">Enter User's UCLA UID</label>
-      <input id="lookup-id-uid" name="lookup-id-uid" class="hero-form-input" type="text" placeholder="123456789" aria-required="true" pattern=".{3,15}" required autofocus data-errormessage="Logon IDs must be between 3 and 15 characters long">
-  		
-      <button type="submit" class="primary-button">Lookup this UID</button>
-      
-      <h2>UID Found - Displaying Information</h2>
-      
-      <ul class="listless">
-        <li>Jane Montaro Burin</li>
-        <li>Administrative Information Systems</li>
-        <li>4100</li>
-      </ul>
-      
-      <form>
-        
-      <h3>Set Roles:</h3>
-      
-      <label>
-        <input name="QDB.pp_global" type="checkbox" value="pp_global"> pp_global
-      </label>
+    <h3>Set Roles:</h3>
+    
+    <label>
+      <input name="QDB.pp_global" type="checkbox" value="pp_global"> pp_global
+    </label>
 
-      <label>
-				<input name="QDB.rnet_role" type="checkbox" value="rnet_role"> rnet_role
-      </label>
-      
-      <button type="submit" class="primary-button">Add Jane Burin to QDB</button> <button type="submit" class="button">Cancel</button>
-			
-    </div>
+    <label>
+			<input name="QDB.rnet_role" type="checkbox" value="rnet_role"> rnet_role
+    </label>
+    
+    <button type="submit" class="primary-button">Add Jane Burin to QDB</button> <button type="submit" class="button">Cancel</button>
 
   </div>
 </div>

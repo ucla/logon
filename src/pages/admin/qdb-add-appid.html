@@ -2,95 +2,93 @@
 layout: admin-logged-in-qdb
 ---
 
-<div class="home">
+<div class="page">
   <div>
     
-    <div class="page">
-      <h1>Create a QDB Application ID Account</h1>
-      
-      <p>Required fields have an *</p> 
-      
-      <form>
-				
-				<fieldgroup>
-				  <legend>Core Information</legend>
-				  
-  				<label>Application Name *
-  				  <input name="QDB.app_name" id="app_name" type="text" size="32">
-  				</label>
-  
-          <label>Application ID *
-    			  <input name="QDB.app_login_id" id="app_login_id" type="text" size="8" maxlength="8">
-          </label>
-  				<p class="note-that">(must begin with prefix "mgr")</p>
-  
-  				<label>Dept Code *
-  				  <input name="QDB.dept_code" id="dept_code" type="text" size="4" maxlength="4">
-          </label>
-          
-          <label>Web URL
-  				  <input name="QDB.web_url" type="text" size="50" maxlength="255">
-  				</label>
-  				
-				</fieldgroup>
-				
-        <fieldgroup>
-          <legend>Password Management</legend>
-          
-  				<label>Password *
-  				  <input name="QDB.password" id="password" type="text" size="16" maxlength="16">
-  				</label>
-  			
-  				<label>Password Expiration Date *
-  				  <input name="QDB.pwd_expir_date" id="pwd_expir_date" type="date" size="10" maxlength="10">
-  				</label>
-  				
-        </fieldgroup>
+    <h1>Create a QDB Application ID Account</h1>
+    
+    <p>Required fields have an *</p> 
+    
+    <form>
 			
-        <fieldgroup>
-          <legend>Contact Information</legend>
-          
-  				<label>Contact Name *
-  				  <input name="QDB.contact_name" id="contact_name" type="text" size="32" maxlength="32">
-  				</label>
-  			
-  				<label>Contact Email Address *
-  				  <input name="QDB.contact_email_addr" id="contact_email_addr" type="email" size="32" maxlength="32">
-  				</label>
-  			
-  				<label>Contact Phone Number
-  				  <input name="QDB.contact_phone" id="contact_phone" type="tel" size="32" maxlength="32">
-  				</label>
-  				
-        </fieldgroup>
+			<fieldgroup>
+			  <legend>Core Information</legend>
+			  
+				<label>Application Name *
+				  <input name="QDB.app_name" id="app_name" type="text" size="32">
+				</label>
 
-        <fieldgroup>
-          <legend>Backup Contact Information</legend>
-          
-  				<label>Backup Contact Name
-  				  <input name="QDB.backup_contact_name" type="text" size="32" maxlength="32">
-  				</label>
-  				
-  				<label>Backup Contact Email Address
-  				  <input name="QDB.backup_email_addr" id="backup_email_addr" type="email" size="32" maxlength="32">	
-  				</label>
-  			
-  				<label>Backup Contact Phone Number
-  				  <input name="QDB.backup_phone" id="backup_phone" type="tel" size="32" maxlength="32">
-  				</label>
-  				
-        </fieldgroup>
+        <label>Application ID *
+  			  <input name="QDB.app_login_id" id="app_login_id" type="text" size="8" maxlength="8">
+        </label>
+				<p class="note-that">(must begin with prefix "mgr")</p>
+
+				<label>Dept Code *
+				  <input name="QDB.dept_code" id="dept_code" type="text" size="4" maxlength="4">
+        </label>
         
-        <h2>Comments</h2>
+        <label>Web URL
+				  <input name="QDB.web_url" type="text" size="50" maxlength="255">
+				</label>
+				
+			</fieldgroup>
 			
-				<label>Comments
-				  <textarea name="QDB.comments" cols="55" rows="5"></textarea>
+      <fieldgroup>
+        <legend>Password Management</legend>
+        
+				<label>Password *
+				  <input name="QDB.password" id="password" type="text" size="16" maxlength="16">
 				</label>
 			
-        <button type="submit" class="primary-button">Add this AppID</button> <button type="submit" class="button">Cancel</button>
+				<label>Password Expiration Date *
+				  <input name="QDB.pwd_expir_date" id="pwd_expir_date" type="date" size="10" maxlength="10">
+				</label>
+				
+      </fieldgroup>
+		
+      <fieldgroup>
+        <legend>Contact Information</legend>
+        
+				<label>Contact Name *
+				  <input name="QDB.contact_name" id="contact_name" type="text" size="32" maxlength="32">
+				</label>
+			
+				<label>Contact Email Address *
+				  <input name="QDB.contact_email_addr" id="contact_email_addr" type="email" size="32" maxlength="32">
+				</label>
+			
+				<label>Contact Phone Number
+				  <input name="QDB.contact_phone" id="contact_phone" type="tel" size="32" maxlength="32">
+				</label>
+				
+      </fieldgroup>
+
+      <fieldgroup>
+        <legend>Backup Contact Information</legend>
+        
+				<label>Backup Contact Name
+				  <input name="QDB.backup_contact_name" type="text" size="32" maxlength="32">
+				</label>
+				
+				<label>Backup Contact Email Address
+				  <input name="QDB.backup_email_addr" id="backup_email_addr" type="email" size="32" maxlength="32">	
+				</label>
+			
+				<label>Backup Contact Phone Number
+				  <input name="QDB.backup_phone" id="backup_phone" type="tel" size="32" maxlength="32">
+				</label>
+				
+      </fieldgroup>
       
-      </form>
-    </div>
+      <h2>Comments</h2>
+		
+			<label>Comments
+			  <textarea name="QDB.comments" cols="55" rows="5"></textarea>
+			</label>
+		
+      <button type="submit" class="primary-button">Add this AppID</button> <button type="submit" class="button">Cancel</button>
+    
+    </form>
 
   </div>
 </div>
