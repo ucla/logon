@@ -108,6 +108,21 @@ nav {
   }
 }
 
+.search-for {
+  @include grid-column(12);
+  @include breakpoint(multi-column) {
+    @include grid-column(4);
+  }
+  @include breakpoint(wide) {
+    @include grid-column(3);
+  }
+}
+
+.page-title {
+  @include grid-col(12);
+  padding-top: $global-padding;
+}
+
 // layout for logged in pages
 .management, .mfa {
   @include grid-column(12);
