@@ -11,27 +11,26 @@ layout: admin-logged-in-qdb
 <div class="search-for">
   <div>
     
-    <h2>Select a User</h2>
+    <h2>Search for a user by:</h2>
   
     <form>
   			 	
-  		<label>
+  		<label class="has-radio">
   			<input type="radio" name="QDB.search_by" value="syb_login_id" checked=""> Login ID
   		</label>
   		
-  		<label>
-  			<input type="radio" name="QDB.search_by" value="uid"> UID
+  		<label class="has-radio">  			<input type="radio" name="QDB.search_by" value="uid"> UID
   		</label>
   		
-      <label>
+      <label class="has-radio">
         <input type="radio" name="QDB.search_by" value="first_name"> First Name
       </label>
   
-      <label>
+      <label class="has-radio">
         <input type="radio" name="QDB.search_by" value="last_name"> Last Name
       </label>
   			 	
-  		<label>
+  		<label class="has-radio">
   			<input type="radio" name="QDB.search_by" value="dept_code"> Dept Code
   		</label>
   			 	
@@ -40,47 +39,125 @@ layout: admin-logged-in-qdb
       <button type="submit" class="primary-button">Search</button>
   
     </form>
+    
+    <p class="qdb-results-count">12 Search Results</p>
+    
+    <table>
+  
+      <thead>
+        <tr>
+          <th>AppID</th>
+          <th>Name</th>
+          <th>Dept Code</th>
+        </tr>
+      </thead>
+  
+      <tbody>
+        <tr>
+          <td>mgrff</td>
+          <td>Final Fantasy</td>
+          <td>9041</td>
+        </tr>
+  
+        <tr>
+          <td>mgrbruin</td>
+          <td>Bruin Baffle</td>
+          <td>2014</td>
+        </tr>
+  
+        <tr>
+          <td>mgrfoo</td>
+          <td>Foo Bar Bar Bar Barbaran</td>
+          <td>120</td>
+        </tr>
+  
+        <tr>
+          <td>mgrff</td>
+          <td>Final Fantasy</td>
+          <td>9041</td>
+        </tr>
+  
+        <tr>
+          <td>mgrbruin</td>
+          <td>Bruin Baffle</td>
+          <td>2014</td>
+        </tr>
+  
+        <tr>
+          <td>mgrfoo</td>
+          <td>Foo Bar Bar Bar Barbaran</td>
+          <td>120</td>
+        </tr>
+        
+        <tr>
+          <td>mgrff</td>
+          <td>Final Fantasy</td>
+          <td>9041</td>
+        </tr>
+  
+        <tr>
+          <td>mgrbruin</td>
+          <td>Bruin Baffle</td>
+          <td>2014</td>
+        </tr>
+  
+        <tr>
+          <td>mgrfoo</td>
+          <td>Foo Bar Bar Bar Barbaran</td>
+          <td>120</td>
+        </tr>
+      </tbody>
+  
+    </table>
   
   </div>
 </div>
 
-<div class="management">
+<div class="search-results">
   <div>
     
     <h2>Review & Manage Jen Burin's QDB Account</h2>
-  
-    <dl>
-      <dt>Login ID</dt>
-      <dd>acjmb</dd>
-      <dt>UID</dt>
-      <dd>123456789</dd>
-      <dt>First Name</dt>
-      <dd>Jen</dd>
-      <dt>Last Name</dt>
-      <dd>Burin</dd>
-      <dt>E-Mail Address</dt>
-      <dd>bruinlife4eva@gmail.com</dd>
-      <dt>Work Title</dt>
-      <dd>PROGR ANL 3</dd>
-      <dt>Employee Status</dt>
-      <dd>A-</dd>
-      <dt>Creation Date</dt>
-      <dd>March 24, 2017 2:35 PM</dd>
-    </dl>
     
-    <dl>
-      <dt>Department Code</dt>
-      <dd>4100</dd>
-      <dt>Department Title</dt>
-      <dd>ADMINISTRATIVE INFORMATION SYSTEMS</dd>
-      <dt>Campus Phone</dt>
-      <dd>3101234567</dd>
-    </dl>
+    <p class="alert alert-danger">This account has been locked. <a href="#" class="editable-item"><i class="fa fa-unlock" aria-hidden="true"></i></a></p>
     
-    <dl>
-      <dt>QDB Roles</dt>
-      <dd>[public]</dd>
-    </dl>
+    <div class="qdb-account-results">
+
+      <dl>
+        <dt>Login ID</dt>
+        <dd>acjmb</dd>
+        <dt>UID</dt>
+        <dd>123456789</dd>
+        <dt>First Name</dt>
+        <dd>Jen</dd>
+        <dt>Last Name</dt>
+        <dd>Burin</dd>
+        <dt>E-Mail Address</dt>
+        <dd>bruinlife4eva@gmail.com</dd>
+        <dt>Work Title</dt>
+        <dd>PROGR ANL 3</dd>
+        <dt>Employee Status</dt>
+        <dd>A-</dd>
+        <dt>Creation Date</dt>
+        <dd>March 24, 2017 2:35 PM</dd>
+      </dl>
+      
+      <dl>
+        <dt>Department Code</dt>
+        <dd>4100</dd>
+        <dt>Department Title</dt>
+        <dd>ADMINISTRATIVE INFORMATION SYSTEMS</dd>
+        <dt>Campus Phone</dt>
+        <dd>3101234567</dd>
+      </dl>
+      
+      <dl>
+        <dt>QDB Roles</dt>
+        <dd><a href="#" class="editable-item">[public] <i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></dd>
+      </dl>
+    
+    </div>
+    
+    <button type="submit" class="button">Reset Password</button> <button type="submit" class="cancel-button">Remove Account</button>
   
   </div>
 </div>

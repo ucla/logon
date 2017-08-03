@@ -1,0 +1,28 @@
+.search-for .has-radio {
+  display: inline;
+  font-size: $helptext-font-size;
+  padding-right: $global-padding / 2;
+  [type='radio'] {
+    margin-right: 0.2rem;
+  }
+}
+
+.qdb-account-results {
+  overflow: hidden;
+  dl {
+    overflow: hidden;
+    margin-bottom: $global-margin;
+  }
+  dd, dt {
+    float: left;
+    display: inline-block;
+  }
+  dt {
+    clear: both;
+  }
+}
+
+.qdb-results-count {
+  background: $lighter-gray;
+  padding: $global-padding / 2;
+}

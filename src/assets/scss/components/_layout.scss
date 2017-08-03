@@ -111,10 +111,14 @@ nav {
 .search-for {
   @include grid-column(12);
   @include breakpoint(multi-column) {
-    @include grid-column(4);
+    @include grid-column(5);
   }
-  @include breakpoint(wide) {
-    @include grid-column(3);
+}
+
+.search-results {
+  @include grid-column(12);
+  @include breakpoint(multi-column) {
+    @include grid-column(7);
   }
 }
 
