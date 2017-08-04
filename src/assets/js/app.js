@@ -51,3 +51,11 @@ $('.additional-options-toggle').click(function() {
   $('.additional-options').toggle('fast', function() {
   });
 });
+
+/////////////////////////////////////////
+///    load bol admin options
+/////////////////////////////////////////
+
+$('.editable-item').click(function() {
+  $('.bol-account-actions').load('/admin/bol-admin-partials/' + $(this).attr("data-load-partial") + '.html');
+});
