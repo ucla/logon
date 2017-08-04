@@ -45,63 +45,7 @@ layout: create-password
         <span class="form-error">Your passwords don't match and/or this doesn't follow the rules above!</span></label>
       </fieldset>
       
-      <h2>Create a Challenge Phrase for Account Recovery</h2>
-      
-      <p>Select a challenge and response phrase so that should you forget your password in the future, you may reset it online. The challenge question must be at least 8 characters long and may not exceed 128 characters. The response phrase is case sensitive. It cannot be the same as your Challenge phrase. It must be at least 8 characters long and may not exceed 128 characters.</p>
-
-      <script type="text/javascript">
-        var cbh;
-
-        function updateChallenge(obj) {
-          var c = document.getElementById("custom-challenge");
-
-          if (obj == 'self') {
-            var s = document.getElementById("selectChallenge");
-            
-            c.style.display = 'block';
-
-            c.value = '';
-            c.focus();
-          } else {
-            c.value = obj;
-            c.style.display = 'none';
-          }
-        }
-      </script>
-  
-      <label title="Your Challenge phrase is a question or phrase that only you know the response to." for="selectChallenge">Select your Challenge Question</label>
-  
-      <select id="selectChallenge" onchange="updateChallenge(this.value);" required>
-        <option value="What is the name of your first pet?">What is the name of your first pet?</option>
-        <option value="What was your maternal grandmother's maiden name?">What was your maternal grandmother's maiden name?</option>
-        <option value="Who is your favorite actor, musician, or artist?">Who is your favorite actor, musician, or artist?</option>
-        <option value="What is your favorite color?">What is your favorite color?</option>
-        <option value="What is the name of your elementary school?">What is the name of your elementary school?</option>
-        <option value="What was your favorite place to visit as a child?">What was your favorite place to visit as a child?</option>
-        <option value="What is your favorite movie?">What is your favorite movie?</option>
-        <option value="Which phone number do you remember most from your childhood?">Which phone number do you remember most from your childhood?</option>
-        <option value="What is the nickname you gave your favorite grandparent?">What is the nickname you gave your favorite grandparent?</option>
-        <option value="What city were you born in?">What city were you born in?</option>
-        <option value="What is the model of your first car?">What is the model of your first car?</option>
-        <option value="What was the first name of your date for your high school prom?">What was the first name of your date for your high school prom?</option>
-        <option value="self">Write your own challenge question.</option>
-      </select>
-      
-      <label id="custom-challenge" hidden>Write your own challenge question.
-        <input name="challenge" type="text" maxlength="128" id="challenge" placeholder="Something only I know" required>
-      </label>
-  
-      <label for="response">Type your Response
-        <input type="text" name="response" maxlength="128" placeholder="Answer to the above question" id="response" required>
-        <span class="form-error">Challenge responses must be between 8 and 128 characters long.</span>
-      </label>
-      
-      <script type="text/javascript">
-        var element = document.getElementById("selectChallenge");
-        updateChallenge(element[element.selectedIndex].text);
-      </script>
-      
-      <button type="submit" class="primary-button" data-open="id-confirm">Continue</button> <button type="submit" class="button">Cancel</button>
+      <button type="submit" class="primary-button" data-open="id-confirm">Create UCLA Logon ID</button> <button type="submit" class="button">Cancel</button>
       
       <div id="id-confirm" data-reveal data-close-on-click="false" data-close-on-esc="false">
         <h1>Are you Sure?</h1>
