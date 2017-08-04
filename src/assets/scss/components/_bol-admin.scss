@@ -105,12 +105,19 @@
   }
 }
 
-.editable-item i {
-  float: right;
-  background: $white;
-  border-radius: 50%;
-  padding: .3rem;
-  color: $ucla-its-link-color;
+.editable-item {
+  display: inline-block;
+  width: 100%;
+  &:hover {
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  }
+  i {
+    float: right;
+    background: $white;
+    border-radius: 50%;
+    padding: .3rem;
+    color: $ucla-its-link-color;
+  }
 }
 
 /////////////////////////////////////////
