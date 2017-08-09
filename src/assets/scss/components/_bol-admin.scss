@@ -27,6 +27,10 @@
   @include grid-col(6);
 }
 
+.list-results li {
+  margin-bottom: $global-spacing;
+}
+
 /////////////////////////////////////////
 ///         GROUPED RESULTS
 /////////////////////////////////////////
