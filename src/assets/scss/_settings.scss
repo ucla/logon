@@ -105,6 +105,7 @@ $breakpoints: (
   compact-footer: 36rem, // varies based on p length in footer cta
   multi-column: 54rem,
   medium: 54rem, // has to be here, dislike it semantically ;)
+  hero-collapse: 61rem,
   wide: 75rem,
 );
 $print-breakpoint: large-type;
