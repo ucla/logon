@@ -19,22 +19,28 @@ layout: create
       <h2>BruinAlert Enrollment</h2>
 
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      
+    <form action="/activate.php" method="post" data-abide novalidate>
+      <label for="email">BruinAlert Contact Email Address
+      <input name="email" type="email" placeholder="joe.bruin@gmail.com" value="" id="email" required>
+      <span class="form-error">This doesn't look like a valid email address.</span></label>
 
-      <label for="opt-out-mfa" data-open="mfa-confirm"><input id="opt-out-mfa" type="checkbox">I choose to not enroll in BruinAlert at this time.</label>
+      <button type="submit" class="primary-button">Continue</button>
+    </form>
 
-      <div id="mfa-confirm" data-reveal data-close-on-click="false" data-close-on-esc="false">
+      <label for="opt-out-bruinalert" data-open="bruinalert-confirm"><input id="opt-out-bruinalert" type="checkbox">I choose to not enroll in BruinAlert at this time.</label>
+
+      <div id="bruinalert-confirm" data-reveal data-close-on-click="false" data-close-on-esc="false">
         <h1>Are you Sure?</h1>
 
-        <p>Without MFA your accounts only defense against intruders is your password. If someone steals your password they will have access to your account. By enrolling in MFA, your account will have an extra layer of protection.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
 
         <form>
-          <label><input type="radio" name="mfa-confirm-final" value="opt-out" required>Opt out: No, I do not wish to enroll in MFA at this time.</label>
-          <label><input type="radio" name="mfa-confirm-final" value="enrollt" required>Enroll: I would like to enroll in MFA.</label>
+          <label><input type="radio" name="mfa-confirm-final" value="opt-out" required>Opt out: No, I do not wish to enroll in BruinAlert at this time.</label>
+          <label><input type="radio" name="mfa-confirm-final" value="enrollt" required>Enroll: I would like to enroll in BruinAlert.</label>
           <button class="button primary-button">Confirm</button>
         </form>
       </div>
-      
-      <button class="primary-button" type="submit">Continue</button>
 
       <p><span class="message-success"><a href="create-new-logon6.html">(next)</a></span></p>
 
