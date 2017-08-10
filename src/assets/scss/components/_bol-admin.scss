@@ -2,6 +2,10 @@
 ///               HOME
 /////////////////////////////////////////
 
+.hero-form {
+  margin-top: 1rem;
+}
+
 .hero-form-input {
   font-size: rem-calc(map-deep-get($header-styles, large-type, h1, font-size));
   height: 3rem;
