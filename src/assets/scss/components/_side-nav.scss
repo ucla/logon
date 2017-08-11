@@ -3,6 +3,9 @@
   margin-left: 0;
   font-weight: $global-weight-normal;
   margin-top: -2rem;
+  @include breakpoint(compact-footer) {
+    margin-top: -5.5rem;
+  }
   @include breakpoint(multi-column) {
     margin-top: 0;
   }
