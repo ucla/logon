@@ -4,7 +4,7 @@
   @include breakpoint(hero-collapse) {
     padding: 75px 0;
   }
-  background: #007cbf url("/assets/img/pool.png");
+  background: #007cbf url("../img/pool.png");
   background-size: cover;
   margin-top: -1rem;
   @include grid-row();
