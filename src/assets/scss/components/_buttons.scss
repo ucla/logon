@@ -1,0 +1,8 @@
+//////////////////////////
+// Button Overrides
+//////////////////////////
+
+button[disabled] {
+  @include button-disabled($primary-color, $white);
+  cursor: not-allowed;
+}
