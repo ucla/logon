@@ -2,6 +2,10 @@
 // Button Overrides
 //////////////////////////
 
+button {
+  font-family: $ucla-font-stack;
+}
+
 button[disabled] {
   @include button-disabled($primary-color, $white);
   cursor: not-allowed;
