@@ -117,8 +117,10 @@ dd {
 }
 
 .mfa-preview {
-  @include grid-col(4, 0);
-  margin-right: 1rem;
+  @include breakpoint(compact-footer) {
+    @include grid-col(4, 0);
+    margin-right: 1rem;
+  }
   margin-bottom: 1rem;
   div {
     background: $off-white;
