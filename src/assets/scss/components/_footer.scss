@@ -70,6 +70,9 @@
     display: block;
     width: 100%;
     padding: 6px 12px;
+    &:focus {
+      color: $white;
+    }
   }
   &:hover {
     border: 1px $white solid; 
