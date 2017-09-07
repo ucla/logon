@@ -10,7 +10,12 @@
 .standalone-help {
   font-size: 13px;
   &:hover .icon-circle {
-    background: $ucla-its-primary-button-color-hover;
+    background: lighten($ucla-its-primary-button-color-hover, 9%);
+    cursor: pointer;
+  }
+  &:hover .page-help-desc {
+    color: lighten($ucla-its-primary-button-color-hover, 9%);
+    cursor: pointer;
   }
   .icon-circle {
     width: 18px;
@@ -21,7 +26,7 @@
 }
 
 .has-help {
-  h1, h2, h3, p {
+  h1, h2, h3, p, div {
     display: inline-block;
   }
   .standalone-help {
@@ -35,4 +40,8 @@
   @extend .standalone-help;
   text-align: right;
   color: $ucla-its-primary-alt;
+}
+
+.page-help-desc {
+  text-decoration: underline;
 }
