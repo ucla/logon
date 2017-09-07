@@ -28,6 +28,7 @@
   .form-step-doing {
     color: $medium-gray; 
     background: $lighter-gray;
+    border: 1px darken($lighter-gray, 10%) solid;
   }
   .form-step-done {
     color: $black;
@@ -49,31 +50,31 @@
   line-height: $global-spacing * 2;
   &:nth-child(1)::before {
     position: absolute;
-    font-size: $global-font-size / 2;
+    font-size: 12px;
     content: "Step 1";
     top: -$global-margin;
   }
   &:nth-child(2)::before {
     position: absolute;
-    font-size: $global-font-size / 2;
+    font-size: 12px;
     content: "Step 2";
     top: -$global-margin;
   }
   &:nth-child(3)::before {
     position: absolute;
-    font-size: $global-font-size / 2;
+    font-size: 12px;
     content: "Step 3";
     top: -$global-margin;
   }
   &:nth-child(4)::before {
     position: absolute;
-    font-size: $global-font-size / 2;
+    font-size: 12px;
     content: "Step 4";
     top: -$global-margin;
   }
   &:nth-child(5)::before {
     position: absolute;
-    font-size: $global-font-size / 2;
+    font-size: 12px;
     content: "Step 5";
     top: -$global-margin;
   }
