@@ -6,6 +6,26 @@
 $(document).foundation();
 
 /////////////////////////////////////////
+///  swap to email if no UID on lookup
+/////////////////////////////////////////
+
+$('#email-toggler').click(function() {
+  if ($(this).is(':checked') ) {
+    $('#email-toggle').show('fast');
+    $('#uclaid').prop('disabled',true);
+  } else {
+    $('#email-toggle').hide('fast');
+    $('#uclaid').prop('disabled',false);
+  }
+});
+
+/////////////////////////////////////////
+///     load modal on mfa opt-out
+/////////////////////////////////////////
+
+var $modal = $('#mfa-confirm');
+
+/////////////////////////////////////////
 ///       initiate spinner
 /////////////////////////////////////////
 

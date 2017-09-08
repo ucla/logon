@@ -1,0 +1,13 @@
+//////////////////////////
+// Button Overrides
+//////////////////////////
+
+button {
+  font-family: $ucla-font-stack;
+  font-weight: 300;
+}
+
+button[disabled] {
+  @include button-disabled($primary-color, $white);
+  cursor: not-allowed;
+}

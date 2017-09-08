@@ -28,10 +28,13 @@ fieldgroup.inline {
   @include breakpoint(multi-column) {
     display: none;
   }
+
   margin-top: $global-margin * 5;
+
   @include breakpoint($topbar-unstack-breakpoint) {
     margin-top: $global-margin;
   }
+
   background: $nav-background;
   p {
     margin-bottom: 0;
@@ -116,6 +119,7 @@ fieldgroup.inline {
   color: $color;
   padding: $global-padding;
   font-weight: $global-weight-bold;
+  z-index: 101;
   p {
     @include grid-column(11);
     font-size: $helptext-font-size;
@@ -152,6 +156,7 @@ fieldgroup.inline {
 // spinner for the redirect
 #loading-spinner {
   height: $global-spacing * 6;
+  position: relative;
 }
 
 .terse {
