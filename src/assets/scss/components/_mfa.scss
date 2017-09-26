@@ -116,6 +116,8 @@ fieldgroup.inline {
   color: $color;
   padding: $global-padding;
   font-weight: $global-weight-bold;
+  z-index: 101;
+  
   p {
     @include grid-column(11);
     font-size: $helptext-font-size;
