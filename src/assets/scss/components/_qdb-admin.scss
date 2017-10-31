@@ -19,10 +19,18 @@
   }
   dt {
     clear: both;
+    &::after {
+      content: ":";
+    }
   }
 }
 
 .qdb-results-count {
   background: $lighter-gray;
   padding: $global-padding / 2;
+}
+
+.unlock {
+  position: absolute;
+  right: $global-spacing;
 }
