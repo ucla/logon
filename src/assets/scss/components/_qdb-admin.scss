@@ -34,3 +34,7 @@
   position: absolute;
   right: $global-spacing;
 }
+
+.qdb-step {
+  @extend .mfa-inactive;
+}

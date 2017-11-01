@@ -1,0 +1,175 @@
+---
+layout: admin-logged-in-qdb
+---
+
+<header class="page-title">
+  <h1>Manage a QDB User Account</h1>
+  
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</header>
+
+<div class="search-for">
+  <div>
+    
+    <h2>Step One: Search for a User by:</h2>
+  
+    <form>
+  			 	
+  		<label class="has-radio">
+  			<input type="radio" name="QDB.search_by" value="syb_login_id" checked=""> Login ID
+  		</label>
+  		
+  		<label class="has-radio">  			<input type="radio" name="QDB.search_by" value="uid"> UID
+  		</label>
+  		
+      <label class="has-radio">
+        <input type="radio" name="QDB.search_by" value="first_name"> First Name
+      </label>
+  
+      <label class="has-radio">
+        <input type="radio" name="QDB.search_by" value="last_name"> Last Name
+      </label>
+  			 	
+  		<label class="has-radio">
+  			<input type="radio" name="QDB.search_by" value="dept_code"> Dept Code
+  		</label>
+  			 	
+      <input type="text" name="QDB.criteria" size="20">
+      
+      <button type="submit" class="primary-button">Search</button>
+  
+    </form>
+    
+    <h2>Step Two: Select the User to Manage:</h2>
+    
+    <p class="qdb-results-count">12 Search Results</p>
+    
+    <table>
+  
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Dept Code</th>
+        </tr>
+      </thead>
+  
+      <tbody>
+        <tr>
+          <td>acrff</td>
+          <td>Final</td>
+          <td>Fantasy</td>
+          <td>9041</td>
+        </tr>
+  
+        <tr>
+          <td>acbruin</td>
+          <td>Bruin</td>
+          <td>Baffle</td>
+          <td>2014</td>
+        </tr>
+  
+        <tr>
+          <td>acfoo</td>
+          <td>Foo Bar</td>
+          <td>Bar Bar Barbaran</td>
+          <td>120</td>
+        </tr>
+  
+        <tr>
+          <td>acrff</td>
+          <td>Final</td>
+          <td>Fantasy</td>
+          <td>9041</td>
+        </tr>
+  
+        <tr>
+          <td>acbruin</td>
+          <td>Bruin</td>
+          <td>Baffle</td>
+          <td>2014</td>
+        </tr>
+  
+        <tr>
+          <td>acfoo</td>
+          <td>Foo Bar</td>
+          <td>Bar Bar Barbaran</td>
+          <td>120</td>
+        </tr>
+        
+        <tr>
+          <td>acrff</td>
+          <td>Final</td>
+          <td>Fantasy</td>
+          <td>9041</td>
+        </tr>
+  
+        <tr>
+          <td>acbruin</td>
+          <td>Bruin</td>
+          <td>Baffle</td>
+          <td>2014</td>
+        </tr>
+  
+        <tr>
+          <td>acfoo</td>
+          <td>Foo Bar</td>
+          <td>Bar Bar Barbaran</td>
+          <td>120</td>
+        </tr>
+      </tbody>
+  
+    </table>
+  
+  </div>
+</div>
+
+<div class="search-results">
+  <div>
+    
+    <h2>Step Three: Review & Manage Jen Burin's QDB Account</h2>
+    
+    <p class="alert alert-danger">This account has been locked. <a href="#" class="editable-item unlock"><i class="fa fa-unlock" aria-hidden="true"></i></a></p>
+    
+    <div class="qdb-account-results">
+
+      <dl>
+        <dt>Login ID</dt>
+        <dd>acjmb</dd>
+        <dt>UID</dt>
+        <dd>123456789</dd>
+        <dt>First Name</dt>
+        <dd>Jen</dd>
+        <dt>Last Name</dt>
+        <dd>Burin</dd>
+        <dt>E-Mail Address</dt>
+        <dd>bruinlife4eva@gmail.com</dd>
+        <dt>Work Title</dt>
+        <dd>PROGR ANL 3</dd>
+        <dt>Employee Status</dt>
+        <dd>A-</dd>
+        <dt>Creation Date</dt>
+        <dd>March 24, 2017 2:35 PM</dd>
+      </dl>
+      
+      <dl>
+        <dt>Department Code</dt>
+        <dd>4100</dd>
+        <dt>Department Title</dt>
+        <dd>ADMINISTRATIVE INFORMATION SYSTEMS</dd>
+        <dt>Campus Phone</dt>
+        <dd>3101234567</dd>
+      </dl>
+      
+      <dl>
+        <dt>QDB Roles</dt>
+        <dd><a href="#" class="editable-item">[public] <i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></dd>
+      </dl>
+    
+    </div>
+    
+    <button type="submit" class="button">Reset Password</button> <button type="submit" class="cancel-button">Remove Account</button>
+  
+  </div>
+</div>
