@@ -4,6 +4,10 @@
 
 h1, h3, h5 {
   text-transform: uppercase;
+
+  .exclude-text-transform {
+    text-transform: none;
+  }
 }
 
 h2, h3 {
