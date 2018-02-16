@@ -65,8 +65,5 @@ PATHS:
     # - "bower_components/foundation-sites/js/foundation.zf.responsiveAccordionTabs.js"
     # Paths to your own project code are here
     - "bower_components/spin.js/spin.js"
-    - "bower_components/inputmask/dist/inputmask/inputmask.js"
-    - "bower_components/inputmask/dist/inputmask/inputmask.date.extensions.js"
-    - "bower_components/inputmask/dist/inputmask/bindings/inputmask.binding.js"
     - "src/assets/js/!(app).js"
     - "src/assets/js/app.js"
