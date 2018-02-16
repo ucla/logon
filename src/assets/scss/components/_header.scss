@@ -47,6 +47,13 @@
 	@include breakpoint(multi-column) {
     display: block;
   }
+
+  .note-that {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
 	text-decoration: none;
 	color: $white;
 	font-weight: $global-weight-bold;
