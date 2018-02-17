@@ -4,6 +4,10 @@
 
 h1, h3, h5 {
   text-transform: uppercase;
+
+  .lowercase {
+    text-transform: lowercase;
+  }
 }
 
 h2, h3 {
