@@ -45,6 +45,43 @@ layout: manage-bol
       </div>
     </div>
 
+    <h2>BOL Email Alias</h2>
+
+    <div class="item-overview">
+      <span class="expandable-area">
+        <dl>
+          <dt>Manage email alias</dt>
+          <dd>Email alias is <strong class="error-title">NOT</strong> set up for your account.</dd>
+        </dl>
+
+        <span class="expand-context">Change email alias</span>
+      </span>
+
+      <div class="expanded-info">
+        <p>An email alias will allow you to set up a new email address that will deliver to your @ucla.edu email address that is setup for your account.</p>
+
+        <form action="/mailprefs.php" method="post" data-abide novalidate>
+          <label>Enter address to act as an email alias
+            <input class="focus" id="alias-1" name="alias-1" type="email" placeholder="foobruin@gmail.com" title="Enter email alias" required>
+            <span class="form-error">This doesn't look like a valid email address.</span>
+          </label>
+
+          <label>Confirm address to set up as alias
+            <input class="focus" id="alias-2" name="alias-2" type="email" placeholder="foobruin@gmail.com" data-equalto="e1" title="Re-enter email alias" required>
+            <span class="form-error">This doesn't look like a valid email address and/or doesn't match the one above.</span>
+          </label>
+
+          <button id="verify-alias" class="primary-button" type="submit" name="action">Add new email alias</button>  <button class="button" type="submit">Cancel</button>
+
+<!--          <span class="line-thru">or</span>-->
+
+<!--          <button id="disable" class="button cancel-button" type="submit" name="action">Delete my email alias</button>-->
+        </form>
+
+        <p class="note-that">(<a href="manage-bol-add-error.html">error</a>)</p>
+      </div>
+    </div>
+
     <h2>BOL Enabled Services</h2>
 
     <div class="item-overview">

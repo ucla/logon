@@ -15,19 +15,19 @@ layout: manage-bol
       <span class="expandable-area">
         <dl>
           <dt>Your foo.bear@ucla.edu email is delivered to:</dt>
-          <dd>jburin@gmail.com</dd>
+          <dd>Google Apps at UCLA</dd>
         </dl>
 
         <span class="expand-context">Change forwarding</span>
       </span>
 
       <div class="expanded-info">
-        <p>Mail sent to your @ucla.edu email address is currently being forwarded to a custom email address set by you. You can choose a different custom email address to have mail delivered to, revert back to Google Apps for UCLA with a single click. You can also simply disable your @ucla.edu address - if you do so all email sent to it will be returned to sender.</p>
+        <p>Mail sent to your @ucla.edu email address has to be forwarded to another email address to be received. By default, email sent to your @ucla.edu email address is forwarded to your Google Apps at UCLA account, but you can choose to send it to a custom address (i.e. a personal one you already use). You can also just disable your @ucla.edu address - if you do so, all email will be returned to the sender.</p>
 
         <form action="/mailprefs.php" method="post" data-abide novalidate>
           <label>Enter address to forward all @ucla.edu email to
-          <input class="focus" id="e1" name="e1" type="email" placeholder="foobruin@gmail.com" title="Enter email address" required>
-          <span class="form-error">This doesn't look like a valid email address.</span>
+            <input class="focus" id="e1" name="e1" type="email" placeholder="foobruin@gmail.com" title="Enter email address" required>
+            <span class="form-error">This doesn't look like a valid email address.</span>
           </label>
 
           <label>Confirm address to forward all @ucla.edu email to
@@ -40,7 +40,6 @@ layout: manage-bol
 
           <span class="line-thru">or</span>
 
-          <button id="use-google-apps" class="button" type="submit" name="action">Deliver email to Google Apps at UCLA</button>
           <button id="disable" class="button cancel-button" type="submit" name="action">Disable my @ucla.edu address</button>
         </form>
       </div>
@@ -52,7 +51,7 @@ layout: manage-bol
       <span class="expandable-area">
         <dl>
           <dt>Manage email alias</dt>
-          <dd>foo@ucla.edu</dd>
+          <dd>Email alias is <strong class="error-title">NOT</strong> set up for your account.</dd>
         </dl>
 
         <span class="expand-context">Change email alias</span>
@@ -64,20 +63,22 @@ layout: manage-bol
         <form action="/mailprefs.php" method="post" data-abide novalidate>
           <label>Enter address to act as an email alias
             <input class="focus" id="alias-1" name="alias-1" type="email" placeholder="foobruin@gmail.com" title="Enter email alias" required>
-            <span class="form-error">This doesn't look like a valid email address.</span>
+            <span class="form-error is-visible">This doesn't look like a valid email address.</span>
           </label>
 
           <label>Confirm address to set up as alias
             <input class="focus" id="alias-2" name="alias-2" type="email" placeholder="foobruin@gmail.com" data-equalto="e1" title="Re-enter email alias" required>
-            <span class="form-error">This doesn't look like a valid email address and/or doesn't match the one above.</span>
+            <span class="form-error is-visible">This doesn't look like a valid email address and/or doesn't match the one above.</span>
           </label>
 
-          <button id="verify-alias" class="primary-button" type="submit" name="action">Delete old alias and add new email alias</button>  <button class="button" type="submit">Cancel</button>
-          <p>Note: Adding a new email alias will delete your previous one.</p>
-          <span class="line-thru">or</span>
+          <button id="verify-alias" class="primary-button" type="submit" name="action">Add new email alias</button>  <button class="button" type="submit">Cancel</button>
 
-          <button id="disable" class="button cancel-button" type="submit" name="action">Delete my email alias</button>
+          <!--          <span class="line-thru">or</span>-->
+
+          <!--          <button id="disable" class="button cancel-button" type="submit" name="action">Delete my email alias</button>-->
         </form>
+
+        <p class="note-that">(<a href="manage-bol.html">default</a>)</p>
       </div>
     </div>
 
